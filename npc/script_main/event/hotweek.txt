@@ -1,0 +1,125 @@
+//===== rAthena Script =======================================
+//= Hot Week
+//===== By: ==================================================
+//= DurexzOfficial
+//= Striker
+//===== Current Version: =====================================
+//= Ver.1.0 - กำหนดไอเท็ม ราคา จำนวนที่ต้องการจำกัดการซื้อ
+//= Ver.1.1 - เพิ่มเมนูเลือก Zeny หรือ Cashpoints
+//= Ver.1.2 - เพิ่มคำสั่งในการเปิด - ปิด @hotweek
+//= Ver.1.3 - เพิ่มคำสั่งในการรีเซ็ตค่า @clearhotweek
+//= Ver.1.4 - เพิ่มคลิกโชว์รูปไอเท็ม
+//===== Compatible With: =====================================
+//= rAthena Project
+//============================================================
+
+morocc,168,84,4	script	Hot Week	965,{
+	mes .npc$;
+	mes "กิจกรรมครั้งนี้ใช้ ^FF0000"+.use$[.use]+"^000000 ในการแลก";
+	mes "^FF0000ปล. สามารถซื้อได้ครั้งละ 1 ชิ้นเท่านั้น^000000";
+	
+	for(.@i = 0; .@i < getarraysize(.item); .@i = .@i+2) {
+	mes "ไอเท็ม [^0000FF<ITEM>"+getitemname(.item[.@i])+"<INFO>"+.item[.@i]+"</INFO></ITEM> ^000000] เหลือ [^0000FF"+(.limit[.@i/2] - getd("$hot_week_"+.item[.@i]))+"^000000/^FF0000"+.limit[.@i/2]+"^000000]";
+	}
+	
+	callshop "hotweek",1;
+	npcshopattach "hotweek";
+	end;
+	
+OnBuyItem:
+	if( getarraysize(@bought_nameid) > 1) {
+		mes "^FF0000ปล. สามารถซื้อได้ครั้งละ 1 ชิ้นเท่านั้น^000000";
+		end;
+	}
+	for(.@i = 0; .@i < getarraysize(@bought_nameid); .@i = .@i+1)
+		if( @bought_quantity[.@i] > 1) {
+			mes "^FF0000ปล. สามารถซื้อได้ครั้งละ 1 ชิ้นเท่านั้น^000000";
+			end;
+		}
+		
+	setarray .@q[0],@bought_nameid[0],@bought_quantity[0];
+	for(.@i = 0; .@i < getarraysize(@bought_nameid); .@i = .@i+1)
+		for(.@j = 0; .@j < getarraysize(.item); .@j = .@j+2)
+			if(@bought_nameid[.@i] == .item[.@j])
+				.@cost += .item[.@j+1]*@bought_quantity[.@i];
+	if(.use$[.use] == "Zeny"){
+		if(zeny < .@cost) {
+			mes "ท่านมี^FF0000 "+.use$[.use]+"^000000 ไม่เพียงพอ";
+			end;
+		}
+	}else{
+		if( #CASHPOINTS < .@cost) {
+			mes "ท่านมี^FF0000 "+.use$[.use]+"^000000 ไม่เพียงพอ";
+			end;
+		}
+	}
+	
+	.@pos = inarray(.item[0], .@q[0]);
+	if( .@pos >= 0 ) {
+		if( getd("$hot_week_"+.@q[0]) < .limit[.@pos/2]){
+			for(set .@i,0; .@i<getarraysize(@bought_nameid); set .@i,.@i+1) {
+				getitem @bought_nameid[.@i], @bought_quantity[.@i];
+				setd(("$hot_week_"+.@q[0]),getd("$hot_week_"+.@q[0]) + 1);
+				announce "ผู้เล่น ["+strcharinfo(0)+"] ได้ซื้อ ["+getitemname(@bought_nameid[.@i])+"] จำนวน "+@bought_quantity[.@i]+" อัน จากกิจกรรม Hot Week !!!",bc_all;
+			}
+			if(.use$[.use] == "Zeny"){
+				zeny -= .@cost;
+				end;
+			}else{
+				#CASHPOINTS -= .@cost;
+				end;
+			}
+		}else{
+			mes "ไอเท็มนี้ถูกซื้อจนครบ ^FF0000"+.limit[.@pos/2]+"^000000 ชิ้นแล้ว";
+		}
+	}
+	end;
+	
+OnClear:
+	for(.@i = 0; .@i < getarraysize(.item); .@i = .@i+2)
+		setd(("$hot_week_"+.item[.@i]),0);
+end;
+	
+Oninit:
+	hideonnpc strnpcinfo(0);
+	.npc$ = "[ Hot Week ]";
+	.use = 1;	// 0: ใช้ Zeny 1: ใช้ Cashpoints
+	setarray .use$[0],"Zeny","Cashpoints";
+	setarray .item[0],
+	501,3000,
+	502,5000; // <ITEM_ID>,<COST> (รหัสไอเท็ม,ราคา)
+ 	setarray .limit[0],100,30; // Limit ITEM (จำกัดจำนวนไอเท็ม)
+	npcshopdelitem "hotweek",501;
+	
+	for(.@i = 0;.@i < getarraysize(.item);.@i = .@i+2)
+		npcshopadditem "hotweek",.item[.@i],.item[.@i+1];
+		end;
+}
+
+-	shop	hotweek	-1,no,501:-1
+
+-	script	gmclears	-1,{
+
+Oninit:
+	bindatcmd "hotweek", strnpcinfo(0)+"::OnHotweek",99,99;
+	bindatcmd "clearhotweek", strnpcinfo(0)+"::OnHotweekClear",99,99;
+    end;
+
+OnHotweek:
+	mes "ท่านต้องการเปิด";
+	mes "กิจกรรม Hot Week ใช่มั้ย??";
+	if(select("เปิด:ปิด")==1){
+		announce "ขณะนี้ กิจกรรม Hot Week ได้เริ่มต้นขึ้นแล้ว ณ พิกัด legend 134 153 มึงช้าอดน้าาบอกแล้วน้ะ",bc_all;
+		hideoffnpc "Hot Week";
+		end;
+	}else{
+		announce "ขณะนี้ กิจกรรม Hot Week ได้สิ้นสุดลงแล้ว ขอบคุณทุกท่านที่ใช้บริการ",bc_all;
+		hideonnpc "Hot Week";
+		end;
+	}
+	
+OnHotweekClear:
+	donpcevent "Hot Week::OnClear";
+	message strcharinfo(0),"ท่านรีเซ็ตค่าของเรียบร้อยแล้ว";
+	end;
+}

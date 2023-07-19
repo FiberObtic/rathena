@@ -1,0 +1,49 @@
+function	script	F_ChageHairColor	{
+	
+	.@npcname$ = "[ ^FF0000Stylist^000000 ]";		// ตั้งชื่อ npc
+	.@mhcolor = 50;	
+	
+	mes .@npcname$;
+	mes "^ff0000เลือกสีที่ต้องการ^000000";
+	set .@look, 1;
+	next;
+	while (1){
+		setlook 6,.@look;
+		switch(select( "^6600FF~^000000 ต่อไป [^993300"+ ((.@look+1)%(.@mhcolor+1)) +"^000000]","^006600~^000000 ย้อนกลับ [^993300"+ ((.@mhcolor+.@look)%(.@mhcolor+1)) +"^000000]","^FF0000~^000000 ฉันชอบสีเนี่ยเหลือเกิน")){
+			case 1:
+				set .@look,(.@look+1)%(.@mhcolor+1);
+				break;
+			case 2:
+				set .@look,(.@mhcolor+.@look)%(.@mhcolor+1);
+				break;
+			case 3:
+				mes .@npcname$;
+				mes "โอ้~! คุณดูดีจริงๆ ";
+				close;
+		}
+	}
+	end;
+}
+
+function	script	F_ChageBodyColor	{
+	
+	.@npcname$ = "[ ^FF0000Stylist^000000 ]";		// ตั้งชื่อ npc
+	.@mccolor = 180;	
+	
+	mes .@npcname$;
+	mes "^ff0000เลือกสีที่ต้องการ^000000";
+	set .@look, 1;
+	next;
+	while (1){
+		setlook 7,.@look;
+		switch(select( "^6600FF~^000000 ต่อไป [^993300"+ ((.@look+1)%(.@mccolor+1)) +"^000000]","^006600~^000000 ย้อนกลับ [^993300"+ ((.@mccolor+.@look)%(.@mccolor+1)) +"^000000]","^FF0000~^000000 ฉันชอบสีเนี่ยเหลือเกิน")){
+			case 1:
+				set .@look,(.@look+1)%(.@mccolor+1);
+				break;
+			case 2:
+				set .@look,(.@mccolor+.@look)%(.@mccolor+1);
+				break;
+		}
+	}
+	end;
+}

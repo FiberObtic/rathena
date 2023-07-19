@@ -1,0 +1,229 @@
+//—>===============================================================<—|
+// -- # Ragnarok Online EP 4.0 BY Kelberwitz Blade's
+// -- # Izlude HiSo Kafra Corparation !!
+//—>===============================================================<—|
+// - - > Izlude
+
+//izlude,136,88,4	script	Kafra Express::Izlude	115,{
+//	cutin "kafra_03",2;
+//	callfunc "F_KafSetIz";
+//	mes "^0066FF[ Kafra Express ]^000000";
+//	mes "ยินดีต้อนรับสู่บริษัท Kafra";
+//	mes "เราจะอยู่กับท่านทุกที่ที่ท่านไปถึง";
+//	mes "มีอะไรที่ข้าช่วยท่านได้บ้าง?";
+//	callfunc "F_Kafra",5,0,0,30,750;
+//
+//	M_Save:
+//		savepoint "izlude",96,107;
+//		callfunc "F_KafEnd",0,1,"in the city of Izlude";
+//}
+
+// Izlude
+//============================================================
+//izlude,129,151,6	duplicate(kaf_izlude)	Kafra Employee#iz	721
+izlude,125,151,4	script	Kafra Employee::kaf_izlude	116,{
+	cutin "kafra_01",2;
+	callfunc "F_KafSetIz";
+	mes "[Kafra Employee]";
+	mes "ยินดีต้อนรับสู่";
+	mes "Kafra Corporation";
+	mes "บริการของ Kafra นั้นอยู่เคียงข้างคุณเสมอ";
+	mes "ฉันจะช่วยคุณได้อย่างไร";
+	callfunc "F_Kafra",5,0,1,40,820;
+	if (checkre(0))
+		savepoint strnpcinfo(4),129,97,1,1;
+	else
+		savepoint "izlude",125,144,1,1;
+	callfunc "F_KafEnd",0,1,"ในเมือง Izlude";
+}
+
+izlude,78,253,6	script	Kafra Employee::kaf_izlude#iz	116,{
+	cutin "kafra_01",2;
+	callfunc "F_KafSetIz";
+	mes "[Kafra Employee]";
+	mes "ยินดีต้อนรับสู่";
+	mes "Kafra Corporation";
+	mes "บริการของ Kafra นั้นอยู่เคียงข้างคุณเสมอ";
+	mes "ฉันจะช่วยคุณได้อย่างไร";
+	callfunc "F_Kafra",5,0,1,40,820;
+	if (checkre(0))
+		savepoint strnpcinfo(4),78,246,1,1;
+	else
+		savepoint "izlude",78,246,1,1;
+	callfunc "F_KafEnd",0,1,"ในเมือง Izlude";
+}
+
+izlude,162,168,4	script	Kafra Employee::kaf_izlude#iz1	116,{
+	cutin "kafra_01",2;
+	callfunc "F_KafSetIz";
+	mes "[Kafra Employee]";
+	mes "ยินดีต้อนรับสู่";
+	mes "Kafra Corporation";
+	mes "บริการของ Kafra นั้นอยู่เคียงข้างคุณเสมอ";
+	mes "ฉันจะช่วยคุณได้อย่างไร";
+	callfunc "F_Kafra",5,0,1,40,820;
+	if (checkre(0))
+		savepoint strnpcinfo(4),162,161,1,1;
+	else
+		savepoint "izlude",162,161,1,1;
+	callfunc "F_KafEnd",0,1,"ในเมือง Izlude";
+}
+
+izlude,125,252,4	script	Kafra Employee::kaf_izlude#iz2	116,{
+	cutin "kafra_01",2;
+	callfunc "F_KafSetIz";
+	mes "[Kafra Employee]";
+	mes "ยินดีต้อนรับสู่";
+	mes "Kafra Corporation";
+	mes "บริการของ Kafra นั้นอยู่เคียงข้างคุณเสมอ";
+	mes "ฉันจะช่วยคุณได้อย่างไร";
+	callfunc "F_Kafra",5,0,1,40,820;
+	if (checkre(0))
+		savepoint strnpcinfo(4),125,245,1,1;
+	else
+		savepoint "izlude",125,245,1,1;
+	callfunc "F_KafEnd",0,1,"ในเมือง Izlude";
+}
+
+izlude,203,172,4	script	Kafra Employee::kaf_izlude#iz3	116,{
+	cutin "kafra_01",2;
+	callfunc "F_KafSetIz";
+	mes "[Kafra Employee]";
+	mes "ยินดีต้อนรับสู่";
+	mes "Kafra Corporation";
+	mes "บริการของ Kafra นั้นอยู่เคียงข้างคุณเสมอ";
+	mes "ฉันจะช่วยคุณได้อย่างไร";
+	callfunc "F_Kafra",5,0,1,40,820;
+	if (checkre(0))
+		savepoint strnpcinfo(4),203,165,1,1;
+	else
+		savepoint "izlude",203,165,1,1;
+	callfunc "F_KafEnd",0,1,"ในเมือง Izlude";
+}
+
+izlude,176,76,4	script	Kafra Employee::kaf_izlude#iz4	116,{
+	cutin "kafra_01",2;
+	callfunc "F_KafSetIz";
+	mes "[Kafra Employee]";
+	mes "ยินดีต้อนรับสู่";
+	mes "Kafra Corporation";
+	mes "บริการของ Kafra นั้นอยู่เคียงข้างคุณเสมอ";
+	mes "ฉันจะช่วยคุณได้อย่างไร";
+	callfunc "F_Kafra",5,0,1,40,820;
+	if (checkre(0))
+		savepoint strnpcinfo(4),176,69,1,1;
+	else
+		savepoint "izlude",176,69,1,1;
+	callfunc "F_KafEnd",0,1,"ในเมือง Izlude";
+}
+
+izlude,143,63,4	script	Kafra Employee::kaf_izlude#iz5	116,{
+	cutin "kafra_01",2;
+	callfunc "F_KafSetIz";
+	mes "[Kafra Employee]";
+	mes "ยินดีต้อนรับสู่";
+	mes "Kafra Corporation";
+	mes "บริการของ Kafra นั้นอยู่เคียงข้างคุณเสมอ";
+	mes "ฉันจะช่วยคุณได้อย่างไร";
+	callfunc "F_Kafra",5,0,1,40,820;
+	if (checkre(0))
+		savepoint strnpcinfo(4),143,56,1,1;
+	else
+		savepoint "izlude",143,56,1,1;
+	callfunc "F_KafEnd",0,1,"ในเมือง Izlude";
+}
+
+izlude,66,211,4	script	Kafra Employee::kaf_izlude#iz6	116,{
+	cutin "kafra_01",2;
+	callfunc "F_KafSetIz";
+	mes "[Kafra Employee]";
+	mes "ยินดีต้อนรับสู่";
+	mes "Kafra Corporation";
+	mes "บริการของ Kafra นั้นอยู่เคียงข้างคุณเสมอ";
+	mes "ฉันจะช่วยคุณได้อย่างไร";
+	callfunc "F_Kafra",5,0,1,40,820;
+	if (checkre(0))
+		savepoint strnpcinfo(4),66,206,1,1;
+	else
+		savepoint "izlude",66,206,1,1;
+	callfunc "F_KafEnd",0,1,"ในเมือง Izlude";
+}
+
+izlude,147,133,4	script	Kafra Employee::kaf_izlude#iz7	116,{
+	cutin "kafra_01",2;
+	callfunc "F_KafSetIz";
+	mes "[Kafra Employee]";
+	mes "ยินดีต้อนรับสู่";
+	mes "Kafra Corporation";
+	mes "บริการของ Kafra นั้นอยู่เคียงข้างคุณเสมอ";
+	mes "ฉันจะช่วยคุณได้อย่างไร";
+	callfunc "F_Kafra",5,0,1,40,820;
+	if (checkre(0))
+		savepoint strnpcinfo(4),147,126,1,1;
+	else
+		savepoint "izlude",147,126,1,1;
+	callfunc "F_KafEnd",0,1,"ในเมือง Izlude";
+}
+
+izlude,91,168,4	script	Kafra Employee::kaf_izlude#iz8	116,{
+	cutin "kafra_01",2;
+	callfunc "F_KafSetIz";
+	mes "[Kafra Employee]";
+	mes "ยินดีต้อนรับสู่";
+	mes "Kafra Corporation";
+	mes "บริการของ Kafra นั้นอยู่เคียงข้างคุณเสมอ";
+	mes "ฉันจะช่วยคุณได้อย่างไร";
+	callfunc "F_Kafra",5,0,1,40,820;
+	if (checkre(0))
+		savepoint strnpcinfo(4),91,161,1,1;
+	else
+		savepoint "izlude",91,161,1,1;
+	callfunc "F_KafEnd",0,1,"ในเมือง Izlude";
+}
+
+izlude,171,212,4	script	Kafra Employee::kaf_izlude#iz9	116,{
+	cutin "kafra_01",2;
+	callfunc "F_KafSetIz";
+	mes "[Kafra Employee]";
+	mes "ยินดีต้อนรับสู่";
+	mes "Kafra Corporation";
+	mes "บริการของ Kafra นั้นอยู่เคียงข้างคุณเสมอ";
+	mes "ฉันจะช่วยคุณได้อย่างไร";
+	callfunc "F_Kafra",5,0,1,40,820;
+	if (checkre(0))
+		savepoint strnpcinfo(4),171,206,1,1;
+	else
+		savepoint "izlude",171,206,1,1;
+	callfunc "F_KafEnd",0,1,"ในเมือง Izlude";
+}
+
+izlude,55,159,5	script	Kafra Employee::kaf_izlude#iz10	116,{
+	cutin "kafra_01",2;
+	callfunc "F_KafSetIz";
+	mes "[Kafra Employee]";
+	mes "ยินดีต้อนรับสู่";
+	mes "Kafra Corporation";
+	mes "บริการของ Kafra นั้นอยู่เคียงข้างคุณเสมอ";
+	mes "ฉันจะช่วยคุณได้อย่างไร";
+	callfunc "F_Kafra",5,0,1,40,820;
+	if (checkre(0))
+		savepoint strnpcinfo(4),61,159,1,1;
+	else
+		savepoint "izlude",61,159,1,1;
+	callfunc "F_KafEnd",0,1,"ในเมือง Izlude";
+}
+
+// ฟังชั่น Izlude Kafra
+function	script	F_KafSetIz	{
+	cleararray @wrpC$[0],"",getarraysize(@wrpC$);
+	setarray @wrpD$[0], "Prontera", "Payon", "Geffen";
+	setarray @wrpP[0], 900, 1700, 1800;
+	set @wrpC$[0], @wrpD$[0]+" [ "+@wrpP[0]+" z ]";
+	set @wrpC$[1], @wrpD$[1]+" [ "+@wrpP[1]+" z ]";
+	set @wrpC$[2], @wrpD$[2]+" [ "+@wrpP[2]+" z ]";
+	set @wrpC$[3], "ยกเลิก";
+	setarray @viewpX[0], 120, 203;
+	setarray @viewpY[0], 62, 123;
+	return;
+
+}

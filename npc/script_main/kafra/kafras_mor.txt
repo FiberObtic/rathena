@@ -1,0 +1,321 @@
+//—>===============================================================<—|
+// -- # Ragnarok Online EP 4.0 BY Kelberwitz Blade's
+// -- # Morocc HiSo Kafra Corparation !!
+//—>===============================================================<—|
+
+// - - > บริเวณ กลางมอ
+morocc,156,97,4	script	Kafra Express::Morocc#01	113,{
+	cutin "kafra_05",2;
+	callfunc "F_KafSetMoc";
+	mes "^0066FF[ Kafra Express ]^000000";
+	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+	mes "Kafra Corporation ยินดีให้บริการ";
+	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+	callfunc "F_Kafra",5,0,0,60,930;
+
+	M_Save:
+		savepoint "morocc",156,46;
+		callfunc "F_KafEnd",0,1,"Morroc";
+}
+
+// - - > บริเวณ บนมอ
+morocc,160,258,4	script	Kafra Express::Morocc#02	114,{
+	cutin "kafra_04",2;
+	callfunc "F_KafSetMoc";
+	mes "^0066FF[ Kafra Express ]^000000";
+	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+	mes "Kafra Corporation ยินดีให้บริการ";
+	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+	callfunc "F_Kafra",5,0,0,60,930;
+
+	M_Save:
+		savepoint "morocc",188,282;
+		callfunc "F_KafEnd",0,1,"Morroc";
+}
+// 
+// // - - > บริเวณ ห้องตีบวก
+// morocc,28,34,4	script	Kafra Express::Morocc#03	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",28,28;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// // - - > บริเวณ ล่างมอขวา
+// morocc,206,43,4	script	Kafra Express::Morocc#04	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",206,37;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// // - - > บริเวณ ล่างมอซ้าย
+// morocc,105,56,4	script	Kafra Express::Morocc#05	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",105,49;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// // - - > บริเวณ ล่างมอซ้ายสุด
+// morocc,241,43,4	script	Kafra Express::Morocc#06	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",241,37;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// // - - > บริเวณ ราวตากผ้า
+// morocc,284,131,4	script	Kafra Express::Morocc#07	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",284,125;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// // - - > บริเวณ วาบขวา
+// morocc,286,210,4	script	Kafra Express::Morocc#08	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",286,204;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// // - - > บริเวณ บนซ้าย
+// morocc,280,294,4	script	Kafra Express::Morocc#09	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",280,288;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// // - - > บริเวณ บนกลางขวา
+// morocc,105,288,4	script	Kafra Express::Morocc#10	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",105,282;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// // - - > บริเวณ ล่างวาบบนซ้าย
+// morocc,40,232,4	script	Kafra Express::Morocc#11	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",40,226;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// // - - > บริเวณ ล่างวาบบนซ้าย
+// morocc,40,173,4	script	Kafra Express::Morocc#12	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",40,167;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// // - - > บริเวณ บนห้องตีบวก
+// morocc,44,76,4	script	Kafra Express::Morocc#13	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",44,70;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// // - - > บริเวณ ริมสระล่างขวา
+// morocc,204,109,4	script	Kafra Express::Morocc#14	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",204,103;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// // - - > บริเวณ ริมสระขวา
+// morocc,231,162,4	script	Kafra Express::Morocc#15	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",231,156;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// // - - > บริเวณ ริมสระบนขวา
+// morocc,227,246,4	script	Kafra Express::Morocc#16	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",227,240;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// // - - > บริเวณ ริมสระบนซ้าย
+// morocc,89,224,4	script	Kafra Express::Morocc#17	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",89,218;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// // - - > บริเวณ ริมซ้ายกลาง
+// morocc,89,174,4	script	Kafra Express::Morocc#18	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",89,168;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// // - - > บริเวณ ริมซ้ายล่าง
+// morocc,89,130,4	script	Kafra Express::Morocc#19	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",89,124;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// // - - > บริเวณ ล่างวาบขวา
+// morocc,34,107,4	script	Kafra Express::Morocc#20	113,{
+// 	cutin "kafra_05",2;
+// 	callfunc "F_KafSetMoc";
+// 	mes "^0066FF[ Kafra Express ]^000000";
+// 	mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
+// 	mes "Kafra Corporation ยินดีให้บริการ";
+// 	mes "ต้องการให้ข้าช่วยเหลืออะไรไหมคะ ?";
+// 	callfunc "F_Kafra",5,0,0,60,930;
+// 
+// 	M_Save:
+// 		savepoint "morocc",34,101;
+// 		callfunc "F_KafEnd",0,1,"Morroc";
+// }
+// 
+// 
+// - - > ฟังชั่น Morocc Kafra
+function	script	F_KafSetMoc	{
+	cleararray @wrpC$[0],"",getarraysize(@wrpC$);
+	setarray @wrpD$[0], "Prontera", "Payon", "Alberta", "Comodo", "Comodo Pharos Beacon";
+	setarray @wrpP[0], 1200, 1200, 1800, 1800, 1200;
+	set @wrpC$[0], @wrpD$[0]+" [ "+@wrpP[0]+" z ]";
+	set @wrpC$[1], @wrpD$[1]+" [ "+@wrpP[1]+" z ]";
+	set @wrpC$[2], @wrpD$[2]+" [ "+@wrpP[2]+" z ]";
+	set @wrpC$[3], @wrpD$[3]+" [ "+@wrpP[3]+" z ]";
+	set @wrpC$[4], @wrpD$[4]+" [ "+@wrpP[4]+" z ]";
+	set @wrpC$[5], "ยกเลิก";
+	setarray @viewpX[0], 156, 163, 28, 292, 200;
+	setarray @viewpY[0], 97, 260, 167, 211, 288;
+	return;
+}
