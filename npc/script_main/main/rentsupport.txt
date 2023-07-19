@@ -29,9 +29,5 @@ end;
 
 OnInit:
 	waitingroom "เช่านก รถเข็น ปิโกะ หุ่นยนต์",0;
-	specialeffect 1981;
-	sleep 600;
-	specialeffect 1982;
-	sleep 600;
 end;
 }
