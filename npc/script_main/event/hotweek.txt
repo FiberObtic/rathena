@@ -109,7 +109,7 @@ OnHotweek:
 	mes "ท่านต้องการเปิด";
 	mes "กิจกรรม Hot Week ใช่มั้ย??";
 	if(select("เปิด:ปิด")==1){
-		announce "ขณะนี้ กิจกรรม Hot Week ได้เริ่มต้นขึ้นแล้ว ณ พิกัด legend 134 153 มึงช้าอดน้าาบอกแล้วน้ะ",bc_all;
+		announce "ขณะนี้ กิจกรรม Hot Week ได้เริ่มต้นขึ้นแล้ว ณ พิกัด morocc 168 84 มึงช้าอดน้าาบอกแล้วน้ะ",bc_all;
 		hideoffnpc "Hot Week";
 		end;
 	}else{
