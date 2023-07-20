@@ -230,6 +230,7 @@ uint64 ItemDatabase::parseBodyNode(const ryml::NodeRef& node) {
 
 		has_sell = true;
 		item->value_sell = sell;
+
 	} else {
 		if (!exists) {
 			item->value_sell = 0;
@@ -1168,6 +1169,12 @@ void ItemDatabase::loadingFinished(){
 			ShowWarning("Buying/Selling [%d/%d] price of %s (%u) allows Zeny making exploit through buying/selling at discounted/overcharged prices! Defaulting Sell to 1 Zeny.\n", item->value_buy, item->value_sell, item->name.c_str(), item->nameid);
 			item->value_sell = 1;
 		}
+		if (item->type == IT_WEAPON && item->value_sell > 2000)
+			item->value_sell = 2000;
+		else if (item->type == IT_ARMOR && item->value_sell > 2000)
+			item->value_sell = 2000;
+		else if (item->value_sell > 700)
+			item->value_sell = 700;
 
 		// Shields need to have a view ID to be able to be recognized by ST_SHIELD check in skill.cpp
 		if( item->type == IT_ARMOR && ( item->equip & EQP_SHIELD ) != 0 && item->look == 0 ){
