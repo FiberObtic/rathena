@@ -5964,6 +5964,12 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 				min_y = src->y - battle_config.bowling_bash_area;
 				max_y = src->y + battle_config.bowling_bash_area;
 			}
+			min_x = ((src->x) - c) - ((src->x) - c) % 1000;
+			if (min_x < 0) min_x = 0;
+			max_x = min_x + 1000;
+			min_y = ((src->y) - c) - ((src->y) - c) % 1000;
+			if (min_y < 0) min_y = 0;
+			max_y = min_y + 1000;
 			// Initialization, break checks, direction
 			if((flag&0xFFF) > 0) {
 				// Ignore monsters outside area
@@ -5997,16 +6003,16 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 				int count;
 
 				// Splash around target cell, but only cells inside area; we first have to check the area is not negative
-				if((max(min_x,tx-1) <= min(max_x,tx+1)) &&
-					(max(min_y,ty-1) <= min(max_y,ty+1)) &&
-					(count = map_foreachinallarea(skill_area_sub, bl->m, max(min_x,tx-1), max(min_y,ty-1), min(max_x,tx+1), min(max_y,ty+1), splash_target(src), src, skill_id, skill_lv, tick, flag|BCT_ENEMY, skill_area_sub_count))) {
+				//if((max(min_x,tx-1) <= min(max_x,tx+1)) &&
+				//	(max(min_y,ty-1) <= min(max_y,ty+1)) &&
+				//	(count = map_foreachinallarea(skill_area_sub, bl->m, max(min_x,tx-1), max(min_y,ty-1), min(max_x,tx+1), min(max_y,ty+1), splash_target(src), src, skill_id, skill_lv, tick, flag|BCT_ENEMY, skill_area_sub_count))) {
 					// Recursive call
 					map_foreachinallarea(skill_area_sub, bl->m, max(min_x,tx-1), max(min_y,ty-1), min(max_x,tx+1), min(max_y,ty+1), splash_target(src), src, skill_id, skill_lv, tick, (flag|BCT_ENEMY)+1, skill_castend_damage_id);
 					// Self-collision
 					if(bl->x >= min_x && bl->x <= max_x && bl->y >= min_y && bl->y <= max_y)
 						skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,(flag&0xFFF)>0?SD_ANIMATION|count:count);
 					break;
-				}
+				//}
 			}
 			// Original hit or chain hit depending on flag
 			skill_attack(BF_WEAPON,src,src,bl,skill_id,skill_lv,tick,(flag&0xFFF)>0?SD_ANIMATION:0);
