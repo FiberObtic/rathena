@@ -107,7 +107,7 @@ M_Menu:
 
 // - - > เมนูบริการหลัก
 		default:
-			setarray @K_Menu0$[0],"^FF0000•^000000 บันทึกจุดเกิด","^FF0000•^000000 เปิดคลัง","^FF0000•^000000 ใช้บริการเทเลพอต","^FF0000•^000000 เช่ารถเข็น","^FF0000•^000000 ตรวจสอบข้อมูลอื่น ๆ","^FF0000•^000000 ยกเลิก";
+			setarray @K_Menu0$[0],"^FF0000•^000000 บันทึกจุดเกิด","^FF0000•^000000 เปิดคลัง","^FF0000•^000000 ใช้บริการเทเลพอต","^FF0000•^000000 เช่ารถเข็น","^FF0000•^000000 ตรวจสอบข้อมูลอื่น ๆ","^FF0000•^000000 รีเซ็ตสกิล/สเตตัส","^FF0000•^000000 ยกเลิก";
 			break;
 	}
 
@@ -118,7 +118,7 @@ M_Menu:
 	}
 	menu 	@K_Menu0$[0],K_Menu0,@K_Menu0$[1],K_Menu1,@K_Menu0$[2],K_Menu2,
 		@K_Menu0$[3],K_Menu3,@K_Menu0$[4],K_Menu4,@K_Menu0$[5],K_Menu5,
-		@K_Menu0$[6],K_Menu6;
+		@K_Menu0$[6],K_Menu6,@K_Menu0$[7],K_Menu7;
 	K_Menu0:
 		set @num,0;
 		goto K_Menuf;
@@ -139,6 +139,9 @@ M_Menu:
 		goto K_Menuf;
 	K_Menu6:
 		set @num,6;
+		goto K_Menuf;
+	K_Menu7:
+		set @num,7;
 	K_Menuf:
 		if (@K_Menu0$[@num] == "^FF0000•^000000 บันทึกจุดเกิด") return;
 		if (@K_Menu0$[@num] == "^FF0000•^000000 เปิดคลัง"){
@@ -181,6 +184,10 @@ M_Menu:
 			callfunc "F_KafEnd",getarg(0),0;
 			close;
 		}
+		if (@K_Menu0$[@num] == "^FF0000•^000000 รีเซ็ตสกิล/สเตตัส"){
+			callfunc "F_Kafreset",getarg(0),0;
+			close;
+		}
 		if (@K_Menu0$[@num] == "เก็บของกิล"){
 			callfunc "F_KafStor",1,0;
 			next;
@@ -190,6 +197,42 @@ M_Menu:
 }
 
 
+
+function	script	F_Kafreset	{
+		//	 		Skills,	Stats,	Both,	Limit  ราคารีสกิล ( 5000 ), ราคารีสเตตัส ( 5000 ), ราคารีทั้งคู่ ( 9000 ), จำนวนครั้งในการรี ( 0 )
+	setarray .@Reset,	5000,	5000,	9000,	0;
+	mes "^0066FF[ Kafra Express ]^000000";
+	if(.@Reset[3] && reset_limit > .@Reset[3]) {
+		mes "ขอโทษด้วยเจ้าสามารถรีได้แค่ "+callfunc("F_InsertPlural",.@Reset[3],"ครั้ง")+" เท่านั้น.";
+		close;
+	}
+	mes "รีสเตตัส: "+ callfunc("F_InsertComma",.@Reset[1]) +"z";
+	mes "รีสกิล: "+ callfunc("F_InsertComma",.@Reset[0]) +"z";
+	mes "รีทั้งคู่: "+ callfunc("F_InsertComma",.@Reset[2]) +"z";
+	if(.@Reset[3]) mes "เจ้าสามารถรีได้แค่ "+callfunc("F_InsertPlural",.@Reset[3],"ครั้ง")+", ดังนั้นใช้ "+((.@Reset[3]>1)?"มัน":"อย่าง")+" ฉลาด.";
+	mes "กรุณาเลือกบริการที่ต้องการ:";
+	next;
+	set .@i,(select("^FF3355รีสกิล:รีสเตตัส:รีทั้งคู่^000000:ยกเลิก"));
+	if(.@i > 3) close;
+	mes "^0066FF[ Kafra Express ]^000000";
+	if (Zeny < .@Reset[.@i-1]) {
+		mes "ขอโทษด้วย, เจ้ามีเงินไม่พอ.";
+		close;
+	}
+	if(.@Reset[3]){
+		mes "เจ้าสามารถรีได้แค่ "+callfunc("F_InsertPlural",.@Reset[3],"ครั้ง")+" เท่านั้น, เจ้าแน่ใจไหม ?";
+		if(select("ขอคิดดูก่อน:แน่นอน") == 1) close;
+	}
+	set Zeny, Zeny-.@Reset[.@i-1];
+	if(.@i&1){
+		sc_end_class;
+		ResetSkill;
+	}
+	if(.@i&2) ResetStatus;
+	mes "เรียบร้อย!";
+	if(.@Reset[3]) set reset_limit,reset_limit + 1;
+	close;
+}
 // - - > ฟังชั่น คลังเก็บของ
 function	script	F_KafStor	{
 // - - > ไม่สามารถใช้งานได้ หรือ มีสมาชิกกิลด์ท่านอื่น ใช้งานอยู่
