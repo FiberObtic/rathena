@@ -5,12 +5,9 @@ function Go; function Disp; function Pick; function Restrict;
 //	Main Menu:
 // --------------------------------------------------
 	mes "[ Warper ]";
-	mes "^0000FF{ขณะนี้มีคนออนไลน์ ^FF0000"+$@PLAYER+"^0000FF คน}^000000";
+	//mes "^0000FF{ขณะนี้มีคนออนไลน์ ^FF0000"+$@PLAYER+"^0000FF คน}^000000";
 	mes "วันนี้วันที่ :^FF0000 "+ gettimestr("%d/%m/%y",19) +"^000000";
 	mes "เวลา :^FF0000 "+ gettimestr("%H:%M",19) +"^000000";
-	mes "สวัสดีค่ะ ยินดีต้อนรับค่ะ";
-	mes "สายการบิน นกเอี้ยง บินกับนกเอี้ยง";
-	mes "พร้อมมอบความเสี่ยงให้คุณ";
 	mes "กรุณาเลือกเมนูที่คุณต้องการ";
 	mes "คุณสามารถใช้คำสั่ง ^FF0000@load^000000";
 	mes "เพื่อกลับไปยังจุดเซฟ นะค่ะ^_^";
@@ -19,10 +16,10 @@ menu	"^FF0000•^000000 วาร์ปล่าสุด ^777777["+lastwarp$+"]^000000",-,
     	"^FF0000•^000000 พื้นที่ ฟิลด์",Fields,
     	"^FF0000•^000000 ดันเจี้ยน",Dungeons,
     	"^FF0000•^000000 ปราสาท กิลด์",Castles,
-    	"^FF0000•^000000 ดันเจี้ยน กิลด์",Guild_Dungeons,
-		"^FF0000•^000000 Instances ^ff0000Boss^000000",Instances2,
-    	"^FF0000•^000000 Instances ^ff0000New^000000",Instances,
-    	"^FF0000•^000000 พื้นที่ พิเศษ",Special;
+    	"^FF0000•^000000 ดันเจี้ยน กิลด์",Guild_Dungeons;
+//		"^FF0000•^000000 Instances ^ff0000Boss^000000",Instances2,
+//    	"^FF0000•^000000 Instances ^ff0000New^000000",Instances,
+//    	"^FF0000•^000000 พื้นที่ พิเศษ",Special;
 
 	if (lastwarp$ == "")
 		message strcharinfo(0),"ขออภัยด้วยค่ะ แต่คุณยังไม่แผนที่วาร์ปล่าสุด.";
@@ -607,7 +604,7 @@ S9: Restrict("RE");
 S10: Go("turbo_room",99,114);
 
 OnInit:
-	waitingroom "Warp",0;
+	//waitingroom "Warp",0;
 	.Satan_Morroc = true;	//	false will enable moc_fild 4,5,6,8,9,10,14,15 while disable moc_fild 20,21,22 Default is true.
 	.OnlyFirstFld = false;	//	true will teleport to the first level of the Fields  Default is false.
 	.OnlyFirstDun = false;	//	true will teleport to the first level of the Dungeons  Default is false.
@@ -615,4 +612,4 @@ OnInit:
 // --------------------------------------------------
 //	Duplicates:
 // --------------------------------------------------
-morocc,165,97,4	duplicate(Warper)	บริการเคลื่อนย้าย#01	640
+morocc,164,97,4	duplicate(Warper)	บริการเคลื่อนย้าย#01	640

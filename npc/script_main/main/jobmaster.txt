@@ -436,17 +436,14 @@ function	Get_Job_Equip	{
 
 OnInit:
 waitingroom "[•] เปลี่ยนอาชีพ",0; 
-specialeffect 1981;
-sleep 600;
-specialeffect 1982;
-sleep 600;
+
 
 	// การเริ่มต้นอย่าแก้ไขสิ่งเหล่านี้
 	.NPCName$ = "[เปลี่ยนอาชีพ]";
 	
 	// การตั้งค่า
 	.ThirdClass = false;			// เปิดใช้งานสายอาชีพ Class 3 หรือไม่ (เปิดใส่ true / ปิดใส่ false)
-	.RebirthClass = false;			// เปิดใช้งานสายอาชีพ Rebirth หรือไม่ (เปิดใส่ true / ปิดใส่ false)
+	.RebirthClass = true;			// เปิดใช้งานสายอาชีพ Rebirth หรือไม่ (เปิดใส่ true / ปิดใส่ false)
 	.SecondExpanded = true;			// เปิดใช้งานสายอาชีพ Expanded Second : Ex. Super Novice, Kagerou/Oboro, Rebellion หรือไม่ (เปิดใส่ true / ปิดใส่ false)
 	.BabyNovice = true;				// เปิดใช้งานสายอาชีพ Baby Novice ปิดการใช้งานถ้าคุณชอบผู้เล่นจะต้องมีผู้ปกครองที่จะได้รับ ถึงจะเปลี่ยนสายอาชีพ Baby Novice. หรือไม่ (เปิดใส่ true / ปิดใส่ false)
 	.BabyClass = true;				// เปิดใช้งานสายอาชีพ Baby หรือไม่ (เปิดใส่ true / ปิดใส่ false)

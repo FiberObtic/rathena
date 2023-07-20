@@ -1,0 +1,42 @@
+-	script	setop	-1,{
+    end;
+Oninit:
+    bindatcmd "setop", strnpcinfo(0)+"::OnOption",99,99;
+    end;
+OnOption:
+	mes "Input getequipid ID";
+	mes "EQI_ACC_L (0)";
+	mes "EQI_ACC_R (1)";
+	mes "EQI_SHOES (2)";
+	mes "EQI_GARMENT (3)";
+	mes "EQI_HEAD_LOW (4)";
+	mes "EQI_HEAD_MID (5)";
+	mes "EQI_HEAD_TOP (6)";
+	mes "EQI_ARMOR (7)";
+	mes "EQI_HAND_L (8)";
+	mes "EQI_HAND_R (9)";
+	mes "EQI_COSTUME_HEAD_TOP (10)";
+	mes "EQI_COSTUME_HEAD_MID (11)";
+	mes "EQI_COSTUME_HEAD_LOW (12)";
+	mes "EQI_COSTUME_GARMENT (13) ";
+	mes "EQI_AMMO (14)    		 ";
+	mes "EQI_SHADOW_ARMOR (15)    ";
+	mes "EQI_SHADOW_WEAPON (16)   ";
+	mes "EQI_SHADOW_SHIELD (17)   ";
+	mes "EQI_SHADOW_SHOES (18)    ";
+	mes "EQI_SHADOW_ACC_R (19)    ";
+	mes "EQI_SHADOW_ACC_L (20)    ";
+	input .@eid;
+	next;
+	mes "Input Index";
+	input .@inx;
+	next;
+	mes "Input ID Option";
+	input .@oid;
+	next;
+	mes "Input Value";
+	input .@val;
+	next;
+    setrandomoption(.@eid,.@inx,.@oid,.@val,0);
+    end;
+}

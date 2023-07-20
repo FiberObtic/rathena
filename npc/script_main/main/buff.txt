@@ -19,7 +19,7 @@ goto MAINBUFF;
 OnTouch:
 MAINBUFF:
 	set .@delay, 3;	// ดีเลย์การใช้งาน (วินาที)
-	set .@cast, 1;	// ระยะเวลาร่าย (วินาที)
+	set .@cast, 0;	// ระยะเวลาร่าย (วินาที)
 	
 	if ( gettimetick(2)-@delay_heal < .@delay )
 		dispbottom "[ระบบ] โปรดรออีก "+(.@delay-(gettimetick(2)-@delay_heal))+" วินาทีถึงจะใช้งานได้อีกครั้งนะค่ะ";
@@ -138,53 +138,78 @@ MAINBUFF:
 			//==============================================
 			//==============================================
 		
+	switch ( basejob ) {
+	  case Job_Alchemist:	set .@spirit, 445; break;
+	  case Job_Monk:	 set .@spirit, 447; break;
+	  case Job_Star_Gladiator:  set .@spirit, 448; break;
+	  case Job_Sage:	 set .@spirit, 449; break;
+	  case Job_Crusader:	set .@spirit, 450; break;
+	  case Job_SuperNovice:   set .@spirit, 451; break;
+	  case Job_Knight:	set .@spirit, 452; break;
+	  case Job_Wizard:	set .@spirit, 453; break;
+	  case Job_Priest:	set .@spirit, 454; break;
+	  case Job_Bard: case Job_Dancer: set .@spirit, 455; break;
+	  case Job_Rogue:	 set .@spirit, 456; break;
+	  case Job_Assassin:	set .@spirit, 457; break;
+	  case Job_Blacksmith:   set .@spirit, 458; break;
+	  case Job_Hunter:	set .@spirit, 460; break;
+	  case Job_Soul_Linker:   set .@spirit, 461; break;
+	  default:
+	   break;
+	}
+	
+	if ( .@spirit ) {
+		sc_start4 sc_spirit, 360000, 5, .@spirit,0,0;
+		//skilleffect .@spirit, 5;
+	}
+	
 		end;
-		OnInterIfInit:
-		Waitingroom "BUFF ฟื้น HP SP",0;
-		End;
+		//OnInterIfInit:
+		//Waitingroom "BUFF ฟื้น HP SP",0;
+		//End;
 	}
 }
 
 //******************************************************
 //********************* Config Healer *********************
 //******************************************************
-new_1-3,91,33,5	duplicate(BuffsSupports)	Buff Support#novice_1	845
-morocc,160,97,4	duplicate(BuffsSupports)	Buff Support #moc_1	845
-morocc,149,254,5	duplicate(BuffsSupports)	Buff Support#moc_2	845
-morocc,288,214,4	duplicate(BuffsSupports)	Buff Support#moc_3	845
-morocc,42,177,4	duplicate(BuffsSupports)	Buff Support#moc_4	845
+new_1-3,91,33,5	duplicate(BuffsSupports)	บริการบัพ#novice_1	845
+morocc,160,97,4	duplicate(BuffsSupports)	บริการบัพ #moc_1	845
+morocc,149,254,5	duplicate(BuffsSupports)	บริการบัพ#moc_2	845
+morocc,288,214,4	duplicate(BuffsSupports)	บริการบัพ#moc_3	845
+morocc,42,177,4	duplicate(BuffsSupports)	บริการบัพ#moc_4	845
 //======================================================================
 
 //===============================================================
-prontera,143,87,5	duplicate(BuffsSupports)	Buff Support#prt02	845
-prontera,273,197,2	duplicate(BuffsSupports)	Buff Support#prt04	845
-prontera,38,213,6	duplicate(BuffsSupports)	Buff Support#prt05	845
-prontera,147,327,5	duplicate(BuffsSupports)	Buff Support#prt06	845
-prt_fild08,176,372,3	duplicate(BuffsSupports)	Buff Support#prt07	845
-prt_fild05,290,227,3	duplicate(BuffsSupports)	Buff Support#prt08	845
+prontera,143,87,5	duplicate(BuffsSupports)	บริการบัพ#prt02	845
+prontera,273,197,2	duplicate(BuffsSupports)	บริการบัพ#prt04	845
+prontera,38,213,6	duplicate(BuffsSupports)	บริการบัพ#prt05	845
+prontera,147,327,5	duplicate(BuffsSupports)	บริการบัพ#prt06	845
+prt_fild08,176,372,3	duplicate(BuffsSupports)	บริการบัพ#prt07	845
+prt_fild05,290,227,3	duplicate(BuffsSupports)	บริการบัพ#prt08	845
 //===============================================================
-alberta,24,229,0	duplicate(BuffsSupports)	Buff Support#alb11	845
-alberta,113,53,5	duplicate(BuffsSupports)	Buff Support#alb12	845
+alberta,24,229,0	duplicate(BuffsSupports)	บริการบัพ#alb11	845
+alberta,113,53,5	duplicate(BuffsSupports)	บริการบัพ#alb12	845
 //===============================================================
-aldebaran,145,117,3	duplicate(BuffsSupports)	Buff Support#ald13	845
+aldebaran,145,117,3	duplicate(BuffsSupports)	บริการบัพ#ald13	845
 //===============================================================
-comodo,198,148,3	duplicate(BuffsSupports)	Buff Support#com14	845
+comodo,198,148,3	duplicate(BuffsSupports)	บริการบัพ#com14	845
 //===============================================================
-izlude,136,91,3	duplicate(BuffsSupports)	Buff Support#iz15	845
+izlude,136,91,3	duplicate(BuffsSupports)	บริการบัพ#iz15	845
 //===============================================================
-geffen,123,73,3	duplicate(BuffsSupports)	Buff Support#gef16	845
+geffen,123,73,3	duplicate(BuffsSupports)	บริการบัพ#gef16	845
 //===============================================================
-geffen,198,124,4	duplicate(BuffsSupports)	Buff Support#gef17	845
-geffen,124,203,3	duplicate(BuffsSupports)	Buff Support#gef21	845
+geffen,198,124,4	duplicate(BuffsSupports)	บริการบัพ#gef17	845
+geffen,124,203,3	duplicate(BuffsSupports)	บริการบัพ#gef21	845
 //===============================================================
 //===============================================================
-payon,97,121,3	duplicate(BuffsSupports)	Buff Support#pay19	845
+payon,97,121,3	duplicate(BuffsSupports)	บริการบัพ#pay19	845
 //===============================================================
-yuno,149,187,4	duplicate(BuffsSupports)	Buff Support#yu20	845
+yuno,149,187,4	duplicate(BuffsSupports)	บริการบัพ#yu20	845
 //===============================================================
-pay_arche,37,135,5	duplicate(BuffsSupports)	Buff Support#payc22	845
+pay_arche,37,135,5	duplicate(BuffsSupports)	บริการบัพ#payc22	845
 //===============================================================
-glast_01,195,292,4	duplicate(BuffsSupports)	Buff Support#gl23	845
+glast_01,195,292,4	duplicate(BuffsSupports)	บริการบัพ#gl23	845
 //===============================================================
 
 //==============================================
