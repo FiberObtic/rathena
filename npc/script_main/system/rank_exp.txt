@@ -1,4 +1,4 @@
--	pointshop	exp_shop	-1,Exp_All_1,502:100000,501:100
+-	pointshop	exp_shop	-1,Exp_All_1,53000017:100000,501:100
 //-	pointshop	job_shop	-1,Job_All_2,502:100000,501:100
 
 
