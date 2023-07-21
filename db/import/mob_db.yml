@@ -79,7 +79,64 @@ Header:
   Type: MOB_DB
   Version: 3
 
-#Body:
+Body:
+  - Id: 2718
+    AegisName: C5_PECOPECO
+    Name: Elusive Peco Peco
+    Level: 25
+    Hp: 2230
+    BaseExp: 1020
+    JobExp: 2340
+    Attack: 91
+    Attack2: 7
+    Defense: 48
+    Str: 21
+    Agi: 10
+    Vit: 13
+    Int: 5
+    Dex: 28
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Fire
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1564
+    AttackMotion: 864
+    DamageMotion: 576
+    Ai: 03
+  - Id: 2810
+    AegisName: C2_GRAND_PECO
+    Name: Solid Grand Peco
+    Level: 75
+    Hp: 31500
+    BaseExp: 3970
+    JobExp: 11010
+    Attack: 417
+    Attack2: 56
+    Defense: 95
+    MagicDefense: 30
+    Str: 63
+    Agi: 45
+    Vit: 50
+    Int: 23
+    Dex: 61
+    Luk: 25
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 198
+    AttackDelay: 1460
+    AttackMotion: 960
+    DamageMotion: 432
+    Ai: 03
 # eAthena Dev Team
 #=============================================================
 #  - Id: 1900

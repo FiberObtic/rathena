@@ -1,0 +1,79 @@
+-	pointshop	exp_shop	-1,Exp_All_1,502:100000,501:100
+//-	pointshop	job_shop	-1,Job_All_2,502:100000,501:100
+
+
+morocc,167,81,4	script	RANK EXP	838,{
+Start:
+
+.@namenpc$ = "RANK EXP";
+
+.@expcost = 100000;
+//.@jobcost = 100000;
+
+mes "^FF3300[ "+.@namenpc$+" ]^000000";
+
+mes "สวัสดีคุณ ^009900"+strcharinfo(0)+"^000000";
+mes "คุณมี ^009900"+callfunc("F_InsertComma",Exp_All_1)+"^000000 EXP Points.";
+//mes "คุณมี ^009900"+callfunc("F_InsertComma",Job_All_2)+"^000000 JOB Points.";
+
+mes "<ITEM>"+getitemname(53000017)+" x1 = "+callfunc("F_InsertComma",.@expcost)+" แต้ม<INFO>53000017</INFO></ITEM>";
+//mes "<ITEM>"+getitemname(53000018)+" x1 = "+callfunc("F_InsertComma",.@jobcost)+" แต้ม<INFO>53000018</INFO></ITEM>";
+
+
+	Switch(Select("- แลก ^009900"+getitemname(53000017)+"^000000 ^BEBEBE( "+callfunc("F_InsertComma",.@expcost)+" แต้ม)")){		
+		case 1:
+			close2;
+			callshop "exp_shop",1;
+			end;
+//		case 2:
+//			
+//			close2;
+//			callshop "job_shop",1;
+//			end;
+		
+		//case 2:
+			
+			//if(countitem(53000017) > 0){ getexp2(10000000,0); delitem 53000017,countitem(53000017); }
+			//if(countitem(53000018) > 0){ getexp2(0,10000000); delitem 53000018,countitem(53000018); }
+		//end;
+	}
+
+OnInit:
+waitingroom "[#] RANK EXP",0;
+end;
+
+}
+
+-	script	Kill_Get_Exp	-1,{
+OnNPCKillEvent:
+setarray .mobid[0],
+1002;
+	for (set .@c, 0; .@c < getarraysize(.mobid); set .@c, .@c + 1){
+	
+		if (getmonsterinfo(killedrid,MOB_BASEEXP) >= 1){
+		
+			if(Baselevel == 99 && Joblevel >= 50){
+			
+				set #EXPPOINTS,getmonsterinfo(killedrid,MOB_BASEEXP);
+				set Exp_All_1,Exp_All_1 +#EXPPOINTS;
+				
+				//set #JOBPOINTS,getmonsterinfo(killedrid,MOB_BASEEXP);
+				//set Job_All_2,Job_All_2 +#JOBPOINTS;
+	
+				dispbottom "คุณได้รับ ค่าประสบการณ์ RANK EXP : "+callfunc("F_InsertComma",#EXPPOINTS)+" แต้ม   /   คุณได้เก็บ ค่าประสบการณ์ RANK EXP รวม  :  "+callfunc("F_InsertComma",Exp_All_1)+" แต้ม";				
+				//dispbottom "คุณได้รับ ค่าประสบการณ์ RANK JOB : "+callfunc("F_InsertComma",#JOBPOINTS)+" แต้ม   /   คุณได้เก็บ ค่าประสบการณ์ RANK JOB รวม  :  "+callfunc("F_InsertComma",Job_All_2)+" แต้ม";				
+				end;
+			
+			}
+		
+			dispbottom "คุณไม่สามารถเก็บRANK EXP ได้ เนื่องจากยังไม่ Lv.99";
+			
+			end;
+		
+		}
+
+	}
+
+end;
+
+}

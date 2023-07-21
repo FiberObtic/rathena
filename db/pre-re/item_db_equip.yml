@@ -94,6 +94,7 @@ Body:
     Name: Sword
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 100
     Weight: 500
     Attack: 25
@@ -121,6 +122,7 @@ Body:
     Name: Sword
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 100
     Weight: 500
     Attack: 25
@@ -148,6 +150,7 @@ Body:
     Name: Sword
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 100
     Weight: 500
     Attack: 25
@@ -174,6 +177,7 @@ Body:
     Name: Falchion
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 1500
     Weight: 600
     Attack: 39
@@ -201,6 +205,7 @@ Body:
     Name: Falchion
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 1500
     Weight: 600
     Attack: 39
@@ -228,6 +233,7 @@ Body:
     Name: Falchion
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 1500
     Weight: 600
     Attack: 39
@@ -254,6 +260,7 @@ Body:
     Name: Blade
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 2900
     Weight: 700
     Attack: 53
@@ -281,6 +288,7 @@ Body:
     Name: Blade
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 2900
     Weight: 700
     Attack: 53
@@ -308,6 +316,7 @@ Body:
     Name: Blade
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 2900
     Weight: 700
     Attack: 53
@@ -334,6 +343,7 @@ Body:
     Name: Rapier
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 10000
     Weight: 500
     Attack: 70
@@ -361,6 +371,7 @@ Body:
     Name: Rapier
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 10000
     Weight: 500
     Attack: 70
@@ -388,6 +399,7 @@ Body:
     Name: Rapier
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 10000
     Weight: 500
     Attack: 70
@@ -414,6 +426,7 @@ Body:
     Name: Scimitar
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 17000
     Weight: 700
     Attack: 85
@@ -441,6 +454,7 @@ Body:
     Name: Scimitar
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 17000
     Weight: 700
     Attack: 85
@@ -468,6 +482,7 @@ Body:
     Name: Scimitar
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 17000
     Weight: 700
     Attack: 85
@@ -551,6 +566,7 @@ Body:
     Name: Tsurugi
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 51000
     Weight: 1200
     Attack: 130
@@ -576,6 +592,7 @@ Body:
     Name: Tsurugi
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 51000
     Weight: 1200
     Attack: 130
@@ -601,6 +618,7 @@ Body:
     Name: Tsurugi
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 51000
     Weight: 1200
     Attack: 130
@@ -625,6 +643,7 @@ Body:
     Name: Ring Pommel Saber
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 24000
     Weight: 900
     Attack: 100
@@ -650,6 +669,7 @@ Body:
     Name: Haedonggum
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 50000
     Weight: 900
     Attack: 120
@@ -677,6 +697,7 @@ Body:
     Name: Orcish Sword
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 800
     Attack: 90
@@ -705,6 +726,7 @@ Body:
     Name: Ring Pommel Saber
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 24000
     Weight: 900
     Attack: 100
@@ -730,6 +752,7 @@ Body:
     Name: Saber
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 49000
     Weight: 1000
     Attack: 115
@@ -755,6 +778,7 @@ Body:
     Name: Saber
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 49000
     Weight: 1000
     Attack: 115
@@ -780,6 +804,7 @@ Body:
     Name: Haedonggum
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 50000
     Weight: 900
     Attack: 120
@@ -807,6 +832,7 @@ Body:
     Name: Flamberge
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 60000
     Weight: 1500
     Attack: 150
@@ -824,6 +850,7 @@ Body:
     Name: Nagan
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 500
     Attack: 120
@@ -852,6 +879,7 @@ Body:
     Name: Ice Falchion
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 600
     Attack: 100
@@ -882,6 +910,7 @@ Body:
     Name: Edge
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 700
     Attack: 115
@@ -909,6 +938,7 @@ Body:
     Name: Fireblend
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 500
     Attack: 100
@@ -937,6 +967,7 @@ Body:
     Name: Caesar's Sword
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 700
     Attack: 140
@@ -964,6 +995,7 @@ Body:
     Name: Cutlus
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 900
     Attack: 150
@@ -992,6 +1024,7 @@ Body:
     Name: Solar Sword
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 1200
     Attack: 85
@@ -1020,6 +1053,7 @@ Body:
     Name: Excalibur
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 1200
     Attack: 150
@@ -1049,6 +1083,7 @@ Body:
     Name: Mysteltainn
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 1000
     Attack: 170
@@ -1079,6 +1114,7 @@ Body:
     Name: Tirfing
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 1000
     Attack: 200
@@ -1106,6 +1142,7 @@ Body:
     Name: Byeollungum
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 900
     Attack: 150
@@ -1134,6 +1171,7 @@ Body:
     Name: Immaterial Sword
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 900
     Attack: 140
@@ -1163,6 +1201,7 @@ Body:
     Name: Jeweled Sword
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 2200
     Attack: 104
@@ -1189,6 +1228,7 @@ Body:
     Name: Gaia Sword
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 2500
     Attack: 140
@@ -1215,6 +1255,7 @@ Body:
     Name: Sashimi
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 1400
     Attack: 75
@@ -1242,6 +1283,7 @@ Body:
     Name: Holy Avenger
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 450000
     Weight: 1350
     Attack: 125
@@ -1261,6 +1303,7 @@ Body:
     Name: Town Sword
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 42000
     Weight: 800
     Attack: 100
@@ -1279,6 +1322,7 @@ Body:
     Name: Town Sword
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 42000
     Weight: 800
     Attack: 100
@@ -1297,6 +1341,7 @@ Body:
     Name: Star Dust Blade
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 1000
     Attack: 140
@@ -1318,6 +1363,7 @@ Body:
     Name: Flamberge
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 60000
     Weight: 1500
     Attack: 150
@@ -2264,6 +2310,7 @@ Body:
     Name: Knife
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 50
     Weight: 400
     Attack: 17
@@ -2299,6 +2346,7 @@ Body:
     Name: Knife
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 50
     Weight: 400
     Attack: 17
@@ -2334,6 +2382,7 @@ Body:
     Name: Knife
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 50
     Weight: 400
     Attack: 17
@@ -2368,6 +2417,7 @@ Body:
     Name: Cutter
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 1250
     Weight: 500
     Attack: 30
@@ -2403,6 +2453,7 @@ Body:
     Name: Cutter
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 1250
     Weight: 500
     Attack: 30
@@ -2438,6 +2489,7 @@ Body:
     Name: Cutter
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 1250
     Weight: 500
     Attack: 30
@@ -2472,6 +2524,7 @@ Body:
     Name: Main Gauche
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 2400
     Weight: 600
     Attack: 43
@@ -2507,6 +2560,7 @@ Body:
     Name: Main Gauche
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 2400
     Weight: 600
     Attack: 43
@@ -2542,6 +2596,7 @@ Body:
     Name: Main Gauche
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 2400
     Weight: 600
     Attack: 43
@@ -2576,6 +2631,7 @@ Body:
     Name: Dirk
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 8500
     Weight: 500
     Attack: 59
@@ -2611,6 +2667,7 @@ Body:
     Name: Dirk
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 8500
     Weight: 500
     Attack: 59
@@ -2646,6 +2703,7 @@ Body:
     Name: Dirk
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 8500
     Weight: 500
     Attack: 59
@@ -2680,6 +2738,7 @@ Body:
     Name: Dagger
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 14000
     Weight: 600
     Attack: 73
@@ -2715,6 +2774,7 @@ Body:
     Name: Dagger
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 14000
     Weight: 600
     Attack: 73
@@ -2750,6 +2810,7 @@ Body:
     Name: Dagger
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 14000
     Weight: 600
     Attack: 73
@@ -2784,6 +2845,7 @@ Body:
     Name: Stiletto
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 19500
     Weight: 700
     Attack: 87
@@ -2819,6 +2881,7 @@ Body:
     Name: Stiletto
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 19500
     Weight: 700
     Attack: 87
@@ -2854,6 +2917,7 @@ Body:
     Name: Stiletto
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 19500
     Weight: 700
     Attack: 87
@@ -2888,6 +2952,7 @@ Body:
     Name: Gladius
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 43000
     Weight: 700
     Attack: 105
@@ -2921,6 +2986,7 @@ Body:
     Name: Gladius
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 43000
     Weight: 700
     Attack: 105
@@ -2954,6 +3020,7 @@ Body:
     Name: Gladius
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 43000
     Weight: 700
     Attack: 105
@@ -2986,6 +3053,7 @@ Body:
     Name: Damascus
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 49000
     Weight: 800
     Attack: 118
@@ -3021,6 +3089,7 @@ Body:
     Name: Fortune Sword
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 500
     Attack: 90
@@ -3056,6 +3125,7 @@ Body:
     Name: Swordbreaker
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 1000
     Attack: 70
@@ -3090,6 +3160,7 @@ Body:
     Name: Mailbreaker
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 1000
     Attack: 70
@@ -3124,6 +3195,7 @@ Body:
     Name: Damascus
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 49000
     Weight: 800
     Attack: 118
@@ -3159,6 +3231,7 @@ Body:
     Name: Weeder Knife
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 400
     Attack: 80
@@ -3195,6 +3268,7 @@ Body:
     Name: Combat Knife
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 400
     Attack: 80
@@ -3233,6 +3307,7 @@ Body:
     Name: Kitchen Knife
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 500
     Attack: 75
@@ -3268,6 +3343,7 @@ Body:
     Name: Ice Pick
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 600
     Attack: 80
@@ -3302,6 +3378,7 @@ Body:
     Name: Bazerald
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 500
     Attack: 70
@@ -3338,6 +3415,7 @@ Body:
     Name: Assassin Dagger
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 600
     Attack: 140
@@ -3359,6 +3437,7 @@ Body:
     Name: Exorciser
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 700
     Attack: 90
@@ -3396,6 +3475,7 @@ Body:
     Name: Moonlight Dagger
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 700
     Attack: 50
@@ -3431,6 +3511,7 @@ Body:
     Name: Azoth
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 700
     Attack: 110
@@ -3449,6 +3530,7 @@ Body:
     Name: Sucsamad
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 800
     Attack: 140
@@ -3485,6 +3567,7 @@ Body:
     Name: Grimtooth
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 800
     Attack: 180
@@ -3522,6 +3605,7 @@ Body:
     Name: Zeny Knife
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 1200
     Attack: 64
@@ -3556,6 +3640,7 @@ Body:
     Name: Poison Knife
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 800
     Attack: 64
@@ -3591,6 +3676,7 @@ Body:
     Name: Princess Knife
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 400
     Attack: 84
@@ -3625,6 +3711,7 @@ Body:
     Name: Cursed Dagger
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 80000
     Weight: 400
     Attack: 55
@@ -3646,6 +3733,7 @@ Body:
     Name: Dagger of Counter
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 120000
     Weight: 550
     Attack: 140
@@ -3667,6 +3755,7 @@ Body:
     Name: Novice Main-Gauche
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 1
     Weight: 1
     Attack: 45
@@ -3683,6 +3772,7 @@ Body:
     Name: Holy Dagger
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 800
     Attack: 100
@@ -3705,6 +3795,7 @@ Body:
     Name: Cinquedea
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 40000
     Weight: 700
     Attack: 110
@@ -3723,6 +3814,7 @@ Body:
     Name: Cinquedea
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 40000
     Weight: 700
     Attack: 110
@@ -3741,6 +3833,7 @@ Body:
     Name: Kindle Dagger
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 10000
     Weight: 600
     Attack: 39
@@ -3777,6 +3870,7 @@ Body:
     Name: Obsidian Dagger
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 10000
     Weight: 600
     Attack: 39
@@ -3813,6 +3907,7 @@ Body:
     Name: Fisherman's Dagger
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 10000
     Weight: 600
     Attack: 39
@@ -5040,6 +5135,7 @@ Body:
     Name: Tomahawk
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 2
     Attack: 200
     Range: 1
@@ -5060,6 +5156,7 @@ Body:
     Name: Light Epsilon
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 1
     Attack: 229
     Range: 1
@@ -5082,6 +5179,7 @@ Body:
     Name: Battle Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 5400
     Weight: 1500
     Attack: 80
@@ -5104,6 +5202,7 @@ Body:
     Name: Battle Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 5400
     Weight: 1500
     Attack: 80
@@ -5126,6 +5225,7 @@ Body:
     Name: Battle Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 5400
     Weight: 1500
     Attack: 80
@@ -5147,6 +5247,7 @@ Body:
     Name: Hammer
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 15500
     Weight: 2000
     Attack: 120
@@ -5169,6 +5270,7 @@ Body:
     Name: Hammer
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 15500
     Weight: 2000
     Attack: 120
@@ -5191,6 +5293,7 @@ Body:
     Name: Hammer
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 15500
     Weight: 2000
     Attack: 120
@@ -5212,6 +5315,7 @@ Body:
     Name: Buster
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 34000
     Weight: 2200
     Attack: 155
@@ -5234,6 +5338,7 @@ Body:
     Name: Buster
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 34000
     Weight: 2200
     Attack: 155
@@ -5256,6 +5361,7 @@ Body:
     Name: Buster
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 34000
     Weight: 2200
     Attack: 155
@@ -5277,6 +5383,7 @@ Body:
     Name: Two-Handed Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 55000
     Weight: 2500
     Attack: 185
@@ -5299,6 +5406,7 @@ Body:
     Name: Two-Handed Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 55000
     Weight: 2500
     Attack: 185
@@ -5321,6 +5429,7 @@ Body:
     Name: Two-Handed Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 55000
     Weight: 2500
     Attack: 185
@@ -5342,6 +5451,7 @@ Body:
     Name: Bloody Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Weight: 4000
     Attack: 170
@@ -5366,6 +5476,7 @@ Body:
     Name: Great Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Weight: 1800
     Attack: 187
@@ -5390,6 +5501,7 @@ Body:
     Name: Sabbath
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Weight: 2300
     Attack: 120
@@ -5415,6 +5527,7 @@ Body:
     Name: Light Epsilon
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Weight: 2300
     Attack: 180
@@ -5440,6 +5553,7 @@ Body:
     Name: Slaughter
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Weight: 2500
     Attack: 120
@@ -5467,6 +5581,7 @@ Body:
     Name: Tomahawk
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Weight: 2500
     Attack: 165
@@ -5491,6 +5606,7 @@ Body:
     Name: Guillotine
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Weight: 3000
     Attack: 215
@@ -5519,6 +5635,7 @@ Body:
     Name: Doom Slayer
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Weight: 6000
     Attack: 10
@@ -5548,6 +5665,7 @@ Body:
     Name: Doom Slayer
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Weight: 6000
     Attack: 10
@@ -5578,6 +5696,7 @@ Body:
     Name: Light Epsilon
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 1
     Attack: 229
     Range: 1
@@ -5612,6 +5731,7 @@ Body:
     Name: Refined Bloody Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 2
     Attack: 205
     Range: 1
@@ -5634,6 +5754,7 @@ Body:
     Name: Tomahawk
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 2
     Attack: 200
     Range: 1
@@ -5655,6 +5776,7 @@ Body:
     Name: Berdysz
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Weight: 2500
     Attack: 200
@@ -5682,6 +5804,7 @@ Body:
     Name: Heart Breaker
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Weight: 2000
     Attack: 175
@@ -5711,6 +5834,7 @@ Body:
     Name: Hurricane's Fury
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Weight: 3500
     Attack: 332
@@ -5739,6 +5863,7 @@ Body:
     Name: Refined Great Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 1
     Attack: 215
     Range: 1
@@ -5762,6 +5887,7 @@ Body:
     Name: Valorous Insane Battle Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Attack: 200
     Range: 1
@@ -5796,6 +5922,7 @@ Body:
     Name: Brave Insane Battle Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Attack: 200
     Range: 1
@@ -5829,6 +5956,7 @@ Body:
     Name: Novice Battle Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Attack: 100
     Range: 1
     Slots: 3
@@ -5856,6 +5984,7 @@ Body:
     Name: Glorious Two-Handed Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Attack: 220
     Range: 1
@@ -5902,6 +6031,7 @@ Body:
     Name: Celestial Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Weight: 1500
     Attack: 200
@@ -5934,6 +6064,7 @@ Body:
     Name: Veteran Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 10000
     Weight: 3000
     Attack: 250
@@ -5979,6 +6110,7 @@ Body:
     Name: Bradium Stone Hammer
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Weight: 2700
     Attack: 210
@@ -6004,6 +6136,7 @@ Body:
     Name: Doom Slayer
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Attack: 20
     Range: 1
     Jobs:
@@ -6038,6 +6171,7 @@ Body:
     Name: Giant Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 20
     Weight: 4000
     Attack: 330
@@ -6068,6 +6202,7 @@ Body:
     Name: Two-Handed Axe
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Attack: 220
     Range: 1
     Jobs:
@@ -6097,6 +6232,7 @@ Body:
     Name: Tomahawk
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 2
     Attack: 200
     Range: 1
@@ -6117,6 +6253,7 @@ Body:
     Name: Light Epsilon
     Type: Weapon
     SubType: 2hAxe
+    View: 7
     Buy: 1
     Attack: 229
     Range: 1
@@ -7719,6 +7856,7 @@ Body:
     Name: Club
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 120
     Weight: 700
     Attack: 23
@@ -7746,6 +7884,7 @@ Body:
     Name: Club
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 120
     Weight: 700
     Attack: 23
@@ -7773,6 +7912,7 @@ Body:
     Name: Club
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 120
     Weight: 700
     Attack: 23
@@ -7799,6 +7939,7 @@ Body:
     Name: Mace
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 1600
     Weight: 800
     Attack: 37
@@ -7826,6 +7967,7 @@ Body:
     Name: Mace
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 1600
     Weight: 800
     Attack: 37
@@ -7853,6 +7995,7 @@ Body:
     Name: Mace
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 1600
     Weight: 800
     Attack: 37
@@ -7879,6 +8022,7 @@ Body:
     Name: Smasher
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 9000
     Weight: 1000
     Attack: 54
@@ -7906,6 +8050,7 @@ Body:
     Name: Smasher
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 9000
     Weight: 1000
     Attack: 54
@@ -7933,6 +8078,7 @@ Body:
     Name: Smasher
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 9000
     Weight: 1000
     Attack: 54
@@ -7960,6 +8106,7 @@ Body:
     Name: Flail
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 16000
     Weight: 900
     Attack: 69
@@ -7985,6 +8132,7 @@ Body:
     Name: Flail
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 16000
     Weight: 900
     Attack: 69
@@ -8010,6 +8158,7 @@ Body:
     Name: Flail
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 16000
     Weight: 900
     Attack: 69
@@ -8035,6 +8184,7 @@ Body:
     Name: Morning Star
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 41000
     Weight: 1500
     Attack: 110
@@ -8060,6 +8210,7 @@ Body:
     Name: Morning Star
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 41000
     Weight: 1500
     Attack: 110
@@ -8085,6 +8236,7 @@ Body:
     Name: Morning Star
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 41000
     Weight: 1500
     Attack: 110
@@ -8110,6 +8262,7 @@ Body:
     Name: Sword Mace
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 50000
     Weight: 1200
     Attack: 130
@@ -8134,6 +8287,7 @@ Body:
     Name: Sword Mace
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 50000
     Weight: 1200
     Attack: 130
@@ -8159,6 +8313,7 @@ Body:
     Name: Sword Mace
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 50000
     Weight: 1200
     Attack: 130
@@ -8184,6 +8339,7 @@ Body:
     Name: Chain
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 23000
     Weight: 800
     Attack: 84
@@ -8209,6 +8365,7 @@ Body:
     Name: Chain
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 23000
     Weight: 800
     Attack: 84
@@ -8234,6 +8391,7 @@ Body:
     Name: Chain
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 23000
     Weight: 800
     Attack: 84
@@ -8259,6 +8417,7 @@ Body:
     Name: Stunner
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 60000
     Weight: 2000
     Attack: 140
@@ -8279,6 +8438,7 @@ Body:
     Name: Spike
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 700
     Attack: 85
@@ -8301,6 +8461,7 @@ Body:
     Name: Golden Mace
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 800
     Attack: 110
@@ -8323,6 +8484,7 @@ Body:
     Name: Long Mace
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 800
     Attack: 135
@@ -8343,6 +8505,7 @@ Body:
     Name: Slash
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 1000
     Attack: 145
@@ -8365,6 +8528,7 @@ Body:
     Name: Quadrille
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 900
     Attack: 165
@@ -8388,6 +8552,7 @@ Body:
     Name: Grand Cross
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 1500
     Attack: 140
@@ -8412,6 +8577,7 @@ Body:
     Name: Iron Driver
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 3000
     Attack: 155
@@ -8429,6 +8595,7 @@ Body:
     Name: Mjolnir
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 6000
     Attack: 250
@@ -8455,6 +8622,7 @@ Body:
     Name: Wrench
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 2500
     Attack: 115
@@ -8478,6 +8646,7 @@ Body:
     Name: Stunner
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 60000
     Weight: 2000
     Attack: 140
@@ -8499,6 +8668,7 @@ Body:
     Name: Warrior's Balmung
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 1000
     Attack: 170
@@ -8524,6 +8694,7 @@ Body:
     Name: Wrench
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 2
     Attack: 150
     Range: 1
@@ -8544,6 +8715,7 @@ Body:
     Name: Hollgrehenn's Hammer
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 4444
     Weight: 44
     Attack: 4
@@ -8575,6 +8747,7 @@ Body:
     Name: Good Morning Star
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Attack: 120
     Range: 1
@@ -8606,6 +8779,7 @@ Body:
     Name: Refined Quadrille
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 1
     Attack: 193
     Range: 1
@@ -8626,6 +8800,7 @@ Body:
     Name: Spike
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 700
     Attack: 85
@@ -8649,6 +8824,7 @@ Body:
     Name: Golden Mace
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 800
     Attack: 110
@@ -8671,6 +8847,7 @@ Body:
     Name: Grand Cross
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 1500
     Attack: 140
@@ -8696,6 +8873,7 @@ Body:
     Name: Nemesis
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 900
     Attack: 120
@@ -8720,6 +8898,7 @@ Body:
     Name: Valorous Battlefield Morning Star
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Attack: 105
     Range: 1
@@ -8760,6 +8939,7 @@ Body:
     Name: Brave Battlefield Morning Star
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Attack: 105
     Range: 1
@@ -8799,6 +8979,7 @@ Body:
     Name: Lunakaligo
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 700
     Attack: 110
@@ -8828,6 +9009,7 @@ Body:
     Name: Novice Mace
     Type: Weapon
     SubType: Mace
+    View: 8
     Attack: 57
     Range: 1
     Slots: 3
@@ -8860,6 +9042,7 @@ Body:
     Name: Glorious Morning Star
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Attack: 130
     Range: 1
@@ -8910,6 +9093,7 @@ Body:
     Name: Mace Of Madness
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Attack: 150
     Range: 1
@@ -8943,6 +9127,7 @@ Body:
     Name: Veteran Hammer
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 10000
     Weight: 1800
     Attack: 160
@@ -8967,6 +9152,7 @@ Body:
     Name: Pile Bunker
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 10000
     Weight: 3500
     Attack: 450
@@ -9784,6 +9970,7 @@ Body:
     Name: Angra Manyu
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 1
     Weight: 10
     Attack: 200
@@ -9810,6 +9997,7 @@ Body:
     Name: Rod
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 50
     Weight: 400
     Attack: 15
@@ -9837,6 +10025,7 @@ Body:
     Name: Rod
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 50
     Weight: 400
     Attack: 15
@@ -9864,6 +10053,7 @@ Body:
     Name: Rod
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 50
     Weight: 400
     Attack: 15
@@ -9890,6 +10080,7 @@ Body:
     Name: Wand
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 2500
     Weight: 400
     Attack: 25
@@ -9918,6 +10109,7 @@ Body:
     Name: Wand
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 2500
     Weight: 400
     Attack: 25
@@ -9946,6 +10138,7 @@ Body:
     Name: Wand
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 2500
     Weight: 400
     Attack: 25
@@ -9973,6 +10166,7 @@ Body:
     Name: Staff
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 9500
     Weight: 400
     Attack: 40
@@ -9999,6 +10193,7 @@ Body:
     Name: Staff
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 9500
     Weight: 400
     Attack: 40
@@ -10025,6 +10220,7 @@ Body:
     Name: Staff
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 9500
     Weight: 400
     Attack: 40
@@ -10050,6 +10246,7 @@ Body:
     Name: Arc Wand
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 45000
     Weight: 400
     Attack: 60
@@ -10076,6 +10273,7 @@ Body:
     Name: Arc Wand
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 45000
     Weight: 400
     Attack: 60
@@ -10102,6 +10300,7 @@ Body:
     Name: Arc Wand
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 45000
     Weight: 400
     Attack: 60
@@ -10127,6 +10326,7 @@ Body:
     Name: Mighty Staff
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 700
     Attack: 130
@@ -10153,6 +10353,7 @@ Body:
     Name: Wand of Occult
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 700
     Attack: 75
@@ -10178,6 +10379,7 @@ Body:
     Name: Evil Bone Wand
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 700
     Attack: 40
@@ -10204,6 +10406,7 @@ Body:
     Name: Wing Staff
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 500
     Attack: 60
@@ -10226,6 +10429,7 @@ Body:
     Name: Survivor's Rod
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 85000
     Weight: 1000
     Attack: 50
@@ -10252,6 +10456,7 @@ Body:
     Name: Survivor's Rod
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 85000
     Weight: 1000
     Attack: 50
@@ -10279,6 +10484,7 @@ Body:
     Name: Survivor's Rod
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 85000
     Weight: 1000
     Attack: 50
@@ -10305,6 +10511,7 @@ Body:
     Name: Survivor's Rod
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 85000
     Weight: 1000
     Attack: 50
@@ -10332,6 +10539,7 @@ Body:
     Name: Hypnotist's Staff
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 43000
     Weight: 500
     Attack: 70
@@ -10353,6 +10561,7 @@ Body:
     Name: Hypnotist's Staff
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 500
     Attack: 70
@@ -10374,6 +10583,7 @@ Body:
     Name: Mighty Staff
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 1
     Attack: 165
     Range: 1
@@ -10408,6 +10618,7 @@ Body:
     Name: Lich's Bone Wand
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 800
     Attack: 60
@@ -10443,6 +10654,7 @@ Body:
     Name: Healing Staff
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 400
     Attack: 10
@@ -10465,6 +10677,7 @@ Body:
     Name: Piercing Staff
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 500
     Attack: 80
@@ -10494,6 +10707,7 @@ Body:
     Name: Staffy
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Attack: 40
     Range: 1
@@ -10524,6 +10738,7 @@ Body:
     Name: Refined Survivor's Rod
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 1
     Attack: 71
     Range: 1
@@ -10547,6 +10762,7 @@ Body:
     Name: Gentleman's Staff
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 500
     Attack: 40
@@ -10573,6 +10789,7 @@ Body:
     Name: Release of Wish
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 500
     Attack: 30
@@ -10597,6 +10814,7 @@ Body:
     Name: Holy Stick
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 500
     Attack: 50
@@ -10621,6 +10839,7 @@ Body:
     Name: Warlock's Magic Wand
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Attack: 70
     Range: 1
@@ -10657,6 +10876,7 @@ Body:
     Name: Warlock's Battle Wand
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Attack: 70
     Range: 1
@@ -10693,6 +10913,7 @@ Body:
     Name: Strong Recovery Wand
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Attack: 70
     Range: 1
@@ -10726,6 +10947,7 @@ Body:
     Name: Speedy Recovery Wand
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Attack: 70
     Range: 1
@@ -10761,6 +10983,7 @@ Body:
     Name: Thorn Staff of Darkness
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 700
     Attack: 60
@@ -10792,6 +11015,7 @@ Body:
     Name: Eraser
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 500
     Attack: 80
@@ -10824,6 +11048,7 @@ Body:
     Name: Staff Of Healing
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Attack: 10
     Range: 1
@@ -10854,6 +11079,7 @@ Body:
     Name: Novice Rod
     Type: Weapon
     SubType: Staff
+    View: 10
     Attack: 15
     Range: 1
     Slots: 3
@@ -10886,6 +11112,7 @@ Body:
     Name: Glorious Arc Wand
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Attack: 70
     Range: 1
@@ -10928,6 +11155,7 @@ Body:
     Name: Glorious Cure Wand
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Attack: 70
     Range: 1
@@ -10973,6 +11201,7 @@ Body:
     Name: Staff Of Darkness
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Attack: 100
     Range: 1
@@ -11005,6 +11234,7 @@ Body:
     Name: Dead Tree Cane
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 100
     Attack: 100
@@ -11036,6 +11266,7 @@ Body:
     Name: Staff of Piercing
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 500
     Attack: 80
@@ -11073,6 +11304,7 @@ Body:
     Name: Lich's Bone Wand
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 800
     Attack: 60
@@ -11116,6 +11348,7 @@ Body:
     Name: La'cryma Stick
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 500
     Attack: 30
@@ -11145,6 +11378,7 @@ Body:
     Name: Croce Staff
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 500
     Attack: 30
@@ -11171,6 +11405,7 @@ Body:
     Name: Staff Of Bordeaux
     Type: Weapon
     SubType: Staff
+    View: 10
     Buy: 20
     Weight: 500
     Attack: 30
@@ -11199,6 +11434,7 @@ Body:
     Name: Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 1000
     Weight: 500
     Attack: 15
@@ -11220,6 +11456,7 @@ Body:
     Name: Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 1000
     Weight: 500
     Attack: 15
@@ -11241,6 +11478,7 @@ Body:
     Name: Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 1000
     Attack: 15
     Range: 5
@@ -11274,6 +11512,7 @@ Body:
     Name: Composite Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 2500
     Weight: 600
     Attack: 29
@@ -11295,6 +11534,7 @@ Body:
     Name: Composite Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 2500
     Weight: 600
     Attack: 29
@@ -11316,6 +11556,7 @@ Body:
     Name: Composite Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 2500
     Weight: 600
     Attack: 29
@@ -11336,6 +11577,7 @@ Body:
     Name: Great Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 10000
     Weight: 1000
     Attack: 50
@@ -11357,6 +11599,7 @@ Body:
     Name: Great Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 10000
     Weight: 1000
     Attack: 50
@@ -11378,6 +11621,7 @@ Body:
     Name: Great Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 10000
     Weight: 1000
     Attack: 50
@@ -11398,6 +11642,7 @@ Body:
     Name: Crossbow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 17000
     Weight: 900
     Attack: 65
@@ -11419,6 +11664,7 @@ Body:
     Name: Crossbow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 17000
     Weight: 900
     Attack: 65
@@ -11440,6 +11686,7 @@ Body:
     Name: Crossbow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 17000
     Weight: 900
     Attack: 65
@@ -11460,6 +11707,7 @@ Body:
     Name: Arbalest
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 48000
     Weight: 1000
     Attack: 90
@@ -11483,6 +11731,7 @@ Body:
     Name: Gakkung Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 42000
     Weight: 1100
     Attack: 100
@@ -11504,6 +11753,7 @@ Body:
     Name: Arbalest
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 48000
     Weight: 1000
     Attack: 90
@@ -11527,6 +11777,7 @@ Body:
     Name: Gakkung Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 42000
     Weight: 1100
     Attack: 100
@@ -11548,6 +11799,7 @@ Body:
     Name: Hunter Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 64000
     Weight: 1500
     Attack: 125
@@ -11564,6 +11816,7 @@ Body:
     Name: Roguemaster's Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 20
     Weight: 500
     Attack: 75
@@ -11580,6 +11833,7 @@ Body:
     Name: Rudra Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 20
     Weight: 1200
     Attack: 150
@@ -11609,6 +11863,7 @@ Body:
     Name: Repeating Crossbow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 89000
     Weight: 2000
     Attack: 95
@@ -11628,6 +11883,7 @@ Body:
     Name: Ballista
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 124000
     Weight: 3500
     Attack: 145
@@ -11645,6 +11901,7 @@ Body:
     Name: Luna Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 20
     Weight: 2000
     Attack: 100
@@ -11664,6 +11921,7 @@ Body:
     Name: Dragon Wing
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 20
     Weight: 1200
     Attack: 100
@@ -11687,6 +11945,7 @@ Body:
     Name: Minstrel Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 20
     Weight: 1700
     Attack: 120
@@ -11708,6 +11967,7 @@ Body:
     Name: Hunter Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 64000
     Weight: 1500
     Attack: 125
@@ -11725,6 +11985,7 @@ Body:
     Name: Ballista
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 124000
     Weight: 3500
     Attack: 145
@@ -11743,6 +12004,7 @@ Body:
     Name: Ballista
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 1
     Attack: 194
     Range: 5
@@ -11769,6 +12031,7 @@ Body:
     Name: Rudra Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 2
     Attack: 185
     Range: 5
@@ -11791,6 +12054,7 @@ Body:
     Name: Burning Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 20
     Weight: 1400
     Attack: 95
@@ -11813,6 +12077,7 @@ Body:
     Name: Frozen Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 20
     Weight: 1400
     Attack: 100
@@ -11835,6 +12100,7 @@ Body:
     Name: Earth Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 20
     Weight: 1400
     Attack: 105
@@ -11855,6 +12121,7 @@ Body:
     Name: Gust Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 20
     Weight: 1400
     Attack: 95
@@ -11875,6 +12142,7 @@ Body:
     Name: Orc Archer Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 20
     Weight: 1600
     Attack: 120
@@ -11896,6 +12164,7 @@ Body:
     Name: Kkakkung
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 20
     Attack: 120
     Range: 5
@@ -11924,6 +12193,7 @@ Body:
     Name: Double Bound
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 20
     Weight: 900
     Attack: 70
@@ -11945,6 +12215,7 @@ Body:
     Name: Ixion Wings
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 20
     Weight: 300
     Attack: 135
@@ -11967,6 +12238,7 @@ Body:
     Name: Valorous Battle CrossBow
     Type: Weapon
     SubType: Bow
+    View: 11
     Attack: 100
     Range: 5
     Jobs:
@@ -11999,6 +12271,7 @@ Body:
     Name: Brave Battle CrossBow
     Type: Weapon
     SubType: Bow
+    View: 11
     Attack: 100
     Range: 5
     Jobs:
@@ -12030,6 +12303,7 @@ Body:
     Name: Nepenthes Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 20
     Weight: 1000
     Attack: 105
@@ -12051,6 +12325,7 @@ Body:
     Name: Cursed Lyre
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 20
     Weight: 1250
     Attack: 125
@@ -12075,6 +12350,7 @@ Body:
     Name: Novice Composite Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 1
     Attack: 49
     Range: 5
@@ -12102,6 +12378,7 @@ Body:
     Name: Glorious Hunter Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Attack: 100
     Range: 5
     Jobs:
@@ -12143,6 +12420,7 @@ Body:
     Name: Bow Of Evil
     Type: Weapon
     SubType: Bow
+    View: 11
     Attack: 170
     Range: 5
     Jobs:
@@ -12172,6 +12450,7 @@ Body:
     Name: Falken Blitz
     Type: Weapon
     SubType: Bow
+    View: 11
     Weight: 1000
     Attack: 100
     Range: 5
@@ -12196,6 +12475,7 @@ Body:
     Name: Waghnak
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 8000
     Weight: 400
     Attack: 30
@@ -12214,6 +12494,7 @@ Body:
     Name: Waghnak
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 8000
     Weight: 400
     Attack: 30
@@ -12232,6 +12513,7 @@ Body:
     Name: Knuckle Dusters
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 25000
     Weight: 450
     Attack: 50
@@ -12250,6 +12532,7 @@ Body:
     Name: Knuckle Dusters
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 25000
     Weight: 450
     Attack: 50
@@ -12268,6 +12551,7 @@ Body:
     Name: Studded Knuckles
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 32000
     Weight: 450
     Attack: 65
@@ -12286,6 +12570,7 @@ Body:
     Name: Studded Knuckles
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 32000
     Weight: 450
     Attack: 65
@@ -12304,6 +12589,7 @@ Body:
     Name: Fist
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 53000
     Weight: 650
     Attack: 115
@@ -12321,6 +12607,7 @@ Body:
     Name: Fist
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 53000
     Weight: 650
     Attack: 115
@@ -12339,6 +12626,7 @@ Body:
     Name: Claw
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 67000
     Weight: 500
     Attack: 86
@@ -12359,6 +12647,7 @@ Body:
     Name: Claw
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 67000
     Weight: 500
     Attack: 86
@@ -12379,6 +12668,7 @@ Body:
     Name: Finger
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 58000
     Weight: 500
     Attack: 97
@@ -12397,6 +12687,7 @@ Body:
     Name: Finger
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 58000
     Weight: 500
     Attack: 97
@@ -12415,6 +12706,7 @@ Body:
     Name: Kaiser Knuckle
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 20
     Weight: 450
     Attack: 110
@@ -12439,6 +12731,7 @@ Body:
     Name: Berserk
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 20
     Weight: 500
     Attack: 120
@@ -12458,6 +12751,7 @@ Body:
     Name: Hatii Claw
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 20
     Weight: 550
     Attack: 152
@@ -12480,6 +12774,7 @@ Body:
     Name: Berserk
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 20
     Weight: 500
     Attack: 120
@@ -12500,6 +12795,7 @@ Body:
     Name: Kaiser Knuckle
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 1
     Attack: 159
     Range: 1
@@ -12532,6 +12828,7 @@ Body:
     Name: Magma Fist
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 20
     Weight: 650
     Attack: 80
@@ -12552,6 +12849,7 @@ Body:
     Name: Icicle Fist
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 20
     Weight: 650
     Attack: 80
@@ -12572,6 +12870,7 @@ Body:
     Name: Electric Fist
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 20
     Weight: 650
     Attack: 80
@@ -12592,6 +12891,7 @@ Body:
     Name: Seismic Fist
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 20
     Weight: 650
     Attack: 80
@@ -12612,6 +12912,7 @@ Body:
     Name: Combo Battle Glove
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 20
     Weight: 500
     Attack: 30
@@ -12634,6 +12935,7 @@ Body:
     Name: Valorous Battle Fist
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 20
     Attack: 30
     Range: 1
@@ -12666,6 +12968,7 @@ Body:
     Name: Brave Battle Fist
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 20
     Attack: 30
     Range: 1
@@ -12697,6 +13000,7 @@ Body:
     Name: Horn of Hillslion
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 20
     Weight: 600
     Attack: 95
@@ -12720,6 +13024,7 @@ Body:
     Name: Glorious Claw
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 20
     Attack: 30
     Range: 1
@@ -12760,6 +13065,7 @@ Body:
     Name: Glorious Fist
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 20
     Attack: 30
     Range: 1
@@ -12800,6 +13106,7 @@ Body:
     Name: Monk Knuckle
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Buy: 20
     Attack: 150
     Range: 1
@@ -12826,6 +13133,7 @@ Body:
     Name: Fist
     Type: Weapon
     SubType: Knuckle
+    View: 12
     Attack: 150
     Range: 1
     Jobs:
@@ -12851,6 +13159,7 @@ Body:
     Name: Violin
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 4000
     Weight: 700
     Attack: 50
@@ -12869,6 +13178,7 @@ Body:
     Name: Violin
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 4000
     Weight: 700
     Attack: 50
@@ -12887,6 +13197,7 @@ Body:
     Name: Mandolin
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 18000
     Weight: 400
     Attack: 90
@@ -12905,6 +13216,7 @@ Body:
     Name: Mandolin
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 18000
     Weight: 400
     Attack: 90
@@ -12923,6 +13235,7 @@ Body:
     Name: Lute
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 24500
     Weight: 500
     Attack: 105
@@ -12941,6 +13254,7 @@ Body:
     Name: Lute
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 24500
     Weight: 500
     Attack: 105
@@ -12959,6 +13273,7 @@ Body:
     Name: Guitar
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 47000
     Weight: 900
     Attack: 142
@@ -12976,6 +13291,7 @@ Body:
     Name: Guitar
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 47000
     Weight: 900
     Attack: 142
@@ -12994,6 +13310,7 @@ Body:
     Name: Harp
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 62000
     Weight: 900
     Attack: 114
@@ -13014,6 +13331,7 @@ Body:
     Name: Harp
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 62000
     Weight: 900
     Attack: 114
@@ -13034,6 +13352,7 @@ Body:
     Name: Gumoongoh
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 54000
     Weight: 1300
     Attack: 126
@@ -13052,6 +13371,7 @@ Body:
     Name: Gumoongoh
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 54000
     Weight: 1300
     Attack: 126
@@ -13070,6 +13390,7 @@ Body:
     Name: Electric Guitar
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 20
     Weight: 1800
     Attack: 110
@@ -13093,6 +13414,7 @@ Body:
     Name: Burning Passion Guitar
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 20
     Weight: 900
     Attack: 110
@@ -13112,6 +13434,7 @@ Body:
     Name: Loner's Guitar
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 20
     Weight: 900
     Attack: 110
@@ -13131,6 +13454,7 @@ Body:
     Name: Green Acre Guitar
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 20
     Weight: 900
     Attack: 110
@@ -13150,6 +13474,7 @@ Body:
     Name: Gentle Breeze Guitar
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 20
     Weight: 900
     Attack: 110
@@ -13169,6 +13494,7 @@ Body:
     Name: Oriental Lute
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 20
     Weight: 1200
     Attack: 150
@@ -13189,6 +13515,7 @@ Body:
     Name: Bass Guitar
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 20
     Weight: 1500
     Attack: 130
@@ -13213,6 +13540,7 @@ Body:
     Name: Berserk Guitar
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 20
     Weight: 1800
     Attack: 10
@@ -13237,6 +13565,7 @@ Body:
     Name: Gun Moon Gom
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 20
     Attack: 120
     Range: 1
@@ -13261,6 +13590,7 @@ Body:
     Name: Oriental Lute
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 20
     Weight: 1200
     Attack: 150
@@ -13282,6 +13612,7 @@ Body:
     Name: Valorous Battlefield Guitar
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 20
     Attack: 50
     Range: 1
@@ -13312,6 +13643,7 @@ Body:
     Name: Brave Battlefield Guitar
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 20
     Attack: 50
     Range: 1
@@ -13341,6 +13673,7 @@ Body:
     Name: Cello
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 20
     Weight: 700
     Attack: 110
@@ -13366,6 +13699,7 @@ Body:
     Name: Harp of Nepenthes
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 20
     Weight: 1000
     Attack: 120
@@ -13394,6 +13728,7 @@ Body:
     Name: Glorious Guitar
     Type: Weapon
     SubType: Musical
+    View: 13
     Buy: 20
     Attack: 50
     Range: 1
@@ -13432,6 +13767,7 @@ Body:
     Name: Spirited Guitar
     Type: Weapon
     SubType: Musical
+    View: 13
     Attack: 40
     Range: 1
     Jobs:
@@ -13461,6 +13797,7 @@ Body:
     Name: Guitar
     Type: Weapon
     SubType: Musical
+    View: 13
     Attack: 177
     Range: 1
     Jobs:
@@ -13486,6 +13823,7 @@ Body:
     Name: Rope
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 2500
     Weight: 400
     Attack: 45
@@ -13504,6 +13842,7 @@ Body:
     Name: Rope
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 2500
     Weight: 400
     Attack: 45
@@ -13522,6 +13861,7 @@ Body:
     Name: Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 12000
     Weight: 300
     Attack: 80
@@ -13540,6 +13880,7 @@ Body:
     Name: Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 12000
     Weight: 300
     Attack: 80
@@ -13558,6 +13899,7 @@ Body:
     Name: Wire Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 17500
     Weight: 1000
     Attack: 95
@@ -13576,6 +13918,7 @@ Body:
     Name: Wire Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 17500
     Weight: 1000
     Attack: 95
@@ -13594,6 +13937,7 @@ Body:
     Name: Rante Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 32000
     Weight: 900
     Attack: 135
@@ -13611,6 +13955,7 @@ Body:
     Name: Rante Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 32000
     Weight: 900
     Attack: 135
@@ -13629,6 +13974,7 @@ Body:
     Name: Tail Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 41000
     Weight: 700
     Attack: 105
@@ -13649,6 +13995,7 @@ Body:
     Name: Tail Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 41000
     Weight: 700
     Attack: 105
@@ -13669,6 +14016,7 @@ Body:
     Name: Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 38000
     Weight: 700
     Attack: 120
@@ -13687,6 +14035,7 @@ Body:
     Name: Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 38000
     Weight: 700
     Attack: 120
@@ -13705,6 +14054,7 @@ Body:
     Name: Lariat Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Weight: 400
     Attack: 100
@@ -13725,6 +14075,7 @@ Body:
     Name: Rapture Rose
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Weight: 300
     Attack: 115
@@ -13745,6 +14096,7 @@ Body:
     Name: Chemeti Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Weight: 700
     Attack: 135
@@ -13766,6 +14118,7 @@ Body:
     Name: Red Flame Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Weight: 700
     Attack: 110
@@ -13785,6 +14138,7 @@ Body:
     Name: Icicle Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Weight: 700
     Attack: 110
@@ -13804,6 +14158,7 @@ Body:
     Name: Gaia Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Weight: 700
     Attack: 110
@@ -13823,6 +14178,7 @@ Body:
     Name: Skipping Rope
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Weight: 400
     Attack: 120
@@ -13842,6 +14198,7 @@ Body:
     Name: Blade Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Weight: 1200
     Attack: 140
@@ -13861,6 +14218,7 @@ Body:
     Name: Queen's Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Weight: 1100
     Attack: 150
@@ -13881,6 +14239,7 @@ Body:
     Name: Electric Wire
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Weight: 700
     Attack: 110
@@ -13900,6 +14259,7 @@ Body:
     Name: Electric Eel
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Weight: 2000
     Attack: 100
@@ -13927,6 +14287,7 @@ Body:
     Name: Sea Witch's Foot
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Weight: 1500
     Attack: 110
@@ -13951,6 +14312,7 @@ Body:
     Name: Carrot Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Weight: 1300
     Attack: 185
@@ -13973,6 +14335,7 @@ Body:
     Name: Queen Is Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Attack: 120
     Range: 2
@@ -13997,6 +14360,7 @@ Body:
     Name: Queen's Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Weight: 1100
     Attack: 150
@@ -14018,6 +14382,7 @@ Body:
     Name: Valorous Battle Lariat
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Attack: 50
     Range: 2
@@ -14048,6 +14413,7 @@ Body:
     Name: Brave Battle Lariat
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Attack: 50
     Range: 2
@@ -14077,6 +14443,7 @@ Body:
     Name: Stem of Nepenthes
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Weight: 1000
     Attack: 120
@@ -14105,6 +14472,7 @@ Body:
     Name: Whip of Balance
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Weight: 700
     Attack: 110
@@ -14130,6 +14498,7 @@ Body:
     Name: Glorious Lariat
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Attack: 50
     Range: 2
@@ -14168,6 +14537,7 @@ Body:
     Name: Phenomena Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Buy: 20
     Attack: 160
     Range: 2
@@ -14194,6 +14564,7 @@ Body:
     Name: Rante Whip
     Type: Weapon
     SubType: Whip
+    View: 14
     Attack: 170
     Range: 2
     Jobs:
@@ -36975,6 +37346,7 @@ Body:
     Name: Jujube Dagger
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 10000
     Weight: 600
     Attack: 39
@@ -37011,6 +37383,7 @@ Body:
     Name: Dragon Killer
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 900
     Attack: 110
@@ -37048,6 +37421,7 @@ Body:
     Name: Ginnungagap
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 700
     Attack: 148
@@ -37086,6 +37460,7 @@ Body:
     Name: Cowardice Blade
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 52000
     Weight: 700
     Attack: 80
@@ -37108,6 +37483,7 @@ Body:
     Name: Cowardice Blade
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 52000
     Weight: 700
     Attack: 80
@@ -37130,6 +37506,7 @@ Body:
     Name: Angelic Wing Dagger
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 600
     Attack: 120
@@ -37148,6 +37525,7 @@ Body:
     Name: Khukri
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 240000
     Weight: 600
     Attack: 150
@@ -37167,6 +37545,7 @@ Body:
     Name: Jitte
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20000
     Weight: 400
     Attack: 70
@@ -37185,6 +37564,7 @@ Body:
     Name: Jitte
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20000
     Weight: 400
     Attack: 70
@@ -37204,6 +37584,7 @@ Body:
     Name: Kamaitachi
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 48000
     Weight: 900
     Attack: 125
@@ -37224,6 +37605,7 @@ Body:
     Name: Asura
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 3000
     Weight: 600
     Attack: 50
@@ -37243,6 +37625,7 @@ Body:
     Name: Asura
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 3000
     Weight: 600
     Attack: 50
@@ -37262,6 +37645,7 @@ Body:
     Name: Murasame
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 700
     Attack: 95
@@ -37283,6 +37667,7 @@ Body:
     Name: Murasame
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 700
     Attack: 95
@@ -37304,6 +37689,7 @@ Body:
     Name: Hakujin
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 800
     Attack: 120
@@ -37323,6 +37709,7 @@ Body:
     Name: Hakujin
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 800
     Attack: 120
@@ -37343,6 +37730,7 @@ Body:
     Name: Poison Knife
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 800
     Attack: 64
@@ -37379,6 +37767,7 @@ Body:
     Name: Ice Pick
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 600
     Attack: 70
@@ -37414,6 +37803,7 @@ Body:
     Name: Sucsamad
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 800
     Attack: 140
@@ -37451,6 +37841,7 @@ Body:
     Name: Ginnungagap
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 700
     Attack: 148
@@ -37490,6 +37881,7 @@ Body:
     Name: Warrior's Balmung
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 1000
     Attack: 170
@@ -37515,6 +37907,7 @@ Body:
     Name: Combat Knife
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 1
     Attack: 129
     Range: 1
@@ -37562,6 +37955,7 @@ Body:
     Name: Dagger of Counter
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 1
     Attack: 209
     Range: 1
@@ -37590,6 +37984,7 @@ Body:
     Name: Ashura
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 1
     Attack: 120
     Range: 1
@@ -37615,6 +38010,7 @@ Body:
     Name: Refined Swordbreaker
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 2
     Attack: 105
     Range: 1
@@ -37646,6 +38042,7 @@ Body:
     Name: Refined Mailbreaker
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 2
     Attack: 105
     Range: 1
@@ -37677,6 +38074,7 @@ Body:
     Name: Moonlight Dagger
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 2
     Attack: 85
     Range: 1
@@ -37709,6 +38107,7 @@ Body:
     Name: Scalpel
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 500
     Attack: 120
@@ -37746,6 +38145,7 @@ Body:
     Name: Tooth Blade
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 700
     Attack: 130
@@ -37786,6 +38186,7 @@ Body:
     Name: Prinsense Knife
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Attack: 120
     Range: 1
@@ -37825,6 +38226,7 @@ Body:
     Name: Dragon Killer
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 900
     Attack: 110
@@ -37863,6 +38265,7 @@ Body:
     Name: Swordbreaker
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 1000
     Attack: 70
@@ -37898,6 +38301,7 @@ Body:
     Name: Mailbreaker
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 1000
     Attack: 70
@@ -37933,6 +38337,7 @@ Body:
     Name: Assassin Dagger
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 600
     Attack: 140
@@ -37955,6 +38360,7 @@ Body:
     Name: Desert Twilight
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 600
     Attack: 130
@@ -37974,6 +38380,7 @@ Body:
     Name: Sandstorm
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 600
     Attack: 50
@@ -37993,6 +38400,7 @@ Body:
     Name: Brave Assassin's Damascus
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Attack: 120
     Range: 1
@@ -38043,6 +38451,7 @@ Body:
     Name: Valorous Assassin's Damascus
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Attack: 120
     Range: 1
@@ -38092,6 +38501,7 @@ Body:
     Name: Dagger of Hunter
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 700
     Attack: 120
@@ -38117,6 +38527,7 @@ Body:
     Name: Ivory Knife
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 700
     Attack: 130
@@ -38157,6 +38568,7 @@ Body:
     Name: Novice Cutter
     Type: Weapon
     SubType: Dagger
+    View: 1
     Attack: 50
     Range: 1
     Slots: 3
@@ -38197,6 +38609,7 @@ Body:
     Name: Novice Main Gauche
     Type: Weapon
     SubType: Dagger
+    View: 1
     Attack: 63
     Range: 1
     Slots: 3
@@ -38237,6 +38650,7 @@ Body:
     Name: Glorious Gladius
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Attack: 120
     Range: 1
@@ -38293,6 +38707,7 @@ Body:
     Name: Fortune Sword
     Type: Weapon
     SubType: Dagger
+    View: 1
     Attack: 120
     Range: 1
     Jobs:
@@ -38332,6 +38747,7 @@ Body:
     Name: Ice Pick
     Type: Weapon
     SubType: Dagger
+    View: 1
     Attack: 105
     Range: 1
     Jobs:
@@ -38369,6 +38785,7 @@ Body:
     Name: Kamaitachi
     Type: Weapon
     SubType: Dagger
+    View: 1
     Attack: 155
     Range: 2
     Jobs:
@@ -38390,6 +38807,7 @@ Body:
     Name: Krierg
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 500
     Attack: 110
@@ -38414,6 +38832,7 @@ Body:
     Name: Weihna
     Type: Weapon
     SubType: Dagger
+    View: 1
     Buy: 20
     Weight: 500
     Attack: 135
@@ -38438,6 +38857,7 @@ Body:
     Name: Damascus
     Type: Weapon
     SubType: Dagger
+    View: 1
     Attack: 153
     Range: 1
     Jobs:
@@ -39732,6 +40152,7 @@ Body:
     Name: Cutlus
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 900
     Attack: 150
@@ -39761,6 +40182,7 @@ Body:
     Name: Excalibur
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 1
     Attack: 199
     Range: 1
@@ -39796,6 +40218,7 @@ Body:
     Name: Cutlus
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 2
     Attack: 185
     Range: 1
@@ -39821,6 +40244,7 @@ Body:
     Name: Solar Sword
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 2
     Attack: 120
     Range: 1
@@ -39846,6 +40270,7 @@ Body:
     Name: Platinum Shotel
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 1500
     Attack: 130
@@ -39873,6 +40298,7 @@ Body:
     Name: Curved Sword
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 800
     Attack: 125
@@ -39901,6 +40327,7 @@ Body:
     Name: Edger
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Attack: 120
     Range: 1
@@ -39932,6 +40359,7 @@ Body:
     Name: Refined Nagan
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 1
     Attack: 148
     Range: 1
@@ -39957,6 +40385,7 @@ Body:
     Name: Refined Fireblend
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 1
     Attack: 120
     Range: 1
@@ -39983,6 +40412,7 @@ Body:
     Name: Refined Immaterial Sword
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 1
     Attack: 160
     Range: 1
@@ -40009,6 +40439,7 @@ Body:
     Name: Valorous Gladiator Blade
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Attack: 115
     Range: 1
@@ -40049,6 +40480,7 @@ Body:
     Name: Brave Gladiator Blade
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Attack: 115
     Range: 1
@@ -40089,6 +40521,7 @@ Body:
     Name: Twin Edge of Naght Sieger
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 1500
     Attack: 150
@@ -40120,6 +40553,7 @@ Body:
     Name: Twin Edge of Naght Sieger
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 1500
     Attack: 160
@@ -40151,6 +40585,7 @@ Body:
     Name: Elemental Sword
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 1200
     Attack: 105
@@ -40188,6 +40623,7 @@ Body:
     Name: Novice Falchion
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Attack: 59
     Range: 1
     Slots: 3
@@ -40220,6 +40656,7 @@ Body:
     Name: Glorious Flamberge
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Attack: 130
     Range: 1
@@ -40271,6 +40708,7 @@ Body:
     Name: Glorious Rapier
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Attack: 130
     Range: 1
@@ -40312,6 +40750,7 @@ Body:
     Name: Glorious Holy Avenger
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Attack: 130
     Range: 1
@@ -40352,6 +40791,7 @@ Body:
     Name: Holy saber
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Attack: 160
     Range: 1
@@ -40382,6 +40822,7 @@ Body:
     Name: Honglyun's Sword
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 1200
     Attack: 160
@@ -40415,6 +40856,7 @@ Body:
     Name: Ruber
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Buy: 20
     Weight: 1500
     Attack: 170
@@ -40441,6 +40883,7 @@ Body:
     Name: Flamberge
     Type: Weapon
     SubType: 1hSword
+    View: 2
     Attack: 185
     Range: 1
     Jobs:
@@ -40521,6 +40964,7 @@ Body:
     Name: Erde
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 500
     Attack: 130
@@ -40553,6 +40997,7 @@ Body:
     Name: Red Square Bag
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 500
     Attack: 130
@@ -40591,6 +41036,7 @@ Body:
     Name: Stunner
     Type: Weapon
     SubType: Mace
+    View: 8
     Attack: 175
     Range: 1
     Jobs:
@@ -40618,6 +41064,7 @@ Body:
     Name: Pile Bunker S
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 3000
     Attack: 400
@@ -40637,6 +41084,7 @@ Body:
     Name: Pile Bunker P
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 4000
     Attack: 450
@@ -40655,6 +41103,7 @@ Body:
     Name: Pile Bunker T
     Type: Weapon
     SubType: Mace
+    View: 8
     Buy: 20
     Weight: 3500
     Attack: 400
@@ -40674,6 +41123,7 @@ Body:
     Name: Shooting Star
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 20
     Attack: 190
     Range: 5
@@ -40692,6 +41142,7 @@ Body:
     Name: Rudra Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 2
     Attack: 185
     Range: 5
@@ -40719,6 +41170,7 @@ Body:
     Name: Rudra Bow
     Type: Weapon
     SubType: Bow
+    View: 11
     Buy: 2
     Attack: 185
     Range: 5

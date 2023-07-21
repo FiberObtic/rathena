@@ -106,6 +106,63 @@ Body:
       NoAuction: true
     Script: |
       itemskill "AL_TELEPORT",1;
+  - Id: 53000015
+    AegisName: Premium_Pass
+    Name: Premium Pass
+    Type: Delayconsume
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      TradePartner: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      doevent "Premium Pass Manager::OnActivate";
+  - Id: 53000016
+    AegisName: Premium_Level_Up
+    Name: Premium Level Up
+    Type: Delayconsume
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      TradePartner: true
+      NoSell: true
+      NoCart: true
+      NoStorage: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      doevent "Premium Pass Manager::OnUseLevel";
+  - Id: 53000017
+    AegisName: RANK_EXP
+    Name: RANK EXP
+    Type: Usable
+    Weight: 0
+    Flags:
+      PassIgnore: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoSell: true
+    Script: |
+       dispbottom "[ RANK EXP] คุณได้รับ RANK EXP จำนวน 100,000 Points",0xffffff;
+       getexp2(100000,0);
+  - Id: 53000018
+    AegisName: RANK_JOB
+    Name: RANK JOB
+    Type: Usable
+    Buy: 10
+    Weight: 70
+    Script: |
+       dispbottom "[ RANK JOB] คุณได้รับ RANK Job จำนวน 100,000 Points",0xffffff;
+       getexp2(0,100000);
 # THQ Quest Items
 #=============================================================
 #  - Id: 1998

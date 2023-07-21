@@ -1,0 +1,154 @@
+// izlude,106,123,6	script	Gachapon Cash	506,{
+morocc,134,102,6	script	Gachapon Cash	506,{
+
+	.@cash_price = 15;
+
+	// โครตกาก
+	setarray .@etc_set[0],39998,39999,14616,14617,14618,14619,14620,14621,12914,12913;
+	// กากสุด
+	setarray .@common_set[0],13717,12075,12080,12085,12090,12095,12100;
+	// เกือบดี
+	setarray .@uncommon_set[0],7776,14003,30201,7621,12210;
+	// ดี
+	setarray .@rare_set[0],42000,42001,42002,42003,42004,42005,42006,42007,7619,7620,6635;
+	// หายาก
+	setarray .@epic_set[0],30200,6320,12213,18959,19083,19159;
+	
+	if($gacha_cash==0){
+		mes "^000099[Gachapon Cash]^000000";
+		mes "ขณะนี้ระบบ Gachapon Cash ปิดให้บริการ";
+		mes "ขอบคุณ";
+		next;
+		menu "^009933•^000000 จัดอันดับ",L_show,"^009933•^000000 ไว้ก่อน",L_no;
+		end;
+	}else{
+		mes "^000099[Gachapon Cash]^000000";
+		mes "คุณ ^FF0000[ "+ strcharinfo(0) +" ] มีค่าบริการ "+.@cash_price+" Cash อยากเสี่ยงดวงไหม^000000";
+		query_sql ("SELECT COUNT(`id`) FROM `gachapon` WHERE `char_id` = '"+ getcharid(0) +"' AND `type` = 'Cash'", .@sd_spin);
+		mes "ตอนนี้ท่านหมุนไปแล้ว ^FF0000[ "+ .@sd_spin +" ]^000000 รอบ";
+		mes "ตู้นี้มีรางวัลสะสมทั้งหมด ^FF0000[ "+ $cash_jackpot +" ]^000000 Cash";
+		next;
+		menu "^009933•^000000 อย่ารอช้าปั่นเลย",L_ok,"^009933•^000000 จัดอันดับ",L_show,"^009933•^000000 ไว้ก่อน",L_no;
+	}
+
+L_ok:
+	if(#CASHPOINTS<.@cash_price)goto L_not;
+	{
+		$cash_jackpot += 5;
+
+		mes "^000099[Gachapon Cash]^000000";
+		mes "^FF0000ใช้ : "+.@cash_price+" Cash^000000";
+		mes "^FF0000แคชที่เหลือ: " + #CASHPOINTS + " Cash^000000";
+	
+		// โอกาส jackpot
+		.@jackpot = rand(0,100000);		
+		
+		#CASHPOINTS -= .@cash_price;
+		
+		//if(.@jackpot < 50){
+		if(.@jackpot < 100){
+			.@jackpotprecen = rand(1, 40);
+			$cash_jackpotprecen = $cash_jackpot-$cash_jackpot*.@jackpotprecen/100;
+			specialeffect2 10;
+			.@cash_reduce = $cash_jackpot*.@jackpotprecen/100;
+			announce "[ ระบบ ] : ผู้เล่น ["+strcharinfo(0)+"] หมุนตู้ Gachapon Cash แจ็คพ็อตแตก ได้รับเงิน [ "+ .@cash_reduce +" ] Cash",bc_all,0xFFFF00;
+			$cash_jackpot -= .@cash_reduce;
+			#CASHPOINTS += .@cash_reduce;
+			.@sql_jack = 1;
+		}
+
+		.@char_id = getcharid(0);
+		.@account_id = getcharid(3);
+		.@char_name$ = strcharinfo(0);
+		
+		if(.@sql_jack){
+			query_sql "INSERT INTO `gachapon` (`account_id`,`char_id`,`char_name`,`type`,`jackpot`) VALUES ("+.@account_id+","+.@char_id+",'"+.@char_name$+"','Cash','"+.@cash_reduce+"')";
+		
+			query_sql ("SELECT `id`,`jackpot_count` FROM `gachapon_jackpot` WHERE `account_id` = '"+.@account_id+"' AND `char_id` = '"+.@char_id+"' AND `type` = 'Cash';", .@u_id, .@jackpot_count);
+			
+			if(.@u_id){
+				query_sql ("UPDATE `gachapon_jackpot` SET `jackpot_count` = '"+(.@jackpot_count+1)+"' WHERE `id` = '"+.@u_id+"';");
+			}else{
+				query_sql "INSERT INTO `gachapon_jackpot` (`account_id`,`char_id`,`char_name`,`type`,`jackpot_count`) VALUES ("+.@account_id+","+.@char_id+",'"+.@char_name$+"','Cash',1)";
+			}
+		
+		}else{
+			query_sql "INSERT INTO `gachapon` (`account_id`,`char_id`,`char_name`,`type`) VALUES ("+.@account_id+","+.@char_id+",'"+.@char_name$+"','Cash')";
+		}
+		
+		.@chance = rand(0,10000);
+		
+		if (.@chance < 180) {
+			.@random_index = rand(0,getarraysize(.@epic_set)-1);
+			announce "[ ระบบ ] : ผู้เล่น ["+strcharinfo(0)+"] หมุนตู้ Gachapon Cash ได้รับ "+getitemname(.@epic_set[.@random_index])+" ",bc_all,0xFFFF00;
+			getitem .@epic_set[.@random_index],1;
+			specialeffect2 10;
+			end;
+		}else if(.@chance > 180 && .@chance < 700){
+			.@random_index = rand(0,getarraysize(.@rare_set)-1);
+			announce "[ ระบบ ] : ผู้เล่น ["+strcharinfo(0)+"] หมุนตู้ Gachapon Cash ได้รับ "+getitemname(.@rare_set[.@random_index])+" ",bc_all,0xFFFF00;
+			getitem .@rare_set[.@random_index],1;
+			specialeffect2 10;
+			end;
+		}else if(.@chance > 700 && .@chance < 1700){
+			getitem .@uncommon_set[rand(0,getarraysize(.@uncommon_set)-1)],1;
+			specialeffect2 10;
+			end;
+		}else if(.@chance > 1700 && .@chance < 7000){
+			getitem .@common_set[rand(0,getarraysize(.@common_set)-1)],1;
+			specialeffect2 10;
+			end;
+		} else {
+			getitem .@etc_set[rand(0,getarraysize(.@etc_set)-1)],1;
+			specialeffect2 10;
+			end;
+		}
+    }
+
+L_no:
+	mes "^000099[Gachapon Cash]^000000";
+	mes "พร้อมแล้วก็มาใหม่นะ^000000";
+	close;
+
+L_not:
+	mes "^000099[Gachapon Cash]^000000";
+	mes "ท่านมี Cash ไม่เพียงพอ^000000";
+	close;
+
+	end;
+	
+L_show:
+	query_sql "SELECT `char_name`,`roll` FROM `gachapon_cash` ORDER BY `roll` DESC LIMIT 10",.@name$,.@point;
+	mes"===================== CASH RANKING =====================";
+	for (set .@i,0; .@i < 10; set .@i,.@i+1) {
+		if (.@point[.@i] == 0) set .@name$[.@i],"None";
+		mes "["+(.@i+1)+"]  "+.@name$[.@i]+" : คะแนน " +.@point[.@i]+"";
+	}
+	mes "-----------------------------------------------------";
+	dispbottom"======================= CASH RANKING =======================";
+	for (set .@i,0; .@i < 10; set .@i,.@i+1) {
+		if (.@point[.@i] == 0) set .@name$[.@i],"None";
+	dispbottom "["+(.@i+1)+"]  "+.@name$[.@i]+" : คะแนน " +.@point[.@i]+"";
+	}
+	dispbottom "========================================================";
+
+	.@char_id = getcharid(0);
+	.@account_id = getcharid(3);
+	
+	query_sql "SELECT `roll` FROM `gachapon_cash` WHERE `account_id` = '"+.@account_id+"' AND `char_id` = '"+.@char_id+"'",.@your_point;
+	
+	mes "คุณมีคะแนน : "+.@your_point;
+	mes "==============================================";
+	dispbottom "คุณมีคะแนน : "+.@your_point;
+	dispbottom "========================================================";
+	close;
+	
+OnInit:
+	//disablenpc();
+	do {
+		delwaitingroom;
+		waitingroom "[ "+callfunc("F_InsertComma",($cash_jackpot))+" ] Cash",0;
+		sleep 80; // Evites super infinity loop
+	} while(1); // End Loop
+	end;
+}

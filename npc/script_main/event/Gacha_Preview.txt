@@ -1,0 +1,110 @@
+-	script	preview_jackpot_st	-1,{
+
+	callfunc "preview_jackpot_shop",1;
+	end;
+
+OnInit:
+	waitingroom "~ ตัวอย่างของรางวัล", 0;
+    end;
+}
+
+-	script	preview_jackpot	-1,{ 
+// =============================================================
+function PreviewAddItems;
+// =============================================================
+OnInit:
+	freeloop(1);
+	setarray .Shops$[1],"~ ตัวอย่างของรางวัล";
+// =============================================================	
+	PreviewAddItems(1,30200,1,0,0);
+	PreviewAddItems(1,6320,1,0,0);
+	PreviewAddItems(1,12213,1,0,0);
+	PreviewAddItems(1,18959,1,0,0);
+	PreviewAddItems(1,19083,1,0,0);
+	PreviewAddItems(1,19159,1,0,0);
+    PreviewAddItems(1,7620,1,0,0);
+	PreviewAddItems(1,6635,1,0,0);
+    PreviewAddItems(1,30201,1,0,0);
+    PreviewAddItems(1,42000,1,0,0);
+    PreviewAddItems(1,42001,1,0,0);
+    PreviewAddItems(1,42002,1,0,0);
+    PreviewAddItems(1,42003,1,0,0);
+    PreviewAddItems(1,42004,1,0,0);
+    PreviewAddItems(1,42005,1,0,0);
+    PreviewAddItems(1,42006,1,0,0);
+    PreviewAddItems(1,42007,1,0,0);
+	PreviewAddItems(1,7776,1,0,0);
+	PreviewAddItems(1,14003,1,0,0);
+	PreviewAddItems(1,12210,1,0,0);
+    PreviewAddItems(1,7621,1,0,0);
+    PreviewAddItems(1,12075,1,0,0);
+    PreviewAddItems(1,12080,1,0,0);
+	PreviewAddItems(1,12085,1,0,0);
+    PreviewAddItems(1,12090,1,0,0);
+    PreviewAddItems(1,12095,1,0,0);
+    PreviewAddItems(1,12100,1,0,0);
+    PreviewAddItems(1,13717,1,0,0);
+    PreviewAddItems(1,14621,1,0,0);
+    PreviewAddItems(1,14620,1,0,0);
+    PreviewAddItems(1,14619,1,0,0);
+    PreviewAddItems(1,14618,1,0,0);
+    PreviewAddItems(1,14617,1,0,0);
+    PreviewAddItems(1,14616,1,0,0);
+    PreviewAddItems(1,39999,1,0,0);
+    PreviewAddItems(1,39998,1,0,0);
+	PreviewAddItems(1,12913,1,0,0);
+    PreviewAddItems(1,12914,1,0,0);
+// =============================================================
+
+	freeloop(0);
+	set .menu$,"";
+	for(set .@i,1; .@i<=getarraysize(.Shops$); set .@i,.@i+1) {
+		set .menu$, .menu$+.Shops$[.@i]+":";
+		npcshopdelitem "preview_jackpot_shop"+.@i,909;
+	}
+	end;
+
+OnMainMenu:
+
+	set .@size, getarraysize(@i);
+	if (!.@size) set .@i, select(.menu$);
+	else if (.@size == 1) set .@i, @i[0];
+	else {
+		for(set .@j,0; .@j<.@size; set .@j,.@j+1)
+			set .@menu$, .@menu$+.Shops$[@i[.@j]]+":";
+		set .@i, @i[select(.@menu$)-1];
+	}
+	deletearray @i[0],getarraysize(@i);
+	if (.Shops$[.@i] == "") {
+		message strcharinfo(0),"เกิดข้อผิดพลาด.";
+		end;
+	}
+	callshop "preview_jackpot_shop"+.@i,1;
+	npcshopattach "preview_jackpot_shop"+.@i;
+	end;
+
+OnBuyItem:
+	end;
+
+function PreviewAddItems {
+	
+	npcshopadditem "preview_jackpot_shop"+getarg(0),getarg(1),((.ShowZeny)?getarg(3):0);
+	return;
+}
+
+}
+
+function	script	preview_jackpot_shop	{
+
+	deletearray @i[0],getarraysize(@i);
+	for(set .@i,0; .@i<getargcount(); set .@i,.@i+1)
+		set @i[.@i],getarg(.@i);
+	doevent "preview_jackpot::OnMainMenu";
+	end;
+}
+
+-	shop	preview_jackpot_shop1	-1,909:-1
+
+//morocc,129,113,3	duplicate(preview_jackpot_st)	ตัวอย่างของรางวัล#05	604
+sec_pri,31,41,3	duplicate(preview_jackpot_st)	ตัวอย่างของรางวัล#02	604
+// izlude,96,123,3	duplicate(preview_jackpot_st)	ตัวอย่างของรางวัล#02	604

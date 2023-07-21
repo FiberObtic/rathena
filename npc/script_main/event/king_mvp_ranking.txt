@@ -1,0 +1,208 @@
+-	script	script_rank_mvp	-1,{
+OnInit:
+	query_sql (
+		"CREATE TABLE IF NOT EXISTS `rank_mvp_player_logs` ("+
+		"`id` int(7) NOT NULL AUTO_INCREMENT,"+
+		"`account_id` int(11) NOT NULL,"+
+		"`char_id` int(11) NOT NULL,"+
+		"`player_name` varchar(255) NOT NULL,"+
+		"`played` int(7) NOT NULL,"+
+		"PRIMARY KEY (`id`)"+
+		") ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;"
+	);
+	query_sql (
+		"CREATE TABLE IF NOT EXISTS `rank_mvp_player_ranking` ("+
+		"`id` int(7) NOT NULL AUTO_INCREMENT,"+
+		"`account_id` int(11) NOT NULL,"+
+		"`char_id` int(11) NOT NULL,"+
+		"`player_name` varchar(255) NOT NULL,"+
+		"`score` int(7) NOT NULL,"+
+		"PRIMARY KEY (`id`)"+
+		") ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;"
+	);
+	query_sql (
+		"CREATE TABLE IF NOT EXISTS `rank_mvp_player_winners` ("+
+		"`id` int(7) NOT NULL AUTO_INCREMENT,"+
+		"`account_id` int(11) NOT NULL,"+
+		"`char_id` int(11) NOT NULL,"+
+		"`player_name` varchar(255) NOT NULL,"+
+		"`score` int(7) NOT NULL,"+
+		"`number` tinyint(1) NOT NULL,"+
+		"`reward_id` int(7) NOT NULL,"+
+		"`reward_amount` int(7) NOT NULL,"+
+		"`claim` tinyint(1) NOT NULL,"+
+		"PRIMARY KEY (`id`)"+
+		") ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;"
+	);
+end;
+
+OnNPCKillEvent:
+	
+	if(getmonsterinfo(killedrid,MOB_MVPEXP)){
+		.@point = 1;	//	กำหนดแต้มที่ได้รับจากการฆ่า Monster MVP
+		query_sql("SELECT COUNT(char_id) FROM `rank_mvp_player_logs` WHERE char_id = "+getcharid(0)+"",.@ccid);
+		if (!.@ccid) {
+			query_sql("INSERT INTO `rank_mvp_player_logs` (account_id,char_id,player_name,played) VALUES ("+getcharid(3)+","+getcharid(0)+",'"+strcharinfo(0)+"',"+.@point+")");
+		}
+		else {
+			query_sql("UPDATE `rank_mvp_player_logs` SET `played` = `played`+1 WHERE char_id = "+getcharid(0)+"");
+		}
+		query_sql("SELECT COUNT(char_id) FROM `rank_mvp_player_ranking` WHERE char_id = "+getcharid(0)+"",.@ccid);
+		if (!.@ccid) {
+			query_sql("INSERT INTO `rank_mvp_player_ranking` (account_id,char_id,player_name,score) VALUES ("+getcharid(3)+","+getcharid(0)+",'"+strcharinfo(0)+"',"+.@point+")");
+		}
+		else {
+			query_sql("UPDATE `rank_mvp_player_ranking` SET `score` = `score`+"+.@point+" WHERE char_id = "+getcharid(0)+"");
+		}
+	
+	}
+	
+	end;
+}
+
+-	shop	ex_rank_mvp_shop	-1,53000010:-1,53000011:-1,53000012:-1
+
+morocc,179,98,4	script	Ranking MVP	827,{
+Start:
+	
+	mes "^FF3300[ "+strnpcinfo(0)+" ]^000000";
+	
+	query_sql("SELECT player_name,score FROM `rank_mvp_player_ranking` ORDER BY score DESC LIMIT 100",.@name$,.@score);
+	
+	for (set .@i,0; .@i < getarraysize(.@name$); set .@i,.@i+1) {
+		if(strcharinfo(0) == .@name$[.@i]){ mes "MVP# : ^0000FF"+callfunc("F_InsertComma",.@score[.@i])+" คะแนน^000000"; }
+	}
+	
+	menu	"- ตรวจสอบอันดับ",menu_01,
+			"- ^009900รับรางวัลจัดอันดับ^000000",menu_02,
+			"- ตรวจสอบอันดับรอบที่ผ่านมา",menu_03
+			;
+	end;
+	
+	menu_04:
+		
+		next;
+		mes "^FF3300[ "+strnpcinfo(0)+" ]^000000";
+		mes "โปรดเลือก [C] Mvp ที่เป็นวัตถุดิบ";
+		
+		callshop "ex_rank_mvp_shop",2;
+		npcshopattach "ex_rank_mvp_shop";
+		
+		end;
+	
+	menu_01:
+		
+		next;
+		
+		mes "^FF3300[ "+strnpcinfo(0)+" ]^000000";
+			query_sql("SELECT player_name,score FROM `rank_mvp_player_ranking` ORDER BY score DESC LIMIT 10",.@name$,.@score);
+			if (!.@score[0]) {
+				mes " ";
+				mes "^FF0000ยังไม่มีข้อมูลของสัปดาห์นี้^000000";
+				close;
+			}
+			for (set .@i,0; .@i < getarraysize(.@name$); set .@i,.@i+1) {
+				mes ""+(.@i+1)+". "+.@name$[.@i]+" ^FF0000 ["+.@score[.@i]+"] คะแนน^000000";
+			}
+			close;
+		end;
+	
+	menu_02:
+		
+		next;
+		
+		query_sql("SELECT COUNT(char_id) FROM `rank_mvp_player_winners` WHERE char_id = "+getcharid(0)+" AND claim = 0",.@ccid);
+		mes "^FF3300[ "+strnpcinfo(0)+" ]^000000";
+		mes "รางวัลที่ยังไม่ได้รับ ^FF0000"+.@ccid+"^000000 รางวัล";
+		next;
+		if (!.@ccid) {
+			mes "^FF3300[ "+strnpcinfo(0)+" ]^000000";
+			mes " ";
+			mes "^FF0000ยังไม่มีรางวัลที่ท่านสามารถรับได้^000000";
+			close;
+		}
+		if (select("รับรางวัล:ยกเลิก") == 2) {
+			mes "^FF3300[ "+strnpcinfo(0)+" ]^000000";
+			mes " ";
+			mes "^FF0000ไม่เป็นไร ไว้มารับทีหลังก็ได้นะ^000000";
+			close;
+		}
+		query_sql("SELECT id,number,reward_id,reward_amount FROM `rank_mvp_player_winners` WHERE char_id = "+getcharid(0)+" AND claim = 0",.@id,.@no,.@rwid,.@rwamt);
+		for (set .@i,0; .@i < getarraysize(.@rwid); set .@i,.@i+1) {
+			query_sql("UPDATE `rank_mvp_player_winners` SET claim = 1 WHERE id = "+.@id[.@i]+"");
+			dispbottom strnpcinfo(0)+" : คุณได้รับรางวัล ranking อันดับ "+.@no[.@i]+" เป็น "+getitemname(.@rwid[.@i])+" จำนวน "+.@rwamt[.@i]+"ea จาก "+strnpcinfo(0)+"";
+			getitem .@rwid[.@i],.@rwamt[.@i];
+			message strcharinfo(0),"ท่านได้รับรางวัล อันดับ "+.@no[.@i]+"";
+		}
+		end;
+	
+	menu_03:
+		
+		next;
+		
+		mes "^FF3300[ "+strnpcinfo(0)+" ]^000000";
+		query_sql("SELECT player_name,score,number FROM `rank_mvp_player_winners` ORDER BY id DESC LIMIT 10",.@name2$,.@score2,.@number2);
+		if (!.@score2[0]) {
+			mes " ";
+			mes "^FF0000ยังไม่มีข้อมูลของสัปดาห์ที่แล้ว^000000";
+			close;
+		}
+		for (set .@i,getarraysize(.@name2$); .@i >= 0 ; set .@i,.@i-1) {
+			if (.@score2[.@i])
+			mes ""+.@number2[.@i]+". "+.@name2$[.@i]+" ^FF0000 ["+.@score2[.@i]+"] คะแนน^000000";
+		}
+		close;
+		
+		end;
+		
+	OnClock2000:
+		
+		if(gettime(DT_DAYOFWEEK) != $day_of_rank_mvp){ end; }
+		
+		OnRanking:
+		query_sql("TRUNCATE TABLE `rank_mvp_player_winners`");
+		query_sql("SELECT account_id,char_id,player_name,score FROM `rank_mvp_player_ranking` ORDER BY score DESC LIMIT 3",.@aid,.@cid,.@name$,.@score);
+		for (set .@j,0; .@j < getarraysize(.@aid); set .@j,.@j+1) {
+			if ((.@j+1) == 1) {			//	กำหนดรางวัลอันดับ 1
+				set .@rwid, 501;
+				set .@rwamt, 1;
+			}
+			else if((.@j+1) == 2){		//	กำหนดรางวัลอันดับ 2
+				set .@rwid, 501;
+				set .@rwamt, 1;
+			}
+			else if((.@j+1) == 3){		//	กำหนดรางวัลอันดับ 3
+				set .@rwid, 501;
+				set .@rwamt, 1;
+			}
+			
+			announce strnpcinfo(0)+" : ผู้เล่น " +.@name$[.@j]+ " "+.@score[.@j]+" คะแนน ได้อันดับ "+(.@j+1)+" ได้รับ "+getitemname(.@rwid)+" x"+.@rwamt+" ea ในสัปดาห์นี้", bc_all, "0xFFFF00";
+			query_sql("INSERT INTO `rank_mvp_player_winners` (account_id,char_id,player_name,score,number,reward_id,reward_amount,claim) VALUES ("+.@aid[.@j]+","+.@cid[.@j]+",'"+.@name$[.@j]+"',"+.@score[.@j]+","+(.@j+1)+","+.@rwid+","+.@rwamt+",0)");
+		}
+		query_sql("TRUNCATE TABLE `rank_mvp_player_ranking`");
+		announce strnpcinfo(0)+" : ทำการรีเซ็ตอันดับ "+strnpcinfo(0)+" เรียบร้อยแล้ว", bc_all, "0xFFFF00";
+		end;
+			
+OnMenu:
+	
+	menu	"- รีเซ็ตการจัดอันดับ + แจกรางวัล",menu_reset;
+	end;
+	
+	menu_reset:
+		
+		donpcevent ""+strnpcinfo(3)+"::OnRanking";
+		end;
+	
+end;	
+OnInit:
+	
+	//	===================================================================================================	//
+	//	0 = Sunday / 1 = Monday / 2 = Tuesday / 3 = Wednesday / 4 = Thursday / 5 = Friday / 6 = Saturday	//
+	//	===================================================================================================	//
+		$day_of_rank_mvp = 5;		//	ตั้งค่าสำหรับวันที่จะรีเซ็ตอันดับ+แจกรางวัล
+	//	===================================================================================================	//
+	
+	bindatcmd "rank_mvp",""+strnpcinfo(3)+"::OnMenu",99,0;
+	waitingroom "[#] "+strnpcinfo(0)+"",0;
+	end;		
+}

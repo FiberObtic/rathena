@@ -138,3 +138,12 @@
 //3014,Halloween Whisper@NPC_EMOTION,chase,197,1,200,0,5000,yes,self,always,0,19,0x81,,,,,
 
 // Here you can place your custom mob skills
+2718,Elusive Peco Peco@AS_SONICBLOW,attack,136,1,500,800,5000,no,target,always,,,,,,,6,
+2718,Elusive Peco Peco@NPC_EMOTION,chase,197,1,2000,0,5000,yes,self,always,,6,,,,,,
+2718,Elusive Peco Peco@NPC_FIREATTACK,attack,186,1,2000,0,5000,yes,target,always,,,,,,,,
+2718,Elusive Peco Peco@NPC_PROVOCATION,chase,194,1,200,0,5000,yes,target,always,,,,,,,19,
+
+2810,Solid Grand Peco@AS_SONICBLOW,attack,136,1,500,800,5000,no,target,always,,,,,,,6,
+2810,Solid Grand Peco@NPC_EMOTION,chase,197,1,2000,0,5000,yes,self,always,,6,,,,,,
+2810,Solid Grand Peco@NPC_FIREATTACK,attack,186,1,2000,0,5000,yes,target,always,,,,,,,,
+2810,Solid Grand Peco@NPC_PROVOCATION,chase,194,1,200,0,5000,yes,target,always,,,,,,,19,,

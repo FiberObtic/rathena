@@ -19299,3 +19299,82 @@ Body:
       NoGuildStorage: true
       NoMail: true
       NoAuction: true
+      
+############### Weapon Costume ################
+  - Id: 1300005
+    AegisName: Costume_V1
+    Name: Costume V1
+    Type: Shadowgear
+    View: 105
+    Locations:
+      Shadow_Weapon: true
+  - Id: 1300006
+    AegisName: Costume_V2
+    Name: Costume V2
+    Type: Shadowgear
+    View: 106
+    Locations:
+      Shadow_Weapon: true
+  - Id: 1300007
+    AegisName: Costume_V3
+    Name: Costume V3
+    Type: Shadowgear
+    View: 107
+    Locations:
+      Shadow_Weapon: true
+  - Id: 1300008
+    AegisName: Costume_V4
+    Name: Costume V4
+    Type: Shadowgear
+    View: 103
+    Locations:
+      Shadow_Weapon: true
+  - Id: 1300009
+    AegisName: Costume_V5
+    Name: Costume V1
+    Type: Shadowgear
+    View: 109
+    Locations:
+      Shadow_Weapon: true
+  - Id: 1300010
+    AegisName: Costume_V6
+    Name: Costume V6
+    Type: Shadowgear
+    View: 110
+    Locations:
+      Shadow_Weapon: true
+  - Id: 1300011
+    AegisName: Costume_V7
+    Name: Costume V7
+    Type: Shadowgear
+    View: 111
+    Locations:
+      Shadow_Weapon: true
+  - Id: 1300012
+    AegisName: Costume_V8
+    Name: Costume V8
+    Type: Shadowgear
+    View: 112
+    Locations:
+      Shadow_Weapon: true
+  - Id: 1300013
+    AegisName: Costume_V9
+    Name: Costume V9
+    Type: Shadowgear
+    View: 113
+    Locations:
+      Shadow_Weapon: true
+  - Id: 1300014
+    AegisName: Costume_V10
+    Name: Costume V10
+    Type: Shadowgear
+    View: 114
+    Locations:
+      Shadow_Weapon: true
+  - Id: 1300015
+    AegisName: Costume_V11
+    Name: Costume V11
+    Type: Shadowgear
+    View: 115
+    Locations:
+      Shadow_Weapon: true
