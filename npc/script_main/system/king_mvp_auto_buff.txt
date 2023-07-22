@@ -1,0 +1,22 @@
+-	script	auto_bonus_mvp_ranking	-1,{
+OnPCLoginEvent:
+	
+	OnBuffer:
+		if((delay_buff_mvp-gettimetick(2)) > 0){
+			if(mvp_ranking == 1){
+				bonus_script "{ if(!getmapflag(strcharinfo(3),mf_gvg)){ bonus2 bAddClass,Class_Boss,30; bonus2 bExpAddRace,RC_All,30; bonus2 bDropAddRace,RC_All,30; bonus2 bAddClass,Class_All,10; bonus bMatkRate,10; bonus bMaxSpRate,10; } }",delay_buff_mvp-gettimetick(2),512,0,EFST_RANKMVP_1;
+			}
+			if(mvp_ranking == 2){
+				bonus_script "{ if(!getmapflag(strcharinfo(3),mf_gvg)){ bonus2 bAddClass,Class_Boss,20; bonus2 bExpAddRace,RC_All,20; bonus2 bDropAddRace,RC_All,20; bonus2 bAddClass,Class_All,5; bonus bMatkRate,5; bonus bMaxSpRate,5; } }",delay_buff_mvp-gettimetick(2),512,0,EFST_RANKMVP_2;
+			}
+			if(mvp_ranking == 3){
+				bonus_script "{ if(!getmapflag(strcharinfo(3),mf_gvg)){ bonus2 bAddClass,Class_Boss,10; bonus2 bExpAddRace,RC_All,10; bonus2 bDropAddRace,RC_All,10; bonus2 bAddClass,Class_All,2; bonus bMatkRate,2; bonus bMaxSpRate,2; } }",delay_buff_mvp-gettimetick(2),512,0,EFST_RANKMVP_3;
+			}
+		}
+		if(delay_buff_mvp-gettimetick(2) <= 0){
+			mvp_ranking = 0;
+		}
+		
+	end;
+	
+}

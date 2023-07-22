@@ -619,3 +619,162 @@ Body:
 #    Gender: Female
 #  - Id: 5735
 #    Gender: Female
+  - Id: 5300000
+    AegisName: Vote_Member_Lv_1
+    Name: Vote Member Lv.1
+    Type: DelayConsume
+    Buy: 20
+    Weight: 0
+    Script: |
+      delitem 5300000,1;
+      #vote_member = 1;
+      addtimer 1000,"vote_member::OnBuffer";
+      dispbottom "[ระบบ] : คุณเป็นผู้ใช้งาน Vote Member Lv.1";
+      dispbottom "กรุณาออกเกม เข้าใหม่";
+  - Id: 5300001
+    AegisName: Vote_Member_Lv_2
+    Name: Vote Member Lv.2
+    Type: DelayConsume
+    Buy: 20
+    Weight: 0
+    Script: |
+      delitem 5300001,1;
+      #vote_member = 2;
+      addtimer 1000,"vote_member::OnBuffer";
+      dispbottom "[ระบบ] : คุณเป็นผู้ใช้งาน Vote Member Lv.2";
+      dispbottom "กรุณาออกเกม เข้าใหม่";
+  - Id: 5300002
+    AegisName: Vote_Member_Lv_3
+    Name: Vote Member Lv.3
+    Type: DelayConsume
+    Buy: 20
+    Weight: 0
+    Script: |
+      delitem 5300002,1;
+      #vote_member = 3;
+      addtimer 1000,"vote_member::OnBuffer";
+      dispbottom "[ระบบ] : คุณเป็นผู้ใช้งาน Vote Member Lv.3";
+      dispbottom "กรุณาออกเกม เข้าใหม่";
+  - Id: 5300003
+    AegisName: Vote_Member_Lv_4
+    Name: Vote Member Lv.4
+    Type: DelayConsume
+    Buy: 20
+    Weight: 0
+    Script: |
+      delitem 5300003,1;
+      #vote_member = 4;
+      addtimer 1000,"vote_member::OnBuffer";
+      dispbottom "[ระบบ] : คุณเป็นผู้ใช้งาน Vote Member Lv.4";
+      dispbottom "กรุณาออกเกม เข้าใหม่";
+  - Id: 5300004
+    AegisName: Vote_Member_Lv_5
+    Name: Vote Member Lv.5
+    Type: DelayConsume
+    Buy: 20
+    Weight: 0
+    Script: |
+      delitem 5300004,1;
+      #vote_member = 5;
+      addtimer 1000,"vote_member::OnBuffer";
+      dispbottom "[ระบบ] : คุณเป็นผู้ใช้งาน Vote Member Lv.5";
+      dispbottom "กรุณาออกเกม เข้าใหม่";
+  - Id: 5300005
+    AegisName: Vote_Member_Lv_6
+    Name: Vote Member Lv.6
+    Type: DelayConsume
+    Buy: 20
+    Weight: 0
+    Script: |
+      delitem 5300005,1;
+      #vote_member = 6;
+      addtimer 1000,"vote_member::OnBuffer";
+      dispbottom "[ระบบ] : คุณเป็นผู้ใช้งาน Vote Member Lv.6";
+      dispbottom "กรุณาออกเกม เข้าใหม่";
+  - Id: 5300006
+    AegisName: Vote_Member_Lv_7
+    Name: Vote Member Lv.7
+    Type: DelayConsume
+    Buy: 20
+    Weight: 0
+    Script: |
+      delitem 5300006,1;
+      #vote_member = 7;
+      addtimer 1000,"vote_member::OnBuffer";
+      dispbottom "[ระบบ] : คุณเป็นผู้ใช้งาน Vote Member Lv.7";
+      dispbottom "กรุณาออกเกม เข้าใหม่";
+  - Id: 5300007
+    AegisName: Vote_Member_Lv_8
+    Name: Vote Member Lv.8
+    Type: DelayConsume
+    Buy: 20
+    Weight: 0
+    Script: |
+      delitem 5300007,1;
+      #vote_member = 8;
+      addtimer 1000,"vote_member::OnBuffer";
+      dispbottom "[ระบบ] : คุณเป็นผู้ใช้งาน Vote Member Lv.8";
+      dispbottom "กรุณาออกเกม เข้าใหม่";
+  - Id: 5300008
+    AegisName: Vote_Member_Lv_9
+    Name: Vote Member Lv.9
+    Type: DelayConsume
+    Buy: 20
+    Weight: 0
+    Script: |
+      delitem 5300008,1;
+      #vote_member = 9;
+      addtimer 1000,"vote_member::OnBuffer";
+      dispbottom "[ระบบ] : คุณเป็นผู้ใช้งาน Vote Member Lv.9";
+      dispbottom "กรุณาออกเกม เข้าใหม่";
+  - Id: 5300009
+    AegisName: Vote_Member_Lv_10
+    Name: Vote Member Lv.10
+    Type: DelayConsume
+    Buy: 20
+    Weight: 0
+    Script: |
+      delitem 5300009,1;
+      #vote_member = 10;
+      addtimer 1000,"vote_member::OnBuffer";
+      dispbottom "[ระบบ] : คุณเป็นผู้ใช้งาน Vote Member Lv.10";
+      dispbottom "กรุณาออกเกม เข้าใหม่";
+  - Id: 53000010
+    AegisName: Mvp_Rank_1
+    Name: Mvp Rank 1
+    Type: DelayConsume
+    Buy: 100
+    Weight: 10
+    Script: |
+      delitem 53000010,1;
+      mvp_ranking = 1;
+      delay_buff_mvp = gettimetick(2)+60*60*24*7;
+      addtimer 1000,"auto_bonus_mvp_ranking::OnBuffer";
+      dispbottom "[ระบบ] : คุณเป็นผู้ใช้งาน Mvp Rank [1] ";
+      dispbottom "กรุณาออกเกม เข้าใหม่";
+  - Id: 53000011
+    AegisName: Mvp_Rank_2
+    Name: Mvp Rank 2
+    Type: DelayConsume
+    Buy: 100
+    Weight: 10
+    Script: |
+      delitem 53000011,1;
+      mvp_ranking = 2;
+      delay_buff_mvp = gettimetick(2)+60*60*24*7;
+      addtimer 1000,"auto_bonus_mvp_ranking::OnBuffer";
+      dispbottom "[ระบบ] : คุณเป็นผู้ใช้งาน Mvp Rank [2] ";
+      dispbottom "กรุณาออกเกม เข้าใหม่";
+  - Id: 53000012
+    AegisName: Mvp_Rank_3
+    Name: Mvp Rank 3
+    Type: DelayConsume
+    Buy: 100
+    Weight: 10
+    Script: |
+      delitem 53000012,1;
+      mvp_ranking = 3;
+      delay_buff_mvp = gettimetick(2)+60*60*24*7;
+      addtimer 1000,"auto_bonus_mvp_ranking::OnBuffer";
+      dispbottom "[ระบบ] : คุณเป็นผู้ใช้งาน Mvp Rank [3] ";
+      dispbottom "กรุณาออกเกม เข้าใหม่";
