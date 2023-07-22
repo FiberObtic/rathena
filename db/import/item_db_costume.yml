@@ -19302,79 +19302,155 @@ Body:
       
 ############### Weapon Costume ################
   - Id: 1300005
-    AegisName: Costume_V1
+    AegisName: Costume_V1_Knight
     Name: Costume V1
     Type: Shadowgear
     View: 105
+    Jobs:
+      Knight: true
     Locations:
       Shadow_Weapon: true
+    Script: |
+      bonus2 bSkillAtk,"KN_BOWLINGBASH",25;
   - Id: 1300006
-    AegisName: Costume_V2
+    AegisName: Costume_V2_Crusader
     Name: Costume V2
     Type: Shadowgear
     View: 106
+    Jobs:
+      Crusader: true
     Locations:
       Shadow_Weapon: true
+    Script: |
+      bonus2 bSkillAtk,"CR_GRANDCROSS",50;
+      bonus2 bSkillAtk,"PA_SACRIFICE",25;
   - Id: 1300007
-    AegisName: Costume_V3
+    AegisName: Costume_V3_Hunter
     Name: Costume V3
     Type: Shadowgear
     View: 107
+    Jobs:
+      Hunter: true
     Locations:
       Shadow_Weapon: true
+    Script: |
+      bonus2 bSkillAtk,"HT_BLITZBEAT",100;
+      bonus2 bSkillAtk,"AC_DOUBLE",25;
   - Id: 1300008
-    AegisName: Costume_V4
+    AegisName: Costume_V4_Priest
     Name: Costume V4
     Type: Shadowgear
     View: 103
+    Jobs:
+      Priest: true
     Locations:
       Shadow_Weapon: true
+    Script: |
+      bonus2 bSkillAtk,"PR_MAGNUS",50;
+      bonus bNogemstone;
   - Id: 1300009
-    AegisName: Costume_V5
+    AegisName: Costume_V5_Monk
     Name: Costume V1
     Type: Shadowgear
     View: 109
+    Jobs:
+      Monk: true
     Locations:
       Shadow_Weapon: true
+    Script: |
+      bonus2 bSkillAtk,"MO_EXTREMITYFIST",10;
   - Id: 1300010
-    AegisName: Costume_V6
+    AegisName: Costume_V6_Assassin
     Name: Costume V6
     Type: Shadowgear
     View: 110
+    Jobs:
+      Assassin: true
     Locations:
       Shadow_Weapon: true
+    Script: |
+      bonus bCritAtkRate,10;
   - Id: 1300011
-    AegisName: Costume_V7
+    AegisName: Costume_V7_Alchemist
     Name: Costume V7
     Type: Shadowgear
     View: 111
+    Jobs:
+      Alchemist: true
     Locations:
       Shadow_Weapon: true
+    Script: |
+      bonus2 bSkillAtk,"CR_ACIDDEMONSTRATION",10;
   - Id: 1300012
-    AegisName: Costume_V8
+    AegisName: Costume_V8_Blacksmith
     Name: Costume V8
     Type: Shadowgear
     View: 112
+    Jobs:
+      Blacksmith: true
     Locations:
       Shadow_Weapon: true
+    Script: |
+      bonus2 bSkillAtk,"MC_MAMMONITE",50;
+      bonus2 bSkillAtk,"WS_CARTTERMINATION",25;
   - Id: 1300013
-    AegisName: Costume_V9
+    AegisName: Costume_V9_Wizard
     Name: Costume V9
     Type: Shadowgear
     View: 113
+    Jobs:
+      Wizard: true
     Locations:
       Shadow_Weapon: true
+    Script: |
+      bonus2 bSkillAtk,"WZ_METEOR",25;
+      bonus2 bSkillAtk,"WZ_VERMILION",25;
+      bonus2 bSkillAtk,"WZ_STORMGUST",25;
   - Id: 1300014
-    AegisName: Costume_V10
+    AegisName: Costume_V10_Sage
     Name: Costume V10
     Type: Shadowgear
     View: 114
+    Jobs:
+      Sage: true
     Locations:
       Shadow_Weapon: true
+    Script: |
+      bonus3 bAutoSpell,"MG_FIREBOLT",Max(1,getskilllv("MG_FIREBOLT")),2000;
+      bonus3 bAutoSpell,"MG_COLDBOLT",Max(1,getskilllv("MG_COLDBOLT")),2000;
+      bonus3 bAutoSpell,"MG_LIGHTNINGBOLT",Max(1,getskilllv("MG_LIGHTNINGBOLT")),2000;
   - Id: 1300015
-    AegisName: Costume_V11
+    AegisName: Costume_V11_Rogue
     Name: Costume V11
     Type: Shadowgear
     View: 115
+    Jobs:
+      Rogue: true
     Locations:
       Shadow_Weapon: true
+    Script: |
+      bonus bDoublerate,100;
+  - Id: 1300016
+    AegisName: Costume_V11_Bard
+    Name: Costume V11
+    Type: Shadowgear
+    View: 115
+    Jobs:
+      Rogue: true
+    Locations:
+      Shadow_Weapon: true
+    Script: |
+      bonus2 bSkillAtk,"DC_THROWARROW",100;
+      bonus2 bSkillAtk,"CG_ARROWVULCAN",50;
+  - Id: 1300017
+    AegisName: Costume_V11_Dance
+    Name: Costume V11
+    Type: Shadowgear
+    View: 115
+    Jobs:
+      Rogue: true
+    Locations:
+      Shadow_Weapon: true
+    Script: |
+      bonus2 bSkillAtk,"DC_THROWARROW",100;
+      bonus2 bSkillAtk,"CG_ARROWVULCAN",50;
