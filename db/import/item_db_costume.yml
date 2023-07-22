@@ -19416,11 +19416,11 @@ Body:
     Locations:
       Shadow_Weapon: true
     Script: |
-      if (getskilllv("MG_FIREBOLT")) bonus3 bAutoSpell,"MG_FIREBOLT",Max(1,getskilllv("MG_FIREBOLT")),200;
-      if (getskilllv("MG_COLDBOLT"))bonus3 bAutoSpell,"MG_COLDBOLT",Max(1,getskilllv("MG_COLDBOLT")),200;
-      if (getskilllv("MG_LIGHTNINGBOLT"))bonus3 bAutoSpell,"MG_LIGHTNINGBOLT",Max(1,getskilllv("MG_LIGHTNINGBOLT")),200;
-      if (getskilllv("MG_SOULSTRIKE"))bonus3 bAutoSpell,"MG_SOULSTRIKE",Max(1,getskilllv("MG_SOULSTRIKE")),200;
-      if (getskilllv("WZ_EARTHSPIKE"))bonus3 bAutoSpell,"WZ_EARTHSPIKE",Max(1,getskilllv("WZ_EARTHSPIKE")),200;
+      if (getskilllv("MG_FIREBOLT")) bonus3 bAutoSpell,"MG_FIREBOLT",Max(1,getskilllv("MG_FIREBOLT")),50;
+      if (getskilllv("MG_COLDBOLT"))bonus3 bAutoSpell,"MG_COLDBOLT",Max(1,getskilllv("MG_COLDBOLT")),50;
+      if (getskilllv("MG_LIGHTNINGBOLT"))bonus3 bAutoSpell,"MG_LIGHTNINGBOLT",Max(1,getskilllv("MG_LIGHTNINGBOLT")),50;
+      if (getskilllv("MG_SOULSTRIKE"))bonus3 bAutoSpell,"MG_SOULSTRIKE",Max(1,getskilllv("MG_SOULSTRIKE")),50;
+      if (getskilllv("WZ_EARTHSPIKE"))bonus3 bAutoSpell,"WZ_EARTHSPIKE",Max(1,getskilllv("WZ_EARTHSPIKE")),50;
   - Id: 1300015
     AegisName: Costume_V11_Rogue
     Name: Costume V11
