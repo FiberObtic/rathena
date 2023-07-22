@@ -13245,27 +13245,6 @@ Body:
     Duration2: 5000
     Requires:
       SpCost: 15
-      ZenyCost:
-        - Level: 1
-          Amount: 600
-        - Level: 2
-          Amount: 700
-        - Level: 3
-          Amount: 800
-        - Level: 4
-          Amount: 900
-        - Level: 5
-          Amount: 1000
-        - Level: 6
-          Amount: 1100
-        - Level: 7
-          Amount: 1200
-        - Level: 8
-          Amount: 1300
-        - Level: 9
-          Amount: 1400
-        - Level: 10
-          Amount: 1500
       Weapon:
         Fist: true
         Dagger: true
