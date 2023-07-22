@@ -19286,6 +19286,12 @@ Body:
     Locations:
       Costume_Head_Low: true
     ArmorLevel: 1
+    Script: |
+      bonus bAddMaxWeight,1000000;
+      bonus bSplashRange,20;
+      bonus bAspd,100;
+      bonus bAtkrange,20;
+      bonus bBaseAtk,10000;
   - Id: 1000995
     AegisName: Boost_C_Enchant_2
     Name: Booster Costume Premium Enchantment Ticket
@@ -19312,6 +19318,7 @@ Body:
       Shadow_Weapon: true
     Script: |
       bonus2 bSkillAtk,"KN_BOWLINGBASH",25;
+      bonus2 bDropAddRace,RC_All,5;
   - Id: 1300006
     AegisName: Costume_V2_Crusader
     Name: Costume V2
@@ -19324,6 +19331,7 @@ Body:
     Script: |
       bonus2 bSkillAtk,"CR_GRANDCROSS",50;
       bonus2 bSkillAtk,"PA_SACRIFICE",25;
+      bonus2 bDropAddRace,RC_All,5;
   - Id: 1300007
     AegisName: Costume_V3_Hunter
     Name: Costume V3
@@ -19336,6 +19344,7 @@ Body:
     Script: |
       bonus2 bSkillAtk,"HT_BLITZBEAT",100;
       bonus2 bSkillAtk,"AC_DOUBLE",25;
+      bonus2 bDropAddRace,RC_All,5;
   - Id: 1300008
     AegisName: Costume_V4_Priest
     Name: Costume V4
@@ -19348,6 +19357,7 @@ Body:
     Script: |
       bonus2 bSkillAtk,"PR_MAGNUS",50;
       bonus bNogemstone;
+      bonus2 bDropAddRace,RC_All,5;
   - Id: 1300009
     AegisName: Costume_V5_Monk
     Name: Costume V1
@@ -19359,6 +19369,7 @@ Body:
       Shadow_Weapon: true
     Script: |
       bonus2 bSkillAtk,"MO_EXTREMITYFIST",10;
+      bonus2 bDropAddRace,RC_All,5;
   - Id: 1300010
     AegisName: Costume_V6_Assassin
     Name: Costume V6
@@ -19370,6 +19381,7 @@ Body:
       Shadow_Weapon: true
     Script: |
       bonus bCritAtkRate,10;
+      bonus2 bDropAddRace,RC_All,5;
   - Id: 1300011
     AegisName: Costume_V7_Alchemist
     Name: Costume V7
@@ -19381,6 +19393,7 @@ Body:
       Shadow_Weapon: true
     Script: |
       bonus2 bSkillAtk,"CR_ACIDDEMONSTRATION",10;
+      bonus2 bDropAddRace,RC_All,5;
   - Id: 1300012
     AegisName: Costume_V8_Blacksmith
     Name: Costume V8
@@ -19393,6 +19406,7 @@ Body:
     Script: |
       bonus2 bSkillAtk,"MC_MAMMONITE",50;
       bonus2 bSkillAtk,"WS_CARTTERMINATION",25;
+      bonus2 bDropAddRace,RC_All,5;
   - Id: 1300013
     AegisName: Costume_V9_Wizard
     Name: Costume V9
@@ -19406,6 +19420,7 @@ Body:
       bonus2 bSkillAtk,"WZ_METEOR",25;
       bonus2 bSkillAtk,"WZ_VERMILION",25;
       bonus2 bSkillAtk,"WZ_STORMGUST",25;
+      bonus2 bDropAddRace,RC_All,5;
   - Id: 1300014
     AegisName: Costume_V10_Sage
     Name: Costume V10
@@ -19421,6 +19436,7 @@ Body:
       if (getskilllv("MG_LIGHTNINGBOLT"))bonus3 bAutoSpell,"MG_LIGHTNINGBOLT",Max(1,getskilllv("MG_LIGHTNINGBOLT")),50;
       if (getskilllv("MG_SOULSTRIKE"))bonus3 bAutoSpell,"MG_SOULSTRIKE",Max(1,getskilllv("MG_SOULSTRIKE")),50;
       if (getskilllv("WZ_EARTHSPIKE"))bonus3 bAutoSpell,"WZ_EARTHSPIKE",Max(1,getskilllv("WZ_EARTHSPIKE")),50;
+      bonus2 bDropAddRace,RC_All,5;
   - Id: 1300015
     AegisName: Costume_V11_Rogue
     Name: Costume V11
@@ -19432,6 +19448,7 @@ Body:
       Shadow_Weapon: true
     Script: |
       bonus bDoublerate,100;
+      bonus2 bDropAddRace,RC_All,5;
   - Id: 1300016
     AegisName: Costume_V11_Bard
     Name: Costume V11
@@ -19444,6 +19461,7 @@ Body:
     Script: |
       bonus2 bSkillAtk,"DC_THROWARROW",100;
       bonus2 bSkillAtk,"CG_ARROWVULCAN",50;
+      bonus2 bDropAddRace,RC_All,5;
   - Id: 1300017
     AegisName: Costume_V11_Dance
     Name: Costume V11
@@ -19456,3 +19474,4 @@ Body:
     Script: |
       bonus2 bSkillAtk,"DC_THROWARROW",100;
       bonus2 bSkillAtk,"CG_ARROWVULCAN",50;
+      bonus2 bDropAddRace,RC_All,5;

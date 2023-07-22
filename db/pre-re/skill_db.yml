@@ -10605,7 +10605,7 @@ Body:
       AllowOnMado: true
     Hit: Single
     HitCount: 1
-    Duration1: 60000
+    Duration1: 300000
     Requires:
       SpCost: 20
       State: Cart
@@ -10719,25 +10719,25 @@ Body:
         Time: 3800
     AfterCastActDelay:
       - Level: 1
-        Time: 2800
+        Time: 900
       - Level: 2
-        Time: 2800
+        Time: 900
       - Level: 3
-        Time: 2800
+        Time: 900
       - Level: 4
-        Time: 2800
+        Time: 900
       - Level: 5
-        Time: 2800
+        Time: 900
       - Level: 6
-        Time: 3000
+        Time: 1000
       - Level: 7
-        Time: 3000
+        Time: 1000
       - Level: 8
-        Time: 3000
+        Time: 1000
       - Level: 9
-        Time: 3000
+        Time: 1000
       - Level: 10
-        Time: 3000
+        Time: 1000
     AfterCastWalkDelay: 2000
     CastDelayFlags:
       IgnoreStatus: true

@@ -3987,6 +3987,7 @@ Body:
     Name: Jur
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 19500
     Weight: 800
     Attack: 125
@@ -4004,6 +4005,7 @@ Body:
     Name: Jur
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 19500
     Weight: 800
     Attack: 125
@@ -4021,6 +4023,7 @@ Body:
     Name: Katar
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 41000
     Weight: 1200
     Attack: 148
@@ -4040,6 +4043,7 @@ Body:
     Name: Katar
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 41000
     Weight: 1200
     Attack: 148
@@ -4059,6 +4063,7 @@ Body:
     Name: Jamadhar
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 37200
     Weight: 1500
     Attack: 165
@@ -4075,6 +4080,7 @@ Body:
     Name: Jamadhar
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 37200
     Weight: 1500
     Attack: 165
@@ -4092,6 +4098,7 @@ Body:
     Name: Katar of Frozen Icicle
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 45000
     Weight: 1200
     Attack: 105
@@ -4111,6 +4118,7 @@ Body:
     Name: Katar of Quaking
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 45000
     Weight: 1200
     Attack: 105
@@ -4130,6 +4138,7 @@ Body:
     Name: Katar of Raging Blaze
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 45000
     Weight: 1200
     Attack: 105
@@ -4149,6 +4158,7 @@ Body:
     Name: Katar of Piercing Wind
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 45000
     Weight: 1200
     Attack: 105
@@ -4168,6 +4178,7 @@ Body:
     Name: Sharpened Legbone of Ghoul
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 52500
     Weight: 1700
     Attack: 150
@@ -4186,6 +4197,7 @@ Body:
     Name: Infiltrator
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 57000
     Weight: 1500
     Attack: 140
@@ -4208,6 +4220,7 @@ Body:
     Name: Loki's Nail
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 20
     Weight: 1200
     Attack: 115
@@ -4226,6 +4239,7 @@ Body:
     Name: Unholy Touch
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 20
     Weight: 1250
     Attack: 151
@@ -4247,6 +4261,7 @@ Body:
     Name: Specialty Jur
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 20
     Weight: 800
     Attack: 90
@@ -4266,6 +4281,7 @@ Body:
     Name: Bloody Roar
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 20
     Weight: 1000
     Attack: 120
@@ -4288,6 +4304,7 @@ Body:
     Name: Infiltrator
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 57000
     Weight: 1500
     Attack: 140
@@ -4311,6 +4328,7 @@ Body:
     Name: Infiltrator
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 1
     Attack: 189
     Range: 1
@@ -4341,6 +4359,7 @@ Body:
     Name: Wild Beast Claw
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 20
     Weight: 1450
     Attack: 160
@@ -4365,6 +4384,7 @@ Body:
     Name: Inverse Scale
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 20
     Weight: 1500
     Attack: 140
@@ -4386,6 +4406,7 @@ Body:
     Name: Drill Katar
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 20
     Weight: 1400
     Attack: 110
@@ -4408,6 +4429,7 @@ Body:
     Name: Blood Tears
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 20
     Weight: 1700
     Attack: 120
@@ -4432,6 +4454,7 @@ Body:
     Name: Scratcher
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 20
     Attack: 120
     Range: 1
@@ -4455,6 +4478,7 @@ Body:
     Name: Refined Bloody Roar
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 1
     Attack: 148
     Range: 1
@@ -4472,6 +4496,7 @@ Body:
     Name: Refined Unholy Touch
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 1
     Attack: 179
     Range: 1
@@ -4490,6 +4515,7 @@ Body:
     Name: Katar of Frozen Icicle
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 45000
     Weight: 1200
     Attack: 105
@@ -4510,6 +4536,7 @@ Body:
     Name: Katar of Quaking
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 45000
     Weight: 1200
     Attack: 105
@@ -4530,6 +4557,7 @@ Body:
     Name: Katar of Raging Blaze
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 45000
     Weight: 1200
     Attack: 105
@@ -4550,6 +4578,7 @@ Body:
     Name: Katar of Piercing Wind
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 45000
     Weight: 1200
     Attack: 105
@@ -4570,6 +4599,7 @@ Body:
     Name: Brave Carnage Katar
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 20
     Attack: 130
     Range: 1
@@ -4601,6 +4631,7 @@ Body:
     Name: Valorous Carnage Katar
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 20
     Attack: 130
     Range: 1
@@ -4632,6 +4663,7 @@ Body:
     Name: Glorious Bloody Roar
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 20
     Attack: 140
     Range: 1
@@ -4669,6 +4701,7 @@ Body:
     Name: Glorious Jamadhar
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 20
     Attack: 140
     Range: 1
@@ -4706,6 +4739,7 @@ Body:
     Name: Katar Of Speed
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 20
     Attack: 175
     Range: 1
@@ -4731,6 +4765,7 @@ Body:
     Name: Krishna
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 20
     Weight: 1200
     Attack: 120
@@ -4758,6 +4793,7 @@ Body:
     Name: Chakram
     Type: Weapon
     SubType: Katar
+    View: 16
     Buy: 20
     Weight: 1000
     Attack: 130
@@ -4782,6 +4818,7 @@ Body:
     Name: Jamadhar
     Type: Weapon
     SubType: Katar
+    View: 16
     Attack: 200
     Range: 1
     Jobs:
