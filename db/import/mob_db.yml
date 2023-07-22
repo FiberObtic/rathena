@@ -80,6 +80,20 @@ Header:
   Version: 3
 
 Body:
+  - Id: 2408
+    AegisName: DUMMY_10
+    Name: Dummy 10
+    Level: 10
+    Hp: 99999999
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 1
+    WalkSpeed: 200
+    Class: Boss
+    Modes:
+      NoRandomWalk: true
+      TeleportBlock: true
   - Id: 2718
     AegisName: C5_PECOPECO
     Name: Elusive Peco Peco
