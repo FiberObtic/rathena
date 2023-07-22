@@ -19436,9 +19436,9 @@ Body:
     AegisName: Costume_V11_Bard
     Name: Costume V11
     Type: Shadowgear
-    View: 115
+    View: 116
     Jobs:
-      Rogue: true
+      BardDancer: true
     Locations:
       Shadow_Weapon: true
     Script: |
@@ -19448,9 +19448,9 @@ Body:
     AegisName: Costume_V11_Dance
     Name: Costume V11
     Type: Shadowgear
-    View: 115
+    View: 117
     Jobs:
-      Rogue: true
+      BardDancer: true
     Locations:
       Shadow_Weapon: true
     Script: |
