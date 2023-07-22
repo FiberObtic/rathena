@@ -10605,7 +10605,7 @@ Body:
       AllowOnMado: true
     Hit: Single
     HitCount: 1
-    Duration1: 60000
+    Duration1: 300000
     Requires:
       SpCost: 20
       State: Cart
