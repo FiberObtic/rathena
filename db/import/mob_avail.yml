@@ -43,8 +43,9 @@ Header:
   Type: MOB_AVAIL_DB
   Version: 1
 
-#Body:
-  # Examples
+Body:
+  - Mob: DUMMY_150
+    Sprite: EMPELIUM
 #  - Mob: PORING
 #    Sprite: BAPHOMET
 #  - Mob: E_OBEAUNE

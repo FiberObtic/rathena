@@ -151,6 +151,43 @@ Body:
     AttackMotion: 960
     DamageMotion: 432
     Ai: 03
+  - Id: 2411
+    AegisName: DUMMY_150
+    Name: Dummy 150
+    Level: 90
+    Hp: 700
+    Attack: 60
+    Attack2: 71
+    Defense: 40
+    MagicDefense: 50
+    Agi: 17
+    Vit: 80
+    Int: 50
+    Dex: 26
+    Luk: 20
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Angel
+    RaceGroups:
+      Gvg: true
+    Element: Holy
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 1288
+    AttackMotion: 288
+    DamageMotion: 384
+    Class: Boss
+    Modes:
+      IgnoreMagic: true
+      IgnoreMelee: true
+      IgnoreMisc: true
+      IgnoreRanged: true
+      TeleportBlock: true
+      KnockBackImmune: true
+      StatusImmune: true
+      SkillImmune: true
 # eAthena Dev Team
 #=============================================================
 #  - Id: 1900
