@@ -96,3 +96,7 @@ Footer:
     Mode: Renewal
   - Path: db/import/item_db.yml
   - Path: db/import/item_db_costume.yml
+  - Path: db/import/item_db_h_costume.yml
+  - Path: db/import/item_db_l_costume.yml
+  - Path: db/import/item_db_m_costume.yml
+  - Path: db/import/item_db_r_costume.yml
