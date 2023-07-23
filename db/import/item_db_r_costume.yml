@@ -1,0 +1,105 @@
+Header:
+  Type: ITEM_DB
+  Version: 3
+
+Body:
+  - Id: 90001
+    AegisName: Costume Wing Of Angel
+    Name: Costume Wing Of Angel
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    Script: |
+      bonus bAddMaxWeight,9999;
+    View: 141
+  - Id: 90002
+    AegisName: Costume Wing Of Angel BK
+    Name: Costume Wing Of Angel BK
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    Script: |
+      bonus bAddMaxWeight,9999;
+    View: 142
+  - Id: 90003
+    AegisName: Costume wing of angel F
+    Name: Costume wing of angel F
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    Script: |
+      bonus bAddMaxWeight,9999;
+    View: 143
+  - Id: 90004
+    AegisName: Costume Wing Of Angel Gold
+    Name: Costume Wing Of Angel Gold
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    View: 144
+    Script: |
+      bonus bAddMaxWeight,9999;
+  - Id: 90005
+    AegisName: Costume Wing Of Angel Blue
+    Name: Costume Wing Of Angel Blue
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    Script: |
+      bonus bAddMaxWeight,9999;
+    View: 145
+  - Id: 90006
+    AegisName: Costume Wing Of Angel Green
+    Name: Costume Wing Of Angel Green
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    Script: |
+      bonus bAddMaxWeight,9999;
+    View: 146
+  - Id: 90007
+    AegisName: Costume Wing Of Angel Purple
+    Name: Costume Wing Of Angel Purple
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    Script: |
+      bonus bAddMaxWeight,9999;
+    View: 147
+  - Id: 90008
+    AegisName: Costume Wing Of Angel Rainbow
+    Name: Costume Wing Of Angel Rainbow
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    Script: |
+      bonus bAddMaxWeight,9999;
+    View: 148
+  - Id: 90009
+    AegisName: Costume Wing Of Angel Red
+    Name: Costume Wing Of Angel Red
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    Script: |
+      bonus bAddMaxWeight,9999;
+    View: 149
+  - Id: 90010
+    AegisName: Costume Wing Of Angel Yellow
+    Name: Costume Wing Of Angel Yellow
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    Script: |
+      bonus bAddMaxWeight,9999;
+    View: 150

@@ -1,0 +1,14 @@
+Header:
+  Type: ITEM_DB
+  Version: 3
+
+Body:
+  - Id: 5912
+    AegisName: C_Minions_Of_Devil
+    Name: Costume Servant Deviling
+    Type: Armor
+    View: 1036
+    Buy: 20
+    Locations:
+      Costume_Head_Mid: true
+    ArmorLevel: 1
