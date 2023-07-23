@@ -14,7 +14,7 @@ morocc,128,107,4	script	CASH GACHAPON#1	456,{
 			mes ".";
 			mes "^FF0000โปรดเลือกรายการที่ต้องการ ?^000000";
 			next;
-			switch(select("~ ใช้ ^FF0000Gacha Coin^000000 1ea [มี "+callfunc("F_InsertComma",countitem(992112))+"ea]:~ ยกเลิกการสนทนา")) {
+			switch(select("~ ใช้ ^FF0000Gacha Coin^000000 1ea [มี "+callfunc("F_InsertComma",countitem(501))+"ea]:~ ยกเลิกการสนทนา")) {
 				case 1:
 						if (countitem(.GASHA_CASH) < .GASHA_POINT) {
 							mes "[ CASH Gashapon ]";
