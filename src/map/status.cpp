@@ -11474,6 +11474,18 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		case SC_EXPBOOST:
 		case SC_JEXPBOOST:
 		case SC_JP_EVENT04:
+		// TAURUS VIP Icon
+		case SC_CASH_VIP:
+		// TAURUS PREMIUM SERVICE
+		case SC_PREMIUMSERVICE_EXPBOOST_A:
+		case SC_PREMIUMSERVICE_EXPBOOST_S:
+		case SC_PREMIUMSERVICE_JEXPBOOST_A:
+		case SC_PREMIUMSERVICE_JEXPBOOST_S:
+		case SC_PREMIUMSERVICE:
+		// TAURUS PREMIUM Boost
+		case SC_PREMIUM_EXPBOOST:
+		case SC_PREMIUM_JEXPBOOST:
+		case SC_PREMIUM_ITEMBOOST:
 			if (val1 < 0)
 				val1 = 0;
 			break;

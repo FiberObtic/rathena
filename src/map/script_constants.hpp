@@ -1892,6 +1892,23 @@
 	export_constant(SC_RELIEVE_OFF);
 	export_constant(SC_RUSH_QUAKE1);
 	export_constant(SC_RUSH_QUAKE2);
+	
+	// TAURUS VIP Icon
+	export_constant(SC_CASH_VIP);
+	// TAURUS PREMIUM SERVICE
+	export_constant(SC_PREMIUMSERVICE_EXPBOOST_A);
+	export_constant(SC_PREMIUMSERVICE_EXPBOOST_S);
+	export_constant(SC_PREMIUMSERVICE_JEXPBOOST_A);
+	export_constant(SC_PREMIUMSERVICE_JEXPBOOST_S);
+	export_constant(SC_PREMIUMSERVICE_ITEMBOOST_A);
+	export_constant(SC_PREMIUMSERVICE_ITEMBOOST_S);
+	export_constant(SC_PREMIUMSERVICE_STORAGE);
+	export_constant(SC_PREMIUMSERVICE_LIFEINSURANCE);
+	export_constant(SC_PREMIUMSERVICE);
+	// TAURUS PREMIUM Boost
+	export_constant(SC_PREMIUM_EXPBOOST);
+	export_constant(SC_PREMIUM_JEXPBOOST);
+	export_constant(SC_PREMIUM_ITEMBOOST);
 
 #ifdef RENEWAL
 	export_constant(SC_EXTREMITYFIST2);

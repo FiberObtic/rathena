@@ -175,6 +175,223 @@ Body:
     Script: |
        dispbottom "[ RANK JOB] คุณได้รับ RANK Job จำนวน 100,000 Points",0xffffff;
        getexp2(0,100000);
+  - Id: 23207
+    AegisName: Premium_Box
+    Name: Premium Service Box
+    Type: Cash
+    Weight: 10
+    Flags:
+      UniqueId: true
+      DropEffect: YELLOW_PILLAR
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      rentitem 23165,2592000;
+      #PREMIUMSERVICE_TIME = gettimetick(2)+2592000;
+      sc_start SC_PREMIUMSERVICE,2592000000,30;
+      sc_start SC_PREMIUMSERVICE_STORAGE,2592000000,300;
+      sc_start SC_PREMIUMSERVICE_EXPBOOST_A,2592000000,20;
+      sc_start SC_PREMIUMSERVICE_JEXPBOOST_A,2592000000,20;
+      sc_start SC_PREMIUMSERVICE_ITEMBOOST_A,2592000000,30;
+  - Id: 23209
+    AegisName: Premium_Box_1d
+    Name: Premium Service 1Day Box
+    Type: Cash
+    Weight: 10
+    Flags:
+      UniqueId: true
+      DropEffect: YELLOW_PILLAR
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      rentitem 23165,86400;
+      #PREMIUMSERVICE_TIME = gettimetick(2)+86400;
+      sc_start SC_PREMIUMSERVICE,86400000,1;
+      sc_start SC_PREMIUMSERVICE_STORAGE,86400000,300;
+      sc_start SC_PREMIUMSERVICE_EXPBOOST_A,86400000,20;
+      sc_start SC_PREMIUMSERVICE_JEXPBOOST_A,86400000,20;
+      sc_start SC_PREMIUMSERVICE_ITEMBOOST_A,86400000,30;
+  - Id: 23210
+    AegisName: Premium_Box_4d
+    Name: Premium Service 4Day Box
+    Type: Cash
+    Weight: 10
+    Flags:
+      UniqueId: true
+      DropEffect: YELLOW_PILLAR
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      rentitem 23165,345600;
+      #PREMIUMSERVICE_TIME = gettimetick(2)+345600;
+      sc_start SC_PREMIUMSERVICE,345600000,4;
+      sc_start SC_PREMIUMSERVICE_STORAGE,345600000,300;
+      sc_start SC_PREMIUMSERVICE_EXPBOOST_A,345600000,20;
+      sc_start SC_PREMIUMSERVICE_JEXPBOOST_A,345600000,20;
+      sc_start SC_PREMIUMSERVICE_ITEMBOOST_A,345600000,30;
+  - Id: 23211
+    AegisName: Premium_Box_5d
+    Name: Premium Service 5Day Box
+    Type: Cash
+    Weight: 10
+    Flags:
+      UniqueId: true
+      DropEffect: YELLOW_PILLAR
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      rentitem 23165,432000;
+      #PREMIUMSERVICE_TIME = gettimetick(2)+432000;
+      sc_start SC_PREMIUMSERVICE,432000000,5;
+      sc_start SC_PREMIUMSERVICE_STORAGE,432000000,300;
+      sc_start SC_PREMIUMSERVICE_EXPBOOST_A,432000000,20;
+      sc_start SC_PREMIUMSERVICE_JEXPBOOST_A,432000000,20;
+      sc_start SC_PREMIUMSERVICE_ITEMBOOST_A,432000000,30;
+  - Id: 23212
+    AegisName: Premium_Box_6d
+    Name: Premium Service 6Day Box
+    Type: Cash
+    Weight: 10
+    Flags:
+      UniqueId: true
+      DropEffect: YELLOW_PILLAR
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      rentitem 23165,518400;
+      #PREMIUMSERVICE_TIME = gettimetick(2)+518400;
+      sc_start SC_PREMIUMSERVICE,518400000,6;
+      sc_start SC_PREMIUMSERVICE_STORAGE,518400000,300;
+      sc_start SC_PREMIUMSERVICE_EXPBOOST_A,518400000,20;
+      sc_start SC_PREMIUMSERVICE_JEXPBOOST_A,518400000,20;
+      sc_start SC_PREMIUMSERVICE_ITEMBOOST_A,518400000,30;
+  - Id: 23213
+    AegisName: Premium_Box_7d
+    Name: Premium Service 7Day Box
+    Type: Cash
+    Weight: 10
+    Flags:
+      UniqueId: true
+      DropEffect: YELLOW_PILLAR
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      rentitem 23165,604800;
+      #PREMIUMSERVICE_TIME = gettimetick(2)+604800;
+      sc_start SC_PREMIUMSERVICE,604800000,7;
+      sc_start SC_PREMIUMSERVICE_STORAGE,604800000,300;
+      sc_start SC_PREMIUMSERVICE_EXPBOOST_A,604800000,20;
+      sc_start SC_PREMIUMSERVICE_JEXPBOOST_A,604800000,20;
+      sc_start SC_PREMIUMSERVICE_ITEMBOOST_A,604800000,30;
+  - Id: 23214
+    AegisName: Premium_Box_8d
+    Name: Premium Service 8Day Box
+    Type: Cash
+    Weight: 10
+    Flags:
+      UniqueId: true
+      DropEffect: YELLOW_PILLAR
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      rentitem 23165,691200;
+      #PREMIUMSERVICE_TIME = gettimetick(2)+691200;
+      sc_start SC_PREMIUMSERVICE,691200000,8;
+      sc_start SC_PREMIUMSERVICE_STORAGE,691200000,300;
+      sc_start SC_PREMIUMSERVICE_EXPBOOST_A,691200000,20;
+      sc_start SC_PREMIUMSERVICE_JEXPBOOST_A,691200000,20;
+      sc_start SC_PREMIUMSERVICE_ITEMBOOST_A,691200000,30;
+  - Id: 23215
+    AegisName: Premium_Box_9d
+    Name: Premium Service 9Day Box
+    Type: Cash
+    Weight: 10
+    Flags:
+      UniqueId: true
+      DropEffect: YELLOW_PILLAR
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+  - Id: 23216
+    AegisName: Premium_Box_10d
+    Name: Premium Service 10Day Box
+    Type: Cash
+    Weight: 10
+    Flags:
+      UniqueId: true
+      DropEffect: YELLOW_PILLAR
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      rentitem 23165,864000;
+      #PREMIUMSERVICE_TIME = gettimetick(2)+864000;
+      sc_start SC_PREMIUMSERVICE,864000000,10;
+      sc_start SC_PREMIUMSERVICE_STORAGE,864000000,300;
+      sc_start SC_PREMIUMSERVICE_EXPBOOST_A,864000000,20;
+      sc_start SC_PREMIUMSERVICE_JEXPBOOST_A,864000000,20;
+      sc_start SC_PREMIUMSERVICE_ITEMBOOST_A,864000000,30;
 # THQ Quest Items
 #=============================================================
 #  - Id: 1998
