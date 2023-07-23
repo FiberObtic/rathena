@@ -20,10 +20,12 @@
 //===== Compatible With: =====================================
 //= rAthena Project
 //============================================================
+-	shop	Dummy#Jackpot_Item	-1,909:-1
 morocc,124,103,4	script	Jackpot Item#i1	562,{
 	
 //============= Setting ===========================================================================
 	disable_items;
+	//cutin "slot_lv7_00",1;
 	if (MaxWeight - Weight < 1000) {
 		mes "รอสักครู่!!";
 		mes "ท่านนำสิ่งต่าง ๆ มากมายเกินไป!";
@@ -39,12 +41,18 @@ morocc,124,103,4	script	Jackpot Item#i1	562,{
 	set .@c_round,2;	// กำหนด รอบที่ต้องการเพื่อให้ได้รับรางวัล
 	setarray .@item_round[0],501,10;	// กำหนดไอเท็มที่ได้รับ และจำนวนที่ได้รับเมื่อสุ่มครบ .@c_round
 	.@GM = getgmlevel() >= 99;	// กำหนดระดับสิทธิ์
+	/*
 	// item id 909(ห้ามแก้) rate 1% = ยอดสะสม zeny
 	setarray .@item[0],909,501,502,503,504,505,506,507,508,509,510,910,607; // item_id
 	setarray .@arr[0],100,1300,1400,1500,1000,1700,1800,1900,2000,1000,5000,7000,8000;	// item_rate 100 = 1%
 	setarray .@amt[0],1,2,3,4,5,6,7,8,9,10,11,12,13;	// item_amount
 	// reward rank 1-3
 	setarray .@reward_id[0],501,502,503;	// item_id
+	*/
+	copyarray .@item[0],.item[0],getarraysize(.item);
+	copyarray .@arr[0],.arr[0],getarraysize(.arr);
+	copyarray .@amt[0],.amt[0],getarraysize(.amt);
+	copyarray .@reward_id[0],.item[0],getarraysize(.reward_id);
 	
 //============= Random ===========================================================================
 	// start sort variable max to min
@@ -126,18 +134,28 @@ GM:
 	} // if end .@GM
 	next;
 	mes .NPCname$;
+	mes "โปรดเลือกสิ่งที่ต้องการ";
+	/*
 	mes "รายการของดังต่อไปนี้";
 	for(.@i = 0; .@i < getarraysize(.@item) ; .@i += 1) 
 		mes .@i+1+". <ITEM>"+getitemname(.@item[.@i])+"<INFO>"+.@item[.@i]+"</INFO></ITEM>";
 	next;
+	*/
 	menu "~ สุ่มโดยใช้ ^0000ff("+callfunc("F_InsertComma",.@money)+")^000000 Zeny",Cost_use,
+	"~ ตรวจสอบรายการของรางวัล",Checkshop,
 	"~ จัดอันดับผู้เล่น",Ranking,
 	"~ รางวัลอันดับ1-3",Reward,
 	""+(.@GM ? "~ ^FF0000ล้างระบบพ้อย^000000":""),Reset,
 	""+(.@GM ? "~ ^FF0000ล้างแต้มสะสม^000000":""),Reset1,
 	"~ ไม่ล่ะ เอาไว้ก่อน",-;
 	end;
-	
+
+Checkshop:
+	mes "รายการจะแสดงตามร้านค้า จำนวนที่ได้รับจะเท่ากับราคาสินค้าภายในร้าน";
+	callshop "Dummy#Jackpot_Item",1;
+	npcshopattach "Dummy#Jackpot_Item";
+	end;
+
 Cost_use:
 	if (@menu == 1 ) {
 		if( zeny < .@money ){
@@ -288,10 +306,24 @@ Reward:
 	mes "ยังไม่ถึงเวลารับของรางวัล";
 	end;
 	
+OnBuyItem:
+OnSellItem:
+	mes .NPCname$;
+	mes "เป็นเพียงแค่ของโชว์เท่านั้น";
+	end;
 Oninit:
 	if (!query_sql("SHOW COLUMNS FROM `char` WHERE `Field` = 'point_jack_item'", .@fields, .@a, .@b, .@c, .@d, .@e))
 		query_sql "ALTER TABLE `char` ADD COLUMN `point_jack_item` INT DEFAULT 0 AFTER `show_equip`, ADD INDEX(`point_jack_item`)";
 	
 	set .NPCname$,"[ Jackpot Item ]";
+	// item id 909(ห้ามแก้) rate 1% = ยอดสะสม zeny
+	setarray .item[0],909,501,502,503,504,505,506,507,508,509,510,910,607; // item_id
+	setarray .arr[0],100,1300,1400,1500,1000,1700,1800,1900,2000,1000,5000,7000,8000;	// item_rate 100 = 1%
+	setarray .amt[0],1,2,3,4,5,6,7,8,9,10,11,12,13;	// item_amount
+	// reward rank 1-3
+	setarray .reward_id[0],501,502,503;	// item_id
+	for(.@i=1;.@i<getarraysize(.item);.@i++)
+		npcshopadditem "Dummy#Jackpot_Item",.item[.@i],.amt[.@i];
+	npcshopdelitem "Dummy#Jackpot_Item",909;
 	end;
 }

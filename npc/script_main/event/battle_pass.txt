@@ -299,26 +299,47 @@ morocc,153,82,5	script	Premium Pass Manager	4_F_DRKAFRA01,{
 					}
 					switch(.@type) {
 						case 1:
+							if(mobhunt) {
+								mes .NPCname$;
+								mes "ไม่สามารถเลือกเควสซ้ำกับที่เคยเลือกไปได้";
+								next;
+								goto OnQuest;
+							}
 							.@id = .hunt_list[rand(getarraysize(.hunt_list))];
 							.@amount = rand(.min_hunt,.max_hunt);
 							.@type$ = "ล่ามอนสเตอร์";
 							.@prefix$ = "ล่า";
 							c_hunt++;
+							mobhunt++;
 							break;
 							
 						case 2:
+							if(takeitem) {
+								mes .NPCname$;
+								mes "ไม่สามารถเลือกเควสซ้ำกับที่เคยเลือกไปได้";
+								next;
+								goto OnQuest;
+							}
 							.@id = .collect_list[rand(getarraysize(.collect_list))];
 							.@amount = rand(.min_collect,.max_collect);
 							.@type$ = "เก็บรวบรวมไอเทม";
 							.@prefix$ = "รวบรวม";
+							takeitem++;
 							break;
 							
 						case 3:
+							if(mvphunt) {
+								mes .NPCname$;
+								mes "ไม่สามารถเลือกเควสซ้ำกับที่เคยเลือกไปได้";
+								next;
+								goto OnQuest;
+							}
 							.@id = .mvp_list[rand(getarraysize(.mvp_list))];
 							.@amount = 1;
 							.@type$ = "ล่ามอนสเตอร์ MVP";
 							.@prefix$ = "MVP";
 							c_hunt++;
+							mvphunt++;
 							break;
 					}
 					.@TT$[0] = .@type;
@@ -377,6 +398,10 @@ morocc,153,82,5	script	Premium Pass Manager	4_F_DRKAFRA01,{
 					case 1:
 						if (.@type == 2)
 							delitem .@id,.@amount;
+						else if (.@type == 1)
+							mobhunt--;
+						else if (.@type == 3)
+							mvphunt--;
 						else
 							c_hunt--;
 						.@T$[.@s] = "4,0,0,0";

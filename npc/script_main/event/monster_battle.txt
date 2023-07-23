@@ -5,12 +5,12 @@
 //////////////////////////////////////////////
 -	script	monstervsmonster_setingz#1	-1,{
 OnInit:
-set $@nemeeventcheken1$,"[ Chicken 200K ]"; //ชื่อ NPC
+set $@nemeeventcheken1$,"[ Chicken 500K ]"; //ชื่อ NPC
 set $redteam,2718; //ID Monster
 set $blueteam,2810; //ID Monster
 /////////////////////////////////
-set $monsterzenyre,200000; //ราคาเดิมพัน
-set $monsterzenyrservece,5000; //ราคาค่าน้ำ
+set $monsterzenyre,500000; //ราคาเดิมพัน
+set $monsterzenyrservece,95*$monsterzenyre/100; //ราคาค่าน้ำ
 set $Monterteimset,30000; //เวลานับถอยหลัง 1000=1วินาที
 /////////////**Mode จำกัดผู้เล่นสองฝั่ง**//////////////////
 set $Montermaxon,0; // 1=เปิด 0=ปิด $monterrungamezplayer
@@ -21,15 +21,15 @@ end;
 -	script	monstervsmonster_setingz#2	-1,{
 	OnInit:
 	if(getd("$monterrungamez") == 1){
-donpcevent "[ Chicken 200K ]::Oneffect2";}
-donpcevent "[ Chicken 200K ]::Onkillchicken";
+donpcevent "[ Chicken 500K ]::Oneffect2";}
+donpcevent "[ Chicken 500K ]::Onkillchicken";
 setd "$monterrungamezz",0;
 setd "$monsdiez1",0;
 setd "$monsdiez2",0;
 	end;
 }
 
-izlude,152,199,6	script	[ Chicken 200K ]	540,{
+morocc,206,44,6	script	[ Chicken 500K ]	540,{
 
 			if(getgmlevel()){
 		mes "^FF0000---GM MODE---^000000";
@@ -320,15 +320,15 @@ if(getd("$monterrungames2z")== 1){end;}
 	set .@rn,rand(1000);
 sleep .@rn;
 	/////////////////////////////////////
-	monster "izlude",148,193,"Peco Peco",$redteam,1,strnpcinfo(0) +"::Onbluedie",0,0;
-	monster "izlude",148,192,"Peco Peco",$redteam,1,strnpcinfo(0) +"::Onbluedie",0,0;
-	monster "izlude",148,191,"Peco Peco",$redteam,1,strnpcinfo(0) +"::Onbluedie",0,0;	
+	monster "morocc",201,39,"Peco Peco",$redteam,1,strnpcinfo(0) +"::Onbluedie",0,0;
+	monster "morocc",201,38,"Peco Peco",$redteam,1,strnpcinfo(0) +"::Onbluedie",0,0;
+	monster "morocc",201,37,"Peco Peco",$redteam,1,strnpcinfo(0) +"::Onbluedie",0,0;	
 	/////////////////////////////////////
-	monster "izlude",156,193,"Grand Peco",$blueteam,1,strnpcinfo(0) +"::Onreddie",0,1;
-	monster "izlude",156,192,"Grand Peco",$blueteam,1,strnpcinfo(0) +"::Onreddie",0,1;
-	monster "izlude",156,191,"Grand Peco",$blueteam,1,strnpcinfo(0) +"::Onreddie",0,1;
+	monster "morocc",211,39,"Grand Peco",$blueteam,1,strnpcinfo(0) +"::Onreddie",0,1;
+	monster "morocc",211,38,"Grand Peco",$blueteam,1,strnpcinfo(0) +"::Onreddie",0,1;
+	monster "morocc",211,37,"Grand Peco",$blueteam,1,strnpcinfo(0) +"::Onreddie",0,1;
 
-	setmapflag "izlude", mf_monster_noteleport;
+	setmapflag "morocc", mf_monster_noteleport;
 	end;
 	
 Onbluedie:
@@ -368,8 +368,8 @@ if(getd("$monsdiez2") >= 3){
 end;			
 ///////////////////////////////
 Onkillchicken:
-killmonster "izlude",strnpcinfo(0) +"::Onreddie",1;
-killmonster "izlude",strnpcinfo(0) +"::Onbluedie",1;
+killmonster "morocc",strnpcinfo(0) +"::Onreddie",1;
+killmonster "morocc",strnpcinfo(0) +"::Onbluedie",1;
 end;
 //////////////////////////////
 OnEnd:
@@ -381,13 +381,13 @@ OnEnd:
 	setd "$monterrungamez",0;
 	setd "$monterrungamezz",0;
 	sleep 3000;
-	killmonster "izlude",strnpcinfo(0) +"::Onreddie",1;
-	killmonster "izlude",strnpcinfo(0) +"::Onbluedie",1;
+	killmonster "morocc",strnpcinfo(0) +"::Onreddie",1;
+	killmonster "morocc",strnpcinfo(0) +"::Onbluedie",1;
 	npctalk ""+$@nemeeventcheken1$+" รอบที่ ["+(getd("$monswin1")+getd("$monswin2")+1)+"] ได้เปิดแล้ว";
 	end;
 
 OnInit:
-	waitingroom "[ ไก่ชน 200K ]",0;
+	waitingroom "[ ไก่ชน 500K ]",0;
 	OnTimer500:
 	if(getd("$mons1") < 0)+(getd("$mons2") < 0){
 	setd "$mons1",0;
@@ -455,7 +455,7 @@ if(.@monster == 2	&&	.@zenycheck > 0){
 return;	
 }
 
-izlude,148,197,6	script	Peco Peco#01	2718,{
+morocc,202,42,6	script	Peco Peco#01	2718,{
 	end;
 	Oneffect1:	specialeffect 568;specialeffect 518;end;
 	Oneffect2:	specialeffect 568;specialeffect 518;specialeffect 68;end;
@@ -468,7 +468,7 @@ OnTimer1000:
 end;
 }
 
-izlude,156,197,3	script	Grand Peco#02	2810,{
+morocc,210,42,3	script	Grand Peco#02	2810,{
 	end;
 	Oneffect1:	specialeffect 568;specialeffect 518;end;
 	Oneffect2:	specialeffect 568;specialeffect 518;specialeffect 68;end;
@@ -480,19 +480,19 @@ OnTimer1000:
 	initnpctimer;
 end;
 }
-izlude,146,195,3	script	Wall#777	858 ,{}
-izlude,146,189,3	script	Wall#888	858 ,{}
-izlude,158,195,3	script	Wall#999	858 ,{}
-izlude,158,189,3	script	Wall#1010	858 ,{}
+morocc,200,41,3	script	Wall#777	858 ,{}
+morocc,200,35,3	script	Wall#888	858 ,{}
+morocc,212,41,3	script	Wall#999	858 ,{}
+morocc,212,35,3	script	Wall#1010	858 ,{}
 -	script	กรงไก่ชนer	FAKE_NPC,{
 	end;
 	
 OnInit:
-	setwall "izlude",146,195,12,6,0,"wallanti#111";
-	setwall "izlude",158,195,6,4,0,"wallanti#112";
-	setwall "izlude",158,189,12,2,0,"wallanti#113";
-	setwall "izlude",146,189,6,0,0,"wallanti#114";
-	setcell "izlude",146,195,158,189,cell_landprotector,1;
-	setcell "izlude",146,195,158,189,cell_basilica,1;	
+	setwall "morocc",200,41,12,6,0,"wallanti#111";
+	setwall "morocc",200,35,6,4,0,"wallanti#112";
+	setwall "morocc",212,41,12,2,0,"wallanti#113";
+	setwall "morocc",212,35,6,0,0,"wallanti#114";
+	setcell "morocc",200,35,212,41,cell_landprotector,1;
+	setcell "morocc",200,35,212,41,cell_basilica,1;	
 	end;
 }
