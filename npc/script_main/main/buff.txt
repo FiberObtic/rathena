@@ -1,43 +1,37 @@
-//==============================================
-//==============================================
-//==============================================
-// - Script By : แม่มดน้อย จอมป่วน
-// - Script City : Thailand 
-// - Script Support Server : rAthena & Hercules
-// Contacts
-// Facebook https://www.facebook.com/appleroplus2
-// Gmail appleroplus@gmail.com
-// Skype appleroplus@hotmail.com
-//==============================================
-//==============================================
-//==============================================
--	script	BuffsSupports	-1,{
+//===== rAthena Script =======================================
+//= Healer
+//===== By: ==================================================
+//= Euphy
+//===== Current Version: =====================================
+//= 1.1
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Basic healer script.
+//===== Additional Comments: =================================
+//= 1.0 Initial script.
+//= 1.1 Aligned coordinates with @go.
+//============================================================
 
-goto MAINBUFF;
-//OnPCBaseLvUpEvent:
-//	if(strnpcinfo(2) != "01")	end;
-OnTouch:
-MAINBUFF:
-	set .@delay, 3;	// ดีเลย์การใช้งาน (วินาที)
-	set .@cast, 0;	// ระยะเวลาร่าย (วินาที)
-	
-	if ( gettimetick(2)-@delay_heal < .@delay )
-		dispbottom "[ระบบ] โปรดรออีก "+(.@delay-(gettimetick(2)-@delay_heal))+" วินาทีถึงจะใช้งานได้อีกครั้งนะค่ะ";
-	else
-	{
-		progressbar "0x007000", .@cast;
-		soundeffect "buff.wav",0;
-		
-		set @delay_heal, gettimetick(2);
+-	script	Healer	-1,{
 
-		//ข้อความที่ต้องการให้NPCพูด
+	.@Price = 0;	// ค่าใช้จ่ายในการรักษา
+	.@Buffs = 1;	// บัฟผู้เล่นด้วย? (1: ใช่ / 0: ไม่)
+	.@Delay = 3;	// ระยะเวลารักษาเป็นวินาที
 
-		//เช็คไอเทมที่เสียหายถ้ามีซ่อมให้ทันที
-		if (getbrokenid(1) > 0) 
-		{ 
-			atcommand "@repairall";
-		}
-		
+	if (@HD > gettimetick(2))
+		end;
+	if (.@Price) {
+		message strcharinfo(0), "ค่าใช้จ่ายในการรักษา " + callfunc("F_InsertComma",.@Price) + " Zeny";
+		if (Zeny < .@Price)
+			end;
+		if (select("^0055FFรักษา^000000:^777777ยกเลิก^000000") == 2)
+			end;
+		Zeny -= .@Price;
+	}
+	specialeffect2 EF_HEAL2;
+	percentheal 100,100;
+	if (.@Buffs) {
 		//แก้สถานะต่างๆ
 		sc_end SC_STAN;
 		sc_end SC_STUN;
@@ -67,76 +61,34 @@ MAINBUFF:
 		sc_end SC_FREEZING;
 		sc_end SC_FEAR;
 
-		//บัพค่าอาหาร 30นาที Support rAthena
-		//sc_start SC_STRFood, 1800000,5;
-		//sc_start SC_AGIFood, 1800000,5;
-		//sc_start SC_VITFood, 1800000,5;
-		//sc_start SC_INTFood, 1800000,5;
-		//sc_start SC_DEXFood, 1800000,5;
-		//sc_start SC_LUKFood, 1800000,5;
-		
-		//บัพสกิลต่างๆ
-		sc_start SC_BLESSING,1800000,10;
-		sc_start SC_INCREASEAGI,1800000,10;
+		if(#PREMIUMSERVICE_TIME){
+			sc_start SC_INCREASEAGI,1000*60*30,10;
+			sc_start SC_BLESSING,1000*60*30,10;
+			sc_start 41,1000*60*30,5; //กอเรีย
+			sc_start 40,1000*60*30,5; // MAGNIFICAT เร่ง
+			sc_start4 SC_POEMBRAGI,1000*60*5,5,70,90,10;
+			sc_start4 SC_SERVICE4U,1000*60*5,5,40,40,1;
+			
+			//บัพค่าอาหาร 30นาที Support rAthena
+			sc_start SC_STRFood,1000*60*30,5;
+			sc_start SC_AGIFood,1000*60*30,5;
+			sc_start SC_VITFood,1000*60*30,5;
+			sc_start SC_INTFood,1000*60*30,5;
+			sc_start SC_DEXFood,1000*60*30,5;
+			sc_start SC_LUKFood,1000*60*30,5;
+			dispbottom "[บริการบัพ] ผู้เล่นระดับพรีเมี่ยม คุณ ได้รับ ( POEMBRAGI & SERVICE4U ) เป็นเวลา 5 นาที และบัพอื่นๆเป็นเวลา 30 นาที";
+			close;
 		}
-
-		//เพิ่มHPและSP 100%
-		percentheal 100,100; 
-		
-		//เอฟเฟกเพิ่มความสวยงาม
-		specialeffect2 EF_HEAL2;
-		specialeffect2 EF_INCAGILITY;
-		specialeffect2 EF_BLESSING;
-		//==============================================
-		//==============================================
-		//==============================================
-		
-		//ส่องไอเทมปริศนาที่มีในตัวทั้งหมด
-			atcommand "@identifyall";
-
-		
-		
-		// VIP บัพ
-		if(vip_status(VIP_STATUS_ACTIVE) || getgmlevel() >= 99){
-			//sc_start 72,1800000,5; // WEAPON เคลือบอาวุธ
-			//sc_start 73,1800000,5; // SHIELD เคลือบโล่
-			//sc_start 74,1800000,5; // ARMOR เคลือบชุดเกราะ
-			//sc_start 75,1800000,5; // HELM เคลือบส่วนหัว
-			sc_start SC_SpeedUp1,1800000,1; //วิ่งเร็ว
-			//sc_start SC_ATKPOTION,1800000,50; //+atk
-			//sc_start SC_MATKPOTION,1800000,50; //+matk
-			sc_start SC_ENDURE,1800000,10;
-			//sc_start 29,1800000,10; //แอง
-			//sc_start SC_IMPOSITIO,1800000,5;
-			sc_start 41,1800000,5; //กอเรีย
-			//sc_start 34,1800000,1; //พิษ
-			//sc_start 121,1800000,10; //วินวอค
-			//sc_start 39,1800000,10; //ไครี่
-			//sc_start 120,1800000,10; // Falconeye
-			//sc_start 36,1800000,10; // SUFFRAGIUM ร่ายไว
-			//sc_start 115,1800000,5; // ASSUMPTIO ถึก
-			//sc_start 40,1800000,5; // MAGNIFICAT เร่ง
-			//sc_start 44,1800000,5; // WEAPONPERFECTION เพิ่มโจมตี 100% อาวุธ
-			//sc_start 46,1800000,5; //MAXIMIZEPOWER โจมตีแรงที่สุด
-			sc_start SC_HitFood,1800000,10;
-			sc_start SC_FleeFood,1800000,10;
-			sc_start SC_BATKFood,1800000,10;
-			sc_start SC_MATKFood,1800000,10;
-				sc_start4 SC_POEMBRAGI,1000*60*15,5,70,90,10;
-				sc_start4 SC_SERVICE4U,1000*60*15,5,40,40,1;
-				dispbottom "[เอลฟ์แห่งเสียงดนตรี] คุณ เป็นผู้เล่น ระดับ VIP ได้รับ บัพช่วยเหลือพิเศษ & ในขณะคุณได้อยู่ในสถานะ ( บากิ & เซอร์วิส ) เป็นเวลา 15 นาที (ไม่สามารถใช้ได้ใน สนามประลอง & สงครามชิงปราสาท ได้)";
-
-			
-			//เพิ่มHPและSP 100%
-			percentheal 100,100; 
-			
-			//เอฟเฟกเพิ่มความสวยงาม
-			specialeffect2 EF_HEAL2;
-			specialeffect2 EF_INCAGILITY;
-			specialeffect2 EF_BLESSING;
-			//==============================================
-			//==============================================
-			//==============================================
+		else{
+			sc_start SC_INCREASEAGI,420000,5;
+			sc_start SC_BLESSING,420000,5;
+			sc_start 41,420000,1; //กอเรีย
+			sc_start 40,420000,3; // MAGNIFICAT เร่ง
+			sc_start4 SC_POEMBRAGI,1000*60,1,20,30,1;
+			sc_start4 SC_SERVICE4U,1000*60,1,10,6,1;
+			dispbottom "[บริการบัพ] ผู้เล่นทั่วไป คุณ ได้รับ ( POEMBRAGI & SERVICE4U ) เป็นเวลา 1 นาที และบัพอื่นๆเป็นเวลา 7 นาที";
+			close;
+		}
 		
 	switch ( basejob ) {
 	  case Job_Alchemist:	set .@spirit, 445; break;
@@ -161,172 +113,83 @@ MAINBUFF:
 	if ( .@spirit ) {
 		sc_start4 sc_spirit, 360000, 5, .@spirit,0,0;
 		//skilleffect .@spirit, 5;
-	}
-	
 		end;
-		//OnInterIfInit:
-		//Waitingroom "BUFF ฟื้น HP SP",0;
-		//End;
 	}
+
+	}
+	if (.@Delay)
+		@HD = gettimetick(2) + .@Delay;
+	end;
 }
 
-//******************************************************
-//********************* Config Healer *********************
-//******************************************************
-new_1-3,91,33,5	duplicate(BuffsSupports)	บริการบัพ#novice_1	845
-morocc,160,97,4	duplicate(BuffsSupports)	บริการบัพ #moc_1	845
-morocc,149,254,5	duplicate(BuffsSupports)	บริการบัพ#moc_2	845
-morocc,288,214,4	duplicate(BuffsSupports)	บริการบัพ#moc_3	845
-morocc,42,177,4	duplicate(BuffsSupports)	บริการบัพ#moc_4	845
-//======================================================================
 
-//===============================================================
-prontera,143,87,5	duplicate(BuffsSupports)	บริการบัพ#prt02	845
-prontera,273,197,2	duplicate(BuffsSupports)	บริการบัพ#prt04	845
-prontera,38,213,6	duplicate(BuffsSupports)	บริการบัพ#prt05	845
-prontera,147,327,5	duplicate(BuffsSupports)	บริการบัพ#prt06	845
-prt_fild08,176,372,3	duplicate(BuffsSupports)	บริการบัพ#prt07	845
-prt_fild05,290,227,3	duplicate(BuffsSupports)	บริการบัพ#prt08	845
-//===============================================================
-alberta,24,229,0	duplicate(BuffsSupports)	บริการบัพ#alb11	845
-alberta,113,53,5	duplicate(BuffsSupports)	บริการบัพ#alb12	845
-//===============================================================
-aldebaran,145,117,3	duplicate(BuffsSupports)	บริการบัพ#ald13	845
-//===============================================================
-comodo,198,148,3	duplicate(BuffsSupports)	บริการบัพ#com14	845
-//===============================================================
-izlude,136,91,3	duplicate(BuffsSupports)	บริการบัพ#iz15	845
-//===============================================================
-geffen,123,73,3	duplicate(BuffsSupports)	บริการบัพ#gef16	845
-//===============================================================
-geffen,198,124,4	duplicate(BuffsSupports)	บริการบัพ#gef17	845
-geffen,124,203,3	duplicate(BuffsSupports)	บริการบัพ#gef21	845
-//===============================================================
-//===============================================================
-payon,97,121,3	duplicate(BuffsSupports)	บริการบัพ#pay19	845
-//===============================================================
-yuno,149,187,4	duplicate(BuffsSupports)	บริการบัพ#yu20	845
-//===============================================================
-pay_arche,37,135,5	duplicate(BuffsSupports)	บริการบัพ#payc22	845
-//===============================================================
-glast_01,195,292,4	duplicate(BuffsSupports)	บริการบัพ#gl23	845
-//===============================================================
+// Duplicates
+//============================================================
+alberta,25,240,6	duplicate(Healer)	Healer#alb	10078
+aldebaran,135,118,6	duplicate(Healer)	Healer#alde	10078
+amatsu,200,79,4	duplicate(Healer)	Healer#ama	10078
+ayothaya,207,169,6	duplicate(Healer)	Healer#ayo	10078
+comodo,184,158,6	duplicate(Healer)	Healer#com	10078
+einbech,57,36,6	duplicate(Healer)	Healer#einbe	10078
+einbroch,57,202,6	duplicate(Healer)	Healer#einbr	10078
+geffen,115,72,6	duplicate(Healer)	Healer#gef	10078
+gonryun,156,122,6	duplicate(Healer)	Healer#gon	10078
+hugel,89,150,6	duplicate(Healer)	Healer#hug	10078
+izlude,121,150,6	duplicate(Healer)	Healer#izl	10078	//Pre-RE: (125,118)
+jawaii,250,139,4	duplicate(Healer)	Healer#jaw	10078
+lighthalzen,152,100,6	duplicate(Healer)	Healer#lhz	10078
+louyang,226,103,4	duplicate(Healer)	Healer#lou	10078
+manuk,272,144,6	duplicate(Healer)	Healer#man	10078
+mid_camp,203,289,6	duplicate(Healer)	Healer#mid	10078
+moc_ruins,72,164,4	duplicate(Healer)	Healer#moc	10078
+morocc,160,97,4	duplicate(Healer)	Healer#mor	10078
+moscovia,220,191,4	duplicate(Healer)	Healer#mos	10078
+niflheim,212,182,5	duplicate(Healer)	Healer#nif	10078
+payon,179,106,4	duplicate(Healer)	Healer#pay	10078
+prontera,162,193,4	duplicate(Healer)	Healer#prt	10078
+rachel,125,116,6	duplicate(Healer)	Healer#rac	10078
+splendide,201,153,4	duplicate(Healer)	Healer#spl	10078
+thor_camp,249,74,4	duplicate(Healer)	Healer#thor	10078
+umbala,105,148,3	duplicate(Healer)	Healer#umb	10078
+veins,217,121,4	duplicate(Healer)	Healer#ve	10078
+xmas,143,136,4	duplicate(Healer)	Healer#xmas	10078
+yuno,164,45,4	duplicate(Healer)	Healer#yuno	10078
+alberta,25,240,6	duplicate(Healer)	Healer#alb	10078
+aldebaran,135,118,6	duplicate(Healer)	Healer#alde	10078
+amatsu,200,79,4	duplicate(Healer)	Healer#ama	10078
+ayothaya,207,169,6	duplicate(Healer)	Healer#ayo	10078
+comodo,184,158,6	duplicate(Healer)	Healer#com	10078
+einbech,57,36,6	duplicate(Healer)	Healer#einbe	10078
+einbroch,57,202,6	duplicate(Healer)	Healer#einbr	10078
+geffen,115,72,6	duplicate(Healer)	Healer#gef	10078
+gonryun,156,122,6	duplicate(Healer)	Healer#gon	10078
+hugel,89,150,6	duplicate(Healer)	Healer#hug	10078
+izlude,121,150,6	duplicate(Healer)	Healer#izl	10078	//Pre-RE: (125,118)
+jawaii,250,139,4	duplicate(Healer)	Healer#jaw	10078
+lighthalzen,152,100,6	duplicate(Healer)	Healer#lhz	10078
+louyang,226,103,4	duplicate(Healer)	Healer#lou	10078
+manuk,272,144,6	duplicate(Healer)	Healer#man	10078
+mid_camp,203,289,6	duplicate(Healer)	Healer#mid	10078
+moc_ruins,72,164,4	duplicate(Healer)	Healer#moc	10078
+//morocc,162,97,4	duplicate(Healer)	Healer#mor	10078
+moscovia,220,191,4	duplicate(Healer)	Healer#mos	10078
+niflheim,212,182,5	duplicate(Healer)	Healer#nif	10078
+payon,179,106,4	duplicate(Healer)	Healer#pay	10078
+prontera,162,193,4	duplicate(Healer)	Healer#prt	10078
+rachel,125,116,6	duplicate(Healer)	Healer#rac	10078
+splendide,201,153,4	duplicate(Healer)	Healer#spl	10078
+thor_camp,249,74,4	duplicate(Healer)	Healer#thor	10078
+umbala,105,148,3	duplicate(Healer)	Healer#umb	10078
+veins,217,121,4	duplicate(Healer)	Healer#ve	10078
+xmas,143,136,4	duplicate(Healer)	Healer#xmas	10078
+yuno,164,45,4	duplicate(Healer)	Healer#yuno	10078
 
-//==============================================
-
--	script	BuffsSupportsLvUp	-1,{
-	end;
-
-OnPCBaseLvUpEvent:
-		//เช็คไอเทมที่เสียหายถ้ามีซ่อมให้ทันที
-		if (getbrokenid(1) > 0)
-		{
-			atcommand "@repairall"; 
-		}
-		
-		//แก้สถานะต่างๆ
-		sc_end SC_STAN;
-		sc_end SC_STUN;
-		sc_end SC_STONE;
-		sc_end SC_SLOWDOWN;
-		sc_end SC_FREEZE;
-		sc_end SC_SLEEP;
-		sc_end SC_CURSE;
-		sc_end SC_SILENCE;
-		sc_end SC_CONFUSION;
-		sc_end SC_BLIND;
-		sc_end SC_BLEEDING;
-		sc_end SC_DECREASEAGI;
-		sc_end SC_POISON;
-		sc_end SC_HALLUCINATION;
-		sc_end SC_STRIPWEAPON;
-		sc_end SC_STRIPARMOR;
-		sc_end SC_STRIPHELM;
-		sc_end SC_STRIPSHIELD;
-		sc_end SC_CHANGEUNDEAD;
-		sc_end SC_ORCISH;
-		sc_end SC_BERSERK;
-		sc_end SC_SKE;
-		sc_end SC_SWOO;
-		sc_end SC_SKA;
-		sc_end SC_BURNING;
-		sc_end SC_FREEZING;
-		sc_end SC_FEAR;
-
-		//บัพค่าอาหาร 30นาที Support rAthena
-		sc_start SC_STRFood, 1800000,5;
-		sc_start SC_AGIFood, 1800000,5;
-		sc_start SC_VITFood, 1800000,5;
-		sc_start SC_INTFood, 1800000,5;
-		sc_start SC_DEXFood, 1800000,5;
-		sc_start SC_LUKFood, 1800000,5;
-		
-		//บัพสกิลต่างๆ
-		sc_start SC_BLESSING,1800000,10;
-		sc_start SC_INCREASEAGI,1800000,10;
-		sc_start 41,1800000,10; //กอเรีย
-		sc_start 40,1800000,10; // MAGNIFICAT เร่ง
-			sc_start4 SC_POEMBRAGI,1000*60*5,5,70,90,10;
-			sc_start4 SC_SERVICE4U,1000*60*5,5,40,40,1;
-			dispbottom "[เอลฟ์แห่งเสียงดนตรี] คุณ เป็นผู้เล่น ระดับ ทั่วไป ในขณะคุณได้อยู่ในสถานะ ( บากิ & เซอร์วิส ) เป็นเวลา 5 นาที (ไม่สามารถใช้ได้ใน สนามประลอง & สงครามชิงปราสาท ได้)";
-		
-
-		//เพิ่มHPและSP 100%
-		percentheal 100,100; 
-		
-		//เอฟเฟกเพิ่มความสวยงาม
-		specialeffect2 EF_HEAL2;
-		specialeffect2 EF_INCAGILITY;
-		specialeffect2 EF_BLESSING;
-		//==============================================
-		//==============================================
-		//==============================================
-		
-		//ส่องไอเทมปริศนาที่มีในตัวทั้งหมด
-			atcommand "@identifyall";
-		
-		
-		// VIP บัพ
-		if(vip_status(VIP_STATUS_ACTIVE) || getgmlevel() >= 99){
-			sc_start 72,1800000,5; // WEAPON เคลือบอาวุธ
-			sc_start 73,1800000,5; // SHIELD เคลือบโล่
-			sc_start 74,1800000,5; // ARMOR เคลือบชุดเกราะ
-			sc_start 75,1800000,5; // HELM เคลือบส่วนหัว
-			sc_start SC_SpeedUp1,1800000,1; //วิ่งเร็ว
-			sc_start SC_ATKPOTION,1800000,50; //+atk
-			sc_start SC_MATKPOTION,1800000,50; //+matk
-			sc_start SC_ENDURE,1800000,10;
-			sc_start 29,1800000,10; //แอง
-			sc_start SC_IMPOSITIO,1800000,5;
-			sc_start 41,1800000,5; //กอเรีย
-			sc_start 34,1800000,1; //พิษ
-			sc_start 121,1800000,10; //วินวอค
-			sc_start 39,1800000,10; //ไครี่
-			sc_start 120,1800000,10; // Falconeye
-			sc_start 36,1800000,10; // SUFFRAGIUM ร่ายไว
-			sc_start 115,1800000,5; // ASSUMPTIO ถึก
-			sc_start 40,1800000,5; // MAGNIFICAT เร่ง
-			sc_start 44,1800000,5; // WEAPONPERFECTION เพิ่มโจมตี 100% อาวุธ
-			sc_start 46,1800000,5; //MAXIMIZEPOWER โจมตีแรงที่สุด
-			sc_start SC_HitFood,1800000,10;
-			sc_start SC_FleeFood,1800000,10;
-			sc_start SC_BATKFood,1800000,10;
-			sc_start SC_MATKFood,1800000,10;
-				sc_start4 SC_POEMBRAGI,1000*60*15,5,70,90,10;
-				sc_start4 SC_SERVICE4U,1000*60*15,5,40,40,1;
-				dispbottom "[เอลฟ์แห่งเสียงดนตรี] คุณ เป็นผู้เล่น ระดับ VIP ได้รับ บัพช่วยเหลือพิเศษ & ในขณะคุณได้อยู่ในสถานะ ( บากิ & เซอร์วิส ) เป็นเวลา 15 นาที (ไม่สามารถใช้ได้ใน สนามประลอง & สงครามชิงปราสาท ได้)";
-			
-			
-			//เพิ่มHPและSP 100%
-			percentheal 100,100; 
-			
-			//เอฟเฟกเพิ่มความสวยงาม
-		specialeffect2 EF_HEAL2;
-		specialeffect2 EF_INCAGILITY;
-		specialeffect2 EF_BLESSING;
-			//==============================================
-			//==============================================
-			//==============================================
-		end;
-	}
-	}
+// Duplicates (Renewal)
+//============================================================
+brasilis,194,221,6	duplicate(Healer)	Healer#bra	10078
+dewata,195,187,4	duplicate(Healer)	Healer#dew	10078
+dicastes01,201,194,4	duplicate(Healer)	Healer#dic	10078
+ecl_in01,45,60,4	duplicate(Healer)	Healer#ecl	10078
+malangdo,132,114,6	duplicate(Healer)	Healer#mal	10078
+malaya,227,204,6	duplicate(Healer)	Healer#ma	10078
+mora,55,152,4	duplicate(Healer)	Healer#mora	10078

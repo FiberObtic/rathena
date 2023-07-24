@@ -19276,18 +19276,31 @@ Body:
     Script: |
       .@r = getrefine();
       .@s = readparam(bStr);
-      bonus bPerfectHitAddRate,.@r/2;
-      bonus bBaseAtk,50+25*.@r;
-      bonus bAtkRate,2*.@r;
-      bonus2 bSkillAtk,"SM_BASH",.@s*5;
-      bonus2 bSkillAtk,"KN_BOWLINGBASH",.@s*3;
-      bonus2 bSkillAtk,"RK_SONICWAVE",.@s;
-      bonus4 bAutoSpellonSkill,"KN_BOWLINGBASH","RK_SONICWAVE",5,.@r*20-.@s;
-      bonus4 bAutoSpellonSkill,"KN_BOWLINGBASH","KN_BOWLINGBASH",15,.@r*30-.@s;
-      bonus4 bAutoSpellonSkill,"SM_BASH","SM_BASH",1,700;
-      bonus4 bAutoSpellonSkill,"SM_BASH","SM_BASH",5,500;
-      bonus4 bAutoSpellonSkill,"SM_BASH","SM_BASH",10,250;
-      bonus4 bAutoSpellonSkill,"SM_BASH","SM_BASH",100,20;
+      .@a = readparam(bAgi);
+      .@v = readparam(bVit);
+      .@i = readparam(bInt);
+      bonus bAspd,193;
+      bonus bPerfectHitAddRate,100;
+      bonus bBaseAtk,.@s*.@r;
+      bonus bAtkRate,.@r*(joblevel/10);
+      bonus bDef,.@v*5;
+      bonus bDefRate,.@v;
+      bonus bDef2,.@v*2;
+      bonus bDef2Rate,.@v/2;
+      bonus bMdef,.@i*5;
+      bonus bMdef2,.@i*2;
+      bonus bMdefRate,.@i;
+      bonus bMdef2Rate,.@i/2;
+      bonus bMaxHP,100*.@v*.@r;
+      bonus bMaxHPRate,.@r*2;
+      bonus2 bSkillAtk,"TK_STORMKICK",.@s+.@a*2;
+      bonus2 bSkillAtk,"TK_DOWNKICK",.@s+.@a*2;
+      bonus2 bSkillAtk,"TK_TURNKICK",.@s+.@a*2;
+      bonus2 bSkillAtk,"TK_COUNTER",.@s+.@a*2;
+      bonus4 bAutoSpellonSkill,"TK_STORMKICK","TK_COUNTER",7,1000;
+      bonus4 bAutoSpellonSkill,"TK_COUNTER","TK_DOWNKICK",7,1000;
+      bonus4 bAutoSpellonSkill,"TK_DOWNKICK","TK_TURNKICK",7,1000;
+      bonus4 bAutoSpellonSkill,"TK_JUMPKICK","TK_STORMKICK",7,1000;
   - Id: 480310
     AegisName: C_Giant_Mad_Bunny
     Name: Costume Big Mad Bunny
@@ -19297,7 +19310,18 @@ Body:
       Costume_Garment: true
     ArmorLevel: 1
     Script: |
-      .@r = getrefine(); .@s = readparam(bStr); .@l = readparam(bLuk); .@a = readparam(bAgi); bonus bMaxHPRate,-4*.@r; bonus bPerfectHitAddRate,4*.@r; bonus bBaseAtk,50*.@r-(.@s+.@a+.@l); bonus bAtkRate,4*.@r; bonus bCritical,100; bonus bCritAtkRate,(.@l/6)*.@r; if(.@r>=11) { bonus3 bAutoSpell,"SM_BASH",20,(.@s+.@a+.@l)/3; bonus3 bAutoSpell,"KN_BOWLINGBASH",20,(.@s+.@a+.@l)/3; bonus3 bAutoSpell,"MC_MAMMONITE",25,(.@s+.@a+.@l)/3; bonus3 bAutoSpell,"CR_HOLYCROSS",20,(.@s+.@a+.@l)/3; bonus3 bAutoSpell,"LK_SPIRALPIERCE",10,(.@s+.@a+.@l)/3; bonus3 bAutoSpell,"SM_MAGNUM",10,(.@s+.@a+.@l)/3;} if(.@s+.@a+.@l)>=360 {bonus bUnbreakableWeapon;} if(.@r>=16) { bonus3 bAutoSpell,"AL_BLESSING",20,.@r*5; bonus3 bAutoSpell,"PR_IMPOSITIO",10,.@r*5; bonus3 bAutoSpell,"BS_WEAPONPERFECT",5,.@r*5; bonus3 bAutoSpell,"BS_OVERTHRUST",10,.@r*5; bonus3 bAutoSpell,"LK_AURABLADE",5,.@r*5; bonus3 bAutoSpell,"LK_CONCENTRATION",5,.@r*5; bonus3 bAutoSpell,"HP_ASSUMPTIO",8,.@r*5; bonus3 bAutoSpell,"SN_SIGHT",15,.@r*5; bonus3 bAutoSpell,"ASC_EDP",5,.@r*2;} if (.@r == 10)  { bonus3 bAutoSpell,"RK_CRUSHSTRIKE",1,70*.@r; skill "TF_DOUBLE",10; bonus bDoubleRate,50;  } 
+      .@r = getrefine();
+      .@s = readparam(bStr);
+      .@l = readparam(bLuk);
+      .@a = readparam(bAgi);
+      bonus bMaxHPRate,-4*.@r;
+      bonus bPerfectHitAddRate,4*.@r;
+      bonus bBaseAtk,50*.@r-(.@s+.@a+.@l);
+      bonus bAtkRate,4*.@r;
+      bonus bCritical,100;
+      bonus bCritAtkRate,(.@l/6)*.@r;
+      if(.@r>=7) { bonus3 bAutoSpell,"SM_BASH",20,(.@s+.@a+.@l)/3; bonus3 bAutoSpell,"KN_BOWLINGBASH",20,(.@s+.@a+.@l)/3; bonus3 bAutoSpell,"MC_MAMMONITE",25,(.@s+.@a+.@l)/3; bonus3 bAutoSpell,"CR_HOLYCROSS",20,(.@s+.@a+.@l)/3; bonus3 bAutoSpell,"LK_SPIRALPIERCE",10,(.@s+.@a+.@l)/3; bonus3 bAutoSpell,"SM_MAGNUM",10,(.@s+.@a+.@l)/3;} if(.@s+.@a+.@l)>=360 {bonus bUnbreakableWeapon;}
+      if(.@r>=9) { bonus3 bAutoSpell,"AL_BLESSING",20,.@r*5; bonus3 bAutoSpell,"PR_IMPOSITIO",10,.@r*5; bonus3 bAutoSpell,"BS_WEAPONPERFECT",5,.@r*5; bonus3 bAutoSpell,"BS_OVERTHRUST",10,.@r*5; bonus3 bAutoSpell,"LK_AURABLADE",5,.@r*5; bonus3 bAutoSpell,"LK_CONCENTRATION",5,.@r*5; bonus3 bAutoSpell,"HP_ASSUMPTIO",8,.@r*5; bonus3 bAutoSpell,"SN_SIGHT",15,.@r*5; bonus3 bAutoSpell,"ASC_EDP",5,.@r*2;}
   - Id: 480311
     AegisName: aegis_480311
     Name: Costume Key To Happiness
@@ -19307,7 +19331,20 @@ Body:
       Costume_Garment: true
     ArmorLevel: 1
     Script: |
-      .@r = getrefine(); .@i = readparam(bInt); .@d = readparam(bDex); bonus bmatk,(JobLevel*5); bonus bmatkrate,(JobLevel/2); bonus2 bMagicAddRace,RC_All,.@r*4; bonus2 bMagicAddClass,Class_All,.@r*3; bonus2 bMagicAddSize,Size_All,.@r*3; bonus2 bMagicAddEle,Ele_All,.@r*3; bonus2 bSkillAtk,"MG_LIGHTNINGBOLT",.@i*3; bonus2 bSkillAtk,"MG_FIREBOLT",.@i*3; bonus2 bSkillAtk,"MG_COLDBOLT",.@i*3; if(.@r<16) { bonus3 bAutoSpell,"MG_THUNDERSTORM",10,750; bonus bAspd,5; bonus4 bAutoSpellOnSkill,"MG_THUNDERSTORM","MG_FIREBOLT",10,900; bonus4 bAutoSpellOnSkill,"MG_THUNDERSTORM","MG_LIGHTNINGBOLT",10,900; bonus4 bAutoSpellOnSkill,"MG_THUNDERSTORM","MG_COLDBOLT",10,900;}  if(.@r >=16) { bonus2 bSkillAtk,"MG_LIGHTNINGBOLT",.@i*.@r; bonus2 bSkillAtk,"MG_FIREBOLT",.@i*.@r; bonus2 bSkillAtk,"MG_COLDBOLT",.@i*.@r; bonus2 bSkillFixedCast,"MG_LIGHTNINGBOLT",5000; bonus2 bSkillFixedCast,"MG_COLDBOLT",5000; bonus2 bSkillFixedCast,"MG_FIREBOLT",5000; bonus2 bSkillAtk,"SO_SPELLFIST",.@i*.@r*5; bonus bCritAtkRate,.@i*4; bonus bHitRate,-100; bonus bCritical,200; bonus bDoubleAddRate,100; }
+      .@r = getrefine();
+      .@i = readparam(bInt);
+      .@d = readparam(bDex);
+      bonus bmatk,(JobLevel*5);
+      bonus bmatkrate,(JobLevel/2);
+      bonus2 bMagicAddRace,RC_All,.@r*4; 
+      bonus2 bMagicAddClass,Class_All,.@r*3; 
+      bonus2 bMagicAddSize,Size_All,.@r*3;
+      bonus2 bMagicAddEle,Ele_All,.@r*3; 
+      bonus2 bSkillAtk,"MG_LIGHTNINGBOLT",.@i*3;
+      bonus2 bSkillAtk,"MG_FIREBOLT",.@i*3;
+      bonus2 bSkillAtk,"MG_COLDBOLT",.@i*3; 
+      if(.@r<9) { bonus3 bAutoSpell,"MG_THUNDERSTORM",10,750; bonus bAspd,5; bonus4 bAutoSpellOnSkill,"MG_THUNDERSTORM","MG_FIREBOLT",10,900; bonus4 bAutoSpellOnSkill,"MG_THUNDERSTORM","MG_LIGHTNINGBOLT",10,900; bonus4 bAutoSpellOnSkill,"MG_THUNDERSTORM","MG_COLDBOLT",10,900;}  
+      if(.@r >=10) { bonus2 bSkillAtk,"MG_LIGHTNINGBOLT",.@i*.@r; bonus2 bSkillAtk,"MG_FIREBOLT",.@i*.@r; bonus2 bSkillAtk,"MG_COLDBOLT",.@i*.@r; bonus2 bSkillFixedCast,"MG_LIGHTNINGBOLT",5000; bonus2 bSkillFixedCast,"MG_COLDBOLT",5000; bonus2 bSkillFixedCast,"MG_FIREBOLT",5000; bonus2 bSkillAtk,"SO_SPELLFIST",.@i*.@r*5; bonus bCritAtkRate,.@i*4; bonus bHitRate,-100; bonus bCritical,200; bonus bDoubleAddRate,100; }
   - Id: 490242
     AegisName: C_Valkyrie_Hair
     Name: Costume Valkyrie Hair

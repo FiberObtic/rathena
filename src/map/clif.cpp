@@ -1052,14 +1052,14 @@ void clif_get_weapon_view(map_session_data* sd, t_itemid *rhand, t_itemid *lhand
 	else 				*rhand = 0;
 
 	if (sd->equip_index[EQI_HAND_L] >= 0 &&
-		sd->equip_index[EQI_HAND_L] != sd->equip_index[EQI_HAND_R] &&
+		//sd->equip_index[EQI_HAND_L] != sd->equip_index[EQI_HAND_R] &&
 		sd->inventory_data[sd->equip_index[EQI_HAND_L]])
 	{
 		struct item_data* id = sd->inventory_data[sd->equip_index[EQI_HAND_L]];
 		if (id->view_id > 0)
 			*lhand = id->view_id;
-		else
-			*lhand = id->nameid;
+		//else
+		//	*lhand = id->nameid;
 	} else
 		*lhand = 0;
 #endif

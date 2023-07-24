@@ -3,12 +3,651 @@ Header:
   Version: 3
 
 Body:
-  - Id: 5912
-    AegisName: C_Minions_Of_Devil
-    Name: Costume Servant Deviling
+  - Id: 60001
+    AegisName: Costume Upper 1
+    Name: Costume Upper 1
     Type: Armor
-    View: 1036
-    Buy: 20
     Locations:
-      Costume_Head_Mid: true
+      Costume_Head_Top: true
     ArmorLevel: 1
+    View: 3000
+  - Id: 60002
+    AegisName: Costume Upper 2
+    Name: Costume Upper 2
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3001
+  - Id: 60003
+    AegisName: Costume Upper 3
+    Name: Costume Upper 3
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3002
+  - Id: 60004
+    AegisName: Costume Upper 4
+    Name: Costume Upper 4
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3003
+  - Id: 60005
+    AegisName: Costume Upper 5
+    Name: Costume Upper 5
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3004
+  - Id: 60006
+    AegisName: Costume Upper 6
+    Name: Costume Upper 6
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3005
+  - Id: 60007
+    AegisName: Costume Upper 7
+    Name: Costume Upper 7
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3006
+  - Id: 60008
+    AegisName: Costume Upper 8
+    Name: Costume Upper 8
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3007
+  - Id: 60009
+    AegisName: Costume Upper 9
+    Name: Costume Upper 9
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3008
+  - Id: 60010
+    AegisName: Costume Upper 10
+    Name: Costume Upper 10
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3009
+  - Id: 60011
+    AegisName: Costume Upper 11
+    Name: Costume Upper 11
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3010
+  - Id: 60012
+    AegisName: Costume Upper 12
+    Name: Costume Upper 12
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3011
+  - Id: 60013
+    AegisName: Costume Upper 13
+    Name: Costume Upper 13
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3012
+  - Id: 60014
+    AegisName: Costume Upper 14
+    Name: Costume Upper 14
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3013
+  - Id: 60015
+    AegisName: Costume Upper 15
+    Name: Costume Upper 15
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3014
+  - Id: 60016
+    AegisName: Costume Upper 16
+    Name: Costume Upper 16
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3015
+  - Id: 60017
+    AegisName: Costume Upper 17
+    Name: Costume Upper 17
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3016
+  - Id: 60018
+    AegisName: Costume Upper 18
+    Name: Costume Upper 18
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3017
+  - Id: 60019
+    AegisName: Costume Upper 19
+    Name: Costume Upper 19
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3018
+  - Id: 60020
+    AegisName: Costume Upper 20
+    Name: Costume Upper 20
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3019
+  - Id: 60021
+    AegisName: Costume Upper 21
+    Name: Costume Upper 21
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3020
+  - Id: 60022
+    AegisName: Costume Upper 22
+    Name: Costume Upper 22
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3021
+  - Id: 60023
+    AegisName: Costume Upper 23
+    Name: Costume Upper 23
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3022
+  - Id: 60024
+    AegisName: Costume Upper 24
+    Name: Costume Upper 24
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3023
+  - Id: 60025
+    AegisName: Costume Upper 25
+    Name: Costume Upper 25
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3024
+  - Id: 60026
+    AegisName: Costume Upper 26
+    Name: Costume Upper 26
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3025
+  - Id: 60027
+    AegisName: Costume Upper 27
+    Name: Costume Upper 27
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3026
+  - Id: 60028
+    AegisName: Costume Upper 28
+    Name: Costume Upper 28
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3027
+  - Id: 60029
+    AegisName: Costume Upper 29
+    Name: Costume Upper 29
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3028
+  - Id: 60030
+    AegisName: Costume Upper 30
+    Name: Costume Upper 30
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3029
+  - Id: 60031
+    AegisName: Costume Upper 31
+    Name: Costume Upper 31
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3030
+  - Id: 60032
+    AegisName: Costume Upper 32
+    Name: Costume Upper 32
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3031
+  - Id: 60033
+    AegisName: Costume Upper 33
+    Name: Costume Upper 33
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3032
+  - Id: 60034
+    AegisName: Costume Upper 34
+    Name: Costume Upper 34
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3033
+  - Id: 60035
+    AegisName: Costume Upper 35
+    Name: Costume Upper 35
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3034
+  - Id: 60036
+    AegisName: Costume Upper 36
+    Name: Costume Upper 36
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3035
+  - Id: 60037
+    AegisName: Costume Upper 37
+    Name: Costume Upper 37
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3036
+  - Id: 60038
+    AegisName: Costume Upper 38
+    Name: Costume Upper 38
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3037
+  - Id: 60039
+    AegisName: Costume Upper 39
+    Name: Costume Upper 39
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3038
+  - Id: 60040
+    AegisName: Costume Upper 40
+    Name: Costume Upper 40
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3039
+  - Id: 60041
+    AegisName: Costume Upper 41
+    Name: Costume Upper 41
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3040
+  - Id: 60042
+    AegisName: Costume Upper 42
+    Name: Costume Upper 42
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3041
+  - Id: 60043
+    AegisName: Costume Upper 43
+    Name: Costume Upper 43
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3042
+  - Id: 60044
+    AegisName: Costume Upper 44
+    Name: Costume Upper 44
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3043
+  - Id: 60045
+    AegisName: Costume Upper 45
+    Name: Costume Upper 45
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3044
+  - Id: 60046
+    AegisName: Costume Upper 46
+    Name: Costume Upper 46
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3045
+  - Id: 60047
+    AegisName: Costume Upper 47
+    Name: Costume Upper 47
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3046
+  - Id: 60048
+    AegisName: Costume Upper 48
+    Name: Costume Upper 48
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3047
+  - Id: 60049
+    AegisName: Costume Upper 49
+    Name: Costume Upper 49
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3048
+  - Id: 60050
+    AegisName: Costume Upper 50
+    Name: Costume Upper 50
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3049
+  - Id: 60051
+    AegisName: Costume Upper 51
+    Name: Costume Upper 51
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3050
+  - Id: 60052
+    AegisName: Costume Upper 52
+    Name: Costume Upper 52
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3051
+  - Id: 60053
+    AegisName: Costume Upper 53
+    Name: Costume Upper 53
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3052
+  - Id: 60054
+    AegisName: Costume Upper 54
+    Name: Costume Upper 54
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3053
+  - Id: 60055
+    AegisName: Costume Upper 55
+    Name: Costume Upper 55
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3054
+  - Id: 60056
+    AegisName: Costume Upper 56
+    Name: Costume Upper 56
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3055
+  - Id: 60057
+    AegisName: Costume Upper 57
+    Name: Costume Upper 57
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3056
+  - Id: 60058
+    AegisName: Costume Upper 58
+    Name: Costume Upper 58
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3057
+  - Id: 60059
+    AegisName: Costume Upper 59
+    Name: Costume Upper 59
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3058
+  - Id: 60060
+    AegisName: Costume Upper 60
+    Name: Costume Upper 60
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3059
+  - Id: 60061
+    AegisName: Costume Upper 61
+    Name: Costume Upper 61
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3060
+  - Id: 60062
+    AegisName: Costume Upper 62
+    Name: Costume Upper 62
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3061
+  - Id: 60063
+    AegisName: Costume Upper 63
+    Name: Costume Upper 63
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3062
+  - Id: 60064
+    AegisName: Costume Upper 64
+    Name: Costume Upper 64
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3063
+  - Id: 60065
+    AegisName: Costume Upper 65
+    Name: Costume Upper 65
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3064
+  - Id: 60066
+    AegisName: Costume Upper 66
+    Name: Costume Upper 66
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3065
+  - Id: 60067
+    AegisName: Costume Upper 67
+    Name: Costume Upper 67
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3066
+  - Id: 60068
+    AegisName: Costume Upper 68
+    Name: Costume Upper 68
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3067
+  - Id: 60069
+    AegisName: Costume Upper 69
+    Name: Costume Upper 69
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3068
+  - Id: 60070
+    AegisName: Costume Upper 70
+    Name: Costume Upper 70
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3069
+  - Id: 60071
+    AegisName: Costume Upper 71
+    Name: Costume Upper 71
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3070
+  - Id: 60072
+    AegisName: Costume Upper 72
+    Name: Costume Upper 72
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3071
+  - Id: 60073
+    AegisName: Costume Upper 73
+    Name: Costume Upper 73
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3072
+  - Id: 60074
+    AegisName: Costume Upper 74
+    Name: Costume Upper 74
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3073
+  - Id: 60075
+    AegisName: Costume Upper 75
+    Name: Costume Upper 75
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3074
+  - Id: 60076
+    AegisName: Costume Upper 76
+    Name: Costume Upper 76
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3075
+  - Id: 60077
+    AegisName: Costume Upper 77
+    Name: Costume Upper 77
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3076
+  - Id: 60078
+    AegisName: Costume Upper 78
+    Name: Costume Upper 78
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3077
+  - Id: 60079
+    AegisName: Costume Upper 79
+    Name: Costume Upper 79
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3078
+  - Id: 60080
+    AegisName: Costume Upper 80
+    Name: Costume Upper 80
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3079
+  - Id: 60081
+    AegisName: Costume Upper 81
+    Name: Costume Upper 81
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3080

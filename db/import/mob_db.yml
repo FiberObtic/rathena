@@ -89,9 +89,13 @@ Body:
     Race: Formless
     Element: Neutral
     ElementLevel: 1
-    WalkSpeed: 200
+    WalkSpeed: 100
+    AttackDelay: 1072
+    AttackMotion: 672
+    DamageMotion: 384
     Class: Boss
     Modes:
+      Mvp: true
       NoRandomWalk: true
       TeleportBlock: true
   - Id: 2718
