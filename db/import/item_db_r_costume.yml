@@ -11,7 +11,10 @@ Body:
       Costume_Garment: true
     ArmorLevel: 1
     Script: |
-      bonus bAddMaxWeight,9999;
+      bonus2 bExpAddRace,RC_All,10;
+      bonus2 bDropAddRace,RC_All,10;
+      bonus bAllstats,2;
+      bonus bSpeedAddrate,50;
     View: 141
   - Id: 90002
     AegisName: Costume Wing Of Angel BK
@@ -21,7 +24,10 @@ Body:
       Costume_Garment: true
     ArmorLevel: 1
     Script: |
-      bonus bAddMaxWeight,9999;
+      bonus2 bExpAddRace,RC_All,10;
+      bonus2 bDropAddRace,RC_All,10;
+      bonus bAllstats,2;
+      bonus bSpeedAddrate,50;
     View: 142
   - Id: 90003
     AegisName: Costume wing of angel F
@@ -31,7 +37,10 @@ Body:
       Costume_Garment: true
     ArmorLevel: 1
     Script: |
-      bonus bAddMaxWeight,9999;
+      bonus2 bExpAddRace,RC_All,10;
+      bonus2 bDropAddRace,RC_All,10;
+      bonus bAllstats,2;
+      bonus bSpeedAddrate,50;
     View: 143
   - Id: 90004
     AegisName: Costume Wing Of Angel Gold
@@ -42,7 +51,10 @@ Body:
     ArmorLevel: 1
     View: 144
     Script: |
-      bonus bAddMaxWeight,9999;
+      bonus2 bExpAddRace,RC_All,10;
+      bonus2 bDropAddRace,RC_All,10;
+      bonus bAllstats,2;
+      bonus bSpeedAddrate,50;
   - Id: 90005
     AegisName: Costume Wing Of Angel Blue
     Name: Costume Wing Of Angel Blue
@@ -51,7 +63,10 @@ Body:
       Costume_Garment: true
     ArmorLevel: 1
     Script: |
-      bonus bAddMaxWeight,9999;
+      bonus2 bExpAddRace,RC_All,10;
+      bonus2 bDropAddRace,RC_All,10;
+      bonus bAllstats,2;
+      bonus bSpeedAddrate,50;
     View: 145
   - Id: 90006
     AegisName: Costume Wing Of Angel Green
@@ -61,7 +76,10 @@ Body:
       Costume_Garment: true
     ArmorLevel: 1
     Script: |
-      bonus bAddMaxWeight,9999;
+      bonus2 bExpAddRace,RC_All,10;
+      bonus2 bDropAddRace,RC_All,10;
+      bonus bAllstats,2;
+      bonus bSpeedAddrate,50;
     View: 146
   - Id: 90007
     AegisName: Costume Wing Of Angel Purple
@@ -71,7 +89,10 @@ Body:
       Costume_Garment: true
     ArmorLevel: 1
     Script: |
-      bonus bAddMaxWeight,9999;
+      bonus2 bExpAddRace,RC_All,10;
+      bonus2 bDropAddRace,RC_All,10;
+      bonus bAllstats,2;
+      bonus bSpeedAddrate,50;
     View: 147
   - Id: 90008
     AegisName: Costume Wing Of Angel Rainbow
@@ -81,7 +102,10 @@ Body:
       Costume_Garment: true
     ArmorLevel: 1
     Script: |
-      bonus bAddMaxWeight,9999;
+      bonus2 bExpAddRace,RC_All,10;
+      bonus2 bDropAddRace,RC_All,10;
+      bonus bAllstats,2;
+      bonus bSpeedAddrate,50;
     View: 148
   - Id: 90009
     AegisName: Costume Wing Of Angel Red
@@ -91,7 +115,10 @@ Body:
       Costume_Garment: true
     ArmorLevel: 1
     Script: |
-      bonus bAddMaxWeight,9999;
+      bonus2 bExpAddRace,RC_All,10;
+      bonus2 bDropAddRace,RC_All,10;
+      bonus bAllstats,2;
+      bonus bSpeedAddrate,50;
     View: 149
   - Id: 90010
     AegisName: Costume Wing Of Angel Yellow
@@ -101,5 +128,8 @@ Body:
       Costume_Garment: true
     ArmorLevel: 1
     Script: |
-      bonus bAddMaxWeight,9999;
+      bonus2 bExpAddRace,RC_All,10;
+      bonus2 bDropAddRace,RC_All,10;
+      bonus bAllstats,2;
+      bonus bSpeedAddrate,50;
     View: 150
