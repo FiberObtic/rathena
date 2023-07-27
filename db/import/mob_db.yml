@@ -84,7 +84,7 @@ Body:
     AegisName: DUMMY_10
     Name: Dummy 10
     Level: 10
-    Hp: 99999999
+    Hp: 9999999999
     Size: Medium
     Race: Formless
     Element: Neutral
@@ -159,7 +159,7 @@ Body:
     AegisName: DUMMY_150
     Name: Dummy 150
     Level: 90
-    Hp: 700
+    Hp: 68430
     Attack: 60
     Attack2: 71
     Defense: 40
@@ -183,15 +183,6 @@ Body:
     AttackMotion: 288
     DamageMotion: 384
     Class: Boss
-    Modes:
-      IgnoreMagic: true
-      IgnoreMelee: true
-      IgnoreMisc: true
-      IgnoreRanged: true
-      TeleportBlock: true
-      KnockBackImmune: true
-      StatusImmune: true
-      SkillImmune: true
 # eAthena Dev Team
 #=============================================================
 #  - Id: 1900
