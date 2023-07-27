@@ -571,3 +571,172 @@ Body:
       addtimer 1000,"auto_bonus_mvp_ranking::OnBuffer";
       dispbottom "[ระบบ] : คุณเป็นผู้ใช้งาน Mvp Rank [3] ";
       dispbottom "กรุณาออกเกม เข้าใหม่";
+  - Id: 20841
+    AegisName: Golden_Angel_Wing_TH
+    Name: Golden Angel Wing
+    Type: Armor
+    Weight: 10
+    Defense: 20
+    Slots: 1
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    View: 5
+    Script: |
+      .@r = getrefine();
+      if (readparam(bStr) >= 90) {
+         bonus bBaseAtk,15;
+         if (.@r >= 9)
+            bonus bBaseAtk,15;
+      }
+      if (readparam(bInt) >= 90) {
+         bonus bMatk,15;
+         if (.@r >= 9)
+            bonus bMatk,15;
+      }
+      if (readparam(bVit) >= 90) {
+         bonus bMaxHPrate,5;
+         bonus bMaxSPrate,5;
+         if (.@r >= 9) {
+            bonus bMaxHPrate,5;
+            bonus bMaxSPrate,5;
+         }
+      }
+      if (readparam(bAgi) >= 90) {
+         bonus bAspd,1;
+         if (.@r >= 9)
+            bonus bAspd,1;
+      }
+      if (readparam(bDex) >= 90) {
+         bonus bLongAtkRate,5;
+         if (.@r >= 9)
+            bonus bLongAtkRate,5;
+      }
+      if (readparam(bLuk) >= 90) {
+         bonus bCritAtkRate,5;
+         if (.@r >= 9)
+            bonus bCritAtkRate,5;
+      }
+  - Id: 2589
+    AegisName: Fallen_Angel_Wing
+    Name: Fallen Angel Wing
+    Type: Armor
+    Weight: 200
+    Defense: 18
+    Slots: 1
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 3
+    Trade:
+      NoDrop: true
+    Script: |
+      bonus bAllStats,1;
+      bonus bBaseAtk,readparam(bStr)/20;
+      bonus bMatk,readparam(bInt)/20;
+      bonus2 bSubEle,Ele_Neutral,readparam(bVit)/20;
+      bonus bAspdRate,(readparam(bAgi)/20);
+      bonus bLongAtkRate,readparam(bDex)/20;
+      bonus bCritAtkRate,readparam(bLuk)/20;
+  - Id: 2576
+    AegisName: Bravery_Bag
+    Name: Adventurer's Backpack
+    Type: Armor
+    Weight: 200
+    Defense: 20
+    Slots: 1
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 2
+    Trade:
+      NoDrop: true
+    Script: |
+      skill "BS_GREED",1;
+      .@r = getrefine();
+      if (.@r>=7) {
+         if (readparam(bStr)>=90) {
+            bonus bBaseAtk,(.@r>=9)?30:20;
+         }
+         if (readparam(bInt)>=90) {
+            bonus bMatk,(.@r>=9)?50:30;
+         }
+         if (readparam(bVit)>=90) {
+            bonus2 bSubEle,Ele_Neutral,(.@r>=9)?10:5;
+         }
+         if (readparam(bAgi)>=90) {
+            bonus bAspdRate,8;
+            if (.@r>=9) {
+               bonus bAspd,1;
+            }
+         }
+         if (readparam(bDex)>=90) {
+            bonus bLongAtkRate,(.@r>=9)?10:5;
+         }
+         if (readparam(bLuk)>=90) {
+            bonus bCritAtkRate,(.@r>=9)?15:10;
+         }
+      }
+  - Id: 28502
+    AegisName: Mob_Scarf
+    Name: Mob Scarf
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Locations:
+      Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 100
+    View: 1568
+    Script: |
+      skill "SA_SPELLBREAKER",2;
+  - Id: 5918
+    AegisName: Gambler_Seal
+    Name: Gambler's Seal
+    Type: Armor
+    Weight: 500
+    Locations:
+      Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    View: 1202
+    Script: |
+      .@dex = readparam(bDex);
+      .@luk = readparam(bLuk);
+      .@critical = 3 + (.@luk / 10);
+      .@critical_dmg = 3 - (.@dex/10) * 2;
+      .@sub_arrowstorm = 10;
+      .@sub_gateofhell = 10;
+      bonus bBaseAtk,(.@luk/10)*2;
+      bonus bMatk,(.@luk / 10) * 2;
+      if (.@luk > 107) {
+         .@critical += 5;
+         .@critical_dmg += 10;
+      }
+      if (.@luk > 119) {
+         .@critical += 10;
+         .@critical_dmg += 17;
+         .@sub_arrowstorm += 30;
+         .@sub_gateofhell += 30;
+      }
+      bonus bCritical,.@critical;
+      bonus bCritAtkRate,.@critical_dmg;
+      bonus2 bSubSkill,"RA_ARROWSTORM",.@sub_arrowstorm;
+      bonus2 bSubSkill,"SR_GATEOFHELL",.@sub_gateofhell;
+  - Id: 19306
+    AegisName: Heart_Card_In_Mouth
+    Name: Heart Card in Mouth
+    Type: Armor
+    Buy: 20
+    Weight: 300
+    Locations:
+      Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 80
+    View: 1679
+    Script: |
+      bonus bCritAtkRate,5;

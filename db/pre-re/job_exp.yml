@@ -315,23 +315,23 @@ Body:
       - Level: 89
         Exp: 7602600
       - Level: 90
-        Exp: 9738720
+        Exp: 19477440
       - Level: 91
-        Exp: 11649960
+        Exp: 23299920
       - Level: 92
-        Exp: 13643520
+        Exp: 27287040
       - Level: 93
-        Exp: 18339300
+        Exp: 36678600
       - Level: 94
-        Exp: 23836800
+        Exp: 47673600
       - Level: 95
-        Exp: 35658000
+        Exp: 106974000
       - Level: 96
-        Exp: 48687000
+        Exp: 146061000
       - Level: 97
-        Exp: 58135000
+        Exp: 174405000
       - Level: 98
-        Exp: 99999998
+        Exp: 299999994
       - Level: 99
         Exp: 99999999
   - Jobs:
@@ -538,23 +538,23 @@ Body:
       - Level: 89
         Exp: 19766760
       - Level: 90
-        Exp: 29216160
+        Exp: 58432320
       - Level: 91
-        Exp: 34949880
+        Exp: 69899760
       - Level: 92
-        Exp: 40930560
+        Exp: 81861120
       - Level: 93
-        Exp: 55017900
+        Exp: 110035800
       - Level: 94
-        Exp: 71510400
+        Exp: 143020800
       - Level: 95
-        Exp: 106974000
+        Exp: 320922000
       - Level: 96
-        Exp: 146061000
+        Exp: 438183000
       - Level: 97
-        Exp: 174405000
+        Exp: 523215000
       - Level: 98
-        Exp: 343210000
+        Exp: 1029630000
       - Level: 99
         Exp: 99999999
   - Jobs:
