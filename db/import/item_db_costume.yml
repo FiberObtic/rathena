@@ -19257,15 +19257,15 @@ Body:
     ArmorLevel: 1
     Script: |
       .@r = getrefine();
-      .@s = readparam(bStr);
-      .@i = readparam(bInt);
-      .@d = readparam(bDex);
-      bonus bLongAtkRate,4*.@r;
-      bonus bBaseAtk,(.@s+.@d);
-      bonus bAtkRate,3*.@r;
-      bonus bDelayrate,-30;
-      if(getskilllv("ASC_BREAKER")==9) {bonus2 bSkillAtk,"ASC_BREAKER",(.@i+.@d+.@s)/6;} 
-      if(getskilllv("ASC_BREAKER")==10) {bonus2 bSkillAtk,"ASC_BREAKER",(.@i+.@d+.@s)/20; bonus4 bAutoSpellonSkill,"ASC_BREAKER","ASC_BREAKER",10,(.@i+.@d)*2; bonus4 bAutoSpellonSkill,"ASC_BREAKER","ASC_BREAKER",10,(.@s+.@d)*2; bonus4 bAutoSpellonSkill,"ASC_BREAKER","ASC_BREAKER",10,(.@i+.@s)*2;}
+      .@l = readparam(bLuk);
+      .@a = readparam(bAgi);
+      bonus bDelayrate,100;
+      bonus bBaseAtk,(.@a+.@l)+(.@r*.@r)*2;
+      bonus bCritAtkRate,((.@l+.@a+.@s)/6)*.@r;
+      bonus2 bAddClass,Class_All,((.@l+.@a+.@s)/5)*.@r;
+      if(.@l>=99) { bonus bHitRate,-100; bonus bCritical,100;} 
+      if(.@r>=9) { bonus bDoubleAddRate,100; } 
+      if(.@r>=10) { bonus bSplashAddRange,3; }
   - Id: 480298
     AegisName: C_MCircle_Wonderland
     Name: Costume Magic Circle of Wonderland
@@ -19384,7 +19384,7 @@ Body:
     Locations:
       Shadow_Weapon: true
     Script: |
-      bonus2 bSkillAtk,"KN_BOWLINGBASH",25;
+      bonus2 bSkillAtk,"KN_BOWLINGBASH",50;
       bonus2 bDropAddRace,RC_All,5;
   - Id: 1300006
     AegisName: Costume_V2_Crusader
@@ -19397,7 +19397,7 @@ Body:
       Shadow_Weapon: true
     Script: |
       bonus2 bSkillAtk,"CR_GRANDCROSS",50;
-      bonus2 bSkillAtk,"PA_SACRIFICE",25;
+      bonus2 bSkillAtk,"PA_SACRIFICE",50;
       bonus2 bDropAddRace,RC_All,5;
   - Id: 1300007
     AegisName: Costume_V3_Hunter
@@ -19447,7 +19447,8 @@ Body:
     Locations:
       Shadow_Weapon: true
     Script: |
-      bonus bCritAtkRate,10;
+      bonus bCritAtkRate,25;
+      bonus bAspdRate,5;
       bonus2 bDropAddRace,RC_All,5;
   - Id: 1300011
     AegisName: Costume_V7_Alchemist
@@ -19514,6 +19515,11 @@ Body:
     Locations:
       Shadow_Weapon: true
     Script: |
+      bonus3 bAutoSpell,"KN_BOWLINGBASH",5,50;
+      bonus3 bAutoSpell,"PA_PRESSURE",3,50;
+      bonus3 bAutoSpell,"AS_SONICBLOW",5,50;
+      bonus3 bAutoSpell,"CR_HOLYCROSS",3,50;
+      bonus3 bAutoSpell,"PR_LEXAETERNA",1,50;
       bonus bDoublerate,100;
       bonus2 bDropAddRace,RC_All,5;
   - Id: 1300016
