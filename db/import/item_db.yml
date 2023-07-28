@@ -118,6 +118,27 @@ Body:
       NoAuction: true
     Script: |
       itemskill "AL_TELEPORT",1;
+  - Id: 65001
+    AegisName: Option_Weapon_Ticket
+    Name:  Option Weapon Ticket
+    Type: Etc
+    Trade:
+      NoDrop: true
+      NoSell: true
+  - Id: 65002
+    AegisName: Option_Armor_Ticket
+    Name:  Option Armor Ticket
+    Type: Etc
+    Trade:
+      NoDrop: true
+      NoSell: true
+  - Id: 65003
+    AegisName: Option_Accessery_Ticket
+    Name:  Option Accessery Ticket
+    Type: Etc
+    Trade:
+      NoDrop: true
+      NoSell: true
   - Id: 53000015
     AegisName: Premium_Pass
     Name: Premium Pass
@@ -622,12 +643,12 @@ Body:
       NoDrop: true
     Script: |
       bonus bAllStats,1;
-      bonus bBaseAtk,readparam(bStr)/20;
-      bonus bMatk,readparam(bInt)/20;
-      bonus2 bSubEle,Ele_Neutral,readparam(bVit)/20;
-      bonus bAspdRate,(readparam(bAgi)/20);
-      bonus bLongAtkRate,readparam(bDex)/20;
-      bonus bCritAtkRate,readparam(bLuk)/20;
+      bonus bBaseAtk,5*(readparam(bStr)/20);
+      bonus bMatk,5*(readparam(bInt)/20);
+      bonus2 bSubEle,Ele_Neutral,2*(readparam(bVit)/20);
+      bonus bAspdRate,3*(readparam(bAgi)/20);
+      bonus bLongAtkRate,2*(readparam(bDex)/20);
+      bonus bCritAtkRate,4*(readparam(bLuk)/20);
   - Id: 2576
     AegisName: Bravery_Bag
     Name: Adventurer's Backpack
@@ -700,11 +721,11 @@ Body:
       .@sub_gateofhell = 10;
       bonus bBaseAtk,(.@luk/10)*2;
       bonus bMatk,(.@luk / 10) * 2;
-      if (.@luk > 40) {
+      if (.@luk > 49) {
          .@critical += 5;
          .@critical_dmg += 10;
       }
-      if (.@luk > 60) {
+      if (.@luk > 69) {
          .@critical += 10;
          .@critical_dmg += 17;
          .@sub_arrowstorm += 30;
@@ -727,24 +748,82 @@ Body:
     View: 1679
     Script: |
       bonus bCritAtkRate,5;
-  - Id: 65001
-    AegisName: Option_Weapon_Ticket
-    Name:  Option Weapon Ticket
-    Type: Etc
-    Trade:
-      NoDrop: true
-      NoSell: true
-  - Id: 65002
-    AegisName: Option_Armor_Ticket
-    Name:  Option Armor Ticket
-    Type: Etc
-    Trade:
-      NoDrop: true
-      NoSell: true
-  - Id: 65003
-    AegisName: Option_Accessery_Ticket
-    Name:  Option Accessery Ticket
-    Type: Etc
-    Trade:
-      NoDrop: true
-      NoSell: true
+  - Id: 19221
+    AegisName: Golden_Angel_Band_TH
+    Name: Golden Angel Hairband
+    Type: Armor
+    Weight: 10
+    Defense: 10
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    View: 1104
+    Script: |
+      .@r = getrefine();
+      if (readparam(bStr) >= 70) {
+         bonus bBaseAtk,5;
+         if (.@r >= 7)
+            bonus bBaseAtk,10;
+      }
+      if (readparam(bInt) >= 70) {
+         bonus bMatk,5;
+         if (.@r >= 7)
+            bonus bMatk,10;
+      }
+      if (readparam(bVit) >= 70) {
+         bonus bMaxHPrate,2;
+         bonus bMaxSPrate,2;
+         if (.@r >= 7) {
+            bonus bMaxHPrate,2;
+            bonus bMaxSPrate,2;
+         }
+      }
+      if (readparam(bAgi) >= 70) {
+         bonus bAspdRate,2;
+         if (.@r >= 7)
+            bonus bAspdRate,3;
+      }
+      if (readparam(bDex) >= 70) {
+         bonus bLongAtkRate,2;
+         if (.@r >= 7)
+            bonus bLongAtkRate,3;
+      }
+      if (readparam(bLuk) >= 70) {
+         bonus bCritAtkRate,2;
+         if (.@r >= 7)
+            bonus bCritAtkRate,3;
+      }
+  - Id: 18666
+    AegisName: CD_In_Mouth
+    Name: CD In Mouth
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 20
+    View: 815
+    Script: |
+      autobonus "{ bonus3 bAutoSpell,\"MG_FIREBOLT\",rand(1,5),400; bonus3 bAutoSpell,\"MG_LIGHTNINGBOLT\",rand(1,5),400; bonus3 bAutoSpell,\"MG_COLDBOLT\",rand(1,5),400; bonus3 bAutoSpell,\"WZ_EARTHSPIKE\",rand(1,5),400; bonus3 bAutoSpell,\"MG_SOULSTRIKE\",rand(1,5),400; }",60,5000,BF_NORMAL,"{ specialeffect2 EF_ENHANCE; }";
+  - Id: 18523
+    AegisName: Super_Scell
+    Name: Thunderstorm Cloud
+    Type: Armor
+    Buy: 20
+    Weight: 100
+    Defense: 2
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 688
+    Script: |
+      bonus3 bAutoSpell,"MG_LIGHTNINGBOLT",max(getskilllv("MG_LIGHTNINGBOLT"),5),50+(getskilllv("MG_LIGHTNINGBOLT")*5);
+      bonus3 bAutoSpell,"MG_THUNDERSTORM",max(getskilllv("MG_THUNDERSTORM"),5),50+(getskilllv("MG_THUNDERSTORM")*5);

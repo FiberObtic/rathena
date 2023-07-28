@@ -19517,7 +19517,8 @@ Body:
     Script: |
       bonus3 bAutoSpell,"KN_BOWLINGBASH",5,50;
       bonus3 bAutoSpell,"PA_PRESSURE",3,50;
-      bonus3 bAutoSpell,"AS_SONICBLOW",5,50;
+      bonus3 bAutoSpell,"MC_MAMMONITE",5,50;
+      bonus3 bAutoSpell,"MS_BASH",5,50;
       bonus3 bAutoSpell,"CR_HOLYCROSS",3,50;
       bonus3 bAutoSpell,"PR_LEXAETERNA",1,50;
       bonus bDoublerate,100;

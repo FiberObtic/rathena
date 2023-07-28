@@ -70,12 +70,12 @@ Body:
       .@crit_dmg = 2 + 2 * (readparam(bDex) / 10);
       .@sub_player = 2;
       .@luk = readparam(bLuk);
-      if (.@luk > 107) {
+      if (.@luk > 49) {
          .@aspd += 1;
          .@crit_dmg += 2;
          .@sub_player += 2;
       }
-      if (.@luk > 119) {
+      if (.@luk > 69) {
          .@aspd += 2;
          .@crit_dmg += 4;
          .@sub_player += 4;
