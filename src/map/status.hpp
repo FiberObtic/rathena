@@ -1299,7 +1299,6 @@ enum sc_type : int16 {
 	SC_PREMIUM_EXPBOOST,
 	SC_PREMIUM_JEXPBOOST,
 	SC_PREMIUM_ITEMBOOST,
-	// Title Buff System [Easycore]
 
 #ifdef RENEWAL
 	SC_EXTREMITYFIST2, //! NOTE: This SC should be right before SC_MAX, so it doesn't disturb if RENEWAL is disabled
