@@ -3,7 +3,7 @@ morocc,157,66,0	script	CookOptionTest	800,{
 	.@NPCName$ = " [ เสริมพลังออฟชั่น ] ";
 	mes .@NPCName$;
 	mes "ท่านต้องการสิ่งใด?";
-	next:
+	next;
 	menu "เสริมพลังออฟชั่นอุปกรณ์",-
 	,"ดูรายการ Option อาวุธ",L_DisplayOptionSet1
 	,"ดูรายการ Option ชุดเกราะ",L_DisplayOptionSet2
