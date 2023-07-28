@@ -1,0 +1,76 @@
+function	script	F_CashOptionTicket	{
+	.@part = getarg(0);
+	.@index = getarg(1);
+	.@value0 = rand(1,2);
+	.@value1 = rand(1,5);
+	.@value2 = rand(1,10);
+	.@value3 = rand(5,10);
+	.@value4 = rand(1,20);
+	.@value5 = rand(20,100);
+	if(.@index == 99 ){ @id = 0; return @id; }
+	switch(.@part) {
+		case EQI_HAND_R:
+		case EQI_HAND_L:
+			if(getequipweaponlv(.@part)) {
+				if(.@idop == 148 && getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_BOW)
+					.@value = .@value4;
+				else if (.@idop == 148 || getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_BOW)
+					.@value = .@value2;
+				else .@value = .@value1;
+				if (!getequiprandomoption(.@part,0,ROA_VALUE) )
+					//setrandomoption(.@part,0,300,rand(1,5),0);
+				.@id = 300;
+				else
+				//else if (!getequiprandomoption(.@part,.@index,ROA_VALUE) ) 
+					setarray .@idop,17,19,16,104,148,164,24,10,166,157,158,159;
+				break;
+			}
+			else if(getequiparmorlv(.@part)) {
+				if (!getequiprandomoption(.@part,0,ROA_VALUE) ) {
+					//setrandomoption(.@part,0,300,rand(1,5),0);
+				.@id = 301;
+				.@value = .@value5;
+				}
+				else {
+					setarray .@idop,9,20,22,21,160,161,162,201,25,26,27,28,29,30,31,32,33,34,150,167;
+					.@value = .@value1;
+				}
+				break;
+			}
+			break;
+		case EQI_ARMOR:
+		case EQI_GARMENT:
+		case EQI_SHOES:
+			if (!getequiprandomoption(.@part,0,ROA_VALUE) ) {
+					//setrandomoption(.@part,0,300,rand(1,5),0);
+				.@id = 301;
+				.@value = .@value5;
+			}
+			else  {
+				setarray .@idop,9,20,22,21,160,161,162,201,25,26,27,28,29,30,31,32,33,34,150,167;
+				.@value = .@value1;
+			}
+			break;
+		case EQI_ACC_L:
+		case EQI_ACC_R:
+			if (!getequiprandomoption(.@part,0,ROA_VALUE) ) {
+					//setrandomoption(.@part,0,300,rand(1,5),0);
+				.@id = 22;
+				.@value = .@value3;
+			}
+			else {
+				setarray .@idop,3,4,5,6,7,8;
+				.@value = .@value0;
+			}
+		default:
+			break;
+	}
+	if (getequiprandomoption(.@part,1,ROA_ID) && inarray(.@idop[0],(getequiprandomoption(.@part,1,ROA_ID))) >= 0 ) {
+		.@pos = inarray(.@idop[0],(getequiprandomoption(.@part,1,ROA_ID)));
+		deletearray .@idop[.@pos],1;
+	}
+	if (!.@id) .@id = .@idop[rand(getarraysize(.@idop))];
+	setarray @id[0],.@id,.@value;
+	setrandomoption(.@part,.@index,.@id,.@value,0);
+	return @id[0];
+}

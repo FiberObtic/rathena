@@ -445,6 +445,7 @@ Body:
     Option: RACE_DAMAGE_HUMAN
     Script: |
       bonus2 bAddRace,RC_DemiHuman,getrandomoptinfo(ROA_VALUE);
+      bonus2 bAddRace,RC_Player_Human,getrandomoptinfo(ROA_VALUE);
   - Id: 105
     Option: RACE_DAMAGE_ANGEL
     Script: |
@@ -825,6 +826,7 @@ Body:
     Option: RACE_WEAPON_TOLERACE_HUMAN
     Script: |
       bonus3 bSubRace,RC_DemiHuman,getrandomoptinfo(ROA_VALUE),BF_WEAPON;
+      bonus3 bSubRace,RC_Player_Human,getrandomoptinfo(ROA_VALUE),BF_WEAPON;
   - Id: 202
     Option: RACE_WEAPON_TOLERACE_ANGEL
     Script: |
@@ -1029,3 +1031,13 @@ Body:
     Option: VAR_CRITICAL_RATE
     Script: |
       bonus bCRate,getrandomoptinfo(ROA_VALUE);
+  - Id: 300
+    Option: VAR_EXP_PLUS_DROP
+    Script: |
+      bonus2 bExpAddRace,RC_All,getrandomoptinfo(ROA_VALUE);
+      bonus2 bDropAddRace,RC_All,getrandomoptinfo(ROA_VALUE);
+  - Id: 301
+    Option: VAR_HP_PLUS_SP
+    Script: |
+      bonus bMaxHp,getrandomoptinfo(ROA_VALUE);
+      bonus bMaxSp,getrandomoptinfo(ROA_VALUE);

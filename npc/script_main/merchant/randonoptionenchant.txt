@@ -1,0 +1,129 @@
+morocc,157,66,0	script	CookOptionTest	800,{
+	disable_items;
+	.@NPCName$ = " [ เสริมพลังออฟชั่น ] ";
+	mes .@NPCName$;
+	mes "ท่านต้องการสิ่งใด?";
+	next:
+	menu "เสริมพลังออฟชั่นอุปกรณ์",-
+	,"ดูรายการ Option อาวุธ",L_DisplayOptionSet1
+	,"ดูรายการ Option ชุดเกราะ",L_DisplayOptionSet2
+	,"ดูรายการ Option เครื่องประดับ",L_DisplayOptionSet3
+	,"ไม่มีอะไร",L_Nothing;
+	setarray .@indices[1], EQI_ARMOR, EQI_HAND_L, EQI_HAND_R, EQI_GARMENT, EQI_SHOES, EQI_ACC_L, EQI_ACC_R;
+	
+	for(.@i = 1; .@i<getarraysize(.@indices); ++.@i){
+		if(getequipisequiped(.@indices[.@i])){
+			//.@menu$ = .@menu$ + F_getpositionname(.@indices[.@i]);
+			.@menu$ = .@menu$ + "^006600"+getequipname(.@indices[.@i]) + "^000000 - " + F_getpositionname(.@indices[.@i]);
+			.@equipped = 1;
+		}
+		.@menu$ = .@menu$ + ":";
+	}
+	
+	if (.@equipped == 0){
+		mes "เจ้าไม่ได้สวมใส่ อุปกรณ์สวมใส่ใด ๆ เลย";
+		close;
+	}
+	
+	.@part = .@indices[select(.@menu$)];
+
+	if(!getequipisequiped(.@part)){
+		mes "เจ้าเลือกช่องที่ ไม่ได้สวมใส่อะไรอยู่เลย";
+		close;
+	}
+	
+	.@selectedItemId = getequipid(.@part);
+	setarray .@itemcost[0],65001,65002,65003;
+	next;
+	switch(.@part) {
+		case EQI_HAND_R:
+		case EQI_HAND_L:
+			.@itemuse = .@itemcost[0];
+			break;
+		case EQI_ARMOR:
+		case EQI_GARMENT:
+		case EQI_SHOES:
+			.@itemuse = .@itemcost[1];
+			break;
+		case EQI_ACC_L:
+		case EQI_ACC_R:
+			.@itemuse = .@itemcost[2];
+			break;
+		default:
+			mes "Error Contact Admins";
+			end;
+	}
+	mes .@NPCName$;
+	mes "คุณเลือก ^006600"+getequipname(.@indices[.@i]) + "^000000";
+	mes "สิ่งของที่ต้องการคือ <ITEM>"+getitemname(.@itemuse)+"<INFO>"+.@itemuse+"</INFO></ITEM>";
+	mes "ยืนยันหรือไม่";
+	next;
+	if (select ("Yes:NO") == 2 ) end;
+	if (!countitem(.@itemuse)) {
+		mes .@NPCName$;
+		mes "คุณไม่มีตั๋วนิ";
+		mes "ได้โปรดนำ <ITEM>"+getitemname(.@itemuse)+"<INFO>"+.@itemuse+"</INFO></ITEM> มาด้วย ";
+		close;
+	}
+	delitem .@itemuse,1;
+	if ( !getequiprandomoption(.@part,0,ROA_VALUE)) .@index = 0;
+	else if ( !getequiprandomoption(.@part,1,ROA_VALUE)) .@index = 1;
+	else if ( !getequiprandomoption(.@part,2,ROA_VALUE)) .@index = 2;
+	else .@index = 99;
+	callfunc "F_CashOptionTicket",.@part,.@index;
+	mes .@NPCName$;
+	if(!@id[0]) mes "ท่านได้ทำการเสริมพลังสูงสุดแล้ว";
+	else mes "สำเร็จ ตรวจเช็คอุปกรณ์ของท่านได้เลย";
+	end;
+	
+L_Nothing:
+	end;
+
+L_DisplayOptionSet1: //300,2,16,17,19,24,104,148,157,158,159,164,166
+	dispbottom "2 - Max SP";
+	dispbottom "16 - ASPD %";
+	dispbottom "17 - ATK";
+	dispbottom "19 - MATK";
+	dispbottom "24 - CRIT";
+	dispbottom "104 - ATK % กับ Monster Demihuman";
+	dispbottom "148 - ATK % กับ Monster Boss";
+	dispbottom "157 - ATK % กับ Monster ขนาด Small";
+	dispbottom "158 - ATK % กับ Monster ขนาด Medium";
+	dispbottom "159 - ATK % กับ Monster ขนาด Large";
+	dispbottom "164 - Critical แรงขึ้น %";
+	dispbottom "166 - โจมตีกายภาพระยะไกลแรงขึ้น %";
+	end;
+	
+L_DisplayOptionSet2: //301,9,20,21,22,25,26,27,28,29,30,31,32,33,34,150,160,161,162,167,201
+	dispbottom "9 - Max HP %";
+	dispbottom "20 - DEF";
+	dispbottom "21 - MDEF";
+	dispbottom "22 - FLEE";
+	dispbottom "25 - กันธาตุ Neutral %";
+	dispbottom "26 - กันธาตุ Water %";
+	dispbottom "27 - กันธาตุ Earth %";
+	dispbottom "28 - กันธาตุ Fire %";
+	dispbottom "29 - กันธาตุ Wind %";
+	dispbottom "30 - กันธาตุ Poison %";
+	dispbottom "31 - กันธาตุ Holy %";
+	dispbottom "32 - กันธาตุ Shadow %";
+	dispbottom "33 - กันธาตุ Ghost %";
+	dispbottom "34 - กันธาตุ Undead %";
+	dispbottom "150 - กัน Monster Boss %";
+	dispbottom "160 - กัน Monster ขนาด Small %";
+	dispbottom "161 - กัน Monster ขนาด Medium %";
+	dispbottom "162 - กัน Monster ขนาด Large %";
+	dispbottom "167 - กันกายภาพระยะไกล %";
+	dispbottom "201 - กัน Monster Demihuman %";
+	end;
+	
+L_DisplayOptionSet3: //22,3,4,5,6,7,8
+	dispbottom "22 - FLEE";
+	dispbottom "3 - STR";
+	dispbottom "4 - AGI";
+	dispbottom "5 - VIT";
+	dispbottom "6 - INT";
+	dispbottom "7 - DEX";
+	dispbottom "8 - LUK";
+	end;
+}

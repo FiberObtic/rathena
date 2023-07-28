@@ -19397,7 +19397,7 @@ Body:
       Shadow_Weapon: true
     Script: |
       bonus2 bSkillAtk,"CR_GRANDCROSS",50;
-      bonus2 bSkillAtk,"PA_SACRIFICE",50;
+      bonus2 bSkillAtk,"PA_SACRIFICE",25;
       bonus2 bDropAddRace,RC_All,5;
   - Id: 1300007
     AegisName: Costume_V3_Hunter
