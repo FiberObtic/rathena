@@ -677,7 +677,7 @@ Body:
     Locations:
       Head_Low: true
     ArmorLevel: 1
-    EquipLevelMin: 100
+    EquipLevelMin: 70
     View: 1568
     Script: |
       skill "SA_SPELLBREAKER",2;
@@ -700,11 +700,11 @@ Body:
       .@sub_gateofhell = 10;
       bonus bBaseAtk,(.@luk/10)*2;
       bonus bMatk,(.@luk / 10) * 2;
-      if (.@luk > 107) {
+      if (.@luk > 40) {
          .@critical += 5;
          .@critical_dmg += 10;
       }
-      if (.@luk > 119) {
+      if (.@luk > 60) {
          .@critical += 10;
          .@critical_dmg += 17;
          .@sub_arrowstorm += 30;
@@ -723,7 +723,7 @@ Body:
     Locations:
       Head_Low: true
     ArmorLevel: 1
-    EquipLevelMin: 80
+    EquipLevelMin: 70
     View: 1679
     Script: |
       bonus bCritAtkRate,5;
