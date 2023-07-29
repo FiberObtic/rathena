@@ -107,7 +107,7 @@ M_Menu:
 
 // - - > เมนูบริการหลัก
 		default:
-			setarray @K_Menu0$[0],"^FF0000•^000000 บันทึกจุดเกิด","^FF0000•^000000 เปิดคลัง","^FF0000•^000000 ใช้บริการเทเลพอต","^FF0000•^000000 เช่ารถเข็น","^FF0000•^000000 ตรวจสอบข้อมูลอื่น ๆ","^FF0000•^000000 รีเซ็ตสกิล/สเตตัส","^FF0000•^000000 ยกเลิก";
+			setarray @K_Menu0$[0],"^FF0000•^000000 บันทึกจุดเกิด","^FF0000•^000000 เปิดคลัง","^FF0000•^000000 ใช้บริการเทเลพอต","^FF0000•^000000 เช่านก,รถเข็น,เป็ด","^FF0000•^000000 รับสกิลเสริม","^FF0000•^000000 รีเซ็ตสกิล/สเตตัส","^FF0000•^000000 ยกเลิก";
 			break;
 	}
 
@@ -172,13 +172,13 @@ M_Menu:
 			callfunc "F_KafTele",getarg(0);
 			goto M_Menu;
 		}
-		if (@K_Menu0$[@num] == "^FF0000•^000000 เช่ารถเข็น"){
-			if(callfunc("F_KafCart",getarg(0),getarg(4)) == 1) next;
-			goto M_Menu;
+		if (@K_Menu0$[@num] == "^FF0000•^000000 เช่านก,รถเข็น,เป็ด"){
+			callfunc "F_KafCart";
+			close;
 		}
-		if (@K_Menu0$[@num] == "^FF0000•^000000 ตรวจสอบข้อมูลอื่น ๆ"){
-			callfunc "F_KafInfo",getarg(2);
-			goto M_Menu;
+		if (@K_Menu0$[@num] == "^FF0000•^000000 รับสกิลเสริม"){
+			callfunc "F_KafInfo";
+			close;
 		}
 		if (@K_Menu0$[@num] == "^FF0000•^000000 ยกเลิก"){
 			callfunc "F_KafEnd",getarg(0),0;
@@ -407,55 +407,31 @@ function	script	F_KafTele	{
 
 // - - > ฟังชั่นระบบเช่ารถเข็น
 function	script	F_KafCart	{
-// - - > เช็คเงื่อนไขอาชีพ
-	if(baseClass != Job_Merchant){
-		mes "^0066FF[ Kafra Express ]^000000";
-		mes "ดิฉัน..ต้องขออภัยด้วยค่ะ";
-		mes "แต่ว่า ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
-		mes "ไม่เหมาะสมที่จะมีรถเข็นนะคะ";
-		mes "ดิฉันไม่สามารถให้บริการได้ค่ะ  ~";
-		cutin "", 255;
-		close;
-	}
-	// Make sure the invoking character does not have a cart already
-	else if(checkcart() == 1){
-		mes "^0066FF[ Kafra Express ]^000000";
-		mes "ดิฉัน..ต้องขออภัยด้วยค่ะ";
-		mes "แต่ว่า ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
-		mes "มีรถเข็นอยู่แล้วนะคะ !!";
-		mes "รถสองคันท่านจะลากยังไงคะ โธ่ !";
-		cutin "", 255;
-		close;
-	}
-
-	// Consume "Free Ticket for the Cart Service" if available.
-	// Do not consume if in Guild castle.
-	if(countitem(7061) > 0 && getarg(0) != 2) delitem 7061,1;
+	if (ismounting()) {
+		message strcharinfo(0),"[ระบบ] ก่อนอื่นคุณต้องนำสิ่งที่คุณใช้อยู่แล้วออกเสียก่อนนะ.";
+		end;
+	} else if (((eaclass()&EAJ_THIRDMASK)==EAJ_RANGER) && !countitem(6124)) {
+		if (!checkfalcon() && getskilllv("HT_FALCON") && !checkwug()) {
+			if(select(" ^FF0000•^000000 Falcon: ^FF0000•^000000 Warg")==1) setfalcon;
+			else getitem 6124,1; //Wolf's_Flute
+		} else getitem 6124,1; //Wolf's_Flute
+	} else if (((eaclass()&EAJ_THIRDMASK)==EAJ_MECHANIC) && !checkcart() && getskilllv("MC_PUSHCART")) {
+		if (!checkmadogear() && getskilllv("NC_MADOLICENCE")) {
+			if(select(" ^FF0000•^000000 Cart: ^FF0000•^000000 Mado")==1) setcart;
+			else setmadogear;
+		} else setcart;
+	} else if (!checkcart() && getskilllv("MC_PUSHCART")) setcart;
+	else if (!checkfalcon() && getskilllv("HT_FALCON") && !checkwug()) setfalcon;
+	else if (!checkriding() && !checkdragon() && getskilllv("KN_RIDING")) {
+		if ((eaclass()&EAJ_THIRDMASK)==EAJ_RUNE_KNIGHT) setdragon;
+		else setriding;
+	} else if (!checkmadogear() && getskilllv("NC_MADOLICENCE")) setmadogear;
 	else {
-		mes "^0066FF[ Kafra Express ]^000000";
-		mes "ค่าบริการเช่ารถเข็นอยู่ที่ ^FF0000"+getarg(1)+"^000000 z";
-		mes "ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
-		mes "ต้องการเช่าตอนนี้เลยไหมคะ ?";
-		next;
-		menu "จัดมาให้ไวเลยน้องสาว..",-, "ยังก่อนดีกว่า..",M_End;
-			if(Zeny<getarg(1)){
-				mes "^0066FF[ Kafra Express ]^000000";
-				mes "ดิฉันไม่สามารถให้บริการได้ค่ะ  ~";
-				mes "หาก ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
-				mes "ต้องการที่จะเช่ารถเข็นจากเรา";
-				mes "จะต้องเสียค่าใช้จ่ายจำนวน ^FF0000 "+getarg(1)+" ^000000z "; 
-				mes "โปรดเตรียมค่าบริการมาด้วยค่ะ..";
-				cutin "", 255;
-				close;
-			}
-			set Zeny,Zeny-getarg(1);
-			set RESRVPTS, RESRVPTS + 48;
+		message strcharinfo(0),"[ระบบ] ขออภัย ก่อนอื่นคุณต้องนำสิ่งที่คุณใช้อยู่แล้วออกเสียก่อนนะ.";
 	}
-	setcart;
-	return 1;
-
-M_End:
-	return 0;
+	specialeffect2 EF_TEIHIT3;
+	cutin "", 255;
+	end;
 }
 
 
@@ -469,29 +445,15 @@ function	script	F_KafGuide	{
 
 // Special Reserve Points Function ===========================================
 function	script	F_KafInfo	{
-
-	sM_Menu:
-	if(getarg(0) == 0) menu "ตรวจสอบคะแนนสะสม",sM_ResChk, "บริการด้านอื่น ๆ",sM_KafLoc,"ย้อนกลับ",sM_End;
-
-	sM_ResChk:
-		mes "^0066FF[ Kafra Express ]^000000";
-		mes "ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
-		mes "มีคะแนนสะสมจำนวน ^0066FF"+RESRVPTS+"^000000 แต้ม";
-		mes "Kafra Corporation ขอขอบพระคุณ";
-		mes "ที่ไว้วางใจเลือกใช้บริการของเรา..";
-		mes "เราจะอยู่เคียงข้างท่านตลอดไปค่ะ ~";
-		cutin "", 255;
-		close;
-
-	sM_KafLoc:
-		mes "^0066FF[ Kafra Express ]^000000";
-		mes "สวัสดีค่ะ ท่าน , ^FF0000"+strcharinfo(0)+" ^000000"; 
-		mes "เรายังไม่เปิดให้บริการในส่วนนี้นะคะ";
-		cutin "", 255;
-		close;
-
-	sM_End:
-		return;
+	mes "ข้าสามารถให้สกิลเสริมแก่เจ้าได้.";
+	mes "เจ้าพร้อมที่จะรับสกิลเสริมเลยไหม ?";
+	next;
+	if (select("พร้อม:ไม่") == 2) {
+		mes "ขอให้โชคดี... >.>";
+		end;
+	}
+	callfunc "F_GetPlatinumSkills";
+	end;
 }
 
 
