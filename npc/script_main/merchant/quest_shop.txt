@@ -1,0 +1,395 @@
+//===== rAthena Script =======================================
+//= Euphy's Quest Shop
+//===== By: ==================================================
+//= Euphy
+//===== Current Version: =====================================
+//= 1.6c
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= A dynamic quest shop based on Lunar's, with easier config.
+//= Includes support for multiple shops & cashpoints.
+//= Item Preview script by ToastOfDoom.
+//===== Additional Comments: =================================
+//= 1.0 Initial script.
+//= 1.2 Added category support.
+//= 1.3 More options and fixes.
+//= 1.4 Added debug settings.
+//= 1.5 Replaced categories with shop IDs.
+//= 1.6 Added support for purchasing stackables.
+//= 1.6a Added support for previewing costumes and robes.
+//= 1.6b Added 'disable_items' command.
+//= 1.6c Replaced function 'A_An' with "F_InsertArticle".
+//============================================================
+
+// Shop NPCs -- supplying no argument displays entire menu.
+//	callfunc "qshop"{,<shop ID>{,<shop ID>{,...}}};
+//  ADD YOUR NPC HERE
+//============================================================
+
+//morocc,147,91,6	script	Custom Hand Made#1	998,{ callfunc "qshop",1; }
+/*
+morocc,147,85,6	script	Quest Head#1	998,{ 
+	callfunc "qshop",2; 
+	end;
+OnInit:
+	waitingroom "เควสทำไอเทม",0;
+	end;
+}
+*/
+morocc,124,82,6	script	Craft Item#1	735,{
+	select(" > ^006600คราฟหมวก^000000: ^FF0000> ออก < ^000000:"+((getgmlevel())?" ล้างค่าคราฟ":""));
+	switch(@menu){
+		case 1:
+			callfunc "qshop",2;
+			break;
+		case 3:
+			goto OnReset;
+		default:
+			break;
+	}
+	end;
+OnInit:
+	waitingroom "คราฟไอเท็ม",0;
+	end;
+
+Onreset:
+	mes "ใส่ ID ของที่จะล้างค่า";
+	mes "ใส่ 0 หากกดผิด";
+	next;
+	input .@id;
+	if(!.@id) end;
+	mes "Item : "+getitemname(.@id);
+	if(!getd("$item_"+.@id)) {
+		mes "ยังไม่มีค่าการคราฟของชิ้นนี้";
+		end;
+	}
+	mes "ของชิ้นนี้คราฟไปแล้ว "+getd("$item_"+.@id)+ " ชิ้น";
+	mes "ล้างค่าทิ้งหรือไม่";
+	if(select("ใช่:ไม่") == 2) end;
+		setd("$item_"+.@id),0;
+	end;
+}
+
+// prontera,165,203,6	script	Quest Shop#2	998,{ callfunc "qshop",1,2; }	// call the shop 1 and 2 defined below
+// etc.. Add your Shop NPCs 'Quest Shop#XXX' here
+//============================================================
+
+
+// Script Core - DO NOT DUPLICATE THIS NPC !!!!!!!!!!!!!
+//============================================================
+-	script	quest_shop	-1,{
+function Add; function Chk; function Slot;
+OnInit:
+	freeloop(1);
+
+// -----------------------------------------------------------
+//  Basic shop settings.
+// -----------------------------------------------------------
+
+	set .Announce,1;	// Announce quest completion? (1: yes / 0: no)
+	set .ShowSlot,1;	// Show item slots? (2: all equipment / 1: if slots > 0 / 0: never)
+	set .ShowID,1;  	// Show item IDs? (1: yes / 0: no)
+	set .ShowZeny,1;	// Show Zeny cost, if any? (1: yes / 0: no)
+	set .MaxStack,1;	// Max number of quest items purchased at one time.
+	/*
+	set .guaranteeID,50101;	// +100
+	set .UpchanceID,50102;	// +50
+	set .Upchancerate,50;	// +50
+	*/
+
+// -----------------------------------------------------------
+//  Points variable -- optional quest requirement.
+//	setarray .Points$[0],"<variable name>","<display name>";
+// -----------------------------------------------------------
+
+	setarray .Points$[0],
+		"#CASHPOINTS", "Cash Points";
+
+
+//=====================================================================================
+// ------------------- ADD YOUR SHOPS NAME AND ITEMS SHOPS STARTING HERE --------------
+//=====================================================================================
+
+// -----------------------------------------------------------
+//  Shop IDs -- to add shops, copy dummy data at bottom of file.
+//	setarray .Shops$[1],"<Shop 1>","<Shop 2>"{,...};
+// -----------------------------------------------------------
+
+	setarray .Shops$[1],
+		"Hand Made",		// Shop Named 1
+		"Quest Shop",		// Shop Named 2
+		"Craft Shop",		// Shop Named 3
+		"Socket Shop";		// Shop Named 4
+
+// -----------------------------------------------------------
+//  Quest items -- do NOT use a reward item more than once!
+//	Add(<shop ID>,<reward ID>,<reward amount>,
+//	    <Zeny cost>,<point cost>,
+//		<Have Chance to fail = 1>,<Amount limit>,<Rate Success>
+//	    <required item ID>,<required item amount>{,...});
+// -----------------------------------------------------------
+
+// Shop 1
+//	Add(1,2589,1,1000000,0,2573,1,984,10,985,10);
+//	Add(1,5374,1,1000000,0,2256,1,984,20,985,20,999,100);
+//	Add(1,5308,1,1000000,0,5628,1,984,10,985,10);
+
+// Shop 2
+//	Add(2,2296,1,50000,0,2243,1,999,100);
+	Add(2,5293,1,1000000,0,1,999,50,7211,1,2285,5);
+// -----------------------------------------------------------
+//	setarray .nouseitem[1],54005,54006,54007,54008,54009,54010,54011,54012,54013,54014,54015,54016,54017;
+//	setarray .reciveback[1],2765,2766,2767,2768,2769,2770,2771,2766,2767,2768,2769,2770,2771;
+//=====================================================================================
+// ------------------- YOUR SHOPS AND ITEMS SHOPS HAVE BEEN ADDED ---------------------
+//=====================================================================================
+
+	freeloop(0);
+	set .menu$,"";
+	for(set .@i,1; .@i<=getarraysize(.Shops$); set .@i,.@i+1) {
+		set .menu$, .menu$+.Shops$[.@i]+":";
+		npcshopdelitem "qshop"+.@i,909;
+	}
+	end;
+
+OnMenu:
+	set .@size, getarraysize(@i);
+	if (!.@size) set @shop_index, select(.menu$);
+	else if (.@size == 1) set @shop_index, @i[0];
+	else {
+		for(set .@j,0; .@j<.@size; set .@j,.@j+1)
+			set .@menu$, .@menu$+.Shops$[@i[.@j]]+":";
+		set @shop_index, @i[select(.@menu$)-1];
+	}
+	deletearray @i[0],getarraysize(@i);
+	if (.Shops$[@shop_index] == "") {
+		message strcharinfo(0),"An error has occurred.";
+		end;
+	}
+	dispbottom "Select one item at a time.";
+	callshop "qshop"+@shop_index,1;
+	npcshopattach "qshop"+@shop_index;
+	end;
+
+OnBuyItem:
+	// .@q[] : RewardID, BoughtAmt, RewardAmt, BaseAmt, ReqZeny, ReqPts, { ReqItem, ReqAmt, ... }
+	setarray .@q[0],@bought_nameid[0],((@bought_quantity[0] > .MaxStack)?.MaxStack:@bought_quantity[0]);
+	copyarray .@q[3],getd(".q_"+@shop_index+"_"+.@q[0]+"[0]"),getarraysize(getd(".q_"+@shop_index+"_"+.@q[0]));
+	set .@q[2],.@q[1]*.@q[3];
+	if (!.@q[2] || .@q[2] > 30000) {
+		message strcharinfo(0),"You can't purchase that many "+getitemname(.@q[0])+".";
+		end;
+	}
+	mes "[Quest Shop]";
+	mes "รางวัล: ^0055FF"+((.@q[2] > 1)?.@q[2]+"x ":"")+Slot(.@q[0])+"^000000";
+	disable_items;
+	/*
+	mes "ความต้องการ:";
+	if (.@q[4]) mes " > "+Chk(Zeny,.@q[4]*.@q[1])+(.@q[4]*.@q[1])+" Zeny^000000";
+	if (.@q[5]) mes " > "+Chk(getd(.Points$[0]),.@q[5]*.@q[1])+(.@q[5]*.@q[1])+" "+.Points$[1]+" ("+getd(.Points$[0])+"/"+(.@q[5]*.@q[1])+")^000000";
+	if (.@q[9]) for(set .@i,9; .@i<getarraysize(.@q); set .@i,.@i+2)
+		mes " > "+Chk(countitem(.@q[.@i]),.@q[.@i+1]*.@q[1])+((.ShowID)?"{"+.@q[.@i]+"} ":"")+"<ITEM>"+Slot(.@q[.@i])+"<INFO>"+.@q[.@i]+"</INFO></ITEM>"+" ("+countitem(.@q[.@i])+"/"+(.@q[.@i+1]*.@q[1])+")^000000";
+	if (.@q[6]) mes " > อัตราสำเร็จ ^FF0000"+.@q[8]+"%^000000";
+	if (.@q[7] && .@q[7] < 99) mes " > จำกัด ^FF0000"+.@q[7]+" ชิ้น^000000";	
+	if (.@q[7] && .@q[7] < 99) mes " > คงเหลือ "+Chk(.@q[7],getd("$item_"+.@q[0]))+(.@q[7]-getd("$item_"+.@q[0]))+" ชิ้น^000000";	
+	*/
+	next;
+	setarray @qe[1], getiteminfo(.@q[0], ITEMINFO_LOCATIONS), getiteminfo(.@q[0], ITEMINFO_VIEW);
+	if (@qe[2] > 0 && ((@qe[1] & EQP_HEAD_LOW) || (@qe[1] & EQP_HEAD_TOP) || (@qe[1] & EQP_HEAD_MID) || (@qe[1] & EQP_COSTUME_HEAD_TOP) || (@qe[1] & EQP_COSTUME_HEAD_MID) || (@qe[1] & EQP_COSTUME_HEAD_LOW) || (@qe[1] & EQP_GARMENT) || (@qe[1] & EQP_COSTUME_GARMENT)))
+		set .@preview,1;
+	addtimer 1000, strnpcinfo(0)+"::OnEnd";
+	while(1) {
+		switch(select(" ~ แลก ^0055FF"+getitemname(.@q[0])+"^000000:"+((.@preview && !@qe[7])?" ~ ทดลองสวมใส่...":"")+": ~ ^777777ยกเลิก^000000")) {
+		case 1:
+			if (@qe[0]) {
+				mes "[Quest Shop]";
+				mes "ไอเท็มที่ใช้ในการแลกไม่เพียงพอ";
+				close;
+			}
+			if (!checkweight(.@q[0],.@q[2])) {
+				mes "[Quest Shop]";
+				mes "^FF0000You need "+(((.@q[2]*getiteminfo(.@q[0], ITEMINFO_WEIGHT))+Weight-MaxWeight)/10)+" additional weight capacity to complete this trade.^000000";
+				close;
+			}
+			/*
+			if(countitem(.guaranteeID)) {
+				mes "[Quest Shop]";
+				mes "ท่านจะใช้ใบการันตีหรือไม่";
+				next;
+				if(select("ใช้:ไม่ใช้") == 1 ) {
+					.@guarantee = 1;
+				}
+			}
+			if(countitem(.UpchanceID) && !.@guarantee) {
+				mes "[Quest Shop]";
+				mes "ท่านจะใช้ใบเพิ่มอัตราการคราฟหรือไม่";
+				next;
+				if(select("ใช้:ไม่ใช้") == 1 ) {
+					.@upchance = 1;
+				}
+			}
+			*/
+			next;
+			mes "[Quest Shop]";
+			mes "รางวัล: ^0055FF"+((.@q[2] > 1)?.@q[2]+"x ":"")+Slot(.@q[0])+"^000000";
+			mes "ความต้องการ:";
+			if (.@q[4]) mes " > "+Chk(Zeny,.@q[4]*.@q[1])+(.@q[4]*.@q[1])+" Zeny^000000";
+			if (.@q[5]) mes " > "+Chk(getd(.Points$[0]),.@q[5]*.@q[1])+(.@q[5]*.@q[1])+" "+.Points$[1]+" ("+getd(.Points$[0])+"/"+(.@q[5]*.@q[1])+")^000000";
+			if (.@q[9]) for(set .@i,9; .@i<getarraysize(.@q); set .@i,.@i+2)
+				mes " > "+Chk(countitem(.@q[.@i]),.@q[.@i+1]*.@q[1])+((.ShowID)?"{"+.@q[.@i]+"} ":"")+"<ITEM>"+Slot(.@q[.@i])+"<INFO>"+.@q[.@i]+"</INFO></ITEM>"+" ("+countitem(.@q[.@i])+"/"+(.@q[.@i+1]*.@q[1])+")^000000";
+			if(.@guarantee) {
+				if (.@q[6]) mes " > อัตราสำเร็จ ^FF0000 100%^000000"; }
+			else 
+				if (.@q[6]) mes " > อัตราสำเร็จ ^FF0000"+(.@upchance?.@q[8]+50:.@q[8])+"%^000000";
+			if (.@q[7] && .@q[7] < 99) mes " > จำกัด ^FF0000"+.@q[7]+" ชิ้น^000000";	
+			if (.@q[7] && .@q[7] < 99) mes " > คงเหลือ "+Chk(.@q[7],getd("$item_"+.@q[0]))+(.@q[7]-getd("$item_"+.@q[0]))+" ชิ้น^000000";	
+			mes "ท่านตกลงหรือไม่";
+			if(select("ตกลง:ไม่ตกลง") == 2 ) end;
+			next;		
+			// item 2589
+			// เรียงบรรทัดตาม Shop
+			
+			if( getd("$Item_"+.@q[0]) < .@q[7] || getd("$Item_"+.@q[0]) == 99){
+				if (.@q[4]) set Zeny, Zeny-(.@q[4]*.@q[1]);
+				if (.@q[5]) setd .Points$[0], getd(.Points$[0])-(.@q[5]*.@q[1]);
+				if (.@q[9]) for(set .@i,9; .@i<getarraysize(.@q); set .@i,.@i+2)
+					delitem .@q[.@i],.@q[.@i+1]*.@q[1];
+				if(.@guarantee) delitem .guaranteeID,1;
+				if(.@upchance) delitem .UpchanceID,1;
+					.@rate = rand(100);
+					if(.@guarantee) .@rate = 0;
+					if(.@upchance) .@rate -= .Upchancerate;
+					if(.@rate <= .@q[8]){
+						getitem .@q[0],.@q[2];
+						//if(getgmlevel()) {mes "ท่าน GM ได้ทดลองสร้างของแล้วครับ"; end;}
+							setd(("$item_"+.@q[0]),getd("$item_"+.@q[0]) + 1);
+						
+						//if (getd("$item_"+.@q[0]) == getd("$item_2296")){ end; }
+						if (.Announce) announce strcharinfo(0)+" สร้างไอเท็ม "+((.@q[2] > 1)?.@q[2]+"x "+getitemname(.@q[0]):callfunc("F_InsertArticle",getitemname(.@q[0])))+" ได้สำเร็จ ชิ้นที่ "+getd("$item_"+.@q[0])+" ในเซิร์ฟเวอร์"+(.@guarantee >0?"โดยใบการันตี":""),0;
+						specialeffect2 EF_FLOWERLEAF;
+					}else{
+						if (.Announce) announce strcharinfo(0)+" สร้างไอเท็ม "+((.@q[2] > 1)?.@q[2]+"x "+getitemname(.@q[0]):callfunc("F_InsertArticle",getitemname(.@q[0])))+" ล้มเหลว ",0;
+						mes "ขอแสดงความเสียใจด้วย";
+						mes "ท่านแลกไอเท็มไม่สำเร็จ";
+						if (.@unbreak) {
+							mes "^FF0000ท่านได้รับวัตถุดิบหลักคืน^000000";
+							getitem .@q[9],.@q[10];
+						}
+//						if( inarray(.nouseitem[0],.@q[0]) ) getitem .reciveback[inarray(.nouseitem[0],.@q[0])],1;
+					}
+			}else{
+				mes "ไอเท็มชิ้นนี้ถูกสร้างครบ "+.@q[7]+" ชิ้นแล้ว";
+			}
+			
+			// end item 2589
+/*			
+			// item 5374
+			if( .@q[0] == 5374){
+				if( $item_5374 < 3){
+					if(rand(100) <= 10){
+						getitem .@q[0],.@q[2];
+						$item_5374++;
+						if (.Announce) announce strcharinfo(0)+" สร้างไอเท็ม "+((.@q[2] > 1)?.@q[2]+"x "+getitemname(.@q[0]):callfunc("F_InsertArticle",getitemname(.@q[0])))+" ได้สำเร็จ ชิ้นที่ "+$item_5374+" ในเซิร์ฟเวอร์",0;
+						specialeffect2 EF_FLOWERLEAF;
+					}else{
+						mes "ขอแสดงความเสียใจด้วย";
+						mes "ท่านแลกไอเท็มไม่สำเร็จ";
+					}
+				}else{
+					mes "ไอเท็มชิ้นนี้ถูกสร้างครบ 3ชิ้นแล้ว";
+				}
+			} // end item 5374
+			// item 5308
+			if( .@q[0] == 5308){
+				if( $item_5308 < 3){
+					if(rand(100) <= 50){
+						getitem .@q[0],.@q[2];
+						$item_5308++;
+						if (.Announce) announce strcharinfo(0)+" สร้างไอเท็ม "+((.@q[2] > 1)?.@q[2]+"x "+getitemname(.@q[0]):callfunc("F_InsertArticle",getitemname(.@q[0])))+" ได้สำเร็จ ชิ้นที่ "+$item_5308+" ในเซิร์ฟเวอร์",0;
+						specialeffect2 EF_FLOWERLEAF;
+					}else{
+						mes "ขอแสดงความเสียใจด้วย";
+						mes "ท่านแลกไอเท็มไม่สำเร็จ";
+					}
+				}else{
+					mes "ไอเท็มชิ้นนี้ถูกสร้างครบ 3ชิ้นแล้ว";
+				}
+			} // end item 5308
+			//getitem .@q[0],.@q[2];
+*/		
+			close;
+		case 2:
+			setarray @qe[3], getlook(LOOK_HEAD_BOTTOM), getlook(LOOK_HEAD_TOP), getlook(LOOK_HEAD_MID), getlook(LOOK_ROBE), 1;
+			if ((@qe[1] & 1) || (@qe[1] & 4096)) changelook LOOK_HEAD_BOTTOM, @qe[2];
+			else if ((@qe[1] & 256) || (@qe[1] & 1024)) changelook LOOK_HEAD_TOP, @qe[2];
+			else if ((@qe[1] & 512) || (@qe[1] & 2048)) changelook LOOK_HEAD_MID, @qe[2];
+			else if ((@qe[1] & 4) || (@qe[1] & 8192)) changelook LOOK_ROBE, @qe[2];
+			break;
+		case 3:
+			close;
+		}
+	}
+
+OnEnd:
+	if (@qe[7]) {
+		changelook LOOK_HEAD_BOTTOM, @qe[3];
+		changelook LOOK_HEAD_TOP, @qe[4];
+		changelook LOOK_HEAD_MID, @qe[5];
+		changelook LOOK_ROBE, @qe[6];
+	}
+	deletearray @qe[0],8;
+	end;
+
+function Add {
+	if (getitemname(getarg(1)) == "null") {
+		debugmes "Quest reward #"+getarg(1)+" invalid (skipped).";
+		return;
+	}
+	setarray .@j[0],getarg(2),getarg(3),getarg(4),getarg(5),getarg(6),getarg(7);
+	for(set .@i,8; .@i<getargcount(); set .@i,.@i+2) {
+		if (getitemname(getarg(.@i)) == "null") {
+			debugmes "Quest requirement #"+getarg(.@i)+" invalid (skipped).";
+			return;
+		} else
+			setarray .@j[.@i-2],getarg(.@i),getarg(.@i+1);
+	}
+	copyarray getd(".q_"+getarg(0)+"_"+getarg(1)+"[0]"),.@j[0],getarraysize(.@j);
+	npcshopadditem "qshop"+getarg(0),getarg(1),((.ShowZeny)?getarg(3):0);
+	return;
+}
+
+function Chk {
+	if (getarg(0) < getarg(1)) {
+		set @qe[0],1;
+		return "^FF0000";
+	} else
+		return "^018501";
+}
+
+function Slot {
+	set .@s$,getitemname(getarg(0));
+	switch(.ShowSlot) {
+		case 1: if (!getitemslots(getarg(0))) return .@s$;
+		case 2: if (getiteminfo(getarg(0), ITEMINFO_TYPE) == 4 || getiteminfo(getarg(0), ITEMINFO_TYPE) == 5) return .@s$+" ["+getitemslots(getarg(0))+"]";
+		default: return .@s$;
+	}
+}
+}
+
+function	script	qshop	{
+	deletearray @i[0],getarraysize(@i);
+	for(set .@i,0; .@i<getargcount(); set .@i,.@i+1)
+		set @i[.@i],getarg(.@i);
+	doevent "quest_shop::OnMenu";
+	end;
+}
+
+
+// Dummy shop data -- copy as needed.
+//============================================================
+-	shop	qshop1	-1,909:-1
+-	shop	qshop2	-1,909:-1
+-	shop	qshop3	-1,909:-1
+-	shop	qshop4	-1,909:-1
+-	shop	qshop5	-1,909:-1
