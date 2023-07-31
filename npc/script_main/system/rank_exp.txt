@@ -13,6 +13,8 @@ Start:
 mes "^FF3300[ "+.@namenpc$+" ]^000000";
 
 mes "สวัสดีคุณ ^009900"+strcharinfo(0)+"^000000";
+mes "คุณจะเก็บ RANK EXP";
+mes "ได้ก็ต่อเมื่อ Lv.99 & Job 50";
 mes "คุณมี ^009900"+callfunc("F_InsertComma",Exp_All_1)+"^000000 EXP Points.";
 //mes "คุณมี ^009900"+callfunc("F_InsertComma",Job_All_2)+"^000000 JOB Points.";
 
@@ -60,14 +62,12 @@ setarray .mobid[0],
 				//set #JOBPOINTS,getmonsterinfo(killedrid,MOB_BASEEXP);
 				//set Job_All_2,Job_All_2 +#JOBPOINTS;
 	
-				dispbottom "คุณได้รับ ค่าประสบการณ์ RANK EXP : "+callfunc("F_InsertComma",#EXPPOINTS)+" แต้ม   /   คุณได้เก็บ ค่าประสบการณ์ RANK EXP รวม  :  "+callfunc("F_InsertComma",Exp_All_1)+" แต้ม";				
+				dispbottom "คุณได้รับ RANK EXP : "+callfunc("F_InsertComma",#EXPPOINTS)+" แต้ม   /  RANK EXP สะสมรวม  :  "+callfunc("F_InsertComma",Exp_All_1)+" แต้ม";				
 				//dispbottom "คุณได้รับ ค่าประสบการณ์ RANK JOB : "+callfunc("F_InsertComma",#JOBPOINTS)+" แต้ม   /   คุณได้เก็บ ค่าประสบการณ์ RANK JOB รวม  :  "+callfunc("F_InsertComma",Job_All_2)+" แต้ม";				
 				end;
 			
 			}
-		
-			dispbottom "คุณไม่สามารถเก็บRANK EXP ได้ เนื่องจากยังไม่ Lv.99";
-			
+			//dispbottom "คุณไม่สามารถเก็บRANK EXP ได้ เนื่องจากยังไม่ Lv.99";
 			end;
 		
 		}
