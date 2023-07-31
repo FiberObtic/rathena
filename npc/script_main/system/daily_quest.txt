@@ -150,8 +150,8 @@ OnDailyQuest:
 				mes "เลือกเควสที่จะจัดการ.";
 				next;
 				.@menu$ += "ออก";
-				.@s = select(.@menu$);
-				if (.@s > .quest_count)
+				.@s = select(.@menu$) - 1;
+				if (.@s == .quest_count)
 					end;
 				explode(.@TT$,.@T$[.@s],",");
 				if (atoi(.@TT$[0]) == 4) {
@@ -188,7 +188,7 @@ OnDailyQuest:
 							
 						case 3:
 							.@id = .s_list[rand(getarraysize(.s_list))];
-							.@amount = 1;
+							.@amount = rand(.min_Shunt,.max_Shunt);
 							.@type$ = "ล่ามอนสเตอร์ MVP";
 							.@prefix$ = "MVP";
 							c_hunt++;
