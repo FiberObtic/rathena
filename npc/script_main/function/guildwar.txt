@@ -1,0 +1,20 @@
+morocc,154,144,4	duplicate(InsideFlagsPR1)	Kriemhild#mor	722
+morocc,158,144,4	duplicate(InsideFlagsPA1)	Bright Arbor#mor	722
+morocc,162,144,4	duplicate(InsideFlagsG4)	Bergel#mor	722
+morocc,166,144,4	duplicate(InsideFlagsA3)	Nuernberg#mor	722
+
+morocc,154,142,4	script	test	722,{
+
+OnAgitEnd:
+	set @GID,getcastledata("prtg_cas01",1);
+	if (strcharinfo(0) != getguildmaster(@GID)) {
+		mes "มึงมันไม่ใช่หัวหน้ากิลด์";
+		mes "กลับไปซะไอ่ควาย";
+		end;
+	}
+	mes "มึงเป็นหัวหน้ากิลด์";
+	if (getcharid(2) == @GID) {
+		mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
+		end;
+	}
+}

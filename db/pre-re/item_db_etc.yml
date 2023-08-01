@@ -12485,6 +12485,15 @@ Body:
     Weight: 1
     Flags:
       BuyingStore: true
+  - Id: 6635
+    AegisName: Blacksmith_Blessing
+    Name: Blacksmith Blessing
+    Type: Etc
+    Buy: 20
+    Flags:
+      BuyingStore: true
+    Trade:
+      NoDrop: true
   - Id: 7001
     AegisName: Mould_Powder
     Name: Mould Powder
