@@ -2554,6 +2554,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 	unsigned int mvp_damage;
 	t_tick tick = gettick();
 	bool rebirth, homkillonly, merckillonly;
+	struct map_data* mapdata = map_getmapdata(md->bl.m);
 
 	status = &md->status;
 
@@ -2818,6 +2819,10 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 				continue;
 			
 			drop_rate = mob_getdroprate(src, md->db, md->db->dropitem[i].rate, drop_modifier, md);
+
+			// Drops affected by the mapflag droprate [DurexzOfficial]
+			if (mapdata->droprate && map_getmapflag(m, MF_DROPRATE))
+				drop_rate = (int)((drop_rate * (mapdata->droprate)) / 100.);
 
 			// attempt to drop the item
 			if (rnd() % 10000 >= drop_rate)

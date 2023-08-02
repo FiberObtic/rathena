@@ -1,0 +1,6 @@
+1@tower	mapflag	droprate	110
+2@tower	mapflag	droprate	110
+3@tower	mapflag	droprate	110
+4@tower	mapflag	droprate	110
+5@tower	mapflag	droprate	110
+6@tower	mapflag	droprate	110

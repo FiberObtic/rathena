@@ -4625,6 +4625,8 @@ ACMD_FUNC(mapinfo) {
 		strcat(atcmd_output, " NoRODex |");
 	if (map_getmapflag(m_id, MF_NOPETCAPTURE))
 		strcat(atcmd_output, " NoPetCapture |");
+	if (map_getmapflag(m_id, MF_DROPRATE)) 		// DurexzOfficial
+		strcat(atcmd_output, " DropRate |");
 	clif_displaymessage(fd, atcmd_output);
 
 	switch (list) {

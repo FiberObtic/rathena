@@ -538,6 +538,7 @@
 	export_constant(MF_NOBUYINGSTORE);
 	export_constant(MF_NODYNAMICNPC);
 	export_constant(MF_NOBANK);
+	export_constant(MF_DROPRATE); // DurexzOfficial
 
 	/* setcell types */
 	export_constant(CELL_WALKABLE);

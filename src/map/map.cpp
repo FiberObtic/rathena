@@ -4618,6 +4618,16 @@ bool map_setmapflag_sub(int16 m, enum e_mapflag mapflag, bool status, union u_ma
 				}
 			}
 			break;
+		case MF_DROPRATE:
+			if (status)
+			{
+				nullpo_retr(false, args);
+				mapdata->setMapFlag(mapflag, status);
+				mapdata->droprate = args->droprate;
+			}
+			else
+				mapdata->setMapFlag(mapflag, status);
+			break;
 		case MF_GVG:
 		case MF_GVG_TE:
 			mapdata->setMapFlag(mapflag, status); // Must come first to properly set map property

@@ -670,6 +670,7 @@ enum e_mapflag : int16 {
 	MF_NOBUYINGSTORE,
 	MF_NODYNAMICNPC,
 	MF_NOBANK,
+	MF_DROPRATE, // DurexzOfficial
 	MF_MAX
 };
 
@@ -717,6 +718,7 @@ union u_mapflag_args {
 	struct s_skill_damage skill_damage;
 	struct s_skill_duration skill_duration;
 	int flag_val;
+	int droprate; // DurexzOfficial
 };
 
 // used by map_setcell()
@@ -807,6 +809,7 @@ struct map_data {
 	int users;
 	int users_pvp;
 	int iwall_num; // Total of invisible walls in this map
+	int droprate; // DurexzOfficial
 
 	struct point save;
 	std::vector<s_drop_list> drop_list;

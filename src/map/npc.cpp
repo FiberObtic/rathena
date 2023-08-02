@@ -2820,7 +2820,7 @@ e_purchase_result npc_buylist( map_session_data* sd, std::vector<s_npc_buy_list>
 				sd->status.name, sd->status.account_id, sd->status.char_id, amount, nameid);
 			amount = item_list[i].qty = 1;
 		}
-
+		
 		if( nd->master_nd ) { // Script-controlled shops decide by themselves, what can be bought and for what price.
 			continue;
 		}
@@ -5436,6 +5436,20 @@ static const char* npc_parse_mapflag(char* w1, char* w2, char* w3, char* w4, con
 					map_setmapflag_sub(m, MF_PVP_NIGHTMAREDROP, true, &args);
 			} else if (!state)
 				map_setmapflag(m, MF_PVP_NIGHTMAREDROP, false);
+			break;
+		}
+		
+		// Custom mapflag to modify droprate in map 
+		case MF_DROPRATE: {
+			if (state) {
+				union u_mapflag_args args = {};
+				if (sscanf(w4, "%11d", &args.flag_val) == 1)
+					map_setmapflag_sub(m, MF_DROPRATE, true, &args);
+				else
+					map_setmapflag(m, MF_DROPRATE, false);
+			}
+			else
+				map_setmapflag(m, MF_DROPRATE, false);
 			break;
 		}
 
