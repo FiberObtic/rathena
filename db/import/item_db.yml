@@ -118,6 +118,26 @@ Body:
       NoAuction: true
     Script: |
       itemskill "AL_TELEPORT",1;
+  - Id: 63001
+    AegisName: Endless_Tower_Reset_Pass
+    Name: Endless Tower Reset Pass
+    Type: Usable
+    Weight: 1
+    Delay:
+      Duration: 900000
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoMail: true
+    Script: |
+      if(checkquest(60200,PLAYTIME) == 00 ) {
+        erasequest 60200;
+      }
+      if(checkquest(60201,PLAYTIME) <= 2 ) {
+        erasequest 60201;
+      }
   - Id: 65001
     AegisName: Option_Weapon_Ticket
     Name:  Option Weapon Ticket
@@ -185,7 +205,7 @@ Body:
       NoDrop: true
       NoSell: true
     Script: |
-       dispbottom "[ RANK EXP] ¤Ø³ä´éÃÑº RANK EXP ¨Ó¹Ç¹ 100,000 Points",0xffffff;
+       dispbottom "[ RANK EXP] ï¿½Ø³ï¿½ï¿½ï¿½Ñº RANK EXP ï¿½Ó¹Ç¹ 100,000 Points",0xffffff;
        getexp2(100000,0);
   - Id: 53000018
     AegisName: RANK_JOB
@@ -194,7 +214,7 @@ Body:
     Buy: 10
     Weight: 70
     Script: |
-       dispbottom "[ RANK JOB] ¤Ø³ä´éÃÑº RANK Job ¨Ó¹Ç¹ 100,000 Points",0xffffff;
+       dispbottom "[ RANK JOB] ï¿½Ø³ï¿½ï¿½ï¿½Ñº RANK Job ï¿½Ó¹Ç¹ 100,000 Points",0xffffff;
        getexp2(0,100000);
   - Id: 23165
     AegisName: Service30_AID_Buff
@@ -433,6 +453,14 @@ Body:
       sc_start SC_PREMIUMSERVICE_EXPBOOST_A,864000000,20;
       sc_start SC_PREMIUMSERVICE_JEXPBOOST_A,864000000,20;
       sc_start SC_PREMIUMSERVICE_ITEMBOOST_A,864000000,30;
+  - Id: 65004
+    AegisName: Premium_Reset_Option_Ticket
+    Name: Premium Reset Option Ticket
+    Type: Etc
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoSell: true
   - Id: 5300000
     AegisName: Vote_Member_Lv_1
     Name: Vote Member Lv.1
@@ -442,8 +470,8 @@ Body:
       delitem 5300000,1;
       #vote_member = 1;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[ÃÐºº] : ¤Ø³à»ç¹¼Ùéãªé§Ò¹ Vote Member Lv.1";
-      dispbottom "¡ÃØ³ÒÍÍ¡à¡Á à¢éÒãËÁè";
+      dispbottom "[ï¿½Ðºï¿½] : ï¿½Ø³ï¿½ç¹¼ï¿½ï¿½ï¿½ï¿½Ò¹ Vote Member Lv.1";
+      dispbottom "ï¿½ï¿½Ø³ï¿½ï¿½Í¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
   - Id: 5300001
     AegisName: Vote_Member_Lv_2
     Name: Vote Member Lv.2
@@ -453,8 +481,8 @@ Body:
       delitem 5300001,1;
       #vote_member = 2;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[ÃÐºº] : ¤Ø³à»ç¹¼Ùéãªé§Ò¹ Vote Member Lv.2";
-      dispbottom "¡ÃØ³ÒÍÍ¡à¡Á à¢éÒãËÁè";
+      dispbottom "[ï¿½Ðºï¿½] : ï¿½Ø³ï¿½ç¹¼ï¿½ï¿½ï¿½ï¿½Ò¹ Vote Member Lv.2";
+      dispbottom "ï¿½ï¿½Ø³ï¿½ï¿½Í¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
   - Id: 5300002
     AegisName: Vote_Member_Lv_3
     Name: Vote Member Lv.3
@@ -464,8 +492,8 @@ Body:
       delitem 5300002,1;
       #vote_member = 3;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[ÃÐºº] : ¤Ø³à»ç¹¼Ùéãªé§Ò¹ Vote Member Lv.3";
-      dispbottom "¡ÃØ³ÒÍÍ¡à¡Á à¢éÒãËÁè";
+      dispbottom "[ï¿½Ðºï¿½] : ï¿½Ø³ï¿½ç¹¼ï¿½ï¿½ï¿½ï¿½Ò¹ Vote Member Lv.3";
+      dispbottom "ï¿½ï¿½Ø³ï¿½ï¿½Í¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
   - Id: 5300003
     AegisName: Vote_Member_Lv_4
     Name: Vote Member Lv.4
@@ -475,8 +503,8 @@ Body:
       delitem 5300003,1;
       #vote_member = 4;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[ÃÐºº] : ¤Ø³à»ç¹¼Ùéãªé§Ò¹ Vote Member Lv.4";
-      dispbottom "¡ÃØ³ÒÍÍ¡à¡Á à¢éÒãËÁè";
+      dispbottom "[ï¿½Ðºï¿½] : ï¿½Ø³ï¿½ç¹¼ï¿½ï¿½ï¿½ï¿½Ò¹ Vote Member Lv.4";
+      dispbottom "ï¿½ï¿½Ø³ï¿½ï¿½Í¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
   - Id: 5300004
     AegisName: Vote_Member_Lv_5
     Name: Vote Member Lv.5
@@ -486,8 +514,8 @@ Body:
       delitem 5300004,1;
       #vote_member = 5;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[ÃÐºº] : ¤Ø³à»ç¹¼Ùéãªé§Ò¹ Vote Member Lv.5";
-      dispbottom "¡ÃØ³ÒÍÍ¡à¡Á à¢éÒãËÁè";
+      dispbottom "[ï¿½Ðºï¿½] : ï¿½Ø³ï¿½ç¹¼ï¿½ï¿½ï¿½ï¿½Ò¹ Vote Member Lv.5";
+      dispbottom "ï¿½ï¿½Ø³ï¿½ï¿½Í¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
   - Id: 5300005
     AegisName: Vote_Member_Lv_6
     Name: Vote Member Lv.6
@@ -497,8 +525,8 @@ Body:
       delitem 5300005,1;
       #vote_member = 6;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[ÃÐºº] : ¤Ø³à»ç¹¼Ùéãªé§Ò¹ Vote Member Lv.6";
-      dispbottom "¡ÃØ³ÒÍÍ¡à¡Á à¢éÒãËÁè";
+      dispbottom "[ï¿½Ðºï¿½] : ï¿½Ø³ï¿½ç¹¼ï¿½ï¿½ï¿½ï¿½Ò¹ Vote Member Lv.6";
+      dispbottom "ï¿½ï¿½Ø³ï¿½ï¿½Í¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
   - Id: 5300006
     AegisName: Vote_Member_Lv_7
     Name: Vote Member Lv.7
@@ -508,8 +536,8 @@ Body:
       delitem 5300006,1;
       #vote_member = 7;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[ÃÐºº] : ¤Ø³à»ç¹¼Ùéãªé§Ò¹ Vote Member Lv.7";
-      dispbottom "¡ÃØ³ÒÍÍ¡à¡Á à¢éÒãËÁè";
+      dispbottom "[ï¿½Ðºï¿½] : ï¿½Ø³ï¿½ç¹¼ï¿½ï¿½ï¿½ï¿½Ò¹ Vote Member Lv.7";
+      dispbottom "ï¿½ï¿½Ø³ï¿½ï¿½Í¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
   - Id: 5300007
     AegisName: Vote_Member_Lv_8
     Name: Vote Member Lv.8
@@ -519,8 +547,8 @@ Body:
       delitem 5300007,1;
       #vote_member = 8;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[ÃÐºº] : ¤Ø³à»ç¹¼Ùéãªé§Ò¹ Vote Member Lv.8";
-      dispbottom "¡ÃØ³ÒÍÍ¡à¡Á à¢éÒãËÁè";
+      dispbottom "[ï¿½Ðºï¿½] : ï¿½Ø³ï¿½ç¹¼ï¿½ï¿½ï¿½ï¿½Ò¹ Vote Member Lv.8";
+      dispbottom "ï¿½ï¿½Ø³ï¿½ï¿½Í¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
   - Id: 5300008
     AegisName: Vote_Member_Lv_9
     Name: Vote Member Lv.9
@@ -530,8 +558,8 @@ Body:
       delitem 5300008,1;
       #vote_member = 9;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[ÃÐºº] : ¤Ø³à»ç¹¼Ùéãªé§Ò¹ Vote Member Lv.9";
-      dispbottom "¡ÃØ³ÒÍÍ¡à¡Á à¢éÒãËÁè";
+      dispbottom "[ï¿½Ðºï¿½] : ï¿½Ø³ï¿½ç¹¼ï¿½ï¿½ï¿½ï¿½Ò¹ Vote Member Lv.9";
+      dispbottom "ï¿½ï¿½Ø³ï¿½ï¿½Í¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
   - Id: 5300009
     AegisName: Vote_Member_Lv_10
     Name: Vote Member Lv.10
@@ -541,8 +569,8 @@ Body:
       delitem 5300009,1;
       #vote_member = 10;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[ÃÐºº] : ¤Ø³à»ç¹¼Ùéãªé§Ò¹ Vote Member Lv.10";
-      dispbottom "¡ÃØ³ÒÍÍ¡à¡Á à¢éÒãËÁè";
+      dispbottom "[ï¿½Ðºï¿½] : ï¿½Ø³ï¿½ç¹¼ï¿½ï¿½ï¿½ï¿½Ò¹ Vote Member Lv.10";
+      dispbottom "ï¿½ï¿½Ø³ï¿½ï¿½Í¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
   - Id: 53000010
     AegisName: Mvp_Rank_1
     Name: Mvp Rank 1
@@ -553,8 +581,8 @@ Body:
       mvp_ranking = 1;
       delay_buff_mvp = gettimetick(2)+60*60*24*7;
       addtimer 1000,"auto_bonus_mvp_ranking::OnBuffer";
-      dispbottom "[ÃÐºº] : ¤Ø³à»ç¹¼Ùéãªé§Ò¹ Mvp Rank [1] ";
-      dispbottom "¡ÃØ³ÒÍÍ¡à¡Á à¢éÒãËÁè";
+      dispbottom "[ï¿½Ðºï¿½] : ï¿½Ø³ï¿½ç¹¼ï¿½ï¿½ï¿½ï¿½Ò¹ Mvp Rank [1] ";
+      dispbottom "ï¿½ï¿½Ø³ï¿½ï¿½Í¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
   - Id: 53000011
     AegisName: Mvp_Rank_2
     Name: Mvp Rank 2
@@ -565,8 +593,8 @@ Body:
       mvp_ranking = 2;
       delay_buff_mvp = gettimetick(2)+60*60*24*7;
       addtimer 1000,"auto_bonus_mvp_ranking::OnBuffer";
-      dispbottom "[ÃÐºº] : ¤Ø³à»ç¹¼Ùéãªé§Ò¹ Mvp Rank [2] ";
-      dispbottom "¡ÃØ³ÒÍÍ¡à¡Á à¢éÒãËÁè";
+      dispbottom "[ï¿½Ðºï¿½] : ï¿½Ø³ï¿½ç¹¼ï¿½ï¿½ï¿½ï¿½Ò¹ Mvp Rank [2] ";
+      dispbottom "ï¿½ï¿½Ø³ï¿½ï¿½Í¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
   - Id: 53000012
     AegisName: Mvp_Rank_3
     Name: Mvp Rank 3
@@ -577,8 +605,8 @@ Body:
       mvp_ranking = 3;
       delay_buff_mvp = gettimetick(2)+60*60*24*7;
       addtimer 1000,"auto_bonus_mvp_ranking::OnBuffer";
-      dispbottom "[ÃÐºº] : ¤Ø³à»ç¹¼Ùéãªé§Ò¹ Mvp Rank [3] ";
-      dispbottom "¡ÃØ³ÒÍÍ¡à¡Á à¢éÒãËÁè";
+      dispbottom "[ï¿½Ðºï¿½] : ï¿½Ø³ï¿½ç¹¼ï¿½ï¿½ï¿½ï¿½Ò¹ Mvp Rank [3] ";
+      dispbottom "ï¿½ï¿½Ø³ï¿½ï¿½Í¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
   - Id: 20841
     AegisName: Golden_Angel_Wing_TH
     Name: Golden Angel Wing

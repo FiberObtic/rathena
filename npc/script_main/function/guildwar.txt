@@ -5,16 +5,49 @@ morocc,166,144,4	duplicate(InsideFlagsA3)	Nuernberg#mor	722
 
 morocc,154,142,4	script	test	722,{
 
-OnAgitEnd:
-	set @GID,getcastledata("prtg_cas01",1);
-	if (strcharinfo(0) != getguildmaster(@GID)) {
-		mes "มึงมันไม่ใช่หัวหน้ากิลด์";
-		mes "กลับไปซะไอ่ควาย";
+	if (agitcheck() || agitcheck2()){
+		mes "กำลัง War อยู่ไอ่ควาย";
+		end;
+	}else{
+		set @GID,getcastledata("prtg_cas01",1);
+		if (strcharinfo(0) != getguildmaster(@GID)) {
+			mes "มึงมันไม่ใช่หัวหน้ากิลด์";
+			mes "กลับไปซะไอ่ควาย";
+			end;
+		}
+		mes "End of War";
+		mes "มึงเป็นหัวหน้ากิลด์";
+		if (getcharid(2) == @GID) {
+			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
+			mes "เลขบัญชี: ^5533FF"+.idnum$+" ^000000";
+			mes "ชื่อธนาคาร: ^5533FF"+.bank$+" ^000000";
+			mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
+			next;
+			switch(select("~ รับของรางวัล:~ กรอกบัญชี:~ ยกเลิก")){
+				case 1:
+					
+					break;
+				case 2:
+					mes "1.กรอกเลขบัญชีสิไอ่ควาย";
+					mes "2.กรอกชื่อธนาคารสิไอ่ควาย";
+					mes "3.กรอกชื่อบัญชีผู้รับ";
+					input .idnum$;
+					input .bank$;
+					input .name$;
+					mes "----------------------";
+					mes "เลขบัญชี: ^5533FF"+.idnum$+" ^000000";
+					mes "ชื่อธนาคาร: ^5533FF"+.bank$+" ^000000";
+					mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
+					query_sql();
+					break;
+				default:
+					mes "ไม่ทำอะไรเสือกมาทำควายอะไร";
+					break;
+			}
+			end;
+		}
 		end;
 	}
-	mes "มึงเป็นหัวหน้ากิลด์";
-	if (getcharid(2) == @GID) {
-		mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
-		end;
-	}
+OnInit:
+	
 }

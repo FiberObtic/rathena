@@ -432,7 +432,7 @@ function	script	F_Tower_Monster	{
 		areamonster .@map$,267,351,277,387,"Hornet",1004,5,.@label$;
 		break;
 	case 5:
-		areamonster .@map$,352,351,362,387,"Golden Thief Bug",1086,1,.@label$;
+		areamonster .@map$,352,351,362,387,--ja--,callfunc("F_Rand",1096,1388),1,.@label$;
 		areamonster .@map$,352,351,362,387,"Thief Bug Male",1054,15,.@label$;
 		areamonster .@map$,352,351,362,387,"Thief Bug Female",1053,15,.@label$;
 		areamonster .@map$,352,351,362,387,"Thief Bug",1051,15,.@label$;
@@ -460,7 +460,7 @@ function	script	F_Tower_Monster	{
 		areamonster .@map$,267,267,277,303,"Stapo",1784,10,.@label$;
 		break;
 	case 10:
-		areamonster .@map$,352,267,362,303,"Mistress",1059,1,.@label$;
+		areamonster .@map$,352,267,362,303,--ja--,callfunc("F_Rand",1582,1120),1,.@label$;
 		areamonster .@map$,352,267,362,303,"Giant Hornet",1303,25,.@label$;
 		areamonster .@map$,352,267,362,303,"Hornet",1004,20,.@label$;
 		break;
@@ -487,8 +487,7 @@ function	script	F_Tower_Monster	{
 		areamonster .@map$,267,180,277,216,"Orc Baby",1686,5,.@label$;
 		break;
 	case 15:
-		areamonster .@map$,352,180,362,216,"Maya",1147,1,.@label$;
-		areamonster .@map$,352,180,362,216,"Phreeoni",1159,1,.@label$;
+		areamonster .@map$,352,180,362,216,--ja--,callfunc("F_Rand",1038,1059),1,.@label$;
 		areamonster .@map$,352,180,362,216,"Deniro",1105,15,.@label$;
 		areamonster .@map$,352,180,362,216,"Pierre",1160,15,.@label$;
 		areamonster .@map$,352,180,362,216,"Andre",1095,15,.@label$;
@@ -517,7 +516,7 @@ function	script	F_Tower_Monster	{
 		areamonster .@map$,267,96,277,132,"Phen",1158,10,.@label$;
 		break;
 	case 20:
-		areamonster .@map$,352,96,362,132,"Drake",1112,1,.@label$;
+		areamonster .@map$,352,96,362,132,--ja--,callfunc("F_Rand",1115,1046),1,.@label$;
 		areamonster .@map$,352,96,362,132,"Pirate Skeleton",1071,50,.@label$;
 		break;
 	case 21:
@@ -549,7 +548,7 @@ function	script	F_Tower_Monster	{
 		break;
 	case 25:
 		areamonster .@map$,352,9,362,45,"Cat o' Nine Tails",1307,15,.@label$;
-		areamonster .@map$,352,9,362,45,"Moonlight",1150,1,.@label$;
+		areamonster .@map$,352,9,362,45,--ja--,callfunc("F_Rand",1112,1086),1,.@label$;
 		areamonster .@map$,352,9,362,45,"Nine Tail",1180,15,.@label$;
 		break;
 	case 26:
@@ -582,7 +581,7 @@ function	script	F_Tower_Monster	{
 		areamonster .@map$,267,351,277,387,"Whisper",1179,10,.@label$;
 		break;
 	case 30:
-		areamonster .@map$,352,351,362,387,"White Lady",1630,1,.@label$;
+		areamonster .@map$,352,351,362,387,--ja--,callfunc("F_Rand",1087,1251),1,.@label$;
 		areamonster .@map$,352,351,362,387,"Evil Nymph",1416,30,.@label$;
 		break;
 	case 31:
@@ -613,7 +612,7 @@ function	script	F_Tower_Monster	{
 		areamonster .@map$,267,267,277,303,"Giant Whisper",1186,10,.@label$;
 		break;
 	case 35:
-		areamonster .@map$,352,267,362,303,"Turtle General",1312,1,.@label$;
+		areamonster .@map$,352,267,362,303,--ja--,callfunc("F_Rand",1147,1159),1,.@label$;
 		areamonster .@map$,352,267,362,303,"Freezer",1319,10,.@label$;
 		areamonster .@map$,352,267,362,303,"Solider",1316,10,.@label$;
 		areamonster .@map$,352,267,362,303,"Heater",1318,10,.@label$;
@@ -641,7 +640,7 @@ function	script	F_Tower_Monster	{
 		areamonster .@map$,267,180,277,216,"Jin Guai",1517,5,.@label$;
 		break;
 	case 40:
-		areamonster .@map$,352,180,362,216,"Samurai Specter",1492,1,.@label$;
+		areamonster .@map$,352,180,362,216,--ja--,callfunc("F_Rand",1150,1157),1,.@label$;
 		areamonster .@map$,352,180,362,216,"Shinobi",1401,10,.@label$;
 		areamonster .@map$,352,180,362,216,"Tengu",1405,10,.@label$;
 		areamonster .@map$,352,180,362,216,"Firelock Soldier",1403,5,.@label$;
@@ -672,7 +671,7 @@ function	script	F_Tower_Monster	{
 		areamonster .@map$,267,96,277,132,"Savage Babe",1167,10,.@label$;
 		break;
 	case 45:
-		areamonster .@map$,352,96,362,132,"Osiris",1038,1,.@label$;
+		areamonster .@map$,352,96,362,132,--ja--,callfunc("F_Rand",1389,1688),1,.@label$;
 		areamonster .@map$,352,96,362,132,"Ancient Mummy",1297,15,.@label$;
 		areamonster .@map$,352,96,362,132,"Verit",1032,15,.@label$;
 		areamonster .@map$,352,96,362,132,"Mummy",1041,20,.@label$;
@@ -700,7 +699,7 @@ function	script	F_Tower_Monster	{
 		areamonster .@map$,267,9,277,45,"Bigfoot",1060,5,.@label$;
 		break;
 	case 50:
-		areamonster .@map$,352,9,362,45,"Pharaoh",1157,1,.@label$;
+		areamonster .@map$,352,9,362,45,--ja--,callfunc("F_Rand",1623,1511),1,.@label$;
 		areamonster .@map$,352,9,362,45,"Amon Ra",1511,1,.@label$;
 		areamonster .@map$,352,9,362,45,"Anubis",1098,10,.@label$;
 		areamonster .@map$,352,9,362,45,"Marduk",1140,10,.@label$;
@@ -730,7 +729,7 @@ function	script	F_Tower_Monster	{
 		break;
 	case 55:
 		areamonster .@map$,352,351,362,387,"Medusa",1148,25,.@label$;
-		areamonster .@map$,352,351,362,387,"Evil Snake Lord",1418,1,.@label$;
+		areamonster .@map$,352,351,362,387,--ja--,callfunc("F_Rand",1272,1492),1,.@label$;
 		areamonster .@map$,352,351,362,387,"Isis",1029,15,.@label$;
 		areamonster .@map$,352,351,362,387,"Sidewinder",1037,15,.@label$;
 		break;
@@ -765,8 +764,7 @@ function	script	F_Tower_Monster	{
 		areamonster .@map$,267,267,277,303,"Mystcase",1249,10,.@label$;
 		break;
 	case 60:
-		areamonster .@map$,352,267,362,303,"Egnigem Cenia",1658,1,.@label$;
-		areamonster .@map$,352,267,362,303,"Doppelganger",1046,1,.@label$;
+		areamonster .@map$,352,267,362,303,--ja--,callfunc("F_Rand",1685,1779),1,.@label$;
 		areamonster .@map$,352,267,362,303,"Armeyer Dinze",1654,10,.@label$;
 		areamonster .@map$,352,267,362,303,"Wickebine Tres",1653,10,.@label$;
 		areamonster .@map$,352,267,362,303,"Laurell Winder",1657,10,.@label$;
@@ -801,7 +799,7 @@ function	script	F_Tower_Monster	{
 		areamonster .@map$,267,180,277,216,"Giant Hornet",1303,2,.@label$;
 		break;
 	case 65:
-		areamonster .@map$,352,180,362,216,"Atros",1785,1,.@label$;
+		areamonster .@map$,352,180,362,216,--ja--,callfunc("F_Rand",1583,1039),1,.@label$;
 		areamonster .@map$,352,180,362,216,"Galion",1783,20,.@label$;
 		break;
 	case 66:
@@ -831,8 +829,7 @@ function	script	F_Tower_Monster	{
 		areamonster .@map$,267,96,277,132,"False Angel",1371,10,.@label$;
 		break;
 	case 70:
-		areamonster .@map$,352,96,362,132,"Orc Hero",1087,1,.@label$;
-		areamonster .@map$,352,96,362,132,"Orc Lord",1190,1,.@label$;
+		areamonster .@map$,352,96,362,132,--ja--,callfunc("F_Rand",1785,1630),1,.@label$;
 		areamonster .@map$,352,96,362,132,"Orc Baby",1686,20,.@label$;
 		break;
 	case 71:
@@ -867,8 +864,7 @@ function	script	F_Tower_Monster	{
 		areamonster .@map$,267,9,277,45,"Venatu",1676,6,.@label$;
 		break;
 	case 75:
-		areamonster .@map$,352,9,362,45,"Baphomet",1039,1,.@label$;
-		areamonster .@map$,352,9,362,45,"Dark Lord",1272,1,.@label$;
+		areamonster .@map$,352,9,362,45,--ja--,callfunc("F_Rand",1734,1719),1,.@label$;
 		areamonster .@map$,352,9,362,45,"Baphomet Jr.",1101,20,.@label$;
 		areamonster .@map$,352,9,362,45,"Dark Illusion",1302,10,.@label$;
 		break;
@@ -899,7 +895,7 @@ function	script	F_Tower_Monster	{
 		areamonster .@map$,267,351,277,387,"Petite",1155,5,.@label$;
 		break;
 	case 80:
-		areamonster .@map$,352,351,362,387,"Falling Bishop",1871,1,.@label$;
+		areamonster .@map$,352,351,362,387,--ja--,callfunc("F_Rand",1715,1312),1,.@label$;
 		areamonster .@map$,352,351,362,387,"Necromancer",1870,15,.@label$;
 		break;
 	case 81:
@@ -928,7 +924,7 @@ function	script	F_Tower_Monster	{
 		areamonster .@map$,267,267,277,303,"Incubus",1374,10,.@label$;
 		break;
 	case 85:
-		areamonster .@map$,352,267,362,303,"Ifrit",1832,1,.@label$;
+		areamonster .@map$,352,267,362,303,--ja--,callfunc("F_Rand",1832,1871),1,.@label$;
 		break;
 	case 86:
 		areamonster .@map$,9,180,19,216,"Hydro",1720,10,.@label$;
@@ -956,7 +952,7 @@ function	script	F_Tower_Monster	{
 		areamonster .@map$,267,180,277,216,"Dolor of Thanatos",1707,6,.@label$;
 		break;
 	case 90:
-		areamonster .@map$,352,180,362,216,"Valkyrie Randgris",1751,1,.@label$;
+		areamonster .@map$,352,180,362,216,--ja--,callfunc("F_Rand",1873,1708),1,.@label$;
 		areamonster .@map$,352,180,362,216,"Baroness of Retribution",1702,10,.@label$;
 		areamonster .@map$,352,180,362,216,"Lady Solace",1703,10,.@label$;
 		areamonster .@map$,352,180,362,216,"False Angel",1371,10,.@label$;
@@ -984,7 +980,7 @@ function	script	F_Tower_Monster	{
 		areamonster .@map$,267,96,277,132,"Bow Master",1830,15,.@label$;
 		break;
 	case 95:
-		areamonster .@map$,352,96,362,132,"Beelzebub",1873,1,.@label$;
+		areamonster .@map$,352,96,362,132,--ja--,callfunc("F_Rand",1646,1917,2022,1651),1,.@label$;
 		areamonster .@map$,352,96,362,132,"Hunter Fly",1035,30,.@label$;
 		areamonster .@map$,352,96,362,132,"Steel Chonchon",1042,5,.@label$;
 		areamonster .@map$,352,96,362,132,"Dragon FLy",1091,5,.@label$;
