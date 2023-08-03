@@ -1,125 +1,477 @@
-//===== rAthena Script =======================================
-//= Hot Week
-//===== By: ==================================================
-//= DurexzOfficial
-//= Striker
-//===== Current Version: =====================================
-//= Ver.1.0 - กำหนดไอเท็ม ราคา จำนวนที่ต้องการจำกัดการซื้อ
-//= Ver.1.1 - เพิ่มเมนูเลือก Zeny หรือ Cashpoints
-//= Ver.1.2 - เพิ่มคำสั่งในการเปิด - ปิด @hotweek
-//= Ver.1.3 - เพิ่มคำสั่งในการรีเซ็ตค่า @clearhotweek
-//= Ver.1.4 - เพิ่มคลิกโชว์รูปไอเท็ม
-//===== Compatible With: =====================================
-//= rAthena Project
-//============================================================
+-	shop	surprise_zeny	-1,no,501:-1
+-	shop	surprise_cash	-1,no,501:-1
+-	shop	surprise_card	-1,no,501:-1
+-	shop	surprise_lab	-1,no,501:-1
+-	shop	surprise_kingc	-1,no,501:-1
+/*
+morocc,159,133,0	script	avb	10081,{
+	mes ""+1000/300;
+	mes ""+1000%300;
+	end;
+}
+*/ 
 
-morocc,168,84,4	script	Hot Week	965,{
-	mes .npc$;
-	mes "กิจกรรมครั้งนี้ใช้ ^FF0000"+.use$[.use]+"^000000 ในการแลก";
-	mes "^FF0000ปล. สามารถซื้อได้ครั้งละ 1 ชิ้นเท่านั้น^000000";
-	
-	for(.@i = 0; .@i < getarraysize(.item); .@i = .@i+2) {
-	mes "ไอเท็ม [^0000FF<ITEM>"+getitemname(.item[.@i])+"<INFO>"+.item[.@i]+"</INFO></ITEM> ^000000] เหลือ [^0000FF"+(.limit[.@i/2] - getd("$hot_week_"+.item[.@i]))+"^000000/^FF0000"+.limit[.@i/2]+"^000000]";
-	}
-	
-	callshop "hotweek",1;
-	npcshopattach "hotweek";
-	end;
-	
-OnBuyItem:
-	if( getarraysize(@bought_nameid) > 1) {
-		mes "^FF0000ปล. สามารถซื้อได้ครั้งละ 1 ชิ้นเท่านั้น^000000";
-		end;
-	}
-	for(.@i = 0; .@i < getarraysize(@bought_nameid); .@i = .@i+1)
-		if( @bought_quantity[.@i] > 1) {
-			mes "^FF0000ปล. สามารถซื้อได้ครั้งละ 1 ชิ้นเท่านั้น^000000";
-			end;
-		}
-		
-	setarray .@q[0],@bought_nameid[0],@bought_quantity[0];
-	for(.@i = 0; .@i < getarraysize(@bought_nameid); .@i = .@i+1)
-		for(.@j = 0; .@j < getarraysize(.item); .@j = .@j+2)
-			if(@bought_nameid[.@i] == .item[.@j])
-				.@cost += .item[.@j+1]*@bought_quantity[.@i];
-	if(.use$[.use] == "Zeny"){
-		if(zeny < .@cost) {
-			mes "ท่านมี^FF0000 "+.use$[.use]+"^000000 ไม่เพียงพอ";
-			end;
-		}
-	}else{
-		if( #CASHPOINTS < .@cost) {
-			mes "ท่านมี^FF0000 "+.use$[.use]+"^000000 ไม่เพียงพอ";
-			end;
-		}
-	}
-	
-	.@pos = inarray(.item[0], .@q[0]);
-	if( .@pos >= 0 ) {
-		if( getd("$hot_week_"+.@q[0]) < .limit[.@pos/2]){
-			for(set .@i,0; .@i<getarraysize(@bought_nameid); set .@i,.@i+1) {
-				getitem @bought_nameid[.@i], @bought_quantity[.@i];
-				setd(("$hot_week_"+.@q[0]),getd("$hot_week_"+.@q[0]) + 1);
-				announce "ผู้เล่น ["+strcharinfo(0)+"] ได้ซื้อ ["+getitemname(@bought_nameid[.@i])+"] จำนวน "+@bought_quantity[.@i]+" อัน จากกิจกรรม Hot Week !!!",bc_all;
+morocc,160,150,4	script	GM GAY PRESENT	800,{
+	if(getgmlevel() < 99) end;
+	if(getgmlevel() < 99) 				
+		announce "["+strcharinfo(0)+"] บัคของได้แจ้ง GM เร็ว!! ",bc_all;
+	switch(select("Zeny:Cash:Card:Lab:KingC")) {
+		case 1:
+			callshop "surprise_zeny",1;
+			break;
+		case 2:
+			callshop "surprise_cash",1;
+			break;
+		case 3:
+			callshop "surprise_card",1;
+			break;
+		case 4:
+			callshop "surprise_lab",1;
+			break;
+		case 5:
+			callshop "surprise_kingc",1;
+			break;
+		default:
+			break;
 			}
-			if(.use$[.use] == "Zeny"){
-				zeny -= .@cost;
-				end;
-			}else{
-				#CASHPOINTS -= .@cost;
-				end;
-			}
-		}else{
-			mes "ไอเท็มนี้ถูกซื้อจนครบ ^FF0000"+.limit[.@pos/2]+"^000000 ชิ้นแล้ว";
-		}
-	}
-	end;
-	
-OnClear:
-	for(.@i = 0; .@i < getarraysize(.item); .@i = .@i+2)
-		setd(("$hot_week_"+.item[.@i]),0);
-end;
-	
-Oninit:
-	hideonnpc strnpcinfo(0);
-	.npc$ = "[ Hot Week ]";
-	.use = 1;	// 0: ใช้ Zeny 1: ใช้ Cashpoints
-	setarray .use$[0],"Zeny","Cashpoints";
-	setarray .item[0],
-	501,3000,
-	502,5000; // <ITEM_ID>,<COST> (รหัสไอเท็ม,ราคา)
- 	setarray .limit[0],100,30; // Limit ITEM (จำกัดจำนวนไอเท็ม)
-	npcshopdelitem "hotweek",501;
-	
-	for(.@i = 0;.@i < getarraysize(.item);.@i = .@i+2)
-		npcshopadditem "hotweek",.item[.@i],.item[.@i+1];
-		end;
 }
 
--	shop	hotweek	-1,no,501:-1
-
--	script	gmclears	-1,{
-
-Oninit:
-	bindatcmd "hotweek", strnpcinfo(0)+"::OnHotweek",99,99;
-	bindatcmd "clearhotweek", strnpcinfo(0)+"::OnHotweekClear",99,99;
-    end;
-
-OnHotweek:
-	mes "ท่านต้องการเปิด";
-	mes "กิจกรรม Hot Week ใช่มั้ย??";
-	if(select("เปิด:ปิด")==1){
-		announce "ขณะนี้ กิจกรรม Hot Week ได้เริ่มต้นขึ้นแล้ว ณ พิกัด morocc 168 84 มึงช้าอดน้าาบอกแล้วน้ะ",bc_all;
-		hideoffnpc "Hot Week";
-		end;
-	}else{
-		announce "ขณะนี้ กิจกรรม Hot Week ได้สิ้นสุดลงแล้ว ขอบคุณทุกท่านที่ใช้บริการ",bc_all;
-		hideonnpc "Hot Week";
+morocc,153,144,0	script	Surprise!#Zeny	10081,{
+	if(!.zenyitem[0]) {
+		mes "ร้านนี้ไม่มีอะไรขาย";
 		end;
 	}
+	mes "ร้านนี้ใช้ zeny ในการซื้อ";
+	for(.@i=0; .@i < getarraysize(.zenyitem); .@i+=2) {
+		mes "ไอเท็ม "+getitemname(.zenyitem[.@i])+" เหลือจำนวน "+(.zeny_surprise_limit[.@i/2] - getd("$zeny_surprise_item_"+.zenyitem[.@i]) );
+	}
+	next;
+	callshop "surprise_zeny",1;
+	npcshopattach "surprise_zeny";
+	end;
 	
-OnHotweekClear:
-	donpcevent "Hot Week::OnClear";
+OnClock1900:
+	if( gettime(DT_DAYOFWEEK) == SATURDAY)
+		hideoffnpc strnpcinfo(0);
+	end;
+OnClock2359:
+	if( gettime(DT_DAYOFWEEK) == SATURDAY)
+		hideonnpc strnpcinfo(0);
+	end;
+OnBuyItem:
+	if( getarraysize(@bought_nameid) > 1) {
+		mes "กรุณาซื้อของทีละชิ้น";
+		end;
+	}
+	for(.@i = 0; .@i < getarraysize(@bought_nameid); .@i++)
+		if( @bought_quantity[.@i] > 1) {
+		mes "กรุณาซื้อของทีละชิ้น";
+		end;
+	}
+	setarray .@q[0],@bought_nameid[0],@bought_quantity[0];
+	for(.@i = 0; .@i < getarraysize(@bought_nameid); .@i++)
+		for(.@j = 0; .@j < getarraysize(.zenyitem); .@j += 2)
+			if(@bought_nameid[.@i] == .zenyitem[.@j])
+				.@cost += .zenyitem[.@j+1]*@bought_quantity[.@i];
+	if(zeny<.@cost) {
+		mes "ท่านมี^FF0000 เงิน ^000000ไม่เพียงพอ";
+		close;
+	}
+	.@pos = inarray(.zenyitem[0], .@q[0]);
+	if( .@pos >= 0 ) {
+		if( getd("$zeny_surprise_item_"+.@q[0]) < .zeny_surprise_limit[.@pos/2]){
+			for(set .@i,0; .@i<getarraysize(@bought_nameid); set .@i,.@i+1) {
+				getitem @bought_nameid[.@i], @bought_quantity[.@i];
+				setd(("$zeny_surprise_item_"+.@q[0]),getd("$zeny_surprise_item_"+.@q[0]) + 1);
+				announce "ท่าน ["+strcharinfo(0)+"] ได้ซื้อ ["+getitemname(@bought_nameid[.@i])+"] จำนวน "+@bought_quantity[.@i]+" อัน จากกิจกรรม Surprise Zeny!",bc_all;
+			}
+		zeny -= .@cost;
+		}else{
+		mes "ไอเท็มนี้ขายครบ ^FF0000"+.zeny_surprise_limit[.@pos/2]+"^000000 ชิ้นแล้ว";
+		}
+	}
+	end;
+OnClearCache:
+	for(.@i = 0;.@i<getarraysize(.zenyitem);.@i += 2)
+		setd(("$zeny_surprise_item_"+.zenyitem[.@i]),0);
+	end;
+Oninit:
+	hideonnpc strnpcinfo(0);
+	setarray .zenyitem[0]
+	,6635,7500000,50102,6000000,50103,4000000,50203,400000,50208,800000,53003,4000000,53013,4000000,12412,200000;
+ 	setarray .zeny_surprise_limit[0]
+	,30,30,50,200,50,30,30,200;
+	npcshopdelitem "surprise_zeny",501;
+	for(.@i = 0;.@i<getarraysize(.zenyitem);.@i += 2) npcshopadditem "surprise_zeny",.zenyitem[.@i],.zenyitem[.@i+1];
+	end;
+}
+morocc,156,144,0	script	Surprise!#cash	10081,{
+	if(!.cashitem[0]) {
+		mes "ร้านนี้ไม่มีอะไรขาย";
+		end;
+	}
+	mes "ร้านนี้ใช้ แคช ในการซื้อ";
+	for(.@i=0; .@i < getarraysize(.cashitem); .@i+=2) {
+		mes "ไอเท็ม "+getitemname(.cashitem[.@i])+" เหลือจำนวน "+(.cash_surprise_limit[.@i/2] - getd("$cash_surprise_item_"+.cashitem[.@i]) );
+	}
+	next;
+	callshop "surprise_cash",1;
+	npcshopattach "surprise_cash";
+	end;
+	
+OnClock1900:
+	if( gettime(DT_DAYOFWEEK) == SATURDAY)
+		hideoffnpc strnpcinfo(0);
+	end;
+OnClock2359:
+	if( gettime(DT_DAYOFWEEK) == SATURDAY)
+		hideonnpc strnpcinfo(0);
+	end;
+OnBuyItem:
+	if( getarraysize(@bought_nameid) > 1) {
+		mes "กรุณาซื้อของทีละชิ้น";
+		end;
+	}
+	for(.@i = 0; .@i < getarraysize(@bought_nameid); .@i++)
+		if( @bought_quantity[.@i] > 1) {
+		mes "กรุณาซื้อของทีละชิ้น";
+		end;
+	}
+	setarray .@q[0],@bought_nameid[0],@bought_quantity[0];
+	for(.@i = 0; .@i < getarraysize(@bought_nameid); .@i++)
+		for(.@j = 0; .@j < getarraysize(.cashitem); .@j += 2)
+			if(@bought_nameid[.@i] == .cashitem[.@j])
+				.@cost += .cashitem[.@j+1]*@bought_quantity[.@i];
+	if(#CASHPOINTS<.@cost) {
+		mes "ท่านมี^FF0000 แคช ^000000ไม่เพียงพอ";
+		close;
+	}
+	.@pos = inarray(.cashitem[0], .@q[0]);
+	if( .@pos >= 0 ) {
+		if( getd("$cash_surprise_item_"+.@q[0]) < .cash_surprise_limit[.@pos/2]){
+			for(set .@i,0; .@i<getarraysize(@bought_nameid); set .@i,.@i+1) {
+				getitem @bought_nameid[.@i], @bought_quantity[.@i];
+				setd(("$cash_surprise_item_"+.@q[0]),getd("$cash_surprise_item_"+.@q[0]) + 1);
+				announce "ท่าน ["+strcharinfo(0)+"] ได้ซื้อ ["+getitemname(@bought_nameid[.@i])+"] จำนวน "+@bought_quantity[.@i]+" อัน จากกิจกรรม Surprise แคช!",bc_all;
+			}
+		#CASHPOINTS -= .@cost;	
+		}else{
+		mes "ไอเท็มนี้ขายครบ ^FF0000"+.cash_surprise_limit[.@pos/2]+"^000000 ชิ้นแล้ว";
+		}
+	}
+	end;
+OnClearCache:
+	for(.@i = 0;.@i<getarraysize(.cashitem);.@i += 2)
+		setd(("$cash_surprise_item_"+.cashitem[.@i]),0);
+	end;
+Oninit:
+	hideonnpc strnpcinfo(0);
+	setarray .cashitem[0]
+	,0;
+	setarray .cash_surprise_limit[0]
+	,0;
+	npcshopdelitem "surprise_cash",501;
+	for(.@i = 0;.@i<getarraysize(.cashitem);.@i += 2) npcshopadditem "surprise_cash",.cashitem[.@i],.cashitem[.@i+1];
+	end;
+}
+morocc,159,144,0	script	Surprise!#card	10081,{
+	if(!.carditem[0]) {
+		mes "ร้านนี้ไม่มีอะไรขาย";
+		end;
+	}
+	mes "ร้านนี้ใช้ แต้มการ์ด ในการซื้อ";
+	for(.@i=0; .@i < getarraysize(.carditem); .@i+=2) {
+		mes "ไอเท็ม "+getitemname(.carditem[.@i])+" เหลือจำนวน "+(.card_surprise_limit[.@i/2] - getd("$card_surprise_item_"+.carditem[.@i]) );
+	}
+	next;
+	callshop "surprise_card",1;
+	npcshopattach "surprise_card";
+	end;
+	
+OnClock1900:
+	if( gettime(DT_DAYOFWEEK) == SATURDAY)
+		hideoffnpc strnpcinfo(0);
+	end;
+OnClock2359:
+	if( gettime(DT_DAYOFWEEK) == SATURDAY)
+		hideonnpc strnpcinfo(0);
+	end;
+OnBuyItem:
+	if( getarraysize(@bought_nameid) > 1) {
+		mes "กรุณาซื้อของทีละชิ้น";
+		end;
+	}
+	for(.@i = 0; .@i < getarraysize(@bought_nameid); .@i++)
+		if( @bought_quantity[.@i] > 1) {
+		mes "กรุณาซื้อของทีละชิ้น";
+		end;
+	}
+	setarray .@q[0],@bought_nameid[0],@bought_quantity[0];
+	for(.@i = 0; .@i < getarraysize(@bought_nameid); .@i++)
+		for(.@j = 0; .@j < getarraysize(.carditem); .@j += 2)
+			if(@bought_nameid[.@i] == .carditem[.@j])
+				.@cost += .carditem[.@j+1]*@bought_quantity[.@i];
+	if(#Card_Points<.@cost) {
+		mes "ท่านมี^FF0000 เงิน ^000000ไม่เพียงพอ";
+		close;
+	}
+	.@pos = inarray(.carditem[0], .@q[0]);
+	if( .@pos >= 0 ) {
+		if( getd("$card_surprise_item_"+.@q[0]) < .card_surprise_limit[.@pos/2]){
+			for(set .@i,0; .@i<getarraysize(@bought_nameid); set .@i,.@i+1) {
+				getitem @bought_nameid[.@i], @bought_quantity[.@i];
+				setd(("$card_surprise_item_"+.@q[0]),getd("$card_surprise_item_"+.@q[0]) + 1);
+				announce "ท่าน ["+strcharinfo(0)+"] ได้ซื้อ ["+getitemname(@bought_nameid[.@i])+"] จำนวน "+@bought_quantity[.@i]+" อัน จากกิจกรรม Surprise แต้มการ์ด!",bc_all;
+			}
+		#Card_Points -= .@cost;
+		}else{
+		mes "ไอเท็มนี้ขายครบ ^FF0000"+.card_surprise_limit[.@pos/2]+"^000000 ชิ้นแล้ว";
+		}
+	}
+	end;
+OnClearCache:
+	for(.@i = 0;.@i<getarraysize(.carditem);.@i += 2)
+		setd(("$card_surprise_item_"+.carditem[.@i]),0);
+	end;
+Oninit:
+	hideonnpc strnpcinfo(0);
+	setarray .carditem[0]
+	,6635,40;
+	setarray .card_surprise_limit[0]
+	,20;
+	npcshopdelitem "surprise_card",501;
+	for(.@i = 0;.@i<getarraysize(.carditem);.@i += 2) npcshopadditem "surprise_card",.carditem[.@i],.carditem[.@i+1];
+	end;
+}
+morocc,162,144,0	script	Surprise!#lab	10081,{
+	if(!.labitem[0]) {
+		mes "ร้านนี้ไม่มีอะไรขาย";
+		end;
+	}
+	mes "ร้านนี้ใช้ แต้มวิจัย ในการซื้อ";
+	for(.@i=0; .@i < getarraysize(.labitem); .@i+=2) {
+		mes "ไอเท็ม "+getitemname(.labitem[.@i])+" เหลือจำนวน "+(.lab_surprise_limit[.@i/2] - getd("$lab_surprise_item_"+.labitem[.@i]) );
+	}
+	next;
+	callshop "surprise_lab",1;
+	npcshopattach "surprise_lab";
+	end;
+	
+OnClock1900:
+	if( gettime(DT_DAYOFWEEK) == SATURDAY)
+		hideoffnpc strnpcinfo(0);
+	end;
+OnClock2359:
+	if( gettime(DT_DAYOFWEEK) == SATURDAY)
+		hideonnpc strnpcinfo(0);
+	end;
+OnBuyItem:
+	if( getarraysize(@bought_nameid) > 1) {
+		mes "กรุณาซื้อของทีละชิ้น";
+		end;
+	}
+	for(.@i = 0; .@i < getarraysize(@bought_nameid); .@i++)
+		if( @bought_quantity[.@i] > 1) {
+		mes "กรุณาซื้อของทีละชิ้น";
+		end;
+	}
+	setarray .@q[0],@bought_nameid[0],@bought_quantity[0];
+	for(.@i = 0; .@i < getarraysize(@bought_nameid); .@i++)
+		for(.@j = 0; .@j < getarraysize(.labitem); .@j += 2)
+			if(@bought_nameid[.@i] == .labitem[.@j])
+				.@cost += .labitem[.@j+1]*@bought_quantity[.@i];
+	if(#LABPOINTS<.@cost) {
+		mes "ท่านมี^FF0000 แต้มวิจัย ^000000ไม่เพียงพอ";
+		close;
+	}
+
+	.@pos = inarray(.labitem[0], .@q[0]);
+	if( .@pos >= 0 ) {
+		if( getd("$lab_surprise_item_"+.@q[0]) < .lab_surprise_limit[.@pos/2]){
+			for(set .@i,0; .@i<getarraysize(@bought_nameid); set .@i,.@i+1) {
+				getitem @bought_nameid[.@i], @bought_quantity[.@i];
+				setd(("$lab_surprise_item_"+.@q[0]),getd("$lab_surprise_item_"+.@q[0]) + 1);
+				announce "ท่าน ["+strcharinfo(0)+"] ได้ซื้อ ["+getitemname(@bought_nameid[.@i])+"] จำนวน "+@bought_quantity[.@i]+" อัน จากกิจกรรม Surprise แต้มวิจัย!",bc_all;
+			}
+	#LABPOINTS -= .@cost;		
+		}else{
+		mes "ไอเท็มนี้ขายครบ ^FF0000"+.lab_surprise_limit[.@pos/2]+"^000000 ชิ้นแล้ว";
+		}
+	}
+	end;
+OnClearCache:
+	for(.@i = 0;.@i<getarraysize(.labitem);.@i += 2)
+		setd(("$lab_surprise_item_"+.labitem[.@i]),0);
+	end;
+Oninit:
+	hideonnpc strnpcinfo(0);
+	setarray .labitem[0]
+	,0;
+	setarray .lab_surprise_limit[0]
+	,100;
+	npcshopdelitem "surprise_lab",501;
+	for(.@i = 0;.@i<getarraysize(.labitem);.@i += 2) npcshopadditem "surprise_lab",.labitem[.@i],.labitem[.@i+1];
+	end;
+}
+morocc,165,144,0	script	Surprise!#kingc	10081,{
+	if(!.kingcitem[0]) {
+		mes "ร้านนี้ไม่มีอะไรขาย";
+		end;
+	}
+	mes "ร้านนี้ใช้ King Card ซื้อ";
+	for(.@i=0; .@i < getarraysize(.kingcitem); .@i+=2) {
+		mes "ไอเท็ม "+getitemname(.kingcitem[.@i])+" เหลือจำนวน "+(.kingc_surprise_limit[.@i/2] - getd("$kingc_surprise_item_"+.kingcitem[.@i]) );
+	}
+	
+	next;
+	callshop "surprise_kingc",1;
+	npcshopattach "surprise_kingc";
+	end;
+	
+OnClock1900:
+	if( gettime(DT_DAYOFWEEK) == SATURDAY)
+		hideoffnpc strnpcinfo(0);
+	end;
+OnClock2359:
+	if( gettime(DT_DAYOFWEEK) == SATURDAY)
+		hideonnpc strnpcinfo(0);
+	end;
+OnBuyItem:
+	if( getarraysize(@bought_nameid) > 1) {
+		mes "กรุณาซื้อของทีละชิ้น";
+		end;
+	}
+	for(.@i = 0; .@i < getarraysize(@bought_nameid); .@i++)
+		if( @bought_quantity[.@i] > 1) {
+		mes "กรุณาซื้อของทีละชิ้น";
+		end;
+	}
+	setarray .@q[0],@bought_nameid[0],@bought_quantity[0];
+	for(.@i = 0; .@i < getarraysize(@bought_nameid); .@i++)
+		for(.@j = 0; .@j < getarraysize(.kingcitem); .@j += 2)
+			if(@bought_nameid[.@i] == .kingcitem[.@j])
+				.@cost += .kingcitem[.@j+1]*@bought_quantity[.@i];
+	if(countitem(50001)<.@cost) {
+		mes "ท่านมี^FF0000 King Card ^000000ไม่เพียงพอ";
+		close;
+	}
+
+	.@pos = inarray(.kingcitem[0], .@q[0]);
+	if( .@pos >= 0 ) {
+		if( getd("$kingc_surprise_item_"+.@q[0]) < .kingc_surprise_limit[.@pos/2]){
+			for(set .@i,0; .@i<getarraysize(@bought_nameid); set .@i,.@i+1) {
+				getitem @bought_nameid[.@i], @bought_quantity[.@i];
+				setd(("$kingc_surprise_item_"+.@q[0]),getd("$kingc_surprise_item_"+.@q[0]) + 1);
+				announce "ท่าน ["+strcharinfo(0)+"] ได้ซื้อ ["+getitemname(@bought_nameid[.@i])+"] จำนวน "+@bought_quantity[.@i]+" อัน จากกิจกรรม Surprise kingc!",bc_all;
+			}
+	delitem 50001,.@cost;			
+		}else{
+		mes "ไอเท็มนี้ขายครบ ^FF0000"+.kingc_surprise_limit[.@pos/2]+"^000000 ชิ้นแล้ว";
+		}
+	}
+	end;
+OnClearCache:
+	for(.@i = 0;.@i<getarraysize(.kingcitem);.@i += 2)
+		setd(("$kingc_surprise_item_"+.kingcitem[.@i]),0);
+	end;
+Oninit:
+	hideonnpc strnpcinfo(0);
+	setarray .kingcitem[0],0;
+	setarray .kingc_surprise_limit[0],0;
+	npcshopdelitem "surprise_kingc",501;
+	for(.@i = 0;.@i<getarraysize(.kingcitem);.@i += 2) npcshopadditem "surprise_kingc",.kingcitem[.@i],.kingcitem[.@i+1];
+	end;
+}
+
+-	script	gmsurprise	-1,{
+Oninit:
+    bindatcmd "surprisestart", strnpcinfo(0)+"::OnSurpriseStart",99,99;
+    bindatcmd "surprisetest", strnpcinfo(0)+"::OnSurpriseTest",99,99;
+    bindatcmd "surpriseend", strnpcinfo(0)+"::OnSurpriseEnd",99,99;
+    bindatcmd "clearsurprise", strnpcinfo(0)+"::OnClearSurprise",99,99;
+    end;
+
+OnClearSurprise:
+	donpcevent "Surprise!#Zeny::OnClearCache";
+	donpcevent "Surprise!#cash::OnClearCache";
+	donpcevent "Surprise!#card::OnClearCache";
+	donpcevent "Surprise!#lab::OnClearCache";
+	donpcevent "Surprise!#kingc::OnClearCache";
 	message strcharinfo(0),"ท่านรีเซ็ตค่าของเรียบร้อยแล้ว";
 	end;
+OnSurpriseTest:
+	hideoffnpc "Surprise!#Zeny";
+	hideoffnpc "Surprise!#cash";
+	hideoffnpc "Surprise!#card";
+	hideoffnpc "Surprise!#lab";
+	hideoffnpc "Surprise!#kingc";
+	sleep 60000;
+	hideonnpc "Surprise!#Zeny";
+	hideonnpc "Surprise!#cash";
+	hideonnpc "Surprise!#card";
+	hideonnpc "Surprise!#lab";
+	hideonnpc "Surprise!#kingc";
+	end;
+OnSurpriseStart:
+	.@myname$ = strcharinfo(0);
+	if ( .@atcmd_numparameters != 1 ) {
+			message .@myname$, "กรุณาใส่เวลาที่ต้องการในคำสั่ง: "+ .@atcmd_command$ +" นาที";
+			end;
+	}
+	.timeneed = atoi( .@atcmd_parameters$[0] );
+	if (.timeneed < 1 ) {
+		message .@myname$,"ไม่สามารถเปิดทำงานน้อยกว่า 1 นาทีได้";
+		end;
+	}
+	hideoffnpc "Surprise!#Zeny";
+	hideoffnpc "Surprise!#cash";
+	hideoffnpc "Surprise!#card";
+	hideoffnpc "Surprise!#lab";
+	hideoffnpc "Surprise!#kingc";
+	announce "กิจกรรม Surprise Event!! ถูดจัดขึ้นกระทันหันโดย Administrator แล้ว !!!!",bc_all;
+	sleep 5000;
+	.@hour = .timeneed/60;
+	.@min = .timeneed - .@hour*60;
+	if(.@hour)
+		announce "ท่านมีเวลา "+.@hour+" ชั่วโมง "+.@min+" นาทีในการร่วมกิจกรรมนี้ !!  ขอให้สนุกกับกิจกรรมที่จัดขึ้นค่ะ",bc_all;
+	else
+		announce "ท่านมีเวลา "+.@min+" นาทีในการร่วมกิจกรรมนี้ !!  ขอให้สนุกกับกิจกรรมที่จัดขึ้นค่ะ",bc_all;
+	initnpctimer;
+	end;
+
+OnTimer60000:
+	if(.surtime < .timeneed) {
+		initnpctimer;
+		.surtime++;
+	}
+	else {
+OnSurpriseEnd:
+		announce "กิจกรรม Surprise Event!! ได้จบลงเป็นที่เรียบร้อยแล้ว ขอบคุณที่ร่วมกิจกรรม!!",bc_all;
+		hideonnpc "Surprise!#Zeny";
+		hideonnpc "Surprise!#cash";
+		hideonnpc "Surprise!#card";
+		hideonnpc "Surprise!#lab";
+		hideonnpc "Surprise!#kingc";
+		stopnpctimer;
+		.surtime = 0;
+	}
+	end;
+
+OnClock1850:
+	if( gettime(DT_DAYOFWEEK) == SATURDAY) {
+		announce "อีก 10 นาทีกิจกรรม Surprise Event!! จะถูกจัดขึ้น ณ บ่น้ำ Morroc !!!!",bc_all;
+	}
+	end;
+OnClock1900:
+	if( gettime(DT_DAYOFWEEK) == SATURDAY) {
+		announce "กิจกรรม Surprise Event!! ถูดจัดขึ้นเรียบร้อยแล้ว !!!!",bc_all;
+		sleep 5000;
+		announce "ท่านมีเวลาถึง 23.59 น. ในการร่วมกิจกรรมนี้ !!  ขอให้สนุกกับกิจกรรมที่จัดขึ้นค่ะ",bc_all;
+	}
+	end;
+OnClock2359:
+	if( gettime(DT_DAYOFWEEK) == SATURDAY)
+		announce "กิจกรรม Surprise Event!! ได้จบลงเป็นที่เรียบร้อยแล้ว ขอบคุณที่ร่วมกิจกรรม!!",bc_all;
+	end;
+	
 }

@@ -538,7 +538,7 @@ prt_in,63,60,0	script	Hollgrehenn	4_M_03,{
 }
 
 // morocc,151,167,3	script	Aragham	1_M_SMITH,{
-morocc,148,167,3	script	Aragham#2	1_M_SMITH,{
+morocc_in,72,38,3	script	Aragham#2	1_M_SMITH,{
 	callfunc "refinemain","Aragham",0;
 	end;
 }
