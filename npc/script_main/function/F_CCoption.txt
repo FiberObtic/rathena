@@ -17,7 +17,7 @@ function	script	F_CashOptionTicket	{
 				else if (.@idop == 148 || getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_BOW)
 					.@value = .@value2;
 				else .@value = .@value1;
-				if (!getequiprandomoption(.@part,0,ROA_VALUE) || getarg(2) == 1 )
+				if (!getequiprandomoption(.@part,0,ROA_VALUE) || !.@index )
 					//setrandomoption(.@part,0,300,rand(1,5),0);
 				.@id = 300;
 				else
@@ -41,7 +41,7 @@ function	script	F_CashOptionTicket	{
 		case EQI_ARMOR:
 		case EQI_GARMENT:
 		case EQI_SHOES:
-			if (!getequiprandomoption(.@part,0,ROA_VALUE) || getarg(2) == 1 ) {
+			if (!getequiprandomoption(.@part,0,ROA_VALUE) || !.@index ) {
 					//setrandomoption(.@part,0,300,rand(1,5),0);
 				.@id = 301;
 				.@value = .@value5;
@@ -53,7 +53,7 @@ function	script	F_CashOptionTicket	{
 			break;
 		case EQI_ACC_L:
 		case EQI_ACC_R:
-			if (!getequiprandomoption(.@part,0,ROA_VALUE) || getarg(2) == 1 ) {
+			if (!getequiprandomoption(.@part,0,ROA_VALUE) || !.@index ) {
 					//setrandomoption(.@part,0,300,rand(1,5),0);
 				.@id = 22;
 				.@value = .@value3;
