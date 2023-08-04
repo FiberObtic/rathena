@@ -579,3 +579,51 @@ Body:
       bonus2 bDropAddRace,Rc_All,3;
       bonus2 bExpAddRace,Rc_All,3;
       bonus bAllstats,1;
+  - Id: 61049
+    AegisName: Costume Middle 49
+    Name: Costume Middle 49
+    Type: Armor
+    Locations:
+      Costume_Head_Mid: true
+    ArmorLevel: 1
+    View: 4048
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1;
+  - Id: 61050
+    AegisName: Costume Middle 50
+    Name: Costume Middle 50
+    Type: Armor
+    Locations:
+      Costume_Head_Mid: true
+    ArmorLevel: 1
+    View: 4049
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1;
+  - Id: 61051
+    AegisName: Costume Middle 51
+    Name: Costume Middle 51
+    Type: Armor
+    Locations:
+      Costume_Head_Mid: true
+    ArmorLevel: 1
+    View: 4050
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1;
+  - Id: 61052
+    AegisName: Costume Middle 52
+    Name: Costume Middle 52
+    Type: Armor
+    Locations:
+      Costume_Head_Mid: true
+    ArmorLevel: 1
+    View: 4051
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1;
