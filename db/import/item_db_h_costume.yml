@@ -974,4 +974,376 @@ Body:
     Script: |
       bonus2 bDropAddRace,Rc_All,3;
       bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1;
+  - Id: 60082
+    AegisName: Costume Upper 82
+    Name: Costume Upper 82
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3081
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
       bonus bAllstats,1; 
+  - Id: 60083
+    AegisName: Costume Upper 83
+    Name: Costume Upper 83
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3082
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60084
+    AegisName: Costume Upper 84
+    Name: Costume Upper 84
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3083
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60085
+    AegisName: Costume Upper 85
+    Name: Costume Upper 85
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3084
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60086
+    AegisName: Costume Upper 86
+    Name: Costume Upper 86
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3085
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60087
+    AegisName: Costume Upper 87
+    Name: Costume Upper 87
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3086
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60088
+    AegisName: Costume Upper 88
+    Name: Costume Upper 88
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3087
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60089
+    AegisName: Costume Upper 89
+    Name: Costume Upper 89
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3088
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60090
+    AegisName: Costume Upper 90
+    Name: Costume Upper 90
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3089
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60091
+    AegisName: Costume Upper 91
+    Name: Costume Upper 91
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3090
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60092
+    AegisName: Costume Upper 92
+    Name: Costume Upper 92
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3091
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60093
+    AegisName: Costume Upper 93
+    Name: Costume Upper 93
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3092
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60094
+    AegisName: Costume Upper 94
+    Name: Costume Upper 94
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3093
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60095
+    AegisName: Costume Upper 95
+    Name: Costume Upper 95
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3094
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60096
+    AegisName: Costume Upper 96
+    Name: Costume Upper 96
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3095
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60097
+    AegisName: Costume Upper 97
+    Name: Costume Upper 97
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3096
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60098
+    AegisName: Costume Upper 98
+    Name: Costume Upper 98
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3097
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60099
+    AegisName: Costume Upper 99
+    Name: Costume Upper 99
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3098
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60100
+    AegisName: Costume Upper 100
+    Name: Costume Upper 100
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3099
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60101
+    AegisName: Costume Upper 101
+    Name: Costume Upper 101
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3100
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60102
+    AegisName: Costume Upper 102
+    Name: Costume Upper 102
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3101
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60103
+    AegisName: Costume Upper 103
+    Name: Costume Upper 103
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3102
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60104
+    AegisName: Costume Upper 104
+    Name: Costume Upper 104
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3103
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60105
+    AegisName: Costume Upper 105
+    Name: Costume Upper 105
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3104
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60106
+    AegisName: Costume Upper 106
+    Name: Costume Upper 106
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3105
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
+  - Id: 60107
+    AegisName: Costume Upper 107
+    Name: Costume Upper 107
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3106
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1;
+  - Id: 60108
+    AegisName: Costume Upper 108
+    Name: Costume Upper 108
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3107
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1;
+  - Id: 60109
+    AegisName: Costume Upper 109
+    Name: Costume Upper 109
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3108
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1;
+  - Id: 60110
+    AegisName: Costume Upper 110
+    Name: Costume Upper 110
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3109
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1;
+  - Id: 60111
+    AegisName: Costume Upper 111
+    Name: Costume Upper 111
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3110
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1;
+  - Id: 60112
+    AegisName: Costume Upper 112
+    Name: Costume Upper 112
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 3111
+    Script: |
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1;

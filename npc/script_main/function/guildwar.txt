@@ -15,30 +15,46 @@ morocc,154,142,4	script	test	722,{
 			mes "กลับไปซะไอ่ควาย";
 			end;
 		}
-		mes "End of War";
-		mes "มึงเป็นหัวหน้ากิลด์";
 		if (getcharid(2) == @GID) {
 			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
-			mes "เลขบัญชี: ^5533FF"+.idnum$+" ^000000";
-			mes "ชื่อธนาคาร: ^5533FF"+.bank$+" ^000000";
-			mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
+			query_sql("SELECT `idnum`,`bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_master` = '"+ strcharinfo(0) +"' ORDER BY `id` DESC",.@idnum$,.@bank$,.@name$,.@date,.@status$);
+			mes "เลขบัญชี: ^5533FF"+.@idnum$+" ^000000";
+			mes "ชื่อธนาคาร: ^5533FF"+.@bank$+" ^000000";
+			mes "ชื่อเจ้าของบัญชี: ^5533FF"+.@name$+" ^000000";
+			mes "สถานะ: ^5533FF"+.@status$+" ^000000";
 			next;
 			switch(select("~ รับของรางวัล:~ กรอกบัญชี:~ ยกเลิก")){
 				case 1:
-					
+					if(#guild_reward == 1){
+						mes "ท่านเคยรับรางวัลไปแล้ว ไอ่สัส";
+						end;
+					}
+					#guild_reward = 1;
+					getitem 501,1;
 					break;
 				case 2:
-					mes "1.กรอกเลขบัญชีสิไอ่ควาย";
-					mes "2.กรอกชื่อธนาคารสิไอ่ควาย";
-					mes "3.กรอกชื่อบัญชีผู้รับ";
-					input .idnum$;
-					input .bank$;
-					input .name$;
-					mes "----------------------";
-					mes "เลขบัญชี: ^5533FF"+.idnum$+" ^000000";
-					mes "ชื่อธนาคาร: ^5533FF"+.bank$+" ^000000";
-					mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
-					query_sql();
+					if(#guild_bank == 1){
+						mes "ท่านเคยกรอกข้อมูลไปแล้วไม่สามารถแก้ไขได้";
+						end;
+					}
+						mes "1.กรอกเลขบัญชีสิไอ่ควาย";
+						mes "2.กรอกชื่อธนาคารสิไอ่ควาย";
+						mes "3.กรอกชื่อบัญชีผู้รับ";
+						input .idnum$;
+						input .bank$;
+						input .name$;
+						next;
+						mes "เลขบัญชี: ^5533FF"+.idnum$+" ^000000";
+						mes "ชื่อธนาคาร: ^5533FF"+.bank$+" ^000000";
+						mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
+						mes "^FF0000ปล. หากกดยืนยันจะไม่สามารถแก้ไขได้^000000";
+						mes "^FF0000กรุณาตรวจตอบข้อมูลให้ถูกต้อง^000000";
+						mes "^FF0000หากมีการขอแก้ไขจะถูกหัก 15%^000000";
+					if(select("~ ยกเลิก:~ ยืนยัน") == 1)end;
+					next;
+					mes "เอาหละ ข้อมูลของท่านถูกจัดเก็บเรียบร้อย";
+					#guild_bank = 1;
+					query_sql("INSERT INTO `guild_bank`(idnum,bank,name,guild_name,guild_master,date,status) VALUES ('"+.idnum$+"','"+.bank$+"','"+.name$+"','"+strcharinfo(2)+"','"+strcharinfo(0)+"',now(),'รอการยืนยัน')");
 					break;
 				default:
 					mes "ไม่ทำอะไรเสือกมาทำควายอะไร";
@@ -49,5 +65,17 @@ morocc,154,142,4	script	test	722,{
 		end;
 	}
 OnInit:
-	
+	query_sql (
+		"CREATE TABLE IF NOT EXISTS `guild_bank` ("+
+		"`id` int(7) NOT NULL AUTO_INCREMENT,"+
+		"`idnum` varchar(255) NOT NULL,"+
+		"`bank` varchar(255) NOT NULL,"+
+		"`name` varchar(255) NOT NULL,"+
+		"`guild_name` varchar(255) NOT NULL,"+
+		"`guild_master` varchar(255) NOT NULL,"+
+		"`date` datetime,"+
+		"`status` varchar(255) NOT NULL,"+
+		"PRIMARY KEY (`id`)"+
+		") ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=tis620;"
+	);	
 }
