@@ -63,7 +63,6 @@ morocc,154,144,4	script	Kriemhild#mor	722,{
 					break;
 				case 3:
 					query_sql("SELECT `id` FROM `guild_bank` WHERE `guild_castle` = 'prtg_cas01' ORDER BY `date` DESC",.id);
-					mes .id;
 					query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
 					break;
 				default:
@@ -160,7 +159,6 @@ morocc,158,144,4	script	Bright Arbor#mor	722,{
 					break;
 				case 3:
 					query_sql("SELECT `id` FROM `guild_bank` WHERE `guild_castle` = 'payg_cas01' ORDER BY `date` DESC",.id);
-					mes .id;
 					query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
 					break;
 				default:
@@ -233,7 +231,6 @@ morocc,162,144,4	script	Bergel#mor	722,{
 					break;
 				case 3:
 					query_sql("SELECT `id` FROM `guild_bank` WHERE `guild_castle` = 'gefg_cas04' ORDER BY `date` DESC",.id);
-					mes .id;
 					query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
 					break;
 				default:
@@ -306,7 +303,6 @@ morocc,166,144,4	script	Nuernberg#mor	722,{
 					break;
 				case 3:
 					query_sql("SELECT `id` FROM `guild_bank` WHERE `guild_castle` = 'aldeg_cas03' ORDER BY `date` DESC",.id);
-					mes .id;
 					query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
 					break;
 				default:
