@@ -1,31 +1,36 @@
-morocc,154,144,4	duplicate(InsideFlagsPR1)	Kriemhild#mor	722
-morocc,158,144,4	duplicate(InsideFlagsPA1)	Bright Arbor#mor	722
-morocc,162,144,4	duplicate(InsideFlagsG4)	Bergel#mor	722
-morocc,166,144,4	duplicate(InsideFlagsA3)	Nuernberg#mor	722
+//morocc,154,144,4	duplicate(InsideFlagsPR1)	Kriemhild#mor	722
+//morocc,158,144,4	duplicate(InsideFlagsPA1)	Bright Arbor#mor	722
+//morocc,162,144,4	duplicate(InsideFlagsG4)	Bergel#mor	722
+//morocc,166,144,4	duplicate(InsideFlagsA3)	Nuernberg#mor	722
 
-morocc,154,142,4	script	test	722,{
-
+morocc,154,144,4	script	Kriemhild#mor	722,{
+	.GM = getgmlevel() >= 99;
+	FlagEmblem GetCastleData("prtg_cas01",1);
 	if (agitcheck() || agitcheck2()){
 		mes "กำลัง War อยู่ไอ่ควาย";
 		end;
 	}else{
 		set @GID,getcastledata("prtg_cas01",1);
-		if (strcharinfo(0) != getguildmaster(@GID)) {
+		if (strcharinfo(0) != getguildmaster(@GID) && !.GM) {
 			mes "มึงมันไม่ใช่หัวหน้ากิลด์";
 			mes "กลับไปซะไอ่ควาย";
 			end;
 		}
-		if (getcharid(2) == @GID) {
+		
+		if (getcharid(2) == @GID || .GM) {
 			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
-			query_sql("SELECT `idnum`,`bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_master` = '"+ strcharinfo(0) +"' ORDER BY `id` DESC",.@idnum$,.@bank$,.@name$,.@date,.@status$);
-			mes "เลขบัญชี: ^5533FF"+.@idnum$+" ^000000";
-			mes "ชื่อธนาคาร: ^5533FF"+.@bank$+" ^000000";
-			mes "ชื่อเจ้าของบัญชี: ^5533FF"+.@name$+" ^000000";
-			mes "สถานะ: ^5533FF"+.@status$+" ^000000";
+			query_sql("SELECT `id_bank`,`name_bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_castle` = 'prtg_cas01' ORDER BY `date` DESC",.id_bank$,.name_bank$,.name$,.date,.status);
+			mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
+			mes "ชื่อธนาคาร: ^5533FF"+.name_bank$+" ^000000";
+			mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
+			if(.status)
+				mes "สถานะ: ^006600สำเร็จ ^000000";
+			else
+				mes "สถานะ: ^FF0000รอดำเนินการ ^000000";
 			next;
-			switch(select("~ รับของรางวัล:~ กรอกบัญชี:~ ยกเลิก")){
+			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
 				case 1:
-					if(#guild_reward == 1){
+					if(#guild_reward == 1 || .@GM){
 						mes "ท่านเคยรับรางวัลไปแล้ว ไอ่สัส";
 						end;
 					}
@@ -33,19 +38,19 @@ morocc,154,142,4	script	test	722,{
 					getitem 501,1;
 					break;
 				case 2:
-					if(#guild_bank == 1){
+					if(#guild_bank == 1 || .@GM){
 						mes "ท่านเคยกรอกข้อมูลไปแล้วไม่สามารถแก้ไขได้";
 						end;
 					}
 						mes "1.กรอกเลขบัญชีสิไอ่ควาย";
 						mes "2.กรอกชื่อธนาคารสิไอ่ควาย";
 						mes "3.กรอกชื่อบัญชีผู้รับ";
-						input .idnum$;
-						input .bank$;
+						input .id_bank$;
+						input .name_bank$;
 						input .name$;
 						next;
-						mes "เลขบัญชี: ^5533FF"+.idnum$+" ^000000";
-						mes "ชื่อธนาคาร: ^5533FF"+.bank$+" ^000000";
+						mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
+						mes "ชื่อธนาคาร: ^5533FF"+.name_bank$+" ^000000";
 						mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
 						mes "^FF0000ปล. หากกดยืนยันจะไม่สามารถแก้ไขได้^000000";
 						mes "^FF0000กรุณาตรวจตอบข้อมูลให้ถูกต้อง^000000";
@@ -54,7 +59,12 @@ morocc,154,142,4	script	test	722,{
 					next;
 					mes "เอาหละ ข้อมูลของท่านถูกจัดเก็บเรียบร้อย";
 					#guild_bank = 1;
-					query_sql("INSERT INTO `guild_bank`(idnum,bank,name,guild_name,guild_master,date,status) VALUES ('"+.idnum$+"','"+.bank$+"','"+.name$+"','"+strcharinfo(2)+"','"+strcharinfo(0)+"',now(),'รอการยืนยัน')");
+					query_sql("INSERT INTO `guild_bank`(id_bank,name_bank,name,guild_name,guild_master,date,status,guild_castle) VALUES ('"+.id_bank$+"','"+.name_bank$+"','"+.name$+"','"+strcharinfo(2)+"','"+strcharinfo(0)+"',now(),0,'prtg_cas01')");
+					break;
+				case 3:
+					query_sql("SELECT `id` FROM `guild_bank` WHERE `guild_castle` = 'prtg_cas01' ORDER BY `date` DESC",.id);
+					mes .id;
+					query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
 					break;
 				default:
 					mes "ไม่ทำอะไรเสือกมาทำควายอะไร";
@@ -68,14 +78,243 @@ OnInit:
 	query_sql (
 		"CREATE TABLE IF NOT EXISTS `guild_bank` ("+
 		"`id` int(7) NOT NULL AUTO_INCREMENT,"+
-		"`idnum` varchar(255) NOT NULL,"+
-		"`bank` varchar(255) NOT NULL,"+
+		"`id_bank` varchar(255) NOT NULL,"+
+		"`name_bank` varchar(255) NOT NULL,"+
 		"`name` varchar(255) NOT NULL,"+
 		"`guild_name` varchar(255) NOT NULL,"+
 		"`guild_master` varchar(255) NOT NULL,"+
 		"`date` datetime,"+
-		"`status` varchar(255) NOT NULL,"+
+		"`status` int(1) NOT NULL,"+
+		"`guild_castle` varchar(255) NOT NULL,"+
 		"PRIMARY KEY (`id`)"+
 		") ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=tis620;"
-	);	
+	);
+	end;
+	
+OnAgitStart:
+	query_sql("DELETE FROM `acc_reg_num` WHERE `key` = '#guild_reward'");
+	query_sql("DELETE FROM `acc_reg_num` WHERE `key` = '#guild_bank'");
+	addrid(0);
+	setd("#guild_reward",0);
+	setd("#guild_bank",0);
+	end;
+}
+
+morocc,158,144,4	script	Bright Arbor#mor	722,{
+	.GM = getgmlevel() >= 99;
+	FlagEmblem GetCastleData("payg_cas01",1);
+	if (agitcheck() || agitcheck2()){
+		mes "กำลัง War อยู่ไอ่ควาย";
+		end;
+	}else{
+		set @GID,getcastledata("payg_cas01",1);
+		if (strcharinfo(0) != getguildmaster(@GID) && !.GM) {
+			mes "มึงมันไม่ใช่หัวหน้ากิลด์";
+			mes "กลับไปซะไอ่ควาย";
+			end;
+		}
+		
+		if (getcharid(2) == @GID || .GM) {
+			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
+			query_sql("SELECT `id_bank`,`name_bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_castle` = 'payg_cas01' ORDER BY `date` DESC",.id_bank$,.name_bank$,.name$,.date,.status);
+			mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
+			mes "ชื่อธนาคาร: ^5533FF"+.name_bank$+" ^000000";
+			mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
+			if(.status)
+				mes "สถานะ: ^006600สำเร็จ ^000000";
+			else
+				mes "สถานะ: ^FF0000รอดำเนินการ ^000000";
+			next;
+			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
+				case 1:
+					if(#guild_reward == 1 || .@GM){
+						mes "ท่านเคยรับรางวัลไปแล้ว ไอ่สัส";
+						end;
+					}
+					#guild_reward = 1;
+					getitem 501,1;
+					break;
+				case 2:
+					if(#guild_bank == 1 || .@GM){
+						mes "ท่านเคยกรอกข้อมูลไปแล้วไม่สามารถแก้ไขได้";
+						end;
+					}
+						mes "1.กรอกเลขบัญชีสิไอ่ควาย";
+						mes "2.กรอกชื่อธนาคารสิไอ่ควาย";
+						mes "3.กรอกชื่อบัญชีผู้รับ";
+						input .id_bank$;
+						input .name_bank$;
+						input .name$;
+						next;
+						mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
+						mes "ชื่อธนาคาร: ^5533FF"+.name_bank$+" ^000000";
+						mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
+						mes "^FF0000ปล. หากกดยืนยันจะไม่สามารถแก้ไขได้^000000";
+						mes "^FF0000กรุณาตรวจตอบข้อมูลให้ถูกต้อง^000000";
+						mes "^FF0000หากมีการขอแก้ไขจะถูกหัก 15%^000000";
+					if(select("~ ยกเลิก:~ ยืนยัน") == 1)end;
+					next;
+					mes "เอาหละ ข้อมูลของท่านถูกจัดเก็บเรียบร้อย";
+					#guild_bank = 1;
+					query_sql("INSERT INTO `guild_bank`(id_bank,name_bank,name,guild_name,guild_master,date,status,guild_castle) VALUES ('"+.id_bank$+"','"+.name_bank$+"','"+.name$+"','"+strcharinfo(2)+"','"+strcharinfo(0)+"',now(),0,'payg_cas01')");
+					break;
+				case 3:
+					query_sql("SELECT `id` FROM `guild_bank` WHERE `guild_castle` = 'payg_cas01' ORDER BY `date` DESC",.id);
+					mes .id;
+					query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
+					break;
+				default:
+					mes "ไม่ทำอะไรเสือกมาทำควายอะไร";
+					break;
+			}
+			end;
+		}
+		end;
+	}
+}
+
+morocc,162,144,4	script	Bergel#mor	722,{
+	.GM = getgmlevel() >= 99;
+	FlagEmblem GetCastleData("gefg_cas04",1);
+	if (agitcheck() || agitcheck2()){
+		mes "กำลัง War อยู่ไอ่ควาย";
+		end;
+	}else{
+		set @GID,getcastledata("gefg_cas04",1);
+		if (strcharinfo(0) != getguildmaster(@GID) && !.GM) {
+			mes "มึงมันไม่ใช่หัวหน้ากิลด์";
+			mes "กลับไปซะไอ่ควาย";
+			end;
+		}
+		
+		if (getcharid(2) == @GID || .GM) {
+			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
+			query_sql("SELECT `id_bank`,`name_bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_castle` = 'gefg_cas04' ORDER BY `date` DESC",.id_bank$,.name_bank$,.name$,.date,.status);
+			mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
+			mes "ชื่อธนาคาร: ^5533FF"+.name_bank$+" ^000000";
+			mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
+			if(.status)
+				mes "สถานะ: ^006600สำเร็จ ^000000";
+			else
+				mes "สถานะ: ^FF0000รอดำเนินการ ^000000";
+			next;
+			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
+				case 1:
+					if(#guild_reward == 1 || .@GM){
+						mes "ท่านเคยรับรางวัลไปแล้ว ไอ่สัส";
+						end;
+					}
+					#guild_reward = 1;
+					getitem 501,1;
+					break;
+				case 2:
+					if(#guild_bank == 1 || .@GM){
+						mes "ท่านเคยกรอกข้อมูลไปแล้วไม่สามารถแก้ไขได้";
+						end;
+					}
+						mes "1.กรอกเลขบัญชีสิไอ่ควาย";
+						mes "2.กรอกชื่อธนาคารสิไอ่ควาย";
+						mes "3.กรอกชื่อบัญชีผู้รับ";
+						input .id_bank$;
+						input .name_bank$;
+						input .name$;
+						next;
+						mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
+						mes "ชื่อธนาคาร: ^5533FF"+.name_bank$+" ^000000";
+						mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
+						mes "^FF0000ปล. หากกดยืนยันจะไม่สามารถแก้ไขได้^000000";
+						mes "^FF0000กรุณาตรวจตอบข้อมูลให้ถูกต้อง^000000";
+						mes "^FF0000หากมีการขอแก้ไขจะถูกหัก 15%^000000";
+					if(select("~ ยกเลิก:~ ยืนยัน") == 1)end;
+					next;
+					mes "เอาหละ ข้อมูลของท่านถูกจัดเก็บเรียบร้อย";
+					#guild_bank = 1;
+					query_sql("INSERT INTO `guild_bank`(id_bank,name_bank,name,guild_name,guild_master,date,status,guild_castle) VALUES ('"+.id_bank$+"','"+.name_bank$+"','"+.name$+"','"+strcharinfo(2)+"','"+strcharinfo(0)+"',now(),0,'gefg_cas04')");
+					break;
+				case 3:
+					query_sql("SELECT `id` FROM `guild_bank` WHERE `guild_castle` = 'gefg_cas04' ORDER BY `date` DESC",.id);
+					mes .id;
+					query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
+					break;
+				default:
+					mes "ไม่ทำอะไรเสือกมาทำควายอะไร";
+					break;
+			}
+			end;
+		}
+		end;
+	}
+}
+
+morocc,166,144,4	script	Nuernberg#mor	722,{
+	.GM = getgmlevel() >= 99;
+	FlagEmblem GetCastleData("aldeg_cas03",1);
+	if (agitcheck() || agitcheck2()){
+		mes "กำลัง War อยู่ไอ่ควาย";
+		end;
+	}else{
+		set @GID,getcastledata("aldeg_cas03",1);
+		if (strcharinfo(0) != getguildmaster(@GID) && !.GM) {
+			mes "มึงมันไม่ใช่หัวหน้ากิลด์";
+			mes "กลับไปซะไอ่ควาย";
+			end;
+		}
+		
+		if (getcharid(2) == @GID || .GM) {
+			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
+			query_sql("SELECT `id_bank`,`name_bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_castle` = 'aldeg_cas03' ORDER BY `date` DESC",.id_bank$,.name_bank$,.name$,.date,.status);
+			mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
+			mes "ชื่อธนาคาร: ^5533FF"+.name_bank$+" ^000000";
+			mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
+			if(.status)
+				mes "สถานะ: ^006600สำเร็จ ^000000";
+			else
+				mes "สถานะ: ^FF0000รอดำเนินการ ^000000";
+			next;
+			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
+				case 1:
+					if(#guild_reward == 1 || .@GM){
+						mes "ท่านเคยรับรางวัลไปแล้ว ไอ่สัส";
+						end;
+					}
+					#guild_reward = 1;
+					getitem 501,1;
+					break;
+				case 2:
+					if(#guild_bank == 1 || .@GM){
+						mes "ท่านเคยกรอกข้อมูลไปแล้วไม่สามารถแก้ไขได้";
+						end;
+					}
+						mes "1.กรอกเลขบัญชีสิไอ่ควาย";
+						mes "2.กรอกชื่อธนาคารสิไอ่ควาย";
+						mes "3.กรอกชื่อบัญชีผู้รับ";
+						input .id_bank$;
+						input .name_bank$;
+						input .name$;
+						next;
+						mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
+						mes "ชื่อธนาคาร: ^5533FF"+.name_bank$+" ^000000";
+						mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
+						mes "^FF0000ปล. หากกดยืนยันจะไม่สามารถแก้ไขได้^000000";
+						mes "^FF0000กรุณาตรวจตอบข้อมูลให้ถูกต้อง^000000";
+						mes "^FF0000หากมีการขอแก้ไขจะถูกหัก 15%^000000";
+					if(select("~ ยกเลิก:~ ยืนยัน") == 1)end;
+					next;
+					mes "เอาหละ ข้อมูลของท่านถูกจัดเก็บเรียบร้อย";
+					#guild_bank = 1;
+					query_sql("INSERT INTO `guild_bank`(id_bank,name_bank,name,guild_name,guild_master,date,status,guild_castle) VALUES ('"+.id_bank$+"','"+.name_bank$+"','"+.name$+"','"+strcharinfo(2)+"','"+strcharinfo(0)+"',now(),0,'aldeg_cas03')");
+					break;
+				case 3:
+					query_sql("SELECT `id` FROM `guild_bank` WHERE `guild_castle` = 'aldeg_cas03' ORDER BY `date` DESC",.id);
+					mes .id;
+					query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
+					break;
+				default:
+					mes "ไม่ทำอะไรเสือกมาทำควายอะไร";
+					break;
+			}
+			end;
+		}
+		end;
+	}
 }
