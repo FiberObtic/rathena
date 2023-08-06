@@ -4,20 +4,20 @@
 //morocc,166,144,4	duplicate(InsideFlagsA3)	Nuernberg#mor	722
 
 morocc,154,144,4	script	Kriemhild#mor	722,{
-	.GM = getgmlevel() >= 99;
+	.@GM = getgmlevel() >= 99;
 	FlagEmblem GetCastleData("prtg_cas01",1);
 	if (agitcheck() || agitcheck2()){
 		mes "กำลัง War อยู่ไอ่ควาย";
 		end;
 	}else{
 		set @GID,getcastledata("prtg_cas01",1);
-		if (strcharinfo(0) != getguildmaster(@GID) && !.GM) {
+		if (strcharinfo(0) != getguildmaster(@GID) && !.@GM) {
 			mes "มึงมันไม่ใช่หัวหน้ากิลด์";
 			mes "กลับไปซะไอ่ควาย";
 			end;
 		}
 		
-		if (getcharid(2) == @GID || .GM) {
+		if (getcharid(2) == @GID || .@GM) {
 			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
 			query_sql("SELECT `id_bank`,`name_bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_castle` = 'prtg_cas01' ORDER BY `date` DESC",.id_bank$,.name_bank$,.name$,.date,.status);
 			mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
@@ -28,7 +28,7 @@ morocc,154,144,4	script	Kriemhild#mor	722,{
 			else
 				mes "สถานะ: ^FF0000รอดำเนินการ ^000000";
 			next;
-			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
+			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.@GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
 				case 1:
 					if(#guild_reward == 1 || .@GM){
 						mes "ท่านเคยรับรางวัลไปแล้ว ไอ่สัส";
@@ -62,8 +62,9 @@ morocc,154,144,4	script	Kriemhild#mor	722,{
 					query_sql("INSERT INTO `guild_bank`(id_bank,name_bank,name,guild_name,guild_master,date,status,guild_castle) VALUES ('"+.id_bank$+"','"+.name_bank$+"','"+.name$+"','"+strcharinfo(2)+"','"+strcharinfo(0)+"',now(),0,'prtg_cas01')");
 					break;
 				case 3:
-					query_sql("SELECT `id` FROM `guild_bank` WHERE `guild_castle` = 'prtg_cas01' ORDER BY `date` DESC",.id);
-					query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
+					.check = query_sql("SELECT `id` FROM `guild_bank` WHERE `guild_castle` = 'prtg_cas01' ORDER BY `date` DESC",.id);
+					if(.check)
+						query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
 					break;
 				default:
 					mes "ไม่ทำอะไรเสือกมาทำควายอะไร";
@@ -73,6 +74,7 @@ morocc,154,144,4	script	Kriemhild#mor	722,{
 		}
 		end;
 	}
+	end;
 OnInit:
 	query_sql (
 		"CREATE TABLE IF NOT EXISTS `guild_bank` ("+
@@ -100,20 +102,20 @@ OnAgitStart:
 }
 
 morocc,158,144,4	script	Bright Arbor#mor	722,{
-	.GM = getgmlevel() >= 99;
+	.@GM = getgmlevel() >= 99;
 	FlagEmblem GetCastleData("payg_cas01",1);
 	if (agitcheck() || agitcheck2()){
 		mes "กำลัง War อยู่ไอ่ควาย";
 		end;
 	}else{
 		set @GID,getcastledata("payg_cas01",1);
-		if (strcharinfo(0) != getguildmaster(@GID) && !.GM) {
+		if (strcharinfo(0) != getguildmaster(@GID) && !.@GM) {
 			mes "มึงมันไม่ใช่หัวหน้ากิลด์";
 			mes "กลับไปซะไอ่ควาย";
 			end;
 		}
 		
-		if (getcharid(2) == @GID || .GM) {
+		if (getcharid(2) == @GID || .@GM) {
 			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
 			query_sql("SELECT `id_bank`,`name_bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_castle` = 'payg_cas01' ORDER BY `date` DESC",.id_bank$,.name_bank$,.name$,.date,.status);
 			mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
@@ -124,7 +126,7 @@ morocc,158,144,4	script	Bright Arbor#mor	722,{
 			else
 				mes "สถานะ: ^FF0000รอดำเนินการ ^000000";
 			next;
-			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
+			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.@GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
 				case 1:
 					if(#guild_reward == 1 || .@GM){
 						mes "ท่านเคยรับรางวัลไปแล้ว ไอ่สัส";
@@ -158,8 +160,9 @@ morocc,158,144,4	script	Bright Arbor#mor	722,{
 					query_sql("INSERT INTO `guild_bank`(id_bank,name_bank,name,guild_name,guild_master,date,status,guild_castle) VALUES ('"+.id_bank$+"','"+.name_bank$+"','"+.name$+"','"+strcharinfo(2)+"','"+strcharinfo(0)+"',now(),0,'payg_cas01')");
 					break;
 				case 3:
-					query_sql("SELECT `id` FROM `guild_bank` WHERE `guild_castle` = 'payg_cas01' ORDER BY `date` DESC",.id);
-					query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
+					.check = query_sql("SELECT `id` FROM `guild_bank` WHERE `guild_castle` = 'payg_cas01' ORDER BY `date` DESC",.id);
+					if(.check)
+						query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
 					break;
 				default:
 					mes "ไม่ทำอะไรเสือกมาทำควายอะไร";
@@ -169,23 +172,24 @@ morocc,158,144,4	script	Bright Arbor#mor	722,{
 		}
 		end;
 	}
+	end;
 }
 
 morocc,162,144,4	script	Bergel#mor	722,{
-	.GM = getgmlevel() >= 99;
+	.@GM = getgmlevel() >= 99;
 	FlagEmblem GetCastleData("gefg_cas04",1);
 	if (agitcheck() || agitcheck2()){
 		mes "กำลัง War อยู่ไอ่ควาย";
 		end;
 	}else{
 		set @GID,getcastledata("gefg_cas04",1);
-		if (strcharinfo(0) != getguildmaster(@GID) && !.GM) {
+		if (strcharinfo(0) != getguildmaster(@GID) && !.@GM) {
 			mes "มึงมันไม่ใช่หัวหน้ากิลด์";
 			mes "กลับไปซะไอ่ควาย";
 			end;
 		}
 		
-		if (getcharid(2) == @GID || .GM) {
+		if (getcharid(2) == @GID || .@GM) {
 			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
 			query_sql("SELECT `id_bank`,`name_bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_castle` = 'gefg_cas04' ORDER BY `date` DESC",.id_bank$,.name_bank$,.name$,.date,.status);
 			mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
@@ -196,7 +200,7 @@ morocc,162,144,4	script	Bergel#mor	722,{
 			else
 				mes "สถานะ: ^FF0000รอดำเนินการ ^000000";
 			next;
-			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
+			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.@GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
 				case 1:
 					if(#guild_reward == 1 || .@GM){
 						mes "ท่านเคยรับรางวัลไปแล้ว ไอ่สัส";
@@ -230,8 +234,9 @@ morocc,162,144,4	script	Bergel#mor	722,{
 					query_sql("INSERT INTO `guild_bank`(id_bank,name_bank,name,guild_name,guild_master,date,status,guild_castle) VALUES ('"+.id_bank$+"','"+.name_bank$+"','"+.name$+"','"+strcharinfo(2)+"','"+strcharinfo(0)+"',now(),0,'gefg_cas04')");
 					break;
 				case 3:
-					query_sql("SELECT `id` FROM `guild_bank` WHERE `guild_castle` = 'gefg_cas04' ORDER BY `date` DESC",.id);
-					query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
+					.check = query_sql("SELECT `id` FROM `guild_bank` WHERE `guild_castle` = 'gefg_cas04' ORDER BY `date` DESC",.id);
+					if(.check)
+						query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
 					break;
 				default:
 					mes "ไม่ทำอะไรเสือกมาทำควายอะไร";
@@ -241,23 +246,24 @@ morocc,162,144,4	script	Bergel#mor	722,{
 		}
 		end;
 	}
+	end;
 }
 
 morocc,166,144,4	script	Nuernberg#mor	722,{
-	.GM = getgmlevel() >= 99;
+	.@GM = getgmlevel() >= 99;
 	FlagEmblem GetCastleData("aldeg_cas03",1);
 	if (agitcheck() || agitcheck2()){
 		mes "กำลัง War อยู่ไอ่ควาย";
 		end;
 	}else{
 		set @GID,getcastledata("aldeg_cas03",1);
-		if (strcharinfo(0) != getguildmaster(@GID) && !.GM) {
+		if (strcharinfo(0) != getguildmaster(@GID) && !.@GM) {
 			mes "มึงมันไม่ใช่หัวหน้ากิลด์";
 			mes "กลับไปซะไอ่ควาย";
 			end;
 		}
 		
-		if (getcharid(2) == @GID || .GM) {
+		if (getcharid(2) == @GID || .@GM) {
 			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
 			query_sql("SELECT `id_bank`,`name_bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_castle` = 'aldeg_cas03' ORDER BY `date` DESC",.id_bank$,.name_bank$,.name$,.date,.status);
 			mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
@@ -268,7 +274,7 @@ morocc,166,144,4	script	Nuernberg#mor	722,{
 			else
 				mes "สถานะ: ^FF0000รอดำเนินการ ^000000";
 			next;
-			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
+			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.@GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
 				case 1:
 					if(#guild_reward == 1 || .@GM){
 						mes "ท่านเคยรับรางวัลไปแล้ว ไอ่สัส";
@@ -302,8 +308,9 @@ morocc,166,144,4	script	Nuernberg#mor	722,{
 					query_sql("INSERT INTO `guild_bank`(id_bank,name_bank,name,guild_name,guild_master,date,status,guild_castle) VALUES ('"+.id_bank$+"','"+.name_bank$+"','"+.name$+"','"+strcharinfo(2)+"','"+strcharinfo(0)+"',now(),0,'aldeg_cas03')");
 					break;
 				case 3:
-					query_sql("SELECT `id` FROM `guild_bank` WHERE `guild_castle` = 'aldeg_cas03' ORDER BY `date` DESC",.id);
-					query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
+					.check = query_sql("SELECT `id` FROM `guild_bank` WHERE `guild_castle` = 'aldeg_cas03' ORDER BY `date` DESC",.id);
+					if(.check)
+						query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
 					break;
 				default:
 					mes "ไม่ทำอะไรเสือกมาทำควายอะไร";
@@ -313,4 +320,5 @@ morocc,166,144,4	script	Nuernberg#mor	722,{
 		}
 		end;
 	}
+	end;
 }
