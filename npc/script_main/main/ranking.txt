@@ -181,10 +181,14 @@ OnRankingManage:
 			close;
 		break;
 		case 3:
-			query_sql "UPDATE `char` SET `point_emp`='0'";
+			query_sql "SELECT `name` FROM reward_ranking WHERE status = 0",.@name$;
 			mes .@npc$;
-			mes "Reset คะแนน EMP";
-			mes "เรียบร้อยแล้ว";
+			mes "โปรดเลือกบุคคลที่ต้องการเปลี่ยนสถานะ";
+			.@menu$ = "";
+			for(.@i =0;.@i < getarraysize(.@name$);.@i++)
+				.@menu$ = .@menu$ +" > "+.@name$[.@i]+":";
+			.@choose$ = .@name$[(select(.@menu$)) - 1];
+			query_sql "UPDATE `reward_ranking` SET `status` = 1 WHERE `name` = '"+.@choose$+"'";
 			close;
 		break;
 		case 4:
@@ -221,7 +225,7 @@ OnShow_MVP:
 		mes "=========================";
 	} else if ( (.@command$ == "emp") || (.@command$ == "EMP") ) {
 OnShow_EMP:
-		query_sql "SELECT `name`,`class`,`status`,`type`,`points` FROM `reward_ranking` WHERE `status` <= 1",.@name$,.@class,.@status,.@type$,.@point;
+		query_sql "SELECT `name`,`class`,`status`,`type`,`points`,`bank_acc` FROM `reward_ranking` WHERE `status` <= 1",.@name$,.@class,.@status,.@type$,.@point,.@bank_acc$;
 		mes "====== REWARD RANKING ======";
 		for (set .@i,0; .@i < getarraysize(.@name$); set .@i,.@i+1) {
 			if (.@name$[.@i] == "") set .@name$[.@i],"None";
@@ -232,12 +236,13 @@ OnShow_EMP:
 		mes "=========================";
 		for (set .@j,0; .@j < getarraysize(.@name$); set .@j,.@j+1)
 		if( strcharinfo(0) == .@name$[.@j]) {
+			if( .@bank_acc$ == "") {
 			next;
-			mes .@npc$;
+			mes "[Ranking]";
 			mes "ท่านจะกรอกเลขบัญชีเพื่อรอรับรางวัลเลยหรือไม่ ??";
 			if(select("+ กรอกข้อมูล:+ ยกเลิก") == 2 ) end;
 			next;
-			mes .@npc$;
+			mes "[Ranking]";
 			mes "กรุณากรอกเลขบัญชี หรือ พร้อมเพย์";
 			input .@banknum$;
 			mes "กรอกชื่อธนาคาร กรณีพร้อมเพย์ บอกว่าคือ พร้อมเพย์";
@@ -245,6 +250,14 @@ OnShow_EMP:
 			mes "กรอกชื่อ สกุล ให้ตรงกับชื่อบัญชีที่โอน";
 			input .@realname$;
 			query_sql "UPDATE `reward_ranking` SET `bank_acc`='"+.@banknum$+"',`bank_name` = '"+.@bankname$+"',`real_name` = '"+.@realname$+"'";
+			next;
+			mes "[Ranking]";
+			mes "กรณีเลขบัญชีพลาดกรุณาติดต่อทีมงานโดยทันที หากเลยระยะเวลา 3 วันหลังกรอกข้อมูล จะถือว่าสละสิทธิ์รับรางวัล";
+			mes "เลขบัญชี : " +.@banknum$;
+			mes "ชื่อธนาคาร : " +.@bankname$;
+			mes "ชื่อ - สกุล : "+.@realname$;
+			}
+		break;
 		}
 	} else if ( (.@command$ == "rep") || (.@command$ == "REP") ) {
 OnShow_REP:
