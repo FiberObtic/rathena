@@ -700,7 +700,7 @@ function	script	F_Tower_Monster	{
 		break;
 	case 50:
 		areamonster .@map$,352,9,362,45,"--ja--",callfunc("F_Rand",1623,1511),1,.@label$;
-		areamonster .@map$,352,9,362,45,"Amon Ra",1511,1,.@label$;
+		//areamonster .@map$,352,9,362,45,"Amon Ra",1511,1,.@label$;
 		areamonster .@map$,352,9,362,45,"Anubis",1098,10,.@label$;
 		areamonster .@map$,352,9,362,45,"Marduk",1140,10,.@label$;
 		areamonster .@map$,352,9,362,45,"Matyr",1146,10,.@label$;
