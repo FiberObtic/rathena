@@ -539,8 +539,18 @@ prt_in,63,60,0	script	Hollgrehenn	4_M_03,{
 
 // morocc,151,167,3	script	Aragham	1_M_SMITH,{
 morocc_in,72,38,3	script	Aragham#2	1_M_SMITH,{
-	callfunc "refinemain","Aragham",0;
-	end;
+	if( getbattleflag( "feature.refineui" ) ){
+		mes "[Aragham]";
+		mes "De~sert~Blacksmith~";
+		mes "Aragham Saleh~ผู้สามารถปรับแต่งอะไรก็ได้ Saleh~";
+		mes "ให้ฉันดูว่าคุณต้องการปรับแต่งอะไร~";
+		close2;
+		refineui();
+		end;
+	}else{
+		callfunc "refinemain","Aragham",0;
+		end;
+	}
 }
 
 //morocc,161,144,3	script	Aragham#cbt	1_M_SMITH,{
