@@ -2,7 +2,7 @@
 // Premium Pass.
 //-------------------------------------------------------
 
-morocc,153,82,5	script	Premium Pass Manager	4_F_DRKAFRA01,{
+morocc,147,82,4	script	Premium Pass Manager	4_F_DRKAFRA01,{
 	doevent strnpcinfo(0) + "::OnPremiumPass";
 	end;
 	
@@ -15,24 +15,26 @@ morocc,153,82,5	script	Premium Pass Manager	4_F_DRKAFRA01,{
 		//-------------------------------------------------------
 		.pass_id = 53000015;		// Premium Pass ID
 		.pass_lv_id = 53000016;	// Premium Pass Lvup
-		.max_level = 50;		// Max Premium Pass Level
-		.point_exp = 100;		// EXP Given by Purchaseable Level
-		.quest_count = 3;		// Daily Quest Count
-		.min_hunt = 50;			// Min Hunting Quest Count
-		.max_hunt = 100;		// Max Hunting Quest Count
-		.min_collect = 30;		// Min Collect Quest Count
-		.max_collect = 100;		// Max Collect Quest Count
-		.collect_exp = 50;		// Given EXP for Collect Quest
-		.hunt_exp = 50;			// Given EXP for Hunting Quest
-		.mvp_hunt_exp = 100;	// Given EXP for MVP Hunting Quest
-		
+		.max_level = 10;		// Max Premium Pass Level
+		.point_exp = 100;		// EXP Given by Purchaseable Level	
+		setarray .explevel[1],50,100,200,400,800,1600,3200,6400,12800;			//EXP Per Level
+		.BP_Points_Earn = 100;	// Points per Level	#BP_Points
+		//.quest_count = 3;		// Daily Quest Count
+		//.min_hunt = 50;			// Min Hunting Quest Count
+		//.max_hunt = 100;		// Max Hunting Quest Count
+		//.min_collect = 30;		// Min Collect Quest Count
+		//.max_collect = 100;		// Max Collect Quest Count
+		//.collect_exp = 50;		// Given EXP for Collect Quest
+		//.hunt_exp = 50;			// Given EXP for Hunting Quest
+		//.mvp_hunt_exp = 100;	// Given EXP for MVP Hunting Quest
+		/*
 		// MVP List.
 		setarray .mvp_list,1038,1039,1046,1059,1086,1087,1112,1115,1147,1150,1157,1159,1190,1251,1252,1272,1312,1373,1389,1418,1492,1511,1583,1623,1630,1658,1685,1688,1719,1734,1751,1768,1779,1785,1832,1871,1874;
 		// Mob List.
 		setarray .hunt_list,1001,1002,1004,1005,1007;
 		// Item List.
 		setarray .collect_list,501,502,503,504;
-		
+		*/
 		//-------------------------------------------------------
 		// @premiumpass : Command for Premium Pass.
 		//-------------------------------------------------------
@@ -42,56 +44,16 @@ morocc,153,82,5	script	Premium Pass Manager	4_F_DRKAFRA01,{
 		// Reward list. "Level|ItemID:Amount"
 		//-------------------------------------------------------
 		setarray .pass_reward$,
-			"1|501:10",
-			"2|501:10",
-			"3|501:10",
-			"4|501:10",
-			"5|501:20",
-			"6|501:10",
-			"7|501:10",
-			"8|501:10",
-			"9|501:10",
-			"10|501:10",
-			"11|501:10",
-			"12|501:10",
-			"13|501:10",
-			"14|501:10",
-			"15|501:10",
-			"16|501:10",
-			"17|501:10",
-			"18|501:10",
-			"19|501:10",
-			"20|501:10",
-			"21|501:10",
-			"22|501:10",
-			"23|501:10",
-			"24|501:10",
-			"25|501:10",
-			"26|501:10",
-			"27|501:10",
-			"28|501:10",
-			"29|501:10",
-			"30|501:10",
-			"31|501:10",
-			"32|501:10",
-			"33|501:10",
-			"34|501:10",
-			"35|501:10",
-			"36|501:10",
-			"37|501:10",
-			"38|501:10",
-			"39|501:10",
-			"40|501:10",
-			"41|501:10",
-			"42|501:10",
-			"43|501:10",
-			"44|501:10",
-			"45|501:10",
-			"46|501:10",
-			"47|501:10",
-			"48|501:10",
-			"49|501:10",
-			"50|501:10";
+			"1|30001:100",
+			"2|30001:200",
+			"3|30001:300",
+			"4|30001:400",
+			"5|30001:500",
+			"6|30001:600",
+			"7|30001:700",
+			"8|30001:800",
+			"9|30001:900",
+			"10|30001:1000";
 		
 		//-------------------------------------------------------
 		// Illust for cutin.
@@ -106,47 +68,7 @@ morocc,153,82,5	script	Premium Pass Manager	4_F_DRKAFRA01,{
 			"pass_7",
 			"pass_8",
 			"pass_9",
-			"pass_10",
-			"pass_11",
-			"pass_12",
-			"pass_13",
-			"pass_14",
-			"pass_15",
-			"pass_16",
-			"pass_17",
-			"pass_18",
-			"pass_19",
-			"pass_20",
-			"pass_21",
-			"pass_22",
-			"pass_23",
-			"pass_24",
-			"pass_25",
-			"pass_26",
-			"pass_27",
-			"pass_28",
-			"pass_29",
-			"pass_30",
-			"pass_31",
-			"pass_32",
-			"pass_33",
-			"pass_34",
-			"pass_35",
-			"pass_36",
-			"pass_37",
-			"pass_38",
-			"pass_39",
-			"pass_40",
-			"pass_41",
-			"pass_42",
-			"pass_43",
-			"pass_44",
-			"pass_45",
-			"pass_46",
-			"pass_47",
-			"pass_48",
-			"pass_49",
-			"pass_50";
+			"pass_10";
 		
 		.size = getarraysize(.pass_reward$);
 		for(.@i = 0; .@i < .size; .@i++) {
@@ -157,14 +79,15 @@ morocc,153,82,5	script	Premium Pass Manager	4_F_DRKAFRA01,{
 		// SQL auto create.
 		query_sql("CREATE TABLE IF NOT EXISTS `premium_pass` (`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,`account_id` INT(11) UNSIGNED NOT NULL DEFAULT '0',`level` INT(11) UNSIGNED NOT NULL DEFAULT '1',`exp` INT(11) UNSIGNED NOT NULL DEFAULT '0',`quest` INT(11) UNSIGNED NOT NULL DEFAULT '"+.quest_count+"',PRIMARY KEY (`id`)) ENGINE=MyISAM DEFAULT CHARSET=utf8");
 	end;
-
+/*
 	OnPCLoginEvent:
 		if (gettime(DT_DAYOFMONTH) != #reward_date) {
 			#reward_date = gettime(DT_DAYOFMONTH);
 			data_quest$ = "";
 		}
 	end;
-
+*/
+/*
 	OnNPCKillEvent:
 		if (!c_hunt) end;
 		explode(.@T$,data_quest$,":");
@@ -182,7 +105,7 @@ morocc,153,82,5	script	Premium Pass Manager	4_F_DRKAFRA01,{
 				dispbottom "Premium Pass สถานะการล่า : "+getmonsterinfo(atoi(.@TT$[1]),MOB_NAME)+" [เสร็จสิ้น]",0xFFA500;
 		}
 	end;
-
+*/
 	OnPremiumPass:
 		disable_items;		
 		.@account_id = getcharid(3);
@@ -215,8 +138,8 @@ morocc,153,82,5	script	Premium Pass Manager	4_F_DRKAFRA01,{
 		mes "ยินดีต้อนรับสู่ ^FF0000Premium Pass^000000";
 		mes "ปัจจุบัน เลเวล - [^0000CD"+.@level+"^000000]";
 		if (.@level < .max_level) {
-			mes "ปัจจุบัน EXP - [^32CD32"+.@exp+"^000000/100]";	
-			mes "ภารกิจที่เหลืออยู่ - ["+.@prefix$+""+.@quest+"^000000/"+.quest_count+"]";
+			mes "ปัจจุบัน EXP - [^32CD32"+.@exp+"^000000/"+.explevel[.@level]+"]";	
+			//mes "ภารกิจที่เหลืออยู่ - ["+.@prefix$+""+.@quest+"^000000/"+.quest_count+"]";
 			if (.@clvl)
 				mes "รางวัลถัดไป - ^0000CDเลเวล "+.@next_reward+"^000000";
 		}
@@ -227,7 +150,9 @@ morocc,153,82,5	script	Premium Pass Manager	4_F_DRKAFRA01,{
 			close;
 		}
 		next;
-		switch(select(((.@quest > 0)?""+.sb$+" จัดการเควส":""),((.@next_reward > 0)?""+.sb$+" ตรวจสอบรางวัลถัดไป":""),""+.sb$+" ข้อมูล",""+.sb$+" ออก")) {
+		//switch(select(((.@quest > 0)?""+.sb$+" จัดการเควส":""),((.@next_reward > 0)?""+.sb$+" ตรวจสอบรางวัลถัดไป":""),""+.sb$+" ข้อมูล",""+.sb$+" ออก")) {
+		switch(select(((.@next_reward > 0)?""+.sb$+" ตรวจสอบรางวัลถัดไป":""),""+.sb$+" ข้อมูล",""+.sb$+" ออก")) {
+			/*
 			case 1:
 			OnQuest:
 				.@menu$ = "";
@@ -427,8 +352,8 @@ morocc,153,82,5	script	Premium Pass Manager	4_F_DRKAFRA01,{
 				}
 				break;
 				
-
-			case 2:
+			*/
+			case 1:
 				mes .NPCname$;
 				mes "^0000CDรางวัลเลเวล "+.@clvl+" ^000000 :";
 				.@index = inarray(.level,.@clvl);
@@ -441,7 +366,7 @@ morocc,153,82,5	script	Premium Pass Manager	4_F_DRKAFRA01,{
 				next;
 				goto OnPremiumPass;
 				
-			case 3:
+			case 2:
 				mes .NPCname$;
 				mes "Premium Pass มีเลเวลสูงสุดที่ ^009900"+.max_level+"^000000.";
 				mes "คุณจะได้รับรางวัลต่อเมื่อเลเวล Premium Pass ของคุณเพิ่มขึ้น.";
@@ -449,7 +374,7 @@ morocc,153,82,5	script	Premium Pass Manager	4_F_DRKAFRA01,{
 				mes "หรือซื้อเลเวลจากร้านค้าด้วยการใช้ <ITEM>"+getitemname(.pass_lv_id)+"<INFO>"+.pass_lv_id+"</INFO></ITEM>.";
 				end;
 				
-			case 4:
+			case 3:
 				end;
 		}
 	end;
@@ -473,7 +398,22 @@ morocc,153,82,5	script	Premium Pass Manager	4_F_DRKAFRA01,{
 		dispbottom "คุณได้เปิดใช้งาน Premium Pass กับบัญชีนี้แล้ว. รางวัล Premium Pass พื้นฐานของคุณถูกส่งไปยังจดหมายของคุณแล้ว.";
 	end;
 
+	OnExpDaily:
+		.@point_exp = 20;
+		goto OnExpEarn;
+	OnExpBoss:
+		.@point_exp = 2;
+		goto OnExpEarn;
+	OnExpEndless:
+		.@point_exp = 6;
+		goto OnExpEarn;
+	OnExpQuestionEvent:
+		.@point_exp = 2;
+		goto OnExpEarn;
 	OnUseLevel:
+		.@point_exp = .point_exp;
+		goto OnExpEarn;
+	OnExpEarn:
 		.@account_id = getcharid(3);
 		query_sql("SELECT `level` FROM `premium_pass` WHERE `account_id` = '"+.@account_id+"'",.@level);
 		if (.@level == .max_level) {
@@ -482,9 +422,12 @@ morocc,153,82,5	script	Premium Pass Manager	4_F_DRKAFRA01,{
 		}
 		function pass_getexp;
 		delitem .pass_lv_id,1;
-		pass_getexp(.point_exp);
+		pass_getexp(.@point_exp);
 	end;
+	
 
+	
+	
 	OnHour00:
 		if (gettime(DT_DAYOFMONTH) == 1) {
 			query_sql("TRUNCATE `premium_pass`");
@@ -496,16 +439,18 @@ morocc,153,82,5	script	Premium Pass Manager	4_F_DRKAFRA01,{
 function	pass_getexp	{
 	.@exp_value = getarg(0);
 	.@account_id = getcharid(3);
-	query_sql("SELECT `id`,`exp` FROM `premium_pass` WHERE `account_id` = '"+.@account_id+"'",.@id,.@exp);
+	query_sql("SELECT `id`,`exp`,`level` FROM `premium_pass` WHERE `account_id` = '"+.@account_id+"'",.@id,.@exp,.@level);
 	.@total = .@exp + .@exp_value;
-	if (.@total >= 100) {
-		if (.@total > 100)
-			.@excess = .@total - 100;
+	if (.@total >= .explevel[.@level]) {
+		if (.@total > .explevel[.@level])
+			.@excess = .@total - .explevel[.@level];
 		query_sql("UPDATE `premium_pass` SET `exp` = '"+.@excess+"' WHERE `id` = '"+.@id+"'");
 		function pass_levelup;
 		pass_levelup();
-	} else
+	} else {
 		query_sql("UPDATE `premium_pass` SET `exp` = '"+.@total+"' WHERE `id` = '"+.@id+"'");
+		dispbottom "รางวัล Pass EXP : ^0000CD" + .point_exp +"  สถานะ EXP ปัจจุบัน "+ .@total +"/"+.explevel[.@level] ;
+	}
 	return;
 }
 
@@ -533,6 +478,7 @@ function	pass_reward	{
 		.@item_id[.@x] = atoi(.@id$[0]);
 		.@item_amount[.@x] = atoi(.@id$[1]);
 	}
+	#BP_Points += .BP_Points_Earn;
 	mail getcharid(0),"Premium Pass","รางวัล เลเวล "+.@level+"","นี่คือรางวัลของคุณสําหรับการไปถึงเลเวล "+.@level+" บน Premium Pass ของคุณ.",0,.@item_id,.@item_amount;
 	return;
 }

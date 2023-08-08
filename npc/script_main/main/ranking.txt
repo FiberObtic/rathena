@@ -3,6 +3,23 @@
   # ALTER TABLE  `char` ADD  `point_pvp` INT NOT NULL DEFAULT  '0',
   # ADD  `point_mvp` INT NOT NULL DEFAULT  '0',
   # ADD  `point_emp` INT NOT NULL DEFAULT  '0'
+			INSERT INTO reward_ranking (account_id,`name`,class,`status`,type) VALUES ('1','Test','0','2','TTEST');
+    query_sql(
+        "CREATE TABLE IF NOT EXISTS `Reward_Ranking` ("+
+        "`id` int(11) NOT NULL AUTO_INCREMENT,"+
+        "`account_id` int(11) NOT NULL,"+
+        "`name` varchar(30) NOT NULL DEFAULT '',"+
+        "`class` smallint(6) unsigned NOT NULL default '0',"+
+        "`status` smallint(6) unsigned NOT NULL default '0',"+
+        "`type` varchar(30) unsigned NOT NULL default '',"+
+        "`points` int(11) unsigned NOT NULL default '0',"+
+        "`bank_acc` int(11) unsigned NOT NULL default '0',"+
+        "`bank_name` varchar(30) unsigned NOT NULL default '',"+
+        "`real_name` varchar(30) unsigned NOT NULL default '',"+
+        "PRIMARY KEY (`id`)"+
+        ") ENGINE=MyISAM; AUTO_INCREMENT=1"
+    );
+	
 */
 
 -	script	Ranking	-1,{
@@ -136,15 +153,18 @@ OnNPCKillEvent:
 	end;
 
 OnWhisperGlobal:
-	if (@whispervar0$ == "") end;
+OnRankingManage:
+	//if (@whispervar0$ == "") end;
 	set .@npc$,"[Ranking]";
 	set .@command$,@whispervar0$;
 	if ( (getgmlevel() >= 99) ) {
 		mes .@npc$;
 		mes "ระบบจัดการคะแนน";
 		next;
-		switch (select("- Reset คะแนน PVP","- Reset คะแนน MVP","- Reset คะแนน EMP"/*,"- Reset คะแนน REP"*/)) {
+		switch (select("- Reset คะแนน PVP","- Reset คะแนน MVP","- แก้ไขสถานะการดำเนินการ"/*,"- Reset คะแนน REP"*/)) {
 		case 1:
+			query_sql "SELECT `name`,`point_pvp`,`class`,`account_id` FROM `char` ORDER BY `point_pvp` DESC LIMIT 1",.@name$,.@point,.@class,.@accid;
+			query_sql "INSERT INTO reward_ranking (`account_id`,`name`,`class`,`status`,`type`,`points`) VALUES ('"+.@accid+"','"+.@name$+"','"+.@class+"','0','PVP','"+.@point+"')";
 			query_sql "UPDATE `char` SET `point_pvp`='0'";
 			mes .@npc$;
 			mes "Reset คะแนน PVP";
@@ -152,6 +172,8 @@ OnWhisperGlobal:
 			close;
 		break;
 		case 2:
+			query_sql "SELECT `name`,`point_mvp`,`class`,`account_id` FROM `char` ORDER BY `point_mvp` DESC LIMIT 1",.@name$,.@point,.@class,.@accid;
+			query_sql "INSERT INTO reward_ranking (`account_id`,`name`,`class`,`status`,`type`,`points`) VALUES ('"+.@accid+"','"+.@name$+"','"+.@class+"','0','MVP','"+.@point+"')";
 			query_sql "UPDATE `char` SET `point_mvp`='0'";
 			mes .@npc$;
 			mes "Reset คะแนน MVP";
@@ -199,16 +221,31 @@ OnShow_MVP:
 		mes "=========================";
 	} else if ( (.@command$ == "emp") || (.@command$ == "EMP") ) {
 OnShow_EMP:
-		query_sql "SELECT `name`,`point_emp` FROM `char` ORDER BY `point_emp` DESC LIMIT 10",.@name$,.@point;
-		mes "====== EMP RANKING ======";
-		for (set .@i,0; .@i < 10; set .@i,.@i+1) {
-			if (.@point[.@i] == 0) set .@name$[.@i],"None";
-			mes "["+(.@i+1)+"]  "+.@name$[.@i]+" : คะแนน " +.@point[.@i]+"";
+		query_sql "SELECT `name`,`class`,`status`,`type`,`points` FROM `reward_ranking` WHERE `status` <= 1",.@name$,.@class,.@status,.@type$,.@point;
+		mes "====== REWARD RANKING ======";
+		for (set .@i,0; .@i < getarraysize(.@name$); set .@i,.@i+1) {
+			if (.@name$[.@i] == "") set .@name$[.@i],"None";
+			if (.@type$[.@i] == "") set .@type$[.@i],"None";
+			mes "["+(.@i+1)+"]  "+.@name$[.@i]+" : อาชีพ " +jobname(.@class[.@i])+" : รูปแบบรางวัล  "+.@type$[.@i]+" คะแนน : "+.@point[.@i];
+			mes "สถานะ : "+(.@status[.@i]?"^00FF00ดำเนินการเสร็จสิ้น":"^FF0000รอการดำเนินการ")+"^000000";
 		}
-		mes "-----------------------";
-		query_sql "SELECT `point_emp` FROM `char` WHERE `char_id`='"+getcharid(0)+"'",.@cpoint;
-		mes "คุณมีคะแนน : "+.@cpoint;
 		mes "=========================";
+		for (set .@j,0; .@j < getarraysize(.@name$); set .@j,.@j+1)
+		if( strcharinfo(0) == .@name$[.@j]) {
+			next;
+			mes .@npc$;
+			mes "ท่านจะกรอกเลขบัญชีเพื่อรอรับรางวัลเลยหรือไม่ ??";
+			if(select("+ กรอกข้อมูล:+ ยกเลิก") == 2 ) end;
+			next;
+			mes .@npc$;
+			mes "กรุณากรอกเลขบัญชี หรือ พร้อมเพย์";
+			input .@banknum$;
+			mes "กรอกชื่อธนาคาร กรณีพร้อมเพย์ บอกว่าคือ พร้อมเพย์";
+			input .@bankname$;
+			mes "กรอกชื่อ สกุล ให้ตรงกับชื่อบัญชีที่โอน";
+			input .@realname$;
+			query_sql "UPDATE `reward_ranking` SET `bank_acc`='"+.@banknum$+"',`bank_name` = '"+.@bankname$+"',`real_name` = '"+.@realname$+"'";
+		}
 	} else if ( (.@command$ == "rep") || (.@command$ == "REP") ) {
 OnShow_REP:
 		query_sql "SELECT `userid`,`point_total` FROM `login` ORDER BY `point_total` DESC LIMIT 10",.@name$,.@point;
@@ -226,11 +263,10 @@ OnShow_REP:
 }
 
 -	script	จัดอันดับต่าง::rankingbbs	GUILD_FLAG,{
-
 	set .@npc$,"^00BFFF[ ผู้บันทึกคะแนน ]^000000";
 	mes .@npc$;
 	next;
-	switch (select("^990000+ PVP^000000","^000077+ MVP^000000")) {
+	switch (select("^990000+ PVP^000000","^000077+ MVP^000000","^000077+ รายชื่อผู้ได้รับรางวัล^000000",((getgmlevel() >= 99)?"^000077+ GM Menu^000000":"")) ) {
 	case 1:
 		mes .@npc$;
 		mes "แสดงข้อมูลเรียบร้อยแล้ว";
@@ -250,10 +286,7 @@ OnShow_REP:
 		doevent "Ranking::OnShow_EMP";
 	break;
 	case 4:
-		mes .@npc$;
-		mes "แสดงข้อมูลเรียบร้อยแล้ว";
-		close2;
-		doevent "Ranking::OnShow_REP";
+		doevent "Ranking::OnRankingManage";
 	break;
 	}
 	end;
@@ -267,6 +300,10 @@ function	script	AddPointChar	{
 		query_sql "UPDATE `char` SET `point_pvp`=(`point_pvp` + 1) WHERE `char_id`='"+getcharid(0)+"' LIMIT 1";
 	} else if (.@string$ == "MVP") {
 		query_sql "UPDATE `char` SET `point_mvp`=(`point_mvp` + 1) WHERE `char_id`='"+getcharid(0)+"' LIMIT 1";
+		if (query_sql("SELECT `id` FROM `premium_pass` WHERE `account_id` = '"+.@account_id+"'",.@sql_id)) {
+			#BP_Points += 1;
+			doevent "Premium Pass Manager::OnExpBoss";
+		}
 	} else if (.@string$ == "EMP") {
 		query_sql "UPDATE `char` SET `point_emp`=(`point_emp` + 1) WHERE `char_id`='"+getcharid(0)+"' LIMIT 1";
 	}
