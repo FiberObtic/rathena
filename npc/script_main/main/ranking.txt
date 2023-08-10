@@ -161,7 +161,7 @@ OnRankingManage:
 		mes .@npc$;
 		mes "ระบบจัดการคะแนน";
 		next;
-		switch (select("- Reset คะแนน PVP","- Reset คะแนน MVP","- แก้ไขสถานะการดำเนินการ"/*,"- Reset คะแนน REP"*/)) {
+		switch (select("- Reset คะแนน PVP","- Reset คะแนน MVP","- แก้ไขสถานะการดำเนินการ","- เคลียรายชื่อผู้ได้รับรางวัล")) {
 		case 1:
 			query_sql "SELECT `name`,`point_pvp`,`class`,`account_id` FROM `char` ORDER BY `point_pvp` DESC LIMIT 1",.@name$,.@point,.@class,.@accid;
 			query_sql "INSERT INTO reward_ranking (`account_id`,`name`,`class`,`status`,`type`,`points`) VALUES ('"+.@accid+"','"+.@name$+"','"+.@class+"','0','PVP','"+.@point+"')";
@@ -181,21 +181,28 @@ OnRankingManage:
 			close;
 		break;
 		case 3:
-			query_sql "SELECT `name` FROM reward_ranking WHERE status = 0",.@name$;
+			query_sql "SELECT `name`,`bank_acc`,`bank_name`,`real_name` FROM `reward_ranking` WHERE status = '0'",.@name$,.@bankacc$,.@bankname$,.@realname$;
 			mes .@npc$;
 			mes "โปรดเลือกบุคคลที่ต้องการเปลี่ยนสถานะ";
 			.@menu$ = "";
 			for(.@i =0;.@i < getarraysize(.@name$);.@i++)
 				.@menu$ = .@menu$ +" > "+.@name$[.@i]+":";
 			.@choose$ = .@name$[(select(.@menu$)) - 1];
+			if(.@bankacc$[(select(.@menu$)) - 1] == "" ) {
+				mes "บุคคลนี้ยังไม่กรอกข้อมูลธนาคาร";
+				end;
+			}
+			mes "ชื่อตัวละคร : > "+.@name$;
+			mes "เลขบัญชี  : > "+.@bankacc$;
+			mes "ชื่อธนาคาร  : > "+.@bankname$;
+			mes "ชื่อบัญชี  : > "+.@realname$;
+			mes "ท่านยืนยันการโอนหรือไม่";
+			if(select(" > ยืนยัน: > ไม่ยืนยัน") == 2 ) end;
 			query_sql "UPDATE `reward_ranking` SET `status` = 1 WHERE `name` = '"+.@choose$+"'";
 			close;
 		break;
 		case 4:
-			query_sql "UPDATE `duckdig` SET `point_total`='0'";
-			mes .@npc$;
-			mes "Reset คะแนน REP";
-			mes "เรียบร้อยแล้ว";
+			query_sql "UPDATE `reward_ranking` SET `status` = 2 WHERE `status` = 1";
 			close;
 		break;
 		}
