@@ -159,7 +159,8 @@ morocc,147,82,4	script	Premium Pass Manager	4_F_DRKAFRA01,{
 		}
 		next;
 		//switch(select(((.@quest > 0)?""+.sb$+" จัดการเควส":""),((.@next_reward > 0)?""+.sb$+" ตรวจสอบรางวัลถัดไป":""),""+.sb$+" ข้อมูล",""+.sb$+" ออก")) {	
-		switch(select(((.@next_reward > 0)?""+.sb$+" ตรวจสอบรางวัลถัดไป":""),""+.sb$+" ข้อมูล",""+.sb$+" ออก")) {
+Battlepass_Menu:			
+		switch(select(""+.sb$+" ตรวจสอบรางวัลถัดไป",""+.sb$+" ข้อมูล",""+.sb$+" ออก")) {
 			/*
 			case 1:
 			OnQuest:
@@ -361,16 +362,17 @@ morocc,147,82,4	script	Premium Pass Manager	4_F_DRKAFRA01,{
 				break;
 				
 			*/
-Battlepass_Menu:			
 			case 1:
-				mes .NPCname$;
-				mes "^0000CDรางวัลเลเวล "+.@clvl+" ^000000 :";
-				.@index = inarray(.level,.@clvl);
-				explode(.@clvl$,.pass_reward$[.@index],"|");
-				explode(.@item$,.@clvl$[1],",");
-				for(.@x = 0; .@x < getarraysize(.@item$); .@x++) {
-					explode(.@id$,.@item$[.@x],":");
-					mes "x"+ .@id$[1] + " <ITEM>"+getitemname(atoi(.@id$[0]))+"<INFO>"+atoi(.@id$[0])+"</INFO></ITEM>";
+				if(.@next_reward) {
+					mes .NPCname$;
+					mes "^0000CDรางวัลเลเวล "+.@clvl+" ^000000 :";
+					.@index = inarray(.level,.@clvl);
+					explode(.@clvl$,.pass_reward$[.@index],"|");
+					explode(.@item$,.@clvl$[1],",");
+					for(.@x = 0; .@x < getarraysize(.@item$); .@x++) {
+						explode(.@id$,.@item$[.@x],":");
+						mes "x"+ .@id$[1] + " <ITEM>"+getitemname(atoi(.@id$[0]))+"<INFO>"+atoi(.@id$[0])+"</INFO></ITEM>";
+					}
 				}
 				next;
 				if(select(""+.sb$+" Menu Battle Pass:"+.sb$+" Open Battle Pass Shop") == 2 ) {
@@ -491,7 +493,7 @@ function	pass_reward	{
 		.@item_id[.@x] = atoi(.@id$[0]);
 		.@item_amount[.@x] = atoi(.@id$[1]);
 	}
-	dispbottom ""+.@id$[0]+" and "+.@id$[1];
+	//dispbottom ""+.@id$[0]+" and "+.@id$[1];
 	//#CASHPOINTS += .BP_Cash_Earn[.@level];
 	#CASHPOINTS += atoi(.@id$[1]);
 	//#BP_Points += .BP_Points_Earn;
