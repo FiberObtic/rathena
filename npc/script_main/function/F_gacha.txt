@@ -1,0 +1,104 @@
+/*
+	*	itemdb callfunc("F_Gachapon",Number);
+    */
+
+function	script	F_Gachapon	{
+	switch(getarg(0) ) {
+		case 1:
+			setarray .@item[0],60008,60011,60017,60033,60042,60057,60062,60066,60070,60077,60080,60086,60100,60103,60112;
+			setarray .@arr[0],500,500,500,500,500,500,500,500,500,500,500,500,500,500,500;
+			setarray .@amt[0],1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+			break;
+		case 2:
+			setarray .@item[0],61002,61003,61004,61005,61015,61016,61017,61021,61022,61029,61031,61032,61048,61051,61052;
+			setarray .@arr[0],500,500,500,500,500,500,500,500,500,500,500,500,500,500,500;
+			setarray .@amt[0],1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+			break;
+		case 3:
+			setarray .@item[0],62001,62002,62005,62006,62012,62013,62014,62016,62018,62020,62033,62034,62035,6209,62040,62042,62043,62047,62048,62049;
+			setarray .@arr[0],500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500;
+			setarray .@amt[0],1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+			break;
+		default:
+			break;
+	}
+		setarray .@item[getarraysize(.@item)],6635,7619,7620,65001,65002,65003,7776,23210,23211,12214,12412,12103,14523,14522;
+		setarray .@arr[getarraysize(.@item)],3000,5000,5000,4000,5000,4000,6000,7000,6000,7000,8000,8000,8000,8000;
+		setarray .@amt[getarraysize(.@item)],1,1,1,1,1,1,1,1,1,1,1,1,5,5;
+//============= Random ===========================================================================
+	// start sort variable max to min
+	for(.@i = 1; .@i < getarraysize(.@arr); .@i++){
+		for( .@j = .@i; .@j>0; .@j--) {
+			if(.@arr[.@j]>.@arr[.@j-1] ){
+				// swap position rate
+				.@rate = .@arr[.@j-1];
+				.@arr[.@j-1] = .@arr[.@j];
+				.@arr[.@j] = .@rate;
+				// swap position item
+				.@rate = .@item[.@j-1];
+				.@item[.@j-1] = .@item[.@j];
+				.@item[.@j] = .@rate;
+				// swap position amt
+				.@rate = .@amt[.@j-1];
+				.@amt[.@j-1] = .@amt[.@j];
+				.@amt[.@j] = .@rate;
+			}
+			else {
+				break;
+			}
+		}
+	}
+	// end sort variable max to min
+	
+	// start cut rate more to single variable
+	set .@x,.@arr[0];
+	set .@tok,.@arr[0];
+	setarray .@aa[0],1;
+	for(.@i = 1; .@i < getarraysize(.@arr);.@i++) {
+		if(.@arr[.@i] != .@tok ){
+			set .@x[getarraysize(.@x)],.@arr[.@i];
+			set .@tok,.@arr[.@i];
+			set .@aa[getarraysize(.@aa)],1;
+		}else{
+			.@aa[getarraysize(.@aa)-1]++;
+		}
+	}
+//=================================================================================================
+	if (MaxWeight - Weight < 1000) {
+		disable_items;
+		mes "รอสักครู่!!";
+		mes "ท่านนำสิ่งต่าง ๆ มากมายเกินไป!";
+		mes "ท่านไม่สามารถรับของได้อีก!";
+		mes "โปรดลดจำนวนไอเทม";
+		mes "จากนั้นมาหาข้าอีกครั้ง";
+		end;;
+	}
+
+	//new random
+	.@start = 1;
+	.@stop = 0;
+	for(.@i = 0; .@i < getarraysize(.@x);.@i++) {
+		.@stop += .@x[.@i];
+	}
+	.@pos = rand(.@start,.@stop);
+	.@xx = .@stop;
+	.@cc = 0;
+	for(.@i = getarraysize(.@x)-1 ; .@i >= 0 ;.@i--) {
+		.@xx -= .@x[.@i];
+		if(.@pos > .@xx){
+			.@cc = .@i;
+			break;
+		}
+	}
+	.@bb = rand(.@aa[.@cc]);
+	.@nn = 0;
+	for(.@i = 0 ; .@i < getarraysize(.@arr) ;.@i++) {
+		if(.@arr[.@i] == .@x[.@cc]){
+			.@position = .@i+.@bb;
+			break;
+		}
+	}
+	getitem .@item[.@position],.@amt[.@position];
+	if(.@arr[.@position]/100 <= 5)	announce "[ Gachapon ] : คุณ [ "+strcharinfo(0)+" ] ได้รับ "+getitemname(.@item[.@position])+" จำนวน "+.@amt[.@position]+" ชิ้น โอกาสที่ได้รับ "+.@arr[.@position]/100+"%",bc_all,0xFF99FF;
+	end;
+}

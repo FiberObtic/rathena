@@ -163,6 +163,43 @@ Body:
       if(checkquest(60200,PLAYTIME) == 00 ) {
         etower_timer_pass = gettimetick(2) + 900;
       }
+  - Id: 63002
+    AegisName: Random_Costume_Head
+    Name: Random Costume Head
+    Type: Usable
+    Weight: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoSell: true
+      NoMail: true
+    Script: |
+      callfunc("F_Gachapon",1);
+  - Id: 63003
+    AegisName: Random_Costume_Middle
+    Name: Random Costume Middle
+    Type: Usable
+    Weight: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoMail: true
+    Script: |
+      callfunc("F_Gachapon",2);
+  - Id: 63004
+    AegisName: Random_Costume_Lower
+    Name: Random Costume Lower
+    Type: Usable
+    Weight: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoSell: true
+      NoMail: true
+    Script: |
+      callfunc("F_Gachapon",3);
   - Id: 65001
     AegisName: Option_Weapon_Ticket
     Name:  Option Weapon Ticket
