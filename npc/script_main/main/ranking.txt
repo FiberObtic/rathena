@@ -187,8 +187,8 @@ OnRankingManage:
 			.@menu$ = "";
 			for(.@i =0;.@i < getarraysize(.@name$);.@i++)
 				.@menu$ = .@menu$ +" > "+.@name$[.@i]+":";
-			.@choose$ = .@name$[(select(.@menu$)) - 1];
-			if(.@bankacc$[(select(.@menu$)) - 1] == "" ) {
+			.@choose$ = (select(.@menu$)) - 1;
+			if(.@bankacc$[atoi(.@choose$)] == "" ) {
 				mes "บุคคลนี้ยังไม่กรอกข้อมูลธนาคาร";
 				end;
 			}
@@ -198,7 +198,7 @@ OnRankingManage:
 			mes "ชื่อบัญชี  : > "+.@realname$;
 			mes "ท่านยืนยันการโอนหรือไม่";
 			if(select(" > ยืนยัน: > ไม่ยืนยัน") == 2 ) end;
-			query_sql "UPDATE `reward_ranking` SET `status` = 1 WHERE `name` = '"+.@choose$+"'";
+			query_sql "UPDATE `reward_ranking` SET `status` = 1 WHERE `name` = '"+.@name$[atoi(.@choose$)]+"'";
 			close;
 		break;
 		case 4:
@@ -256,7 +256,7 @@ OnShow_EMP:
 			input .@bankname$;
 			mes "กรอกชื่อ สกุล ให้ตรงกับชื่อบัญชีที่โอน";
 			input .@realname$;
-			query_sql "UPDATE `reward_ranking` SET `bank_acc`='"+.@banknum$+"',`bank_name` = '"+.@bankname$+"',`real_name` = '"+.@realname$+"'";
+			query_sql "UPDATE `reward_ranking` SET `bank_acc`='"+.@banknum$+"',`bank_name` = '"+.@bankname$+"',`real_name` = '"+.@realname$+"' WHERE name = '"+.@name$+"'";
 			next;
 			mes "[Ranking]";
 			mes "กรณีเลขบัญชีพลาดกรุณาติดต่อทีมงานโดยทันที หากเลยระยะเวลา 3 วันหลังกรอกข้อมูล จะถือว่าสละสิทธิ์รับรางวัล";
