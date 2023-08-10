@@ -1,4 +1,31 @@
-morocc,157,66,0	script	CookOptionTest	800,{
+/*
+morocc,159,89,4	script	timetrick	800,{
+	
+	set .@char_time,char_timer; // 12 hours
+	set .@cur_time,gettimetick(2);
+	set .@npc_next_t,(.@char_time - .@cur_time);
+	set .@npc_h,(.@npc_next_t / 3600);
+	set .@npc_m,(.@npc_next_t - (.@npc_h * 3600)) / 60;
+	set .@npc_s,.@npc_next_t - ((.@npc_h * 3600) + (.@npc_m * 60));		
+	if(.@npc_next_t <= 0) {
+		char_timer = gettimetick(2)+300;		//number is second 3600 = 1 hr	
+		set .@npc_next_t,(.@char_time - .@cur_time);
+		mes "You get my this it "+.@npc_h+" Hours "+.@npc_m+" Mins "+.@npc_s+" Second ";
+	}
+	else {
+	 mes "Wait me for "+.@npc_h+" Hours "+.@npc_m+" Mins "+.@npc_s+" Second "; 
+	}
+	
+	mes gettimestr("%Y-%m/%d %H:%M:%S",21,#PREMIUMSERVICE_TIME);
+	mes gettimetick(2);
+	close;
+}
+*/
+//-------------------------------------------------------
+// Premium Pass Durexz Kung.
+//-------------------------------------------------------
+
+morocc,143,74,4	script	OptionItem	10009,{
 	disable_items;
 	.@NPCName$ = " [ เสริมพลังออฟชั่น ] ";
 	mes .@NPCName$;
@@ -39,7 +66,8 @@ morocc,157,66,0	script	CookOptionTest	800,{
 	switch(.@part) {
 		case EQI_HAND_R:
 		case EQI_HAND_L:
-			.@itemuse = .@itemcost[0];
+			if(getequiparmorlv(.@part) ) .@itemuse = .@itemcost[1];
+			else .@itemuse = .@itemcost[0];
 			break;
 		case EQI_ARMOR:
 		case EQI_GARMENT:
@@ -112,6 +140,8 @@ L_ResetOption:
 			mes .@NPCName$;
 			mes "อยากจะรีออฟชั่นแถวไหนหรอ";
 			next;
+			if(!countitem(65004) ) { mes "ท่านไม่มีบัตร "+getitemname(65004); end;}
+			delitem 65004,1;
 			.@index = (select("ช่องที่ 1","ช่องที่ 2","ช่องที่ 3") - 1 );
 			callfunc "F_CashOptionTicket",.@part,.@index,.@selectedType;
 			break;

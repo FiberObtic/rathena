@@ -98,7 +98,7 @@ OnClearCache:
 Oninit:
 	hideonnpc strnpcinfo(0);
 	setarray .zenyitem[0]
-	,6635,7500000,50102,6000000,50103,4000000,50203,400000,50208,800000,53003,4000000,53013,4000000,12412,200000;
+	,0;
  	setarray .zeny_surprise_limit[0]
 	,30,30,50,200,50,30,30,200;
 	npcshopdelitem "surprise_zeny",501;
@@ -236,7 +236,7 @@ OnClearCache:
 Oninit:
 	hideonnpc strnpcinfo(0);
 	setarray .carditem[0]
-	,6635,40;
+	,0;
 	setarray .card_surprise_limit[0]
 	,20;
 	npcshopdelitem "surprise_card",501;

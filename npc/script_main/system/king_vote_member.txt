@@ -3,40 +3,58 @@ OnPCLoginEvent:
 	
 	OnBuffer:
 	
-	bonus_script_clear 1;
-	
+	bonus_script_clear 1,getcharid(0);
+	//bonus_script_clear EFST_RANKVOTE_1;
+
 	if(#vote_member == 1){	
 		bonus_script "{ bonus2 bExpAddRace,RC_All,1; bonus2 bDropAddRace,RC_All,1; bonus2 bAddClass,Class_All,1; bonus bMatkRate,1; }",99999999,512,0,EFST_RANKVOTE_1;
 	}
-	if(#vote_member == 2){	
+	else if(#vote_member == 2){	
 		bonus_script "{ bonus2 bExpAddRace,RC_All,2; bonus2 bDropAddRace,RC_All,2; bonus2 bAddClass,Class_All,2; bonus bMatkRate,2; }",99999999,512,0,EFST_RANKVOTE_2;
 	}
-	if(#vote_member == 3){	
+	else if(#vote_member == 3){	
 		bonus_script "{ bonus2 bExpAddRace,RC_All,3; bonus2 bDropAddRace,RC_All,3; bonus2 bAddClass,Class_All,3; bonus bMatkRate,3; }",99999999,512,0,EFST_RANKVOTE_3;
 	}
-	if(#vote_member == 4){	
+	else if(#vote_member == 4){	
 		bonus_script "{ bonus2 bExpAddRace,RC_All,4; bonus2 bDropAddRace,RC_All,4; bonus2 bAddClass,Class_All,4; bonus bMatkRate,4; }",99999999,512,0,EFST_RANKVOTE_4;
 	}
-	if(#vote_member == 5){	
+	else if(#vote_member == 5){	
 		bonus_script "{ bonus2 bExpAddRace,RC_All,5; bonus2 bDropAddRace,RC_All,5; bonus2 bAddClass,Class_All,5; bonus bMatkRate,5; }",99999999,512,0,EFST_RANKVOTE_5;
 	}
-	if(#vote_member == 6){	
+	else if(#vote_member == 6){	
 		bonus_script "{ bonus2 bExpAddRace,RC_All,6; bonus2 bDropAddRace,RC_All,6; bonus2 bAddClass,Class_All,6; bonus bMatkRate,6; }",99999999,512,0,EFST_RANKVOTE_6;
 	}
-	if(#vote_member == 7){	
+	else if(#vote_member == 7){	
 		bonus_script "{ bonus2 bExpAddRace,RC_All,7; bonus2 bDropAddRace,RC_All,7; bonus2 bAddClass,Class_All,7; bonus bMatkRate,7; }",99999999,512,0,EFST_RANKVOTE_7;
 	}
-	if(#vote_member == 8){	
+	else if(#vote_member == 8){	
 		bonus_script "{ bonus2 bExpAddRace,RC_All,8; bonus2 bDropAddRace,RC_All,8; bonus2 bAddClass,Class_All,8; bonus bMatkRate,8; }",99999999,512,0,EFST_RANKVOTE_8;
 	}
-	if(#vote_member == 9){	
+	else if(#vote_member == 9){	
 		bonus_script "{ bonus2 bExpAddRace,RC_All,9; bonus2 bDropAddRace,RC_All,9; bonus2 bAddClass,Class_All,9; bonus bMatkRate,9; }",99999999,512,0,EFST_RANKVOTE_9;
 	}
-	if(#vote_member == 10){	
-		bonus_script "{ bonus bStr,1200; bonus2 bDropAddRace,RC_All,10; bonus2 bAddClass,Class_All,10; bonus bMatkRate,10; }",99999999,512,0,EFST_RANKVOTE_10;
+	else if(#vote_member == 10){	
+		bonus_script "{ bonus2 bExpAddRace,RC_All,10;  bonus2 bDropAddRace,RC_All,10; bonus2 bAddClass,Class_All,10; bonus bMatkRate,10; }",99999999,512,0,EFST_RANKVOTE_10;
 	}
 	
 	message strcharinfo(0),"[ระบบ] : กรุณาออกเข้าเกมส์ใหม่";
+
+	if((delay_buff_mvp-gettimetick(2)) > 0){
+		if(mvp_ranking == 1){
+			bonus_script "{ if(!getmapflag(strcharinfo(3),mf_gvg)){ bonus2 bAddClass,Class_Boss,10; bonus2 bDropAddRace,RC_All,10; bonus2 bAddClass,Class_All,10; bonus bMatkRate,10; } }",delay_buff_mvp-gettimetick(2),512,0,EFST_RANKMVP_1;
+		}
+		if(mvp_ranking == 2){
+			bonus_script "{ if(!getmapflag(strcharinfo(3),mf_gvg)){ bonus2 bAddClass,Class_Boss,7; bonus2 bDropAddRace,RC_All,7; bonus2 bAddClass,Class_All,7; bonus bMatkRate,7; } }",delay_buff_mvp-gettimetick(2),512,0,EFST_RANKMVP_2;
+		}
+		if(mvp_ranking == 3){
+			bonus_script "{ if(!getmapflag(strcharinfo(3),mf_gvg)){ bonus2 bAddClass,Class_Boss,5; bonus2 bDropAddRace,RC_All,5; bonus2 bAddClass,Class_All,5; bonus bMatkRate,5; } }",delay_buff_mvp-gettimetick(2),512,0,EFST_RANKMVP_3;
+		}
+	}
+	if(delay_buff_mvp-gettimetick(2) <= 0){
+		mvp_ranking = 0;
+	}
+			
+	//message strcharinfo(0),"[ระบบ] : กรุณาออกเข้าเกมส์ใหม่";
 	
 end;
 

@@ -214,6 +214,27 @@ e_tower,81,105,0	script	Tower Protection Stone	406,{
 		mes "กรุณาสร้าง หรือเข้าร่วมปาร์ตี้ที่มีสมาชิกมากกว่า 1 คนแล้วลองอีกครั้ง";
 		close;
 	}
+	
+	if(etower_timer_pass) {
+		set .@dun_lim_time,etower_timer_pass; // 1 days
+		set .@dun_cur_time,gettimetick(2);
+		set .@dun_ent_t,(.@dun_lim_time - .@dun_cur_time);
+		set .@dun_h,(.@dun_ent_t / 3600);
+		set .@dun_m,(.@dun_ent_t - (.@dun_h * 3600)) / 60;
+		set .@dun_s,.@dun_ent_t - ((.@dun_h * 3600) + (.@dun_m * 60));
+		if(.@dun_ent_t >= 0 ) {
+		mes "ท่านใช้ใบรีเซ็ต แค่ท่านต้องรออีก";
+		mes "" + .@dun_m + "นาที " + .@dun_s + "วินาที ";
+		end;
+		}
+		else {
+			etower_timer_pass = 0;
+			erasequest 60200;
+			erasequest 60201;
+			end;
+		}
+		
+	}
 	switch(.@etower_timer) {
 	case -1:
 		if (is_party_leader() == true) {
@@ -269,7 +290,7 @@ e_tower,81,105,0	script	Tower Protection Stone	406,{
 				close;
 			}
 		} else {
-			set .@dun_lim_time,etower_timer+604800; // 1 week
+			set .@dun_lim_time,etower_timer+3600; // 1 days
 			// set .@dun_lim_time2,etower_timer+14400; // 4 hours
 			set .@dun_cur_time,gettimetick(2);
 			set .@dun_ent_t,(.@dun_lim_time - .@dun_cur_time);
@@ -307,7 +328,7 @@ L_Enter:
 	case IE_OK:
 		mapannounce "e_tower", strcharinfo(0) +" จากปาร์ตี้, "+ getpartyname( getcharid(1) ) +", กำลังเข้าสู่ดันเจี้ยน Endless Tower.",bc_map,"0x00ff99",FW_NORMAL,12;
 		if (getarg(1)) {
-			set etower_timer,gettimetick(2);
+			set etower_timer,gettimetick(1);
 			set etower_partyid, getcharid(1);
 			setquest 60200;
 			setquest 60201;

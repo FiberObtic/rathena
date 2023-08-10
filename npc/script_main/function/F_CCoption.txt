@@ -12,24 +12,24 @@ function	script	F_CashOptionTicket	{
 		case EQI_HAND_R:
 		case EQI_HAND_L:
 			if(getequipweaponlv(.@part)) {
-				if(.@idop == 148 && getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_BOW)
-					.@value = .@value4;
-				else if (.@idop == 148 || getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_BOW)
-					.@value = .@value2;
-				else .@value = .@value1;
 				if (!getequiprandomoption(.@part,0,ROA_VALUE) || !.@index )
 					//setrandomoption(.@part,0,300,rand(1,5),0);
 				.@id = 300;
 				else
 				//else if (!getequiprandomoption(.@part,.@index,ROA_VALUE) ) 
 					setarray .@idop,17,19,16,104,148,164,24,10,166,157,158,159;
+				if(.@idop == 148 && getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_BOW)
+					.@value = .@value4;
+				else if (.@idop == 148 || getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_BOW)
+					.@value = .@value2;
+				else .@value = .@value1;
 				break;
 			}
 			else if(getequiparmorlv(.@part)) {
-				if (!getequiprandomoption(.@part,0,ROA_VALUE) ) {
+				if (!getequiprandomoption(.@part,0,ROA_VALUE) || !.@index ) {
 					//setrandomoption(.@part,0,300,rand(1,5),0);
-				.@id = 301;
-				.@value = .@value5;
+				.@id = 300;
+				.@value = .@value1;
 				}
 				else {
 					setarray .@idop,9,20,22,21,160,161,162,201,25,26,27,28,29,30,31,32,33,34,150,167;

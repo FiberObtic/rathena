@@ -161,10 +161,7 @@ Body:
       NoMail: true
     Script: |
       if(checkquest(60200,PLAYTIME) == 00 ) {
-        erasequest 60200;
-      }
-      if(checkquest(60201,PLAYTIME) <= 2 ) {
-        erasequest 60201;
+        etower_timer_pass = gettimetick(2) + 900;
       }
   - Id: 65001
     AegisName: Option_Weapon_Ticket
@@ -233,7 +230,7 @@ Body:
       NoDrop: true
       NoSell: true
     Script: |
-       dispbottom "[ RANK EXP] ä´éÃÑº RANK EXP ¨Ó¹Ç¹ 100,000 Points",0xffffff;
+       dispbottom "[ RANK EXP] ï¿½ï¿½ï¿½Ñº RANK EXP ï¿½Ó¹Ç¹ 100,000 Points",0xffffff;
        getexp2(100000,0);
   - Id: 53000018
     AegisName: RANK_JOB
@@ -242,7 +239,7 @@ Body:
     Buy: 10
     Weight: 70
     Script: |
-       dispbottom "[ RANK JOB] ä´éÃÑº RANK Job ¨Ó¹Ç¹ 100,000 Points",0xffffff;
+       dispbottom "[ RANK JOB] ï¿½ï¿½ï¿½Ñº RANK Job ï¿½Ó¹Ç¹ 100,000 Points",0xffffff;
        getexp2(0,100000);
   - Id: 23165
     AegisName: Service30_AID_Buff

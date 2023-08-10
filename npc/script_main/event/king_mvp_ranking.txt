@@ -60,7 +60,7 @@ OnNPCKillEvent:
 	end;
 }
 
--	shop	ex_rank_mvp_shop	-1,53000010:-1,53000011:-1,53000012:-1
+-	shop	ex_rank_mvp_shop	-1,909:-1
 
 morocc,179,98,4	script	Ranking MVP	827,{
 Start:

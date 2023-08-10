@@ -306,7 +306,7 @@ OnHour00:
 			query_sql("TRUNCATE `daily_quest`");
 			end;
 		}
-		query_sql("UPDATE `daily_quest` SET `quest` = '"+.quest_count+"' WHERE `quest` = '"+.quest_count+"'");
+		query_sql("UPDATE `daily_quest` SET `quest` = '"+.quest_count+"' WHERE `quest` < '"+.quest_count+"'");
 	end;
 
 }

@@ -1,6 +1,12 @@
 //-------------------------------------------------------
+// Premium Pass Shop.
+//-------------------------------------------------------
+-	pointshop	#bp_point_shop	-1,#BP_Points,5360:2000,19306:1200,5918:1200,20841:2500,19221:1200,400043:2500,18523:1200,18666:1200,5210:800
+									
+//-------------------------------------------------------
 // Premium Pass.
 //-------------------------------------------------------
+
 
 morocc,147,82,4	script	Premium Pass Manager	4_F_DRKAFRA01,{
 	doevent strnpcinfo(0) + "::OnPremiumPass";
@@ -19,6 +25,7 @@ morocc,147,82,4	script	Premium Pass Manager	4_F_DRKAFRA01,{
 		.point_exp = 100;		// EXP Given by Purchaseable Level	
 		setarray .explevel[1],50,100,200,400,800,1600,3200,6400,12800;			//EXP Per Level
 		.BP_Points_Earn = 100;	// Points per Level	#BP_Points
+		setarray .BP_Cash_Earn[1],1000,1250,1500,1750,2000,2250,2500,2750,3000,3250;	// Cash per Level	
 		//.quest_count = 3;		// Daily Quest Count
 		//.min_hunt = 50;			// Min Hunting Quest Count
 		//.max_hunt = 100;		// Max Hunting Quest Count
@@ -44,16 +51,16 @@ morocc,147,82,4	script	Premium Pass Manager	4_F_DRKAFRA01,{
 		// Reward list. "Level|ItemID:Amount"
 		//-------------------------------------------------------
 		setarray .pass_reward$,
-			"1|30001:100",
-			"2|30001:200",
-			"3|30001:300",
-			"4|30001:400",
-			"5|30001:500",
-			"6|30001:600",
-			"7|30001:700",
-			"8|30001:800",
-			"9|30001:900",
-			"10|30001:1000";
+			"1|30001:1000",
+			"2|30001:1250",
+			"3|30001:1500",
+			"4|30001:1750",
+			"5|30001:2000",
+			"6|30001:2250",
+			"7|30001:2500",
+			"8|30001:2750",
+			"9|30001:3000",
+			"10|30001:3250";
 		
 		//-------------------------------------------------------
 		// Illust for cutin.
@@ -121,7 +128,7 @@ morocc,147,82,4	script	Premium Pass Manager	4_F_DRKAFRA01,{
 		}
 		query_sql("SELECT `level`,`exp`,`quest` FROM `premium_pass` WHERE `id` = '"+.@sql_id+"'",.@level,.@exp,.@quest);
 		.@clvl = .@level;
-		while(!.@next_reward) {
+		while(!.@next_reward && .@level < .max_level) {
 			.@clvl++;
 			if (inarray(.level,.@clvl) != -1) {
 				.@next_reward = .@clvl;
@@ -134,7 +141,7 @@ morocc,147,82,4	script	Premium Pass Manager	4_F_DRKAFRA01,{
 		}
 		.@prefix$ = .@quest > 0 ? "^32CD32":"^DC143C";
 		mes .NPCname$;
-		cutin $@filename$[.@level-1], 4;
+		//cutin $@filename$[.@level-1], 4;
 		mes "ยินดีต้อนรับสู่ ^FF0000Premium Pass^000000";
 		mes "ปัจจุบัน เลเวล - [^0000CD"+.@level+"^000000]";
 		if (.@level < .max_level) {
@@ -147,10 +154,11 @@ morocc,147,82,4	script	Premium Pass Manager	4_F_DRKAFRA01,{
 			next;
 			mes .NPCname$;
 			mes "^DC143Cเลเวล Premium Pass ของคุณอยู่ในระดับสูงสุดแล้ว. โปรดรอ Premium Pass ของเดือนถัดไป.^000000";
+			goto Battlepass_Menu;
 			close;
 		}
 		next;
-		//switch(select(((.@quest > 0)?""+.sb$+" จัดการเควส":""),((.@next_reward > 0)?""+.sb$+" ตรวจสอบรางวัลถัดไป":""),""+.sb$+" ข้อมูล",""+.sb$+" ออก")) {
+		//switch(select(((.@quest > 0)?""+.sb$+" จัดการเควส":""),((.@next_reward > 0)?""+.sb$+" ตรวจสอบรางวัลถัดไป":""),""+.sb$+" ข้อมูล",""+.sb$+" ออก")) {	
 		switch(select(((.@next_reward > 0)?""+.sb$+" ตรวจสอบรางวัลถัดไป":""),""+.sb$+" ข้อมูล",""+.sb$+" ออก")) {
 			/*
 			case 1:
@@ -353,6 +361,7 @@ morocc,147,82,4	script	Premium Pass Manager	4_F_DRKAFRA01,{
 				break;
 				
 			*/
+Battlepass_Menu:			
 			case 1:
 				mes .NPCname$;
 				mes "^0000CDรางวัลเลเวล "+.@clvl+" ^000000 :";
@@ -364,6 +373,10 @@ morocc,147,82,4	script	Premium Pass Manager	4_F_DRKAFRA01,{
 					mes "x"+ .@id$[1] + " <ITEM>"+getitemname(atoi(.@id$[0]))+"<INFO>"+atoi(.@id$[0])+"</INFO></ITEM>";
 				}
 				next;
+				if(select(""+.sb$+" Menu Battle Pass:"+.sb$+" Open Battle Pass Shop") == 2 ) {
+					callshop "#bp_point_shop",1;
+					close;
+				}
 				goto OnPremiumPass;
 				
 			case 2:
@@ -392,7 +405,7 @@ morocc,147,82,4	script	Premium Pass Manager	4_F_DRKAFRA01,{
 			end;
 		}
 		delitem .@item_id,1;
-		cutin $@filename$[0], 4;
+		//cutin $@filename$[0], 4;
 		query_sql("INSERT INTO `premium_pass` (`account_id`,`level`,`exp`,`quest`) VALUES ('"+.@account_id+"',1,0,'"+.quest_count+"')");
 		pass_reward(1);
 		dispbottom "คุณได้เปิดใช้งาน Premium Pass กับบัญชีนี้แล้ว. รางวัล Premium Pass พื้นฐานของคุณถูกส่งไปยังจดหมายของคุณแล้ว.";
@@ -443,8 +456,8 @@ function	pass_getexp	{
 	.@total = .@exp + .@exp_value;
 	if (.@total >= .explevel[.@level]) {
 		if (.@total > .explevel[.@level])
-			.@excess = .@total - .explevel[.@level];
-		query_sql("UPDATE `premium_pass` SET `exp` = '"+.@excess+"' WHERE `id` = '"+.@id+"'");
+			//.@excess = .explevel[.@level];
+		query_sql("UPDATE `premium_pass` SET `exp` = '"+.@total+"' WHERE `id` = '"+.@id+"'");
 		function pass_levelup;
 		pass_levelup();
 	} else {
@@ -462,7 +475,7 @@ function	pass_levelup	{
 	query_sql("UPDATE `premium_pass` SET `level` = '"+.@level+"' WHERE `id` = '"+.@id+"'");
 	if (inarray(.level,.@level) != -1) {
 		pass_reward(.@level);
-		cutin $@filename$[.@level-1], 4;
+		//cutin $@filename$[.@level-1], 4;
 		dispbottom "ขอแสดงความยินดีสําหรับการไปถึงเลเวล "+.@level+". รางวัลของคุณถูกส่งไปยังอีเมลของคุณแล้ว.";
 	}
 	return;
@@ -478,7 +491,10 @@ function	pass_reward	{
 		.@item_id[.@x] = atoi(.@id$[0]);
 		.@item_amount[.@x] = atoi(.@id$[1]);
 	}
-	#BP_Points += .BP_Points_Earn;
+	dispbottom ""+.@id$[0]+" and "+.@id$[1];
+	//#CASHPOINTS += .BP_Cash_Earn[.@level];
+	#CASHPOINTS += atoi(.@id$[1]);
+	//#BP_Points += .BP_Points_Earn;
 	mail getcharid(0),"Premium Pass","รางวัล เลเวล "+.@level+"","นี่คือรางวัลของคุณสําหรับการไปถึงเลเวล "+.@level+" บน Premium Pass ของคุณ.",0,.@item_id,.@item_amount;
 	return;
 }
