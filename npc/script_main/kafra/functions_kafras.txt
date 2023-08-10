@@ -327,9 +327,21 @@ function	script	F_KafStor	{
 		}
 	}
 // - - > ^FF0000•^000000 เปิดคลัง
-	openstorage;
-	cutin "", 255;
-	close;
+	if(select("~ เปิดคลัง","~ เปิดคลัง Premium") == 1){
+		openstorage;
+		cutin "", 255;
+		close;
+	}else{
+		if(#PREMIUMSERVICE_TIME - gettimetick(2) > 0){
+			openstorage2 1,STOR_MODE_GET|STOR_MODE_PUT;
+			cutin "", 255;
+			close;
+		}else{
+			mes "คุณไม่ได้เป็น Premium";
+			cutin "", 255;
+			close;
+		}
+	}
 }
 
 
