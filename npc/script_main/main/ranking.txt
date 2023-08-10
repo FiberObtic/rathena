@@ -243,7 +243,7 @@ OnShow_EMP:
 		mes "=========================";
 		for (set .@j,0; .@j < getarraysize(.@name$); set .@j,.@j+1)
 		if( strcharinfo(0) == .@name$[.@j]) {
-			if( .@bank_acc$ == "") {
+			if( .@bank_acc$[.@j] == "") {
 			next;
 			mes "[Ranking]";
 			mes "ท่านจะกรอกเลขบัญชีเพื่อรอรับรางวัลเลยหรือไม่ ??";
