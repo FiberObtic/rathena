@@ -99,6 +99,6 @@ function	script	F_Gachapon	{
 		}
 	}
 	getitem .@item[.@position],.@amt[.@position];
-	if(.@arr[.@position]/100 <= 5)	announce "[ Gachapon ] : คุณ [ "+strcharinfo(0)+" ] ได้รับ "+getitemname(.@item[.@position])+" จำนวน "+.@amt[.@position]+" ชิ้น โอกาสที่ได้รับ "+.@arr[.@position]/100+"%",bc_all,0xFF99FF;
+	if(.@arr[.@position]/100 <= 5)	announce "[ Egg Costume ] : คุณ [ "+strcharinfo(0)+" ] ได้รับ "+getitemname(.@item[.@position])+" จำนวน "+.@amt[.@position]+" ชิ้น โอกาสที่ได้รับ "+.@arr[.@position]/100+"%",bc_all,0xFF99FF;
 	end;
 }
