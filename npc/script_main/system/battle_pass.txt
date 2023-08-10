@@ -377,7 +377,7 @@ Battlepass_Menu:
 				next;
 				if(select(""+.sb$+" Menu Battle Pass:"+.sb$+" Open Battle Pass Shop") == 2 ) {
 					callshop "#bp_point_shop",1;
-					close;
+					end;
 				}
 				goto OnPremiumPass;
 				
