@@ -23,8 +23,8 @@ function	script	F_Gachapon	{
 			break;
 	}
 		setarray .@item[getarraysize(.@item)],6635,7619,7620,65001,65002,65003,7776,23210,23211,12214,12412,12103,14523,14522;
-		setarray .@arr[getarraysize(.@item)],3000,5000,5000,4000,5000,4000,6000,7000,6000,7000,8000,8000,8000,8000;
-		setarray .@amt[getarraysize(.@item)],1,1,1,1,1,1,1,1,1,1,1,1,5,5;
+		setarray .@arr[getarraysize(.@arr)],3000,5000,5000,4000,5000,4000,6000,7000,6000,7000,8000,8000,8000,8000;
+		setarray .@amt[getarraysize(.@amt)],1,1,1,1,1,1,1,1,1,1,1,1,5,5;
 //============= Random ===========================================================================
 	// start sort variable max to min
 	for(.@i = 1; .@i < getarraysize(.@arr); .@i++){
