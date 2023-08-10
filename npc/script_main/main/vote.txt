@@ -102,7 +102,7 @@ Oninit:
 	6635,30000,
 	23210,15000,
 	23211,30000; // <ITEM_ID>,<COST> (รหัสไอเท็ม,ราคา)
- 	setarray .limit[0],500,500,500,300,300,300,100,100,100; // Limit ITEM (จำกัดจำนวนไอเท็ม)
+ 	setarray .limit[0],500,500,500,300,300,100,100,100,100; // Limit ITEM (จำกัดจำนวนไอเท็ม)
 	npcshopdelitem "vote",501;
 	
 	for(.@i = 0;.@i < getarraysize(.item);.@i = .@i+2)
