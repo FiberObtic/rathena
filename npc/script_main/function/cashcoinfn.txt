@@ -1,0 +1,23 @@
+function	script	cc	{
+	disable_items;
+	setarray .@cashcoin[0],30002,30003,30004,30005;	//ใส่เลข ID เหรียญ CC
+	setarray .@cashamount[0],1,100,500,1000;		//ใส่จำนวน CC ที่ได้
+	switch(getarg(0)) {
+		case 1: .@coin = 0;
+			break;
+		case 2: .@coin = 1;
+			break;
+		case 3: .@coin = 2;
+			break;
+		case 4: .@coin = 3;
+			break;
+	}
+	.@coinid = .@cashcoin[.@coin];
+	set .@cnum,(countitem(.@coinid));
+	set .@ctotals,.@cashamount[.@coin]+(.@cnum*(.@cashamount[.@coin]));
+	set .@cc,.@ctotals;
+	delitem .@coinid,.@cnum;
+	#CASHPOINTS += .@cc;
+	dispbottom "ท่านได้รับ Cash point จำนวน "+callfunc("F_InsertComma",.@cc)+" Points.";
+	end;
+}

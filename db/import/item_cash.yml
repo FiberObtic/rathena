@@ -35,8 +35,12 @@ Header:
 Body:
   - Tab: New
     Items:
-     - Item: Premium_Box_6H
-       Price: 500
+     - Item: 100Cash
+       Price: 110
+     - Item: 500Cash
+       Price: 550
+     - Item: 1000Cash
+       Price: 1100
      - Item: Premium_Box_1d
        Price: 1000
      - Item: Premium_Box_3d
@@ -69,8 +73,14 @@ Body:
        Price: 500
      - Item: Option_Accessery_Ticket
        Price: 1000
+     - Item: Max_Weight_Up_Scroll
+       Price: 1500
+     - Item: Convex_Mirror
+       Price: 500
   - Tab: Limited
     Items:
+     - Item: Fallen_Angel_feather
+       Price: 999
      - Item: Ramen_Hat
        Price: 999
      - Item: J_Captain_Hat
@@ -199,3 +209,7 @@ Body:
        Price: 12900
      - Item: Costume Lower 38
        Price: 12900
+     - Item: Costume Wing Of Angel
+       Price: 19900
+     - Item: Costume Wing Of Angel BK
+       Price: 19900

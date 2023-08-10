@@ -101,6 +101,34 @@ Body:
     Name: Cash
     Type: Etc
     Weight: 1
+  - Id: 30002
+    AegisName: 1Cash
+    Name: 1Cash
+    Type: Usable
+    Weight: 1
+    Script: |
+      callfunc "cc",1;
+  - Id: 30003
+    AegisName: 100Cash
+    Name: 100Cash
+    Type: Usable
+    Weight: 1
+    Script: |
+      callfunc "cc",2;
+  - Id: 30004
+    AegisName: 500Cash
+    Name: 500Cash
+    Type: Usable
+    Weight: 1
+    Script: |
+      callfunc "cc",3;
+  - Id: 30005
+    AegisName: 1000Cash
+    Name: 1000Cash
+    Type: Usable
+    Weight: 1
+    Script: |
+      callfunc "cc",4;
   - Id: 12887
     AegisName: C_Wing_Of_Fly
     Name: Infinite Flywing
@@ -205,7 +233,7 @@ Body:
       NoDrop: true
       NoSell: true
     Script: |
-       dispbottom "[ RANK EXP] ï¿½Ø³ï¿½ï¿½ï¿½Ñº RANK EXP ï¿½Ó¹Ç¹ 100,000 Points",0xffffff;
+       dispbottom "[ RANK EXP] ä´éÃÑº RANK EXP ¨Ó¹Ç¹ 100,000 Points",0xffffff;
        getexp2(100000,0);
   - Id: 53000018
     AegisName: RANK_JOB
@@ -214,7 +242,7 @@ Body:
     Buy: 10
     Weight: 70
     Script: |
-       dispbottom "[ RANK JOB] ï¿½Ø³ï¿½ï¿½ï¿½Ñº RANK Job ï¿½Ó¹Ç¹ 100,000 Points",0xffffff;
+       dispbottom "[ RANK JOB] ä´éÃÑº RANK Job ¨Ó¹Ç¹ 100,000 Points",0xffffff;
        getexp2(0,100000);
   - Id: 23165
     AegisName: Service30_AID_Buff
@@ -235,7 +263,7 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      callfunc "ps_item";
+      duplicate_dynamic("Premi");
   - Id: 23207
     AegisName: Premium_Box
     Name: Premium Service Box
@@ -855,3 +883,24 @@ Body:
     Script: |
       bonus3 bAutoSpell,"MG_LIGHTNINGBOLT",max(getskilllv("MG_LIGHTNINGBOLT"),5),50+(getskilllv("MG_LIGHTNINGBOLT")*5);
       bonus3 bAutoSpell,"MG_THUNDERSTORM",max(getskilllv("MG_THUNDERSTORM"),5),50+(getskilllv("MG_THUNDERSTORM")*5);
+  - Id: 400043
+    AegisName: Fallen_Angel_feather
+    Name: Fallen Angel Hairband
+    Type: Armor
+    Weight: 100
+    Defense: 5
+    Slots: 1
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    Refineable: true
+    View: 907
+    Script: |
+      .@r = getrefine();
+      bonus bAllStats,1;
+      bonus2 bSubEle,Ele_Holy,-20;
+      bonus2 bSubRace,RC_Angel,-15;
+      bonus2 bSubRace,RC_Demon,6;
+      bonus2 bSubRace,RC_DemiHuman,6;
+      bonus2 bSubRace,RC_Player_Human,6;
+      bonus2 bSubRace,RC_Player_Doram,6;

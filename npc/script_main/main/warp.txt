@@ -404,21 +404,20 @@ D42: Restrict("RE");
 // --------------------------------------------------
 	Castles:
 // --------------------------------------------------
-menu	"[FE] Aldebaran Castles",C1, "[FE] Geffen Castles",C2, "[FE] Payon Castles",C3,
-    	"[FE] Prontera Castles",C4, "[SE] Arunafeltz Castles",C5, "[SE] Schwaltzvalt Castles",C6,
-		"[TE] Aldebaran Castles",C7, "[TE] Prontera Castles",C8;
+menu	"Aldebaran Castles",C1, "Geffen Castles",C2, "Payon Castles",C3,
+    	"Prontera Castles",C4;
 
-C1: setarray @c[2],48,83,95,249,142,85,239,242,264,90;
-	Disp("Neuschwanstein:Hohenschwangau:Nuenberg:Wuerzburg:Rothenburg");
+C1: setarray @c[2],142,85;
+	Disp("Nuenberg");
 	Pick("","alde_gld","alde_gld","alde_gld","alde_gld","alde_gld");
-C2: setarray @c[2],214,75,308,240,143,240,193,278,305,87;
-	Disp("Repherion:Eeyolbriggar:Yesnelph:Bergel:Mersetzdeitz");
+C2: setarray @c[2],193,278;
+	Disp("Bergel");
 	Pick("","gef_fild13","gef_fild13","gef_fild13","gef_fild13","gef_fild13");
 C3: setarray @c[2],121,233,295,116,317,293,140,160,204,266;
-	Disp("Bright Arbor:Scarlet Palace:Holy Shadow:Sacred Altar:Bamboo Grove Hill");
+	Disp("Bright Arbor");
 	Pick("","pay_gld","pay_gld","pay_gld","pay_gld","pay_gld");
 C4: setarray @c[2],134,65,240,128,153,137,111,240,208,240;
-	Disp("Kriemhild:Swanhild:Fadhgridh:Skoegul:Gondul");
+	Disp("Kriemhild");
 	Pick("","prt_gld","prt_gld","prt_gld","prt_gld","prt_gld");
 C5: setarray @c[2],158,272,83,47,68,155,299,345,292,107;
 	Disp("Mardol:Cyr:Horn:Gefn:Banadis");

@@ -19,7 +19,7 @@
 
 // Information NPC
 //============================================================
-morocc,149,91,4	script	WOE Information	966,{
+sec_pri,23,61,4	script	WOE Information	966,{
 	doevent "WOE_CONTROL::OnMenu";
 	end;
 OnAgitStart:
