@@ -192,10 +192,10 @@ OnRankingManage:
 				mes "บุคคลนี้ยังไม่กรอกข้อมูลธนาคาร";
 				end;
 			}
-			mes "ชื่อตัวละคร : > "+.@name$;
-			mes "เลขบัญชี  : > "+.@bankacc$;
-			mes "ชื่อธนาคาร  : > "+.@bankname$;
-			mes "ชื่อบัญชี  : > "+.@realname$;
+			mes "ชื่อตัวละคร : > "+.@name$[atoi(.@choose$)];
+			mes "เลขบัญชี  : > "+.@bankacc$[atoi(.@choose$)];
+			mes "ชื่อธนาคาร  : > "+.@bankname$[atoi(.@choose$)];
+			mes "ชื่อบัญชี  : > "+.@realname$[atoi(.@choose$)];
 			mes "ท่านยืนยันการโอนหรือไม่";
 			if(select(" > ยืนยัน: > ไม่ยืนยัน") == 2 ) end;
 			query_sql "UPDATE `reward_ranking` SET `status` = 1 WHERE `name` = '"+.@name$[atoi(.@choose$)]+"'";
