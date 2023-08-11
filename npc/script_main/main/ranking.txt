@@ -164,8 +164,8 @@ OnRankingManage:
 		switch (select("- Reset คะแนน PVP","- Reset คะแนน MVP","- แก้ไขสถานะการดำเนินการ","- เคลียรายชื่อผู้ได้รับรางวัล")) {
 		case 1:
 			query_sql "SELECT `name`,`point_pvp`,`class`,`account_id` FROM `char` ORDER BY `point_pvp` DESC LIMIT 1",.@name$,.@point,.@class,.@accid;
-			query_sql "INSERT INTO reward_ranking (`account_id`,`name`,`class`,`status`,`type`,`points`) VALUES ('"+.@accid+"','"+.@name$+"','"+.@class+"','0','PVP','"+.@point+"')";
-			query_sql "UPDATE `char` SET `point_pvp`='0'";
+			query_sql "INSERT INTO reward_ranking (`account_id`,`name`,`class`,`status`,`type`,`points`) VALUES ('"+.@accid+"','"+.@name$+"','"+.@class+"',0,'PVP','"+.@point+"')";
+			query_sql "UPDATE `char` SET `point_pvp` = 0";
 			mes .@npc$;
 			mes "Reset คะแนน PVP";
 			mes "เรียบร้อยแล้ว";
@@ -173,15 +173,15 @@ OnRankingManage:
 		break;
 		case 2:
 			query_sql "SELECT `name`,`point_mvp`,`class`,`account_id` FROM `char` ORDER BY `point_mvp` DESC LIMIT 1",.@name$,.@point,.@class,.@accid;
-			query_sql "INSERT INTO reward_ranking (`account_id`,`name`,`class`,`status`,`type`,`points`) VALUES ('"+.@accid+"','"+.@name$+"','"+.@class+"','0','MVP','"+.@point+"')";
-			query_sql "UPDATE `char` SET `point_mvp`='0'";
+			query_sql "INSERT INTO reward_ranking (`account_id`,`name`,`class`,`status`,`type`,`points`) VALUES ('"+.@accid+"','"+.@name$+"','"+.@class+"',0,'MVP','"+.@point+"')";
+			query_sql "UPDATE `char` SET `point_mvp`= 0";
 			mes .@npc$;
 			mes "Reset คะแนน MVP";
 			mes "เรียบร้อยแล้ว";
 			close;
 		break;
 		case 3:
-			query_sql "SELECT `name`,`bank_acc`,`bank_name`,`real_name` FROM `reward_ranking` WHERE status = '0'",.@name$,.@bankacc$,.@bankname$,.@realname$;
+			query_sql "SELECT `name`,`bank_acc`,`bank_name`,`real_name` FROM `reward_ranking` WHERE `status` = 0",.@name$,.@bankacc$,.@bankname$,.@realname$;
 			mes .@npc$;
 			mes "โปรดเลือกบุคคลที่ต้องการเปลี่ยนสถานะ";
 			.@menu$ = "";
@@ -233,14 +233,17 @@ OnShow_MVP:
 	} else if ( (.@command$ == "emp") || (.@command$ == "EMP") ) {
 OnShow_EMP:
 		query_sql "SELECT `name`,`class`,`status`,`type`,`points`,`bank_acc` FROM `reward_ranking` WHERE `status` <= 1",.@name$,.@class,.@status,.@type$,.@point,.@bank_acc$;
-		mes "====== REWARD RANKING ======";
+		mes "^FF0000===== REWARD RANKING =====^000000";
 		for (set .@i,0; .@i < getarraysize(.@name$); set .@i,.@i+1) {
 			if (.@name$[.@i] == "") set .@name$[.@i],"None";
 			if (.@type$[.@i] == "") set .@type$[.@i],"None";
-			mes "["+(.@i+1)+"]  "+.@name$[.@i]+" : อาชีพ " +jobname(.@class[.@i])+" : รูปแบบรางวัล  "+.@type$[.@i]+" คะแนน : "+.@point[.@i];
-			mes "สถานะ : "+(.@status[.@i]?"^00FF00ดำเนินการเสร็จสิ้น":"^FF0000รอการดำเนินการ")+"^000000";
+			mes "["+(.@i+1)+"] รางวัล  "+.@type$[.@i];
+			mes "^0000CC[ชื่อตัวละคร] :^000000 "+.@name$[.@i];
+			mes "^0000CC[อาชีพ] :^000000 "+jobname(.@class[.@i]);
+			mes "^0000CC[คะแนนรวม] :^000000 "+.@point[.@i]+" แต้ม";
+			mes "^0000CC[สถานะ] :^000000 "+(.@status[.@i]?"^00FF00ดำเนินการเสร็จสิ้น":"^FF0000รอการดำเนินการ")+"^000000";
+			mes "^FF0000=======================^000000";
 		}
-		mes "=========================";
 		for (set .@j,0; .@j < getarraysize(.@name$); set .@j,.@j+1)
 		if( strcharinfo(0) == .@name$[.@j]) {
 			if( .@bank_acc$[.@j] == "") {
