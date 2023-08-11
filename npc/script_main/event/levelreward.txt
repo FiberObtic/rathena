@@ -1,0 +1,104 @@
+/* LevelReward By Durexz
+ * With all HI-class and Ex-class patch
+ * Lv 99 Job 70 Only
+ * Credit Durexz Official please dont sell
+ */
+// เพิ่ม NPC รับ 10000Cash สำหรับผู้เล่นที่ lv99job70 อาชีพละ 25 ตัวละคร
+
+
+morocc,179,86,5	script	LevelReward	624,{
+	//mes " > "+Class+" > ";12
+	//mes " > "+eaclass()+" > ";262
+	//mes " > "+jobname(class)+" > "; Class name Like "Lord Knight"
+	//mes .clname$;
+	//mes ""+.cllvl;
+	//mes ""+.cljob;
+	//mes ""+.clreward;
+	.@pos = inarray(.clname$,jobname(class));
+	.@npcname$ = "[ Level Max Get Reward ]";
+	mes .@npcname$;
+	mes "สวัสดีท่านนักผจญภัย";
+	mes "ตอนนี้ ท่านเลเวล "+Baselevel+" จ๊อบ "+Joblevel;
+	mes "อาชีพ "+jobname(class);
+	next;
+	switch(select(" > ตรวจสอบรางวัล"," > สอบถามข้อมูล"," > ไม่มีอะไร",((getgmlevel() >= 99)?"^000077+ GM Menu^000000":"") ) ) {
+		case 1:
+			break;
+		case 2:
+			mes .@npcname$;
+			mes "ตัวข้าจะแจกรางวัล 10,000 Cashpoint";
+			mes "สำหรับผู้ที่เป็น Hi-Class เลเวลและจ๊อบเต็มเท่านั้น";
+			mes "และรางวัลนี้ข้าให้ได้แค่อาชีพละ "+.Maxuser+" ท่าน ถ้าท่านอยากได้เร่งมือเข้าหละ";
+			end;
+		case 3:
+			end;
+		case 4:
+			mes .@npcname$;
+			mes "กรุณาเปลี่ยนเป็น Class ที่จะรีเซ็ตก่อนกำหนดค่าใหม่";
+			mes "ปัจจุบันรับรางวัลไปแล้ว "+getd("$"+"levelreward_"+class)+" คน";
+			/*
+			.@menu$ = "";
+			for(.@i =0;.@i < getarraysize(.clname$);.@i++)
+				.@menu$ = .@menu$ + .clname$[.@i] + ":";
+			.@clselect = (select(.@menu$));
+			*/
+			if(select("+ ล้างค่า: - ยัง") == 2 ) end;
+			setd("$"+"levelreward_"+class),0;
+			end;
+		default:
+			end;
+	}
+	if(getd("$"+"levelreward_"+.clname$[.@pos]) >= .Maxuser) {
+		mes .@npcname$;
+		mes "ขอประทานอภัย อาชีพของท่าน รับรางวัลเต็ม โควต้าแล้ว";
+		end;
+	}
+	if(levelreward) {
+		mes .@npcname$;
+		mes "ท่านเคยรับแล้วนี่";
+		end;
+	}
+	if(.@pos < 0) {
+		mes "รอติดตามอาชีพท่านในโอกาสหน้า";
+		end;
+	}
+	//mes " > "+.clname$[1]+" > "+.cllvl[1]+" > "+.cljob[1]+" > "+.clreward[1];
+	if(Baselevel < .cllvl[.@pos] || Joblevel < .cljob[.@pos] ) {
+		mes "ท่านควรเวลและจ๊อบเต็มก่อนที่จะใช้งานข้า";
+		end;
+	}
+	mes "ท่านจะรับรางวัลหรือไม่ ท่านเป็นผู้รับรางวัลคนที่ "+(getd("$"+"levelreward_"+class) + 1 );
+	if(select("> รับรางวัล: >รอก่อน") == 2 ) end;
+	setd("$"+"levelreward_"+class),getd("$"+"levelreward_"+class) + 1;
+	#CASHPOINTS += .clreward[.@pos];
+	levelreward++;
+	dispbottom "ท่านได้รับแคชพ้อยจำนวน "+.clreward[.@pos]+" พ้อย";
+	end;
+
+Oninit:
+	.Maxuser = 25;
+	setarray .classreward$,		// Set ClassID|Level|Job|Cashreward
+		"Novice|99|10|10000",
+		"Lord Knight|99|70|10000",
+		"High Priest|99|70|10000",
+		"High Wizard|99|70|10000",
+		"Whitesmith|99|70|10000",
+		"Sniper|99|70|10000",
+		"Assassin Cross|99|70|10000",
+		"Paladin|99|70|10000",
+		"Champion|99|70|10000",
+		"Professor|99|70|10000",
+		"Stalker|99|70|10000",
+		"Creator|99|70|10000",
+		"Clown|99|70|10000",
+		"Gypsy|99|70|10000";
+		
+	for(.@i=0;.@i<getarraysize(.classreward$);.@i++) {
+		explode(.@classtemp$,.classreward$[.@i],"|");
+		.clname$[getarraysize(.clname$)] = .@classtemp$[0]; 
+		.cllvl[getarraysize(.cllvl)] = atoi(.@classtemp$[1]); 
+		.cljob[getarraysize(.cljob)] = atoi(.@classtemp$[2]); 
+		.clreward[getarraysize(.clreward)] = atoi(.@classtemp$[3]);
+	}
+	end;
+}

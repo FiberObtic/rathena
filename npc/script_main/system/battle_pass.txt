@@ -436,7 +436,7 @@ Battlepass_Menu:
 			end;
 		}
 		function pass_getexp;
-		delitem .pass_lv_id,1;
+		if(.@point_exp == .point_exp)delitem .pass_lv_id,1;
 		pass_getexp(.@point_exp);
 	end;
 	
@@ -464,7 +464,7 @@ function	pass_getexp	{
 		pass_levelup();
 	} else {
 		query_sql("UPDATE `premium_pass` SET `exp` = '"+.@total+"' WHERE `id` = '"+.@id+"'");
-		dispbottom "รางวัล Pass EXP : ^0000CD" + .point_exp +"  สถานะ EXP ปัจจุบัน "+ .@total +"/"+.explevel[.@level] ;
+		dispbottom "รางวัล Pass EXP : ^0000CD" + .@exp_value +"  สถานะ EXP ปัจจุบัน "+ .@total +"/"+.explevel[.@level] ;
 	}
 	return;
 }

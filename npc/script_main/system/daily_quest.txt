@@ -262,7 +262,7 @@ OnDailyQuest:
 						mes "รางวัล  Cash 100 พ้อย";
 						#CASHPOINTS += 100;
 						#daily_points ++;
-						if (query_sql("SELECT `id` FROM `premium_pass` WHERE `account_id` = '"+.@account_id+"'",.@sql_id)) {
+						if (query_sql("SELECT `id` FROM `premium_pass` WHERE `account_id` = '"+getcharid(3)+"'",.@sql_id)) {
 							#BP_Points += 10;
 							doevent "Premium Pass Manager::OnExpDaily";
 						}

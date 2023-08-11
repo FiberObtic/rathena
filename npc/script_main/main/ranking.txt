@@ -259,7 +259,7 @@ OnShow_EMP:
 			input .@bankname$;
 			mes "กรอกชื่อ สกุล ให้ตรงกับชื่อบัญชีที่โอน";
 			input .@realname$;
-			query_sql "UPDATE `reward_ranking` SET `bank_acc`='"+.@banknum$+"',`bank_name` = '"+.@bankname$+"',`real_name` = '"+.@realname$+"' WHERE name = '"+.@name$+"'";
+			query_sql "UPDATE `reward_ranking` SET `bank_acc`='"+.@banknum$+"',`bank_name` = '"+.@bankname$+"',`real_name` = '"+.@realname$+"' WHERE name = '"+.@name$[.@j]+"'";
 			next;
 			mes "[Ranking]";
 			mes "กรณีเลขบัญชีพลาดกรุณาติดต่อทีมงานโดยทันที หากเลยระยะเวลา 3 วันหลังกรอกข้อมูล จะถือว่าสละสิทธิ์รับรางวัล";
@@ -323,7 +323,7 @@ function	script	AddPointChar	{
 		query_sql "UPDATE `char` SET `point_pvp`=(`point_pvp` + 1) WHERE `char_id`='"+getcharid(0)+"' LIMIT 1";
 	} else if (.@string$ == "MVP") {
 		query_sql "UPDATE `char` SET `point_mvp`=(`point_mvp` + 1) WHERE `char_id`='"+getcharid(0)+"' LIMIT 1";
-		if (query_sql("SELECT `id` FROM `premium_pass` WHERE `account_id` = '"+.@account_id+"'",.@sql_id)) {
+		if (query_sql("SELECT `id` FROM `premium_pass` WHERE `account_id` = '"+getcharid(3)+"'",.@sql_id)) {
 			#BP_Points += 1;
 			doevent "Premium Pass Manager::OnExpBoss";
 		}
