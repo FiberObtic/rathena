@@ -34,6 +34,10 @@ morocc,154,71,4	script	ปริศนาฟ้าแลบ::Quiz Girl	718,{
 		set $@M_QuizEv,0;
 		announce "[ กิจกรรม ปริศนาฟ้าแลบ : ผู้ตอบถูกคือ "+strcharinfo(0)+" และคำตอบที่ถูกคือ "+$@M_QuizEvA$+" ยินดีด้วยค่ะ ! ]",bc_all,0x00ff99;
 		getitem $quizitem,$quizitemcount;
+		if (query_sql("SELECT `id` FROM `premium_pass` WHERE `account_id` = '"+getcharid(3)+"'",.@sql_id)) {
+			#BP_Points += 1;
+			doevent "Premium Pass Manager::OnExpBoss";
+		}
 		stopnpctimer;
 
 		mes " ";
