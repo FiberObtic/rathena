@@ -181,7 +181,7 @@ OnRankingManage:
 			close;
 		break;
 		case 3:
-			query_sql "SELECT `name`,`bank_acc`,`bank_name`,`real_name` FROM `reward_ranking` WHERE `status` = 0 ORDER BY `points` DESC LIMIT 2",.@name$,.@bankacc$,.@bankname$,.@realname$;
+			query_sql "SELECT `name`,`bank_acc`,`bank_name`,`real_name` FROM `reward_ranking` WHERE `status` = 0 ORDER BY `id` DESC LIMIT 2",.@name$,.@bankacc$,.@bankname$,.@realname$;
 			mes .@npc$;
 			mes "โปรดเลือกบุคคลที่ต้องการเปลี่ยนสถานะ";
 			.@menu$ = "";
@@ -232,7 +232,7 @@ OnShow_MVP:
 		mes "=========================";
 	} else if ( (.@command$ == "emp") || (.@command$ == "EMP") ) {
 OnShow_EMP:
-		query_sql "SELECT `name`,`class`,`status`,`type`,`points`,`bank_acc` FROM `reward_ranking` WHERE `status` = 0 ORDER BY `points` DESC LIMIT 2",.@name$,.@class,.@status,.@type$,.@point,.@bank_acc$;
+		query_sql "SELECT `name`,`class`,`status`,`type`,`points`,`bank_acc` FROM `reward_ranking` WHERE `status` = 0 ORDER BY `id` DESC LIMIT 2",.@name$,.@class,.@status,.@type$,.@point,.@bank_acc$;
 		mes "^FF0000===== REWARD RANKING =====^000000";
 		for (set .@i,0; .@i < getarraysize(.@name$); set .@i,.@i+1) {
 			if (.@name$[.@i] == "") set .@name$[.@i],"None";
