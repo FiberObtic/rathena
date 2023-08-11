@@ -181,7 +181,7 @@ OnRankingManage:
 			close;
 		break;
 		case 3:
-			query_sql "SELECT `name`,`bank_acc`,`bank_name`,`real_name` FROM `reward_ranking` WHERE `status` = 0",.@name$,.@bankacc$,.@bankname$,.@realname$;
+			query_sql "SELECT `name`,`bank_acc`,`bank_name`,`real_name` FROM `reward_ranking` WHERE `status` = 0 ORDER BY `points` DESC LIMIT 20",.@name$,.@bankacc$,.@bankname$,.@realname$;
 			mes .@npc$;
 			mes "โปรดเลือกบุคคลที่ต้องการเปลี่ยนสถานะ";
 			.@menu$ = "";
