@@ -96,8 +96,8 @@ Body:
     ArmorLevel: 1
     View: 3007
     Script: |
-      bonus2 bDropAddRace,Rc_All,3;
-      bonus2 bExpAddRace,Rc_All,3;
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bAllstats,1; 
   - Id: 60009
     AegisName: Costume Upper 9
@@ -132,8 +132,8 @@ Body:
     ArmorLevel: 1
     View: 3010
     Script: |
-      bonus2 bDropAddRace,Rc_All,3;
-      bonus2 bExpAddRace,Rc_All,3;
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bAllstats,1; 
   - Id: 60012
     AegisName: Costume Upper 12
@@ -204,8 +204,8 @@ Body:
     ArmorLevel: 1
     View: 3016
     Script: |
-      bonus2 bDropAddRace,Rc_All,3;
-      bonus2 bExpAddRace,Rc_All,3;
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bAllstats,1; 
   - Id: 60018
     AegisName: Costume Upper 18
@@ -396,8 +396,8 @@ Body:
     ArmorLevel: 1
     View: 3032
     Script: |
-      bonus2 bDropAddRace,Rc_All,3;
-      bonus2 bExpAddRace,Rc_All,3;
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bAllstats,1; 
   - Id: 60034
     AegisName: Costume Upper 34
@@ -504,8 +504,8 @@ Body:
     ArmorLevel: 1
     View: 3041
     Script: |
-      bonus2 bDropAddRace,Rc_All,3;
-      bonus2 bExpAddRace,Rc_All,3;
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bAllstats,1; 
   - Id: 60043
     AegisName: Costume Upper 43
@@ -684,8 +684,8 @@ Body:
     ArmorLevel: 1
     View: 3056
     Script: |
-      bonus2 bDropAddRace,Rc_All,3;
-      bonus2 bExpAddRace,Rc_All,3;
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bAllstats,1; 
   - Id: 60058
     AegisName: Costume Upper 58
@@ -744,8 +744,8 @@ Body:
     ArmorLevel: 1
     View: 3061
     Script: |
-      bonus2 bDropAddRace,Rc_All,3;
-      bonus2 bExpAddRace,Rc_All,3;
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bAllstats,1; 
   - Id: 60063
     AegisName: Costume Upper 63
@@ -792,8 +792,8 @@ Body:
     ArmorLevel: 1
     View: 3065
     Script: |
-      bonus2 bDropAddRace,Rc_All,3;
-      bonus2 bExpAddRace,Rc_All,3;
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bAllstats,1; 
   - Id: 60067
     AegisName: Costume Upper 67
@@ -840,8 +840,8 @@ Body:
     ArmorLevel: 1
     View: 3069
     Script: |
-      bonus2 bDropAddRace,Rc_All,3;
-      bonus2 bExpAddRace,Rc_All,3;
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bAllstats,1; 
   - Id: 60071
     AegisName: Costume Upper 71
@@ -924,8 +924,8 @@ Body:
     ArmorLevel: 1
     View: 3076
     Script: |
-      bonus2 bDropAddRace,Rc_All,3;
-      bonus2 bExpAddRace,Rc_All,3;
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bAllstats,1; 
   - Id: 60078
     AegisName: Costume Upper 78
@@ -960,8 +960,8 @@ Body:
     ArmorLevel: 1
     View: 3079
     Script: |
-      bonus2 bDropAddRace,Rc_All,3;
-      bonus2 bExpAddRace,Rc_All,3;
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bAllstats,1; 
   - Id: 60081
     AegisName: Costume Upper 81
@@ -1032,8 +1032,8 @@ Body:
     ArmorLevel: 1
     View: 3085
     Script: |
-      bonus2 bDropAddRace,Rc_All,3;
-      bonus2 bExpAddRace,Rc_All,3;
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bAllstats,1; 
   - Id: 60087
     AegisName: Costume Upper 87
@@ -1200,8 +1200,8 @@ Body:
     ArmorLevel: 1
     View: 3099
     Script: |
-      bonus2 bDropAddRace,Rc_All,3;
-      bonus2 bExpAddRace,Rc_All,3;
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bAllstats,1; 
   - Id: 60101
     AegisName: Costume Upper 101
@@ -1236,8 +1236,8 @@ Body:
     ArmorLevel: 1
     View: 3102
     Script: |
-      bonus2 bDropAddRace,Rc_All,3;
-      bonus2 bExpAddRace,Rc_All,3;
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bAllstats,1; 
   - Id: 60104
     AegisName: Costume Upper 104
@@ -1344,6 +1344,6 @@ Body:
     ArmorLevel: 1
     View: 3111
     Script: |
-      bonus2 bDropAddRace,Rc_All,3;
-      bonus2 bExpAddRace,Rc_All,3;
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bAllstats,1;

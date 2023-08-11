@@ -35,12 +35,8 @@ Header:
 Body:
   - Tab: New
     Items:
-     - Item: 100Cash
-       Price: 110
-     - Item: 500Cash
-       Price: 550
-     - Item: 1000Cash
-       Price: 1100
+     - Item: Premium_Box_6h
+       Price: 500
      - Item: Premium_Box_1d
        Price: 1000
      - Item: Premium_Box_3d
@@ -213,3 +209,17 @@ Body:
        Price: 19900
      - Item: Costume Wing Of Angel BK
        Price: 19900
+  - Tab: Consumables
+    Items:
+     - Item: 100Cash
+       Price: 110
+     - Item: 500Cash
+       Price: 550
+     - Item: 1000Cash
+       Price: 1100
+     - Item: Random_Costume_Head
+       Price: 2500
+     - Item: Random_Costume_Middle
+       Price: 2500
+     - Item: Random_Costume_Lower
+       Price: 2500
