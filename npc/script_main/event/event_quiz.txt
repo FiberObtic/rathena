@@ -1,8 +1,8 @@
 morocc,154,71,4	script	ปริศนาฟ้าแลบ::Quiz Girl	718,{
 
 	set @npcname$,"[^FF0000 ปริศนาฟ้าแลบ ^000000]"; // ตั้งชื่อ npc
-	set $quizitem,7539; // ของรางวัล Quiz Game
-	set $quizitemcount,5; // จำนวนที่จะได้รับ
+	//set $quizitem,7539; // ของรางวัล Quiz Game
+	//set $quizitemcount,5; // จำนวนที่จะได้รับ
 
 	if($@M_QuizEv==0) {
 		mes @npcname$;
@@ -33,7 +33,9 @@ morocc,154,71,4	script	ปริศนาฟ้าแลบ::Quiz Girl	718,{
 	if(@M_QuizEvA$ == $@M_QuizEvA$) {
 		set $@M_QuizEv,0;
 		announce "[ กิจกรรม ปริศนาฟ้าแลบ : ผู้ตอบถูกคือ "+strcharinfo(0)+" และคำตอบที่ถูกคือ "+$@M_QuizEvA$+" ยินดีด้วยค่ะ ! ]",bc_all,0x00ff99;
-		getitem $quizitem,$quizitemcount;
+		//getitem $quizitem,$quizitemcount;
+		#CASHPOINTS += 100;
+		dispbottom "คุณได้รับ 100 Cash Point";
 		if (query_sql("SELECT `id` FROM `premium_pass` WHERE `account_id` = '"+getcharid(3)+"'",.@sql_id)) {
 			#BP_Points += 1;
 			doevent "Premium Pass Manager::OnExpBoss";
@@ -56,9 +58,9 @@ morocc,154,71,4	script	ปริศนาฟ้าแลบ::Quiz Girl	718,{
 
 // ====================== {000-01} ระบบคำถาม ======================
 
-OnMinute00:
-OnMinute20:
-OnMinute40:
+OnMinute49:
+OnMinute51:
+OnMinute53:
 
 
 	if (strnpcinfo(0) == "Quiz7Girl") end;
@@ -104,21 +106,21 @@ OnTimer605000:
 // ====================== {000-02} random ประเภทคำถาม ======================
 
 RD_QuizQRnd:
-	set $@rand,rand(1,1694);
-	if($@rand >= 1  &&  41 > $@rand) goto RD_QuizG001;
-	else if($@rand >= 41  && 109 > $@rand) goto RD_QuizG002;
-	else if($@rand >= 109 && 178 > $@rand) goto RD_QuizG003;
-	else if($@rand >= 178 && 305 > $@rand) goto RD_QuizG004;
-	else if($@rand >= 305 && 387 > $@rand) goto RD_QuizG005;
-	else if($@rand >= 352 && 557 > $@rand) goto RD_QuizG006;
-	else if($@rand >= 522 && 1353 > $@rand) goto RD_QuizG007;
-	else if($@rand >= 1353 && 1429 > $@rand) goto RD_QuizG008;
-	else if($@rand >= 1353 && 1617 > $@rand) goto RD_QuizG009;
-	else if($@rand >= 1353 && 1695 > $@rand) goto RD_QuizG010;
-	else if($@rand >= 1695 && 1770 >= $@rand) goto RD_QuizG011;
-	else if($@rand >= 1771 && 1838 >= $@rand) goto RD_QuizG012;
-	else if($@rand >= 1839 && 2021 >= $@rand) goto RD_QuizG013;
-	else if($@rand >= 2022 && 2071 >= $@rand) goto RD_QuizG014;
+	set $@rand,rand(1,68);
+	if($@rand >= 1  &&  68 >= $@rand) goto RD_QuizG002;
+	//else if($@rand >= 41  && 109 > $@rand) goto RD_QuizG002;
+	//else if($@rand >= 109 && 178 > $@rand) goto RD_QuizG003;
+	//else if($@rand >= 178 && 305 > $@rand) goto RD_QuizG004;
+	//else if($@rand >= 305 && 387 > $@rand) goto RD_QuizG005;
+	//else if($@rand >= 352 && 557 > $@rand) goto RD_QuizG006;
+	//else if($@rand >= 522 && 1353 > $@rand) goto RD_QuizG007;
+	//else if($@rand >= 1353 && 1429 > $@rand) goto RD_QuizG008;
+	//else if($@rand >= 1353 && 1617 > $@rand) goto RD_QuizG009;
+	//else if($@rand >= 1353 && 1695 > $@rand) goto RD_QuizG010;
+	//else if($@rand >= 1695 && 1770 >= $@rand) goto RD_QuizG011;
+	//else if($@rand >= 1771 && 1838 >= $@rand) goto RD_QuizG012;
+	//else if($@rand >= 1839 && 2021 >= $@rand) goto RD_QuizG013;
+	//else if($@rand >= 2022 && 2071 >= $@rand) goto RD_QuizG014;
 
 // ====================== {001} โดเมน ======================
 

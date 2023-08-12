@@ -12,12 +12,12 @@ function Go; function Disp; function Pick; function Restrict;
 	mes "คุณสามารถใช้คำสั่ง ^FF0000@load^000000";
 	mes "เพื่อกลับไปยังจุดเซฟ นะค่ะ^_^";
 menu	"^FF0000•^000000 วาร์ปล่าสุด ^777777["+lastwarp$+"]^000000",-,
-    	"^FF0000•^000000 เมือง",Towns,
+//    	"^FF0000•^000000 เมือง",Towns,
     	"^FF0000•^000000 พื้นที่ ฟิลด์",Fields,
     	"^FF0000•^000000 ดันเจี้ยน",Dungeons,
     	"^FF0000•^000000 ปราสาท กิลด์",Castles,
     	"^FF0000•^000000 ดันเจี้ยน กิลด์",Guild_Dungeons,
-		"^FF0000•^000000 ดันเจี้ยน 100 ชั้น",Instances,
+		"^FF0000•^000000 ดันเจี้ยน พิเศษ",Instances,
 		"^FF0000•^000000 ห้อง PVP",Pvp;
 //		"^FF0000•^000000 Instances ^ff0000Boss^000000",Instances2,
 //    	"^FF0000•^000000 Instances ^ff0000New^000000",Instances,
@@ -516,8 +516,17 @@ P2: Go("pvp_n_8-5",0,0);
 // --------------------------------------------------
 	Instances:
 // --------------------------------------------------
-menu	"Endless Tower",Z1;
+menu	"Endless Tower",Z1,"Battle Pass ^FF0000[Battle Pass Lv.4 ขึ้นไป]^000000",Z2;
 Z1: Go("e_tower",77,109);
+
+Z2:
+next;
+.@account_id = getcharid(3);
+query_sql("SELECT `level` FROM `premium_pass` WHERE `account_id` = '"+.@account_id+"'",.@lv);
+if(.@lv > 3){ Go("verus02",0,0);end; }
+else{ mes "ขอโทษด้วย Level Battle Pass ไม่ถึง 4"; end; }
+	
+	
 /*menu	"Bakonawa Lake",I1, "Bangungot Hospital 2F",I2, "Buwaya Cave",I3,
 		"Nightmare Clock Tower",I03,"Devil Tower",I4, "Eclage Interior",I5, "Endless Tower",I6,
 		"Faceworms Nest",I7, "Geffen Magic Tournament",I8, "Ghost Palace",I9,

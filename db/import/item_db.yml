@@ -221,6 +221,84 @@ Body:
     Trade:
       NoDrop: true
       NoSell: true
+  - Id: 65004
+    AegisName: Premium_Reset_Option_Ticket
+    Name: Premium Reset Option Ticket
+    Type: Etc
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoSell: true
+  - Id: 65005
+    AegisName: Material BP NO.1
+    Name:  Material BP NO.1
+    Type: Etc
+    Trade:
+      NoDrop: true
+      NoSell: true
+  - Id: 65006
+    AegisName: Material BP NO.2
+    Name:  Material BP NO.2
+    Type: Etc
+    Trade:
+      NoDrop: true
+      NoSell: true
+  - Id: 65007
+    AegisName: Material BP NO.3
+    Name:  Material BP NO.3
+    Type: Etc
+    Trade:
+      NoDrop: true
+      NoSell: true
+  - Id: 65008
+    AegisName: Material BP NO.4
+    Name:  Material BP NO.4
+    Type: Etc
+    Trade:
+      NoDrop: true
+      NoSell: true
+  - Id: 65009
+    AegisName: Material BP NO.5
+    Name:  Material BP NO.5
+    Type: Etc
+    Trade:
+      NoDrop: true
+      NoSell: true
+  - Id: 65010
+    AegisName: Material BP NO.6
+    Name:  Material BP NO.6
+    Type: Etc
+    Trade:
+      NoDrop: true
+      NoSell: true
+  - Id: 65011
+    AegisName: Material BP NO.7
+    Name:  Material BP NO.7
+    Type: Etc
+    Trade:
+      NoDrop: true
+      NoSell: true
+  - Id: 65012
+    AegisName: Material BP NO.8
+    Name:  Material BP NO.8
+    Type: Etc
+    Trade:
+      NoDrop: true
+      NoSell: true
+  - Id: 65013
+    AegisName: Material BP NO.9
+    Name:  Material BP NO.9
+    Type: Etc
+    Trade:
+      NoDrop: true
+      NoSell: true
+  - Id: 65014
+    AegisName: Material BP NO.10
+    Name:  Material BP NO.10
+    Type: Etc
+    Trade:
+      NoDrop: true
+      NoSell: true
   - Id: 53000015
     AegisName: Premium_Pass
     Name: Premium Pass
@@ -515,14 +593,6 @@ Body:
       sc_start SC_PREMIUMSERVICE_EXPBOOST_A,864000000,20;
       sc_start SC_PREMIUMSERVICE_JEXPBOOST_A,864000000,20;
       sc_start SC_PREMIUMSERVICE_ITEMBOOST_A,864000000,30;
-  - Id: 65004
-    AegisName: Premium_Reset_Option_Ticket
-    Name: Premium Reset Option Ticket
-    Type: Etc
-    Trade:
-      Override: 100
-      NoDrop: true
-      NoSell: true
   - Id: 5300000
     AegisName: Vote_Member_Lv_1
     Name: Vote Member Lv.1
