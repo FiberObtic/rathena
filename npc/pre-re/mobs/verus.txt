@@ -1,0 +1,22 @@
+//===== rAthena Script =======================================
+//= Verus Monster Spawn Script
+//===== Current Version: =====================================
+//= 1.1
+//===== Description: =========================================
+//= Spawns monsters around Verus.
+//===== Additional Comments: =================================
+//= 1.0 First version. [Capuche]
+//= 1.1 Correct Spawn by Navigation's mob data. [attackjom]
+//============================================================
+
+// verus02
+verus02,0,0	monster	Heart Hunter Skirmisher	20682,30
+verus02,0,0	monster	Bookworm	20683,30
+verus02,0,0	monster	Roaming Spellbook	20684,30
+verus02,0,0	monster	Sewage Venenum	20685,30
+verus02,0,0	monster	Sewage Clamp	20686,30
+verus02,0,0	monster	Sewage Waterfall	20687,30
+verus02,0,0	monster	Elite Bellare	20688,30
+verus02,0,0	monster	Spell Addicted Dolor	20689,30
+verus02,0,0	monster	Released Spell	20690,30
+verus02,0,0	monster	Spell Addicted Plaga	20691,30
