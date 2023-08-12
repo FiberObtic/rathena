@@ -165,8 +165,8 @@ Body:
     JobExp: 70495
     Attack: 2948
     Attack2: 1291
-    Defense: 500
-    MagicDefense: 102
+    Defense: 99
+    MagicDefense: 99
     Str: 110
     Agi: 147
     Vit: 38
@@ -200,8 +200,8 @@ Body:
     JobExp: 15926
     Attack: 1815
     Attack2: 855
-    Defense: 210
-    MagicDefense: 82
+    Defense: 99
+    MagicDefense: 99
     Str: 103
     Agi: 89
     Vit: 23
@@ -233,8 +233,8 @@ Body:
     JobExp: 16345
     Attack: 1980
     Attack2: 931
-    Defense: 258
-    MagicDefense: 84
+    Defense: 99
+    MagicDefense: 99
     Str: 110
     Agi: 147
     Vit: 38
@@ -266,8 +266,8 @@ Body:
     JobExp: 13539
     Attack: 1793
     Attack2: 719
-    Defense: 277
-    MagicDefense: 81
+    Defense: 99
+    MagicDefense: 99
     Str: 80
     Agi: 97
     Vit: 45
@@ -301,8 +301,8 @@ Body:
     JobExp: 13318
     Attack: 1978
     Attack2: 523
-    Defense: 254
-    MagicDefense: 77
+    Defense: 99
+    MagicDefense: 99
     Str: 113
     Agi: 118
     Vit: 38
@@ -336,8 +336,8 @@ Body:
     JobExp: 13435
     Attack: 1674
     Attack2: 949
-    Defense: 270
-    MagicDefense: 83
+    Defense: 99
+    MagicDefense: 99
     Str: 95
     Agi: 111
     Vit: 43
@@ -371,8 +371,8 @@ Body:
     JobExp: 13790
     Attack: 1931
     Attack2: 648
-    Defense: 383
-    MagicDefense: 80
+    Defense: 99
+    MagicDefense: 99
     Str: 108
     Agi: 121
     Vit: 80
@@ -406,8 +406,8 @@ Body:
     JobExp: 13970
     Attack: 2048
     Attack2: 773
-    Defense: 376
-    MagicDefense: 83
+    Defense: 99
+    MagicDefense: 99
     Str: 113
     Agi: 103
     Vit: 77
@@ -441,8 +441,8 @@ Body:
     JobExp: 13582
     Attack: 1746
     Attack2: 1152
-    Defense: 180
-    MagicDefense: 87
+    Defense: 99
+    MagicDefense: 99
     Str: 97
     Agi: 120
     Vit: 12
@@ -476,8 +476,8 @@ Body:
     JobExp: 137513
     Attack: 4824
     Attack2: 1958
-    Defense: 462
-    MagicDefense: 115
+    Defense: 99
+    MagicDefense: 99
     Str: 201
     Agi: 177
     Vit: 90
@@ -502,252 +502,252 @@ Body:
       - Item: Material BP NO.10
         Rate: 1000
         StealProtected: true
-  - Id: 20692
-    AegisName: EP17_2_SANARE3
-    Name: Spell Addicted Sanare
-    Level: 194
-    Hp: 2979073
-    BaseExp: 198605
-    JobExp: 139023
-    Attack: 4462
-    Attack2: 2561
-    Defense: 503
-    MagicDefense: 122
-    Str: 184
-    Agi: 168
-    Vit: 103
-    Int: 198
-    Dex: 162
-    Luk: 72
-    AttackRange: 1
-    SkillRange: 10
-    ChaseRange: 12
-    Size: Medium
-    Race: Demihuman
-    RaceGroups:
-      EP172ALPHA: true
-    Element: Holy
-    ElementLevel: 2
-    WalkSpeed: 150
-    AttackDelay: 576
-    AttackMotion: 1152
-    DamageMotion: 720
-    Ai: 04
-    Drops:
-      - Item: GAMJammingChip
-        Rate: 2000
-      - Item: Heart_Hunter_Seal
-        Rate: 1250
-      - Item: Ep172_1h_Hammer
-        Rate: 5
-        RandomOptionGroup: AUTO_IMP_MAGIC_2
-      - Item: Zelunium_Ore
-        Rate: 150
-      - Item: Shadowdecon_Ore
-        Rate: 150
-      - Item: Sanare3_Card
-        Rate: 1
-        StealProtected: true
-  - Id: 20693
-    AegisName: EP17_2_PLASMA_R
-    Name: Powerful Spell
-    Level: 193
-    Hp: 2961272
-    BaseExp: 197418
-    JobExp: 138193
-    Attack: 4270
-    Attack2: 2522
-    Defense: 445
-    MagicDefense: 121
-    Str: 177
-    Agi: 201
-    Vit: 84
-    Int: 196
-    Dex: 170
-    Luk: 70
-    AttackRange: 1
-    SkillRange: 10
-    ChaseRange: 12
-    Size: Medium
-    Race: Formless
-    RaceGroups:
-      EP172ALPHA: true
-    Element: Ghost
-    ElementLevel: 3
-    WalkSpeed: 120
-    AttackDelay: 912
-    AttackMotion: 1248
-    DamageMotion: 576
-    Ai: 04
-    Drops:
-      - Item: Scell
-        Rate: 1000
-      - Item: Yellow_Gemstone
-        Rate: 200
-      - Item: Ep172_1h_Inst
-        Rate: 5
-        RandomOptionGroup: AUTO_IMP_MAGIC_2
-      - Item: Zelunium_Ore
-        Rate: 150
-      - Item: Shadowdecon_Ore
-        Rate: 150
-      - Item: Plasma_R_Card
-        Rate: 1
-        StealProtected: true
-  - Id: 20694
-    AegisName: EP17_2_PLASMA_R2
-    Name: Sharp Spell
-    Level: 193
-    Hp: 2960243
-    BaseExp: 197350
-    JobExp: 138145
-    Attack: 4101
-    Attack2: 2496
-    Defense: 421
-    MagicDefense: 121
-    Str: 170
-    Agi: 198
-    Vit: 76
-    Int: 194
-    Dex: 167
-    Luk: 67
-    AttackRange: 1
-    SkillRange: 10
-    ChaseRange: 12
-    Size: Medium
-    Race: Formless
-    RaceGroups:
-      EP172ALPHA: true
-    Element: Ghost
-    ElementLevel: 3
-    WalkSpeed: 120
-    AttackDelay: 912
-    AttackMotion: 1248
-    DamageMotion: 576
-    Ai: 04
-    Drops:
-      - Item: Scell
-        Rate: 1000
-      - Item: Red_Gemstone
-        Rate: 200
-      - Item: Ep172_1h_Whip
-        Rate: 5
-        RandomOptionGroup: AUTO_IMP_MAGIC_2
-      - Item: Zelunium_Ore
-        Rate: 150
-      - Item: Shadowdecon_Ore
-        Rate: 150
-      - Item: Plasma_R2_Card
-        Rate: 1
-        StealProtected: true
-  - Id: 20696
-    AegisName: EP17_2_CHILD_ADMIN1
-    Name: Child Admin Beta
-    Level: 130
-    Hp: 130
-    Attack: 10
-    Attack2: 10
-    Defense: 10
-    MagicDefense: 10
-    Str: 10
-    Agi: 10
-    Vit: 10
-    Int: 10
-    Dex: 10
-    Luk: 10
-    AttackRange: 1
-    SkillRange: 10
-    ChaseRange: 12
-    Size: Small
-    Race: Formless
-    Element: Neutral
-    ElementLevel: 1
-    WalkSpeed: 150
-    AttackDelay: 1152
-    AttackMotion: 1344
-    DamageMotion: 480
-    Ai: 01
-  - Id: 20697
-    AegisName: EP17_2_CHILD_ADMIN2
-    Name: Child Admin Alpha
-    Level: 180
-    Hp: 180
-    Attack: 10
-    Attack2: 10
-    Defense: 10
-    MagicDefense: 10
-    Str: 10
-    Agi: 10
-    Vit: 10
-    Int: 10
-    Dex: 10
-    Luk: 10
-    AttackRange: 1
-    SkillRange: 10
-    ChaseRange: 12
-    Size: Small
-    Race: Formless
-    Element: Neutral
-    ElementLevel: 1
-    WalkSpeed: 150
-    AttackDelay: 1152
-    AttackMotion: 1344
-    DamageMotion: 480
-    Ai: 01
-  - Id: 20698
-    AegisName: G_ASSISTANT
-    Name: Assistant
-    Level: 137
-    Hp: 238512
-    Attack: 1661
-    Attack2: 658
-    Defense: 365
-    MagicDefense: 78
-    Str: 97
-    Agi: 87
-    Vit: 76
-    Int: 72
-    Dex: 113
-    Luk: 77
-    AttackRange: 1
-    SkillRange: 10
-    ChaseRange: 12
-    Size: Medium
-    Race: Formless
-    Element: Neutral
-    ElementLevel: 2
-    WalkSpeed: 150
-    AttackDelay: 480
-    AttackMotion: 960
-    DamageMotion: 480
-    Ai: 04
-  - Id: 20699
-    AegisName: G_BELLARE3
-    Name: Heart Hunter Commander
-    Level: 143
-    Hp: 295508
-    Attack: 1931
-    Attack2: 648
-    Defense: 383
-    MagicDefense: 80
-    Str: 108
-    Agi: 121
-    Vit: 80
-    Int: 68
-    Dex: 113
-    Luk: 80
-    AttackRange: 5
-    SkillRange: 10
-    ChaseRange: 12
-    Size: Medium
-    Race: Demihuman
-    Element: Ghost
-    ElementLevel: 1
-    WalkSpeed: 150
-    AttackDelay: 384
-    AttackMotion: 384
-    DamageMotion: 480
-    Ai: 04
+#  - Id: 20692
+#    AegisName: EP17_2_SANARE3
+#    Name: Spell Addicted Sanare
+#    Level: 194
+#    Hp: 2979073
+#    BaseExp: 198605
+#    JobExp: 139023
+#    Attack: 4462
+#    Attack2: 2561
+#    Defense: 503
+#    MagicDefense: 122
+#    Str: 184
+#    Agi: 168
+#    Vit: 103
+#    Int: 198
+#    Dex: 162
+#    Luk: 72
+#    AttackRange: 1
+#    SkillRange: 10
+#    ChaseRange: 12
+#    Size: Medium
+#    Race: Demihuman
+#    RaceGroups:
+#      EP172ALPHA: true
+#    Element: Holy
+#    ElementLevel: 2
+#    WalkSpeed: 150
+#    AttackDelay: 576
+#    AttackMotion: 1152
+#    DamageMotion: 720
+#    Ai: 04
+#    Drops:
+#      - Item: GAMJammingChip
+#        Rate: 2000
+#      - Item: Heart_Hunter_Seal
+#        Rate: 1250
+#      - Item: Ep172_1h_Hammer
+#        Rate: 5
+#        RandomOptionGroup: AUTO_IMP_MAGIC_2
+#      - Item: Zelunium_Ore
+#        Rate: 150
+#      - Item: Shadowdecon_Ore
+#        Rate: 150
+#      - Item: Sanare3_Card
+#        Rate: 1
+#        StealProtected: true
+#  - Id: 20693
+#    AegisName: EP17_2_PLASMA_R
+#    Name: Powerful Spell
+#    Level: 193
+#    Hp: 2961272
+#    BaseExp: 197418
+#    JobExp: 138193
+#    Attack: 4270
+#    Attack2: 2522
+#    Defense: 445
+#    MagicDefense: 121
+#    Str: 177
+#    Agi: 201
+#    Vit: 84
+#    Int: 196
+#    Dex: 170
+#    Luk: 70
+#    AttackRange: 1
+#    SkillRange: 10
+#    ChaseRange: 12
+#    Size: Medium
+#    Race: Formless
+#    RaceGroups:
+#      EP172ALPHA: true
+#    Element: Ghost
+#    ElementLevel: 3
+#    WalkSpeed: 120
+#    AttackDelay: 912
+#    AttackMotion: 1248
+#    DamageMotion: 576
+#    Ai: 04
+#    Drops:
+#      - Item: Scell
+#        Rate: 1000
+#      - Item: Yellow_Gemstone
+#        Rate: 200
+#      - Item: Ep172_1h_Inst
+#        Rate: 5
+#        RandomOptionGroup: AUTO_IMP_MAGIC_2
+#      - Item: Zelunium_Ore
+#        Rate: 150
+#      - Item: Shadowdecon_Ore
+#        Rate: 150
+#      - Item: Plasma_R_Card
+#        Rate: 1
+#        StealProtected: true
+#  - Id: 20694
+#    AegisName: EP17_2_PLASMA_R2
+#    Name: Sharp Spell
+#    Level: 193
+#    Hp: 2960243
+#    BaseExp: 197350
+#    JobExp: 138145
+#    Attack: 4101
+#    Attack2: 2496
+#    Defense: 421
+#    MagicDefense: 121
+#    Str: 170
+#    Agi: 198
+#    Vit: 76
+#    Int: 194
+#    Dex: 167
+#    Luk: 67
+#    AttackRange: 1
+#    SkillRange: 10
+#    ChaseRange: 12
+#    Size: Medium
+#    Race: Formless
+#    RaceGroups:
+#      EP172ALPHA: true
+#    Element: Ghost
+#    ElementLevel: 3
+#    WalkSpeed: 120
+#    AttackDelay: 912
+#    AttackMotion: 1248
+#    DamageMotion: 576
+#    Ai: 04
+#    Drops:
+#      - Item: Scell
+#        Rate: 1000
+#      - Item: Red_Gemstone
+#        Rate: 200
+#      - Item: Ep172_1h_Whip
+#        Rate: 5
+#        RandomOptionGroup: AUTO_IMP_MAGIC_2
+#      - Item: Zelunium_Ore
+#        Rate: 150
+#      - Item: Shadowdecon_Ore
+#        Rate: 150
+#      - Item: Plasma_R2_Card
+#        Rate: 1
+#        StealProtected: true
+#  - Id: 20696
+#    AegisName: EP17_2_CHILD_ADMIN1
+#    Name: Child Admin Beta
+#    Level: 130
+#    Hp: 130
+#    Attack: 10
+#    Attack2: 10
+#    Defense: 10
+#    MagicDefense: 10
+#    Str: 10
+#    Agi: 10
+#    Vit: 10
+#    Int: 10
+#    Dex: 10
+#    Luk: 10
+#    AttackRange: 1
+#    SkillRange: 10
+#    ChaseRange: 12
+#    Size: Small
+#    Race: Formless
+#    Element: Neutral
+#    ElementLevel: 1
+#    WalkSpeed: 150
+#    AttackDelay: 1152
+#    AttackMotion: 1344
+#    DamageMotion: 480
+#    Ai: 01
+#  - Id: 20697
+#    AegisName: EP17_2_CHILD_ADMIN2
+#    Name: Child Admin Alpha
+#    Level: 180
+#    Hp: 180
+#    Attack: 10
+#    Attack2: 10
+#    Defense: 10
+#    MagicDefense: 10
+#    Str: 10
+#    Agi: 10
+#    Vit: 10
+#    Int: 10
+#    Dex: 10
+#    Luk: 10
+#    AttackRange: 1
+#    SkillRange: 10
+#    ChaseRange: 12
+#    Size: Small
+#    Race: Formless
+#    Element: Neutral
+#    ElementLevel: 1
+#    WalkSpeed: 150
+#    AttackDelay: 1152
+#    AttackMotion: 1344
+#    DamageMotion: 480
+#    Ai: 01
+#  - Id: 20698
+#    AegisName: G_ASSISTANT
+#    Name: Assistant
+#    Level: 137
+#    Hp: 238512
+#    Attack: 1661
+#    Attack2: 658
+#    Defense: 365
+#    MagicDefense: 78
+#    Str: 97
+#    Agi: 87
+#    Vit: 76
+#    Int: 72
+#    Dex: 113
+#    Luk: 77
+#    AttackRange: 1
+#    SkillRange: 10
+#    ChaseRange: 12
+#    Size: Medium
+#    Race: Formless
+#    Element: Neutral
+#    ElementLevel: 2
+#    WalkSpeed: 150
+#    AttackDelay: 480
+#    AttackMotion: 960
+#    DamageMotion: 480
+#    Ai: 04
+#  - Id: 20699
+#    AegisName: G_BELLARE3
+#    Name: Heart Hunter Commander
+#    Level: 143
+#    Hp: 295508
+#    Attack: 1931
+#    Attack2: 648
+#    Defense: 383
+#    MagicDefense: 80
+#    Str: 108
+#    Agi: 121
+#    Vit: 80
+#    Int: 68
+#    Dex: 113
+#    Luk: 80
+#    AttackRange: 5
+#    SkillRange: 10
+#    ChaseRange: 12
+#    Size: Medium
+#    Race: Demihuman
+#    Element: Ghost
+#    ElementLevel: 1
+#    WalkSpeed: 150
+#    AttackDelay: 384
+#    AttackMotion: 384
+#    DamageMotion: 480
+#    Ai: 04
   - Id: 2411
     AegisName: DUMMY_150
     Name: Dummy 150
