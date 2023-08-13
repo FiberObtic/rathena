@@ -67,7 +67,7 @@ Body:
           - Heart_Card_In_Mouth
     Script: |
       .@aspd = 1;
-      .@crit_dmg = 2 + 2 * (readparam(bDex) / 10);
+      .@crit_dmg = 2 + 2 * (readparam(bLuk) / 10);
       .@sub_player = 2;
       .@luk = readparam(bLuk);
       if (.@luk > 49) {
@@ -85,3 +85,10 @@ Body:
       bonus bCritAtkRate,.@crit_dmg;
       bonus2 bSubRace,RC_Player_Human,.@sub_player;
       bonus2 bSubSkill,"NPC_CRITICALSLASH",100;
+  - Combos:
+      - Combo:
+          - Fallen_Angel_feather
+          - Fallen_Angel_Wing
+    Script: |
+      bonus bAtkRate,getequiprefinerycnt(EQI_GARMENT);
+      bonus bMatkRate,getequiprefinerycnt(EQI_GARMENT);

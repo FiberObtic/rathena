@@ -75,8 +75,6 @@ Body:
        Price: 500
   - Tab: Limited
     Items:
-     - Item: Fallen_Angel_feather
-       Price: 999
      - Item: Ramen_Hat
        Price: 999
      - Item: J_Captain_Hat
