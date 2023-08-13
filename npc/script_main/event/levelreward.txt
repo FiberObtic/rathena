@@ -6,7 +6,7 @@
 // เพิ่ม NPC รับ 10000Cash สำหรับผู้เล่นที่ lv99job70 อาชีพละ 25 ตัวละคร
 
 
-morocc,179,86,5	script	LevelReward	624,{
+morocc,150,111,5	script	LevelReward	624,{
 	//mes " > "+Class+" > ";12
 	//mes " > "+eaclass()+" > ";262
 	//mes " > "+jobname(class)+" > "; Class name Like "Lord Knight"

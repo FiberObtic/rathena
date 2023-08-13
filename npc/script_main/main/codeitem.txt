@@ -12,7 +12,7 @@
 //============================================================
 
 
-morocc,145,101,6	script	Item Code	660,{
+morocc,170,106,6	script	Item Code	660,{
 	disable_items;
 	if (MaxWeight - Weight < 1000) {
 		mes "รอสักครู่!!";

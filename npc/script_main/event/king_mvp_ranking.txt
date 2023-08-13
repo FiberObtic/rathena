@@ -62,7 +62,7 @@ OnNPCKillEvent:
 
 -	shop	ex_rank_mvp_shop	-1,909:-1
 
-morocc,179,98,4	script	Ranking MVP	827,{
+morocc,147,108,4	script	Ranking MVP	827,{
 Start:
 	
 	mes "^FF3300[ "+strnpcinfo(0)+" ]^000000";

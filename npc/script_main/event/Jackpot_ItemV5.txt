@@ -21,7 +21,7 @@
 //= rAthena Project
 //============================================================
 -	shop	Dummy#Jackpot_Item	-1,909:-1
-morocc,124,103,4	script	Jackpot Item#i1	562,{
+morocc,122,110,4	script	Jackpot Item#i1	562,{
 	
 //============= Setting ===========================================================================
 	disable_items;

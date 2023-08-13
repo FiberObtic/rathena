@@ -7,40 +7,6 @@
 //===== Compatible With: ===================================== 
 //= rAthena Project
 //============================================================
-//==============================================
-// GM Command: "@PremiumService" Call NPC.
-//==============================================
--	script	premium_service_cmd	-1,{
-OnInit:
-	bindatcmd "PremiumService",strnpcinfo(3)+"::OnPremiumService",99,99;
-	$A_npcmax = 100;	// ตั้งค่าจำนวน npc ที่ทั้งเซิฟเรียกได้
-	for(.@i = 1; .@i <= $A_npcmax; ++.@i) {
-		setd "$A_PREMIUM_SERVICE"+.@i , 0;
-	}
-	end;
-
-OnPremiumService:
-	.@npc = 1;
-	while(getd("$A_PREMIUM_SERVICE"+.@npc) && .@npc < ($A_npcmax+1)) {
-		.@npc++;
-	}
-	if (.@npc == ($A_npcmax+1)) {
-		dispbottom "GM กำหนดให้ใช้พร้อมกัน "+$A_npcmax+" คน ตอนนี้ไม่ว่าง รอสักครู่";
-		end;
-	}
-	getmapxy .@map$,.@x,.@y,BL_PC;
-	.@xr = rand(1,2);
-	.@yr = rand(1,2);
-	if (.@xr>1) { .@x = .@x-rand(1,3); } else { .@x = .@x+rand(1,3); }
-	if (.@yr>1) { .@y = .@y-rand(1,3); } else { .@y = .@y+rand(1,3); }
-	unitwarp getnpcid(0,("Premi#ps"+.@npc)),.@map$,.@x,.@y;
-	movenpc ("Premi#ps"+.@npc),.@x,.@y;
-	classchange 4_F_PREMI, ("Premi#ps"+.@npc), bc_self;
-	initnpctimer ("Premi#ps"+.@npc);
-	setd "$A_PREMIUM_SERVICE"+.@npc , 1;
-	end;
-}
-
 
 //==============================================
 // Check Premium Service.
@@ -104,33 +70,6 @@ OnPCLoginEvent:
 	if (#PREMIUMSERVICE_LIFE_S <= gettimetick(2)) { 
 		sc_end SC_PREMIUMSERVICE_LIFEINSURANCE;
 	}
-	end;
-}
-
-
-
-//==============================================
-// Func: Call NPC.
-//==============================================
-function	script	ps_item	{
-	.@npc = 1;
-	while(getd("$A_PREMIUM_SERVICE"+.@npc) && .@npc < ($A_npcmax+1)) {
-		.@npc++;
-	}
-	if (.@npc == ($A_npcmax+1)) {
-		dispbottom "GM กำหนดให้ใช้พร้อมกัน "+$A_npcmax+" คน ตอนนี้ไม่ว่าง รอสักครู่";
-		end;
-	}
-	getmapxy .@map$,.@x,.@y,BL_PC;
-	.@xr = rand(1,2);
-	.@yr = rand(1,2);
-	if (.@xr > 1) { .@x = .@x-rand(1,3); } else { .@x = .@x+rand(1,3); }
-	if (.@yr > 1) { .@y = .@y-rand(1,3); } else { .@y = .@y+rand(1,3); }
-	unitwarp getnpcid(0,("Premi#ps"+.@npc)),.@map$,.@x,.@y;
-	movenpc ("Premi#ps"+.@npc),.@x,.@y;
-	classchange 4_F_PREMI, ("Premi#ps"+.@npc), bc_self;
-	initnpctimer ("Premi#ps"+.@npc);
-	setd "$A_PREMIUM_SERVICE"+.@npc , 1;
 	end;
 }
 

@@ -13,7 +13,7 @@
 //= rAthena Project
 //============================================================
 
-morocc,170,103,3	script	áÅ¡¢Í§¢Ø´::duckdig_shop	848,{
+morocc,147,104,3	script	áÅ¡¢Í§¢Ø´::duckdig_shop	848,{
 	mes .npc$;
 	query_sql "SELECT `point` FROM `duckdig` WHERE `account_id` = " + .@accid + " LIMIT 1", .@point;
 	if( .@point[0] > 0 )

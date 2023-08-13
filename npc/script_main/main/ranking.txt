@@ -333,4 +333,4 @@ function	script	AddPointChar	{
 	return 0;
 }
 
-morocc,155,78,4	duplicate(rankingbbs)	จัดอันดับผู้เล่น#SaveTower	666
+morocc,171,102,4	duplicate(rankingbbs)	จัดอันดับผู้เล่น#SaveTower	666

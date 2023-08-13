@@ -8,7 +8,7 @@
 //-------------------------------------------------------
 
 
-morocc,147,82,4	script	Premium Pass Manager	4_F_DRKAFRA01,{
+morocc,156,144,4	script	Premium Pass Manager	4_F_DRKAFRA01,{
 	doevent strnpcinfo(0) + "::OnPremiumPass";
 	end;
 	

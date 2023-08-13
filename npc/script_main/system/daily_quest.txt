@@ -3,7 +3,7 @@
 //-------------------------------------------------------
 -	pointshop	daily_shop_points	-1,#daily_points,501:-1
 
-morocc,153,82,5	script	Daily Quest	4_F_DRKAFRA01,{
+morocc,164,144,5	script	Daily Quest	4_F_DRKAFRA01,{
 	doevent strnpcinfo(0) + "::OnDailyQuest";
 	end;
 	

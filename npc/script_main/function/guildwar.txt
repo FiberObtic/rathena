@@ -3,7 +3,7 @@
 //morocc,162,144,4	duplicate(InsideFlagsG4)	Bergel#mor	722
 //morocc,166,144,4	duplicate(InsideFlagsA3)	Nuernberg#mor	722
 
-morocc,154,144,4	script	Kriemhild#mor	722,{
+morocc,154,158,4	script	Kriemhild#mor	722,{
 	.@GM = getgmlevel() >= 99;
 	FlagEmblem GetCastleData("prtg_cas01",1);
 	if (agitcheck() || agitcheck2()){
@@ -101,7 +101,7 @@ OnAgitStart:
 	end;
 }
 
-morocc,158,144,4	script	Bright Arbor#mor	722,{
+morocc,158,158,4	script	Bright Arbor#mor	722,{
 	.@GM = getgmlevel() >= 99;
 	FlagEmblem GetCastleData("payg_cas01",1);
 	if (agitcheck() || agitcheck2()){
@@ -175,7 +175,7 @@ morocc,158,144,4	script	Bright Arbor#mor	722,{
 	end;
 }
 
-morocc,162,144,4	script	Bergel#mor	722,{
+morocc,162,158,4	script	Bergel#mor	722,{
 	.@GM = getgmlevel() >= 99;
 	FlagEmblem GetCastleData("gefg_cas04",1);
 	if (agitcheck() || agitcheck2()){
@@ -249,7 +249,7 @@ morocc,162,144,4	script	Bergel#mor	722,{
 	end;
 }
 
-morocc,166,144,4	script	Nuernberg#mor	722,{
+morocc,166,158,4	script	Nuernberg#mor	722,{
 	.@GM = getgmlevel() >= 99;
 	FlagEmblem GetCastleData("aldeg_cas03",1);
 	if (agitcheck() || agitcheck2()){

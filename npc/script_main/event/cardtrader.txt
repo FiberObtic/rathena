@@ -6,7 +6,7 @@
 //= Exchange cards for points?.?
 //============================================================
 
-morocc,140,87,3	script	Card Trader	4_M_ZONDAOYAJI,{
+morocc,138,79,3	script	Card Trader	4_M_ZONDAOYAJI,{
 	disable_items;
 	if (MaxWeight - Weight < 15000) {
 		mes "รอสักครู่!!";
