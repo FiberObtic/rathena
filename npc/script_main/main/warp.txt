@@ -630,4 +630,12 @@ OnInit:
 // --------------------------------------------------
 //	Duplicates:
 // --------------------------------------------------
-morocc,164,97,4	duplicate(Warper)	บริการเคลื่อนย้าย#01	640
+morocc,163,97,4	duplicate(Warper)	บริการเคลื่อนย้าย#01	640
+morocc,229,100,4	duplicate(Warper)	บริการเคลื่อนย้าย#02	640
+morocc,235,163,4	duplicate(Warper)	บริการเคลื่อนย้าย#03	640
+morocc,286,210,4	duplicate(Warper)	บริการเคลื่อนย้าย#04	640
+morocc,279,75,4	duplicate(Warper)	บริการเคลื่อนย้าย#05	640
+morocc,109,111,4	duplicate(Warper)	บริการเคลื่อนย้าย#06	640
+morocc,88,173,4	duplicate(Warper)	บริการเคลื่อนย้าย#07	640
+morocc,44,185,4	duplicate(Warper)	บริการเคลื่อนย้าย#08	640
+morocc,161,288,4	duplicate(Warper)	บริการเคลื่อนย้าย#09	640

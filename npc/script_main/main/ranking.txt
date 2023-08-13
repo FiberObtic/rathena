@@ -313,8 +313,10 @@ OnShow_REP:
 	break;
 	}
 	end;
-
-
+	
+OnInit:
+	waitingroom "จัดอันดับผู้เล่น",0;
+end;
 }
 
 function	script	AddPointChar	{

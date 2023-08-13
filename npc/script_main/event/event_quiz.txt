@@ -1,4 +1,4 @@
-morocc,154,71,4	script	ปริศนาฟ้าแลบ::Quiz Girl	718,{
+morocc,168,144,4	script	ปริศนาฟ้าแลบ::Quiz Girl	718,{
 
 	set @npcname$,"[^FF0000 ปริศนาฟ้าแลบ ^000000]"; // ตั้งชื่อ npc
 	//set $quizitem,7539; // ของรางวัล Quiz Game

@@ -29,7 +29,7 @@ setd "$monsdiez2",0;
 	end;
 }
 
-morocc,206,44,6	script	[ Chicken 500K ]	540,{
+morocc,211,70,6	script	[ Chicken 500K ]	540,{
 
 			if(getgmlevel()){
 		mes "^FF0000---GM MODE---^000000";
@@ -455,7 +455,7 @@ if(.@monster == 2	&&	.@zenycheck > 0){
 return;	
 }
 
-morocc,202,42,6	script	Peco Peco#01	2718,{
+morocc,207,67,6	script	Peco Peco#01	2718,{
 	end;
 	Oneffect1:	specialeffect 568;specialeffect 518;end;
 	Oneffect2:	specialeffect 568;specialeffect 518;specialeffect 68;end;
@@ -468,7 +468,7 @@ OnTimer1000:
 end;
 }
 
-morocc,210,42,3	script	Grand Peco#02	2810,{
+morocc,215,67,3	script	Grand Peco#02	2810,{
 	end;
 	Oneffect1:	specialeffect 568;specialeffect 518;end;
 	Oneffect2:	specialeffect 568;specialeffect 518;specialeffect 68;end;
@@ -480,19 +480,19 @@ OnTimer1000:
 	initnpctimer;
 end;
 }
-morocc,200,41,3	script	Wall#777	858 ,{}
-morocc,200,35,3	script	Wall#888	858 ,{}
-morocc,212,41,3	script	Wall#999	858 ,{}
-morocc,212,35,3	script	Wall#1010	858 ,{}
+morocc,205,65,3	script	Wall#777	858 ,{}
+morocc,205,59,3	script	Wall#888	858 ,{}
+morocc,217,65,3	script	Wall#999	858 ,{}
+morocc,217,59,3	script	Wall#1010	858 ,{}
 -	script	¡Ã§ä¡èª¹er	FAKE_NPC,{
 	end;
 	
 OnInit:
-	setwall "morocc",200,41,12,6,0,"wallanti#111";
-	setwall "morocc",200,35,6,4,0,"wallanti#112";
-	setwall "morocc",212,41,12,2,0,"wallanti#113";
-	setwall "morocc",212,35,6,0,0,"wallanti#114";
-	setcell "morocc",200,35,212,41,cell_landprotector,1;
-	setcell "morocc",200,35,212,41,cell_basilica,1;	
+	setwall "morocc",205,65,12,6,0,"wallanti#111";
+	setwall "morocc",205,59,6,4,0,"wallanti#112";
+	setwall "morocc",217,65,12,2,0,"wallanti#113";
+	setwall "morocc",217,59,6,0,0,"wallanti#114";
+	setcell "morocc",205,59,217,65,cell_landprotector,1;
+	setcell "morocc",205,59,217,65,cell_basilica,1;	
 	end;
 }

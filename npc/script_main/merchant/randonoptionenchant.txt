@@ -25,7 +25,7 @@ morocc,159,89,4	script	timetrick	800,{
 // Premium Pass Durexz Kung.
 //-------------------------------------------------------
 
-morocc,143,74,4	script	OptionItem	10009,{
+morocc,143,74,4	script	Option Item	10009,{
 	disable_items;
 	.@NPCName$ = " [ เสริมพลังออฟชั่น ] ";
 	mes .@NPCName$;
@@ -231,4 +231,8 @@ L_DisplayOptionSet3: //22,3,4,5,6,7,8
 	mes "DEX + 1 - 2 หน่วย";
 	mes "LUK + 1 - 2 หน่วย";
 	end;
+	
+OnInit:
+	waitingroom "เสริมพลังออฟชั่น",0;
+end;
 }

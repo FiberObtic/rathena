@@ -2,7 +2,7 @@
 //-	pointshop	job_shop	-1,Job_All_2,502:100000,501:100
 
 
-morocc,167,81,4	script	RANK EXP	838,{
+morocc,145,101,4	script	RANK EXP	838,{
 Start:
 
 .@namenpc$ = "RANK EXP";

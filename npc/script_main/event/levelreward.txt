@@ -76,6 +76,7 @@ morocc,150,111,5	script	LevelReward	624,{
 	end;
 
 Oninit:
+	waitingroom "Level Reward",0;
 	.Maxuser = 25;
 	setarray .classreward$,		// Set ClassID|Level|Job|Cashreward
 		"Novice|99|10|10000",
