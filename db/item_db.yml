@@ -100,3 +100,4 @@ Footer:
   - Path: db/import/item_db_l_costume.yml
   - Path: db/import/item_db_m_costume.yml
   - Path: db/import/item_db_r_costume.yml
+  - Path: db/import/item_db_charm.yml

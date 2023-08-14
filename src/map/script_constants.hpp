@@ -4561,6 +4561,7 @@
 	export_constant(IT_PETARMOR);
 	export_constant(IT_AMMO);
 	export_constant(IT_DELAYCONSUME);
+	export_constant(IT_CHARM);
 	export_constant(IT_SHADOWGEAR);
 	export_constant(IT_CASH);
 

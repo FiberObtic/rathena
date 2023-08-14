@@ -232,7 +232,7 @@ uint64 ItemDatabase::parseBodyNode(const ryml::NodeRef& node) {
 		item->value_sell = sell;
 
 	} else {
-		if (!exists) {
+	if (!exists) {
 			item->value_sell = 0;
 		}
 	}
@@ -3064,6 +3064,7 @@ const char* itemdb_typename(enum item_types type)
 		case IT_PETARMOR:       return "Pet Accessory";
 		case IT_AMMO:           return "Arrow/Ammunition";
 		case IT_DELAYCONSUME:   return "Delay-Consume Usable";
+		case IT_CHARM:			return "Charm";
 		case IT_SHADOWGEAR:     return "Shadow Equipment";
 		case IT_CASH:           return "Cash Usable";
 	}
@@ -3226,6 +3227,7 @@ char itemdb_isidentified(t_itemid nameid) {
 		case IT_ARMOR:
 		case IT_PETARMOR:
 		case IT_SHADOWGEAR:
+		case IT_CHARM:
 			return 0;
 		default:
 			return 1;

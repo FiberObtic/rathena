@@ -1,0 +1,14 @@
+Header:
+  Type: ITEM_DB
+  Version: 3
+
+Body:
+  - Id: 901
+    AegisName: Charm
+    Name: Charm_
+    Type: Charm
+    Buy: 50
+    Trade:
+      NoSell: true
+    Script: |
+      bonus bAllStats,100;
