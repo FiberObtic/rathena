@@ -1000,11 +1000,9 @@ Body:
     Refineable: true
     View: 907
     Script: |
-      .@r = getrefine();
-      bonus bAllStats,1;
-      bonus2 bSubEle,Ele_Holy,-20;
-      bonus2 bSubRace,RC_Angel,-15;
-      bonus2 bSubRace,RC_Demon,6;
-      bonus2 bSubRace,RC_DemiHuman,6;
-      bonus2 bSubRace,RC_Player_Human,6;
-      bonus2 bSubRace,RC_Player_Doram,6;
+      bonus bBaseAtk,2*(readparam(bStr)/20);
+      bonus bAspd,(readparam(bAgi)/20);
+      bonus bMaxHPrate,2*(readparam(bVit)/20);
+      bonus bMatk,2*(readparam(bInt)/20);
+      bonus bLongAtkRate,2*(readparam(bDex)/20);
+      bonus bCritical,2*(readparam(bLuk)/20);
