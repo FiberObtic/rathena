@@ -10,5 +10,8 @@ Body:
     Buy: 50
     Trade:
       NoSell: true
+      NoDrop: true
+      NoTrade: true
+      NoStorage: true
     Script: |
       bonus bAllStats,5;
