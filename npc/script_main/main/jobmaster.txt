@@ -1,6 +1,6 @@
 //==============================================
 morocc,160,144,5	script	เปลี่ยนอาชีพ	918,{
-soundeffect "job.wav",0;
+//soundeffect "job.wav",0;
 function Get_Job_Equip;
 // Checks if the Player has the required level.
 // closes if not, returns if yes

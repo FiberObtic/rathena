@@ -345,7 +345,7 @@ Body:
       NoDrop: true
       NoSell: true
     Script: |
-       dispbottom "[ RANK EXP] ๏ฟฝ๏ฟฝ๏ฟฝับ RANK EXP ๏ฟฝำนวน 100,000 Points",0xffffff;
+       dispbottom "[ RANK EXP] ได้รับ RANK EXP จำนวน 100,000 Points",0xffffff;
        getexp2(100000,0);
   - Id: 53000018
     AegisName: RANK_JOB
@@ -354,7 +354,7 @@ Body:
     Buy: 10
     Weight: 70
     Script: |
-       dispbottom "[ RANK JOB] ๏ฟฝ๏ฟฝ๏ฟฝับ RANK Job ๏ฟฝำนวน 100,000 Points",0xffffff;
+       dispbottom "[ RANK JOB] ได้รับ RANK Job จำนวน 100,000 Points",0xffffff;
        getexp2(0,100000);
   - Id: 23165
     AegisName: Service30_AID_Buff
@@ -602,8 +602,8 @@ Body:
       delitem 5300000,1;
       #vote_member = 1;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[๏ฟฝะบ๏ฟฝ] : ๏ฟฝุณ๏ฟฝ็นผ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาน Vote Member Lv.1";
-      dispbottom "๏ฟฝ๏ฟฝุณ๏ฟฝ๏ฟฝอก๏ฟฝ๏ฟฝ ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ";
+      dispbottom "[ระบบ] : คุณได้รับสถานะ Vote Member Lv.1";
+      dispbottom "กรุณาออกเลือกตัวละครใหม่อีกครั้ง";
   - Id: 5300001
     AegisName: Vote_Member_Lv_2
     Name: Vote Member Lv.2
@@ -613,8 +613,8 @@ Body:
       delitem 5300001,1;
       #vote_member = 2;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[๏ฟฝะบ๏ฟฝ] : ๏ฟฝุณ๏ฟฝ็นผ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาน Vote Member Lv.2";
-      dispbottom "๏ฟฝ๏ฟฝุณ๏ฟฝ๏ฟฝอก๏ฟฝ๏ฟฝ ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ";
+      dispbottom "[ระบบ] : คุณได้รับสถานะ Vote Member Lv.2";
+      dispbottom "กรุณาออกเลือกตัวละครใหม่อีกครั้ง";
   - Id: 5300002
     AegisName: Vote_Member_Lv_3
     Name: Vote Member Lv.3
@@ -624,8 +624,8 @@ Body:
       delitem 5300002,1;
       #vote_member = 3;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[๏ฟฝะบ๏ฟฝ] : ๏ฟฝุณ๏ฟฝ็นผ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาน Vote Member Lv.3";
-      dispbottom "๏ฟฝ๏ฟฝุณ๏ฟฝ๏ฟฝอก๏ฟฝ๏ฟฝ ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ";
+      dispbottom "[ระบบ] : คุณได้รับสถานะ Vote Member Lv.3";
+      dispbottom "กรุณาออกเลือกตัวละครใหม่อีกครั้ง";
   - Id: 5300003
     AegisName: Vote_Member_Lv_4
     Name: Vote Member Lv.4
@@ -635,8 +635,8 @@ Body:
       delitem 5300003,1;
       #vote_member = 4;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[๏ฟฝะบ๏ฟฝ] : ๏ฟฝุณ๏ฟฝ็นผ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาน Vote Member Lv.4";
-      dispbottom "๏ฟฝ๏ฟฝุณ๏ฟฝ๏ฟฝอก๏ฟฝ๏ฟฝ ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ";
+      dispbottom "[ระบบ] : คุณได้รับสถานะ Vote Member Lv.4";
+      dispbottom "กรุณาออกเลือกตัวละครใหม่อีกครั้ง";
   - Id: 5300004
     AegisName: Vote_Member_Lv_5
     Name: Vote Member Lv.5
@@ -646,8 +646,8 @@ Body:
       delitem 5300004,1;
       #vote_member = 5;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[๏ฟฝะบ๏ฟฝ] : ๏ฟฝุณ๏ฟฝ็นผ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาน Vote Member Lv.5";
-      dispbottom "๏ฟฝ๏ฟฝุณ๏ฟฝ๏ฟฝอก๏ฟฝ๏ฟฝ ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ";
+      dispbottom "[ระบบ] : คุณได้รับสถานะ Vote Member Lv.5";
+      dispbottom "กรุณาออกเลือกตัวละครใหม่อีกครั้ง";
   - Id: 5300005
     AegisName: Vote_Member_Lv_6
     Name: Vote Member Lv.6
@@ -657,8 +657,8 @@ Body:
       delitem 5300005,1;
       #vote_member = 6;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[๏ฟฝะบ๏ฟฝ] : ๏ฟฝุณ๏ฟฝ็นผ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาน Vote Member Lv.6";
-      dispbottom "๏ฟฝ๏ฟฝุณ๏ฟฝ๏ฟฝอก๏ฟฝ๏ฟฝ ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ";
+      dispbottom "[ระบบ] : คุณได้รับสถานะ Vote Member Lv.6";
+      dispbottom "กรุณาออกเลือกตัวละครใหม่อีกครั้ง";
   - Id: 5300006
     AegisName: Vote_Member_Lv_7
     Name: Vote Member Lv.7
@@ -668,8 +668,8 @@ Body:
       delitem 5300006,1;
       #vote_member = 7;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[๏ฟฝะบ๏ฟฝ] : ๏ฟฝุณ๏ฟฝ็นผ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาน Vote Member Lv.7";
-      dispbottom "๏ฟฝ๏ฟฝุณ๏ฟฝ๏ฟฝอก๏ฟฝ๏ฟฝ ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ";
+      dispbottom "[ระบบ] : คุณได้รับสถานะ Vote Member Lv.7";
+      dispbottom "กรุณาออกเลือกตัวละครใหม่อีกครั้ง";
   - Id: 5300007
     AegisName: Vote_Member_Lv_8
     Name: Vote Member Lv.8
@@ -679,8 +679,8 @@ Body:
       delitem 5300007,1;
       #vote_member = 8;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[๏ฟฝะบ๏ฟฝ] : ๏ฟฝุณ๏ฟฝ็นผ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาน Vote Member Lv.8";
-      dispbottom "๏ฟฝ๏ฟฝุณ๏ฟฝ๏ฟฝอก๏ฟฝ๏ฟฝ ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ";
+      dispbottom "[ระบบ] : คุณได้รับสถานะ Vote Member Lv.8";
+      dispbottom "กรุณาออกเลือกตัวละครใหม่อีกครั้ง";
   - Id: 5300008
     AegisName: Vote_Member_Lv_9
     Name: Vote Member Lv.9
@@ -690,8 +690,8 @@ Body:
       delitem 5300008,1;
       #vote_member = 9;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[๏ฟฝะบ๏ฟฝ] : ๏ฟฝุณ๏ฟฝ็นผ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาน Vote Member Lv.9";
-      dispbottom "๏ฟฝ๏ฟฝุณ๏ฟฝ๏ฟฝอก๏ฟฝ๏ฟฝ ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ";
+      dispbottom "[ระบบ] : คุณได้รับสถานะ Vote Member Lv.9";
+      dispbottom "กรุณาออกเลือกตัวละครใหม่อีกครั้ง";
   - Id: 5300009
     AegisName: Vote_Member_Lv_10
     Name: Vote Member Lv.10
@@ -701,8 +701,8 @@ Body:
       delitem 5300009,1;
       #vote_member = 10;
       addtimer 1000,"vote_member::OnBuffer";
-      dispbottom "[๏ฟฝะบ๏ฟฝ] : ๏ฟฝุณ๏ฟฝ็นผ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาน Vote Member Lv.10";
-      dispbottom "๏ฟฝ๏ฟฝุณ๏ฟฝ๏ฟฝอก๏ฟฝ๏ฟฝ ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ";
+      dispbottom "[ระบบ] : คุณได้รับสถานะ Vote Member Lv.10";
+      dispbottom "กรุณาออกเลือกตัวละครใหม่อีกครั้ง";
   - Id: 53000010
     AegisName: Mvp_Rank_1
     Name: Mvp Rank 1
@@ -713,8 +713,8 @@ Body:
       mvp_ranking = 1;
       delay_buff_mvp = gettimetick(2)+60*60*24*7;
       addtimer 1000,"auto_bonus_mvp_ranking::OnBuffer";
-      dispbottom "[๏ฟฝะบ๏ฟฝ] : ๏ฟฝุณ๏ฟฝ็นผ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาน Mvp Rank [1] ";
-      dispbottom "๏ฟฝ๏ฟฝุณ๏ฟฝ๏ฟฝอก๏ฟฝ๏ฟฝ ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ";
+      dispbottom "[ระบบ] : คุณได้รับสถานะ Mvp Rank [1] ";
+      dispbottom "กรุณาออกเลือกตัวละครใหม่อีกครั้ง";
   - Id: 53000011
     AegisName: Mvp_Rank_2
     Name: Mvp Rank 2
@@ -725,8 +725,8 @@ Body:
       mvp_ranking = 2;
       delay_buff_mvp = gettimetick(2)+60*60*24*7;
       addtimer 1000,"auto_bonus_mvp_ranking::OnBuffer";
-      dispbottom "[๏ฟฝะบ๏ฟฝ] : ๏ฟฝุณ๏ฟฝ็นผ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาน Mvp Rank [2] ";
-      dispbottom "๏ฟฝ๏ฟฝุณ๏ฟฝ๏ฟฝอก๏ฟฝ๏ฟฝ ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ";
+      dispbottom "[ระบบ] : คุณได้รับสถานะ Mvp Rank [2] ";
+      dispbottom "กรุณาออกเลือกตัวละครใหม่อีกครั้ง";
   - Id: 53000012
     AegisName: Mvp_Rank_3
     Name: Mvp Rank 3
@@ -737,8 +737,8 @@ Body:
       mvp_ranking = 3;
       delay_buff_mvp = gettimetick(2)+60*60*24*7;
       addtimer 1000,"auto_bonus_mvp_ranking::OnBuffer";
-      dispbottom "[๏ฟฝะบ๏ฟฝ] : ๏ฟฝุณ๏ฟฝ็นผ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาน Mvp Rank [3] ";
-      dispbottom "๏ฟฝ๏ฟฝุณ๏ฟฝ๏ฟฝอก๏ฟฝ๏ฟฝ ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ";
+      dispbottom "[ระบบ] : คุณได้รับสถานะ Mvp Rank [3] ";
+      dispbottom "กรุณาออกเลือกตัวละครใหม่อีกครั้ง";
   - Id: 20841
     AegisName: Golden_Angel_Wing_TH
     Name: Golden Angel Wing
