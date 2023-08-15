@@ -61,18 +61,58 @@ morocc,143,74,4	script	Option Item	10009,{
 	}
 	
 	.@selectedItemId = getequipid(.@part);
+	.@refine = getequiprefinerycnt(.@part);
 	setarray .@itemcost[0],65001,65002,65003;
 	next;
 	switch(.@part) {
 		case EQI_HAND_R:
 		case EQI_HAND_L:
-			if(getequiparmorlv(.@part) ) .@itemuse = .@itemcost[1];
-			else .@itemuse = .@itemcost[0];
+			if(getequiparmorlv(.@part) ) 
+				if(.@refine >= 7)
+					.@itemuse = .@itemcost[1];
+				else {
+					.@refinereq = 7;
+					goto L_Refinereq;
+					close;
+				}
+			else {
+				switch(getequipweaponlv(.@part) ) {
+					case 1:
+					case 2:
+						if(.@refine >= 9)
+							.@itemuse = .@itemcost[0];
+						else {
+							.@refinereq = 9;
+							goto L_Refinereq;
+							close;
+						}
+						break;
+					case 3:
+					case 4:
+						if(.@refine >= 7)
+							.@itemuse = .@itemcost[0];
+						else {
+							.@refinereq = 7;
+							goto L_Refinereq;
+							close;
+						}
+						break;
+					default:
+						mes "error";
+						close;
+				}
+			}
 			break;
 		case EQI_ARMOR:
 		case EQI_GARMENT:
 		case EQI_SHOES:
-			.@itemuse = .@itemcost[1];
+			if(.@refine >= 7)
+				.@itemuse = .@itemcost[0];
+			else {
+				.@refinereq = 7;
+				goto L_Refinereq;
+				close;
+			}
 			break;
 		case EQI_ACC_L:
 		case EQI_ACC_R:
@@ -104,6 +144,11 @@ morocc,143,74,4	script	Option Item	10009,{
 	if(!@id[0]) mes "ท่านได้ทำการเสริมพลังสูงสุดแล้ว";
 	else mes "สำเร็จ ตรวจเช็คอุปกรณ์ของท่านได้เลย";
 	end;
+	
+L_Refinereq:
+	mes .@NPCName$;
+	mes "อุปกรณ์เจ้าตีบวกไม่ถึงเกณฑ์ เราต้องการอุปกรณ์ +"+.@refinereq;
+	close;
 	
 L_ResetOption:
 	setarray .@indices[1], EQI_ARMOR, EQI_HAND_L, EQI_HAND_R, EQI_GARMENT, EQI_SHOES, EQI_ACC_L, EQI_ACC_R;

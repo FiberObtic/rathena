@@ -497,6 +497,7 @@ function	pass_reward	{
 	//#CASHPOINTS += .BP_Cash_Earn[.@level];
 	#CASHPOINTS += atoi(.@id$[1]);
 	#BP_Points += .BP_Points_Earn[.@level];
+	if(.@level == .max_level) rentitem 35001,604800;
 	//mail getcharid(0),"Premium Pass","รางวัล เลเวล "+.@level+"","นี่คือรางวัลของคุณสําหรับการไปถึงเลเวล "+.@level+" บน Premium Pass ของคุณ.",0,.@item_id,.@item_amount;
 	return;
 }

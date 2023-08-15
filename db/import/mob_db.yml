@@ -159,16 +159,14 @@ Body:
   - Id: 20682
     AegisName: EP17_2_HEART_HUNTER_H
     Name: Heart Hunter Skirmisher
-    Level: 176
-    Hp: 1208485
-    BaseExp: 100707
-    JobExp: 70495
-    Attack: 2948
-    Attack2: 1291
-    Defense: 99
-    MagicDefense: 99
+    Level: 140
+    Hp: 120848
+    Attack: 1
+    Attack2: 9999
+    Defense: 50
+    MagicDefense: 50
     Str: 110
-    Agi: 147
+    Agi: 20
     Vit: 38
     Int: 97
     Dex: 153
@@ -196,14 +194,12 @@ Body:
     Name: Bookworm
     Level: 141
     Hp: 250264
-    BaseExp: 22751
-    JobExp: 15926
-    Attack: 1815
-    Attack2: 855
-    Defense: 99
-    MagicDefense: 99
+    Attack: 1678
+    Attack2: 1887
+    Defense: 50
+    MagicDefense: 50
     Str: 103
-    Agi: 89
+    Agi: 20
     Vit: 23
     Int: 91
     Dex: 107
@@ -229,14 +225,12 @@ Body:
     Name: Roaming Spellbook
     Level: 144
     Hp: 256849
-    BaseExp: 23350
-    JobExp: 16345
-    Attack: 1980
-    Attack2: 931
-    Defense: 99
-    MagicDefense: 99
+    Attack: 971
+    Attack2: 3378
+    Defense: 50
+    MagicDefense: 50
     Str: 110
-    Agi: 147
+    Agi: 20
     Vit: 38
     Int: 97
     Dex: 153
@@ -262,14 +256,12 @@ Body:
     Name: Sewage Venenum
     Level: 142
     Hp: 290128
-    BaseExp: 19342
-    JobExp: 13539
     Attack: 1793
-    Attack2: 719
-    Defense: 99
-    MagicDefense: 99
+    Attack2: 1899
+    Defense: 50
+    MagicDefense: 50
     Str: 80
-    Agi: 97
+    Agi: 20
     Vit: 45
     Int: 76
     Dex: 96
@@ -297,14 +289,12 @@ Body:
     Name: Sewage Cramp
     Level: 140
     Hp: 285388
-    BaseExp: 19026
-    JobExp: 13318
-    Attack: 1978
-    Attack2: 523
-    Defense: 99
-    MagicDefense: 99
+    Attack: 1677
+    Attack2: 2085
+    Defense: 50
+    MagicDefense: 50
     Str: 113
-    Agi: 118
+    Agi: 20
     Vit: 38
     Int: 56
     Dex: 109
@@ -332,14 +322,12 @@ Body:
     Name: Sewage Waterfall
     Level: 141
     Hp: 287897
-    BaseExp: 19193
-    JobExp: 13435
     Attack: 1674
-    Attack2: 949
-    Defense: 99
-    MagicDefense: 99
+    Attack2: 1975
+    Defense: 50
+    MagicDefense: 50
     Str: 95
-    Agi: 111
+    Agi: 20
     Vit: 43
     Int: 101
     Dex: 96
@@ -367,14 +355,12 @@ Body:
     Name: Elite Bellare
     Level: 143
     Hp: 295508
-    BaseExp: 19701
-    JobExp: 13790
     Attack: 1931
-    Attack2: 648
-    Defense: 99
-    MagicDefense: 99
+    Attack2: 1931
+    Defense: 50
+    MagicDefense: 50
     Str: 108
-    Agi: 121
+    Agi: 20
     Vit: 80
     Int: 68
     Dex: 113
@@ -402,14 +388,12 @@ Body:
     Name: Spell Addicted Dolor
     Level: 145
     Hp: 299350
-    BaseExp: 19957
-    JobExp: 13970
     Attack: 2048
-    Attack2: 773
-    Defense: 99
-    MagicDefense: 99
+    Attack2: 2188
+    Defense: 50
+    MagicDefense: 50
     Str: 113
-    Agi: 103
+    Agi: 20
     Vit: 77
     Int: 80
     Dex: 115
@@ -437,14 +421,12 @@ Body:
     Name: Released Spell
     Level: 144
     Hp: 291046
-    BaseExp: 19403
-    JobExp: 13582
     Attack: 1746
-    Attack2: 1152
-    Defense: 99
-    MagicDefense: 99
+    Attack2: 1977
+    Defense: 50
+    MagicDefense: 50
     Str: 97
-    Agi: 120
+    Agi: 20
     Vit: 12
     Int: 120
     Dex: 90
@@ -470,16 +452,14 @@ Body:
   - Id: 20691
     AegisName: EP17_2_PLAGA3
     Name: Spell Addicted Plaga
-    Level: 192
-    Hp: 2946697
-    BaseExp: 196446
-    JobExp: 137513
-    Attack: 4824
+    Level: 142
+    Hp: 294697
+    Attack: 1387
     Attack2: 1958
-    Defense: 99
-    MagicDefense: 99
+    Defense: 50
+    MagicDefense: 50
     Str: 201
-    Agi: 177
+    Agi: 20
     Vit: 90
     Int: 153
     Dex: 186

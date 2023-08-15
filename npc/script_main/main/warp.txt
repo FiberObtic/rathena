@@ -523,7 +523,10 @@ Z2:
 next;
 .@account_id = getcharid(3);
 query_sql("SELECT `level` FROM `premium_pass` WHERE `account_id` = '"+.@account_id+"'",.@lv);
-if(.@lv > 3){ Go("verus02",0,0);end; }
+if(.@lv > 3){ 
+	bonus_script "if(strcharinfo(3) == \"verus02\"){bonus2 bDropAddRace,RC_All,2*.@lv; bonus bAddClass,Class_All,2*.@lv; bonus bMatkRate,2*.@lv;}",999999,9;
+	Go("verus02",0,0);end; 
+	}
 else{ mes "ขอโทษด้วย Level Battle Pass ไม่ถึง 4"; end; }
 	
 	

@@ -3,12 +3,12 @@ Header:
   Version: 3
 
 Body:
-  - Id: 901
-    AegisName: Charm
-    Name: Charm_
+  - Id: 35001
+    AegisName: Battle_Pass_Done_7D
+    Name: Battle Pass Max Reward
     Type: Charm
     Buy: 50
     Trade:
       NoSell: true
     Script: |
-      bonus bAllStats,100;
+      bonus bAllStats,5;

@@ -20,7 +20,11 @@ morocc,168,144,4	script	ปริศนาฟ้าแลบ::Quiz Girl	718,{
 
 	mes @npcname$;
 	mes "^FF6600 " + $@M_QuizEvQ$;
-
+	if(#ANSWERQUIZ < gettimetick(2)) {
+		mes " ";
+		mes "คุณตอบไปแล้วค่ะ";
+		close;
+	}
 	input @M_QuizEvA$;
 
 	if($@M_QuizEv<=1) {
@@ -32,7 +36,7 @@ morocc,168,144,4	script	ปริศนาฟ้าแลบ::Quiz Girl	718,{
 	}
 	if(@M_QuizEvA$ == $@M_QuizEvA$) {
 		set $@M_QuizEv,0;
-		announce "[ กิจกรรม ปริศนาฟ้าแลบ : ผู้ตอบถูกคือ "+strcharinfo(0)+" และคำตอบที่ถูกคือ "+$@M_QuizEvA$+" ยินดีด้วยค่ะ ! ]",bc_all,0x00ff99;
+		announce "[ กิจกรรม ปริศนาฟ้าแลบ : ผู้ตอบถูกคือ "+strcharinfo(0)+" /*และคำตอบที่ถูกคือ "+$@M_QuizEvA$+"*/ยินดีด้วยค่ะ ! ]",bc_all,0x00ff99;
 		//getitem $quizitem,$quizitemcount;
 		#CASHPOINTS += 100;
 		dispbottom "คุณได้รับ 100 Cash Point";
@@ -40,10 +44,14 @@ morocc,168,144,4	script	ปริศนาฟ้าแลบ::Quiz Girl	718,{
 			#BP_Points += 1;
 			doevent "Premium Pass Manager::OnExpBoss";
 		}
+		if($MAXPLAYERANSWER < 10 ) {
+			$MAXPLAYERANSWER++;
+			#ANSWERQUIZ = gettimetick(2)+600;
+			mes " ";
+			mes "^000000 ถูกต้องค่ะ";
+			end;
+		}
 		stopnpctimer;
-
-		mes " ";
-		mes "^000000 ถูกต้องค่ะ";
 		close;
 	} else {
 		mes " ";
@@ -58,11 +66,18 @@ morocc,168,144,4	script	ปริศนาฟ้าแลบ::Quiz Girl	718,{
 
 // ====================== {000-01} ระบบคำถาม ======================
 
-OnMinute49:
-OnMinute51:
-OnMinute53:
+OnMinute00:
+OnMinute15:
+OnMinute30:
+OnMinute45:
 
-
+	if($CountdownTimer < gettimetick(2)) {
+			$CountdownTimer = gettimetick(2)+2640;
+			$MAXPLAYERANSWER = 0;
+	}
+	else {
+		end;
+	}
 	if (strnpcinfo(0) == "Quiz7Girl") end;
 	if (gettime(3) < 10)
 		set $@M_QuizTime$,"0"+ gettime(3);
