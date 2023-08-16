@@ -20,7 +20,7 @@ morocc,168,144,4	script	ปริศนาฟ้าแลบ::Quiz Girl	718,{
 
 	mes @npcname$;
 	mes "^FF6600 " + $@M_QuizEvQ$;
-	if(#ANSWERQUIZ < gettimetick(2)) {
+	if(#ANSWERQUIZ > gettimetick(2)) {
 		mes " ";
 		mes "คุณตอบไปแล้วค่ะ";
 		close;

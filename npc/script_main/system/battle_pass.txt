@@ -144,6 +144,7 @@ morocc,156,144,4	script	Premium Pass Manager	4_F_DRKAFRA01,{
 		//cutin $@filename$[.@level-1], 4;
 		mes "ยินดีต้อนรับสู่ ^FF0000Premium Pass^000000";
 		mes "ปัจจุบัน เลเวล - [^0000CD"+.@level+"^000000]";
+		mes "ปัจจุบัน ท่านมี -[ " + #BP_Points +" ]- Points";
 		if (.@level < .max_level) {
 			mes "ปัจจุบัน EXP - [^32CD32"+.@exp+"^000000/"+.explevel[.@level]+"]";	
 			//mes "ภารกิจที่เหลืออยู่ - ["+.@prefix$+""+.@quest+"^000000/"+.quest_count+"]";
@@ -427,6 +428,7 @@ Battlepass_Menu:
 		goto OnExpEarn;
 	OnUseLevel:
 		.@point_exp = .point_exp;
+		#BP_Points += 50;
 		goto OnExpEarn;
 	OnExpEarn:
 		.@account_id = getcharid(3);
