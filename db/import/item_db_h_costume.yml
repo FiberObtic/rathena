@@ -1367,10 +1367,6 @@ Body:
       Costume_Head_Top: true
     ArmorLevel: 1
     View: 3113
-    Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
-      bonus bAllstats,1;
   - Id: 60115
     AegisName: Costume Upper 115
     Name: Costume Upper 115
@@ -1379,10 +1375,6 @@ Body:
       Costume_Head_Top: true
     ArmorLevel: 1
     View: 3114
-    Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
-      bonus bAllstats,1;
   - Id: 60116
     AegisName: Costume Upper 116
     Name: Costume Upper 116
@@ -1391,10 +1383,6 @@ Body:
       Costume_Head_Top: true
     ArmorLevel: 1
     View: 3115
-    Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
-      bonus bAllstats,1;
   - Id: 60117
     AegisName: Costume Upper 117
     Name: Costume Upper 117
@@ -1403,7 +1391,3 @@ Body:
       Costume_Head_Top: true
     ArmorLevel: 1
     View: 3116
-    Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
-      bonus bAllstats,1;
