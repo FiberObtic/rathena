@@ -12,6 +12,5 @@ Body:
       NoSell: true
       NoDrop: true
       NoTrade: true
-      NoStorage: true
-    Script: |
+      Script: |
       bonus bAllStats,5;
