@@ -12,7 +12,7 @@ function Go; function Disp; function Pick; function Restrict;
 	mes "คุณสามารถใช้คำสั่ง ^FF0000@load^000000";
 	mes "เพื่อกลับไปยังจุดเซฟ นะค่ะ^_^";
 menu	"^FF0000•^000000 วาร์ปล่าสุด ^777777["+lastwarp$+"]^000000",-,
-//    	"^FF0000•^000000 เมือง",Towns,
+    	"^FF0000•^000000 เมือง",Towns,
     	"^FF0000•^000000 พื้นที่ ฟิลด์",Fields,
     	"^FF0000•^000000 ดันเจี้ยน",Dungeons,
     	"^FF0000•^000000 ปราสาท กิลด์",Castles,
