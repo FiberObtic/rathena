@@ -428,7 +428,7 @@ Battlepass_Menu:
 		goto OnExpEarn;
 	OnUseLevel:
 		.@point_exp = .point_exp;
-		#BP_Points += 50;
+		#BP_Points += 25;
 		goto OnExpEarn;
 	OnExpEarn:
 		.@account_id = getcharid(3);

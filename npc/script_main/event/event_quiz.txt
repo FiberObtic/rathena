@@ -35,8 +35,7 @@ morocc,168,144,4	script	ปริศนาฟ้าแลบ::Quiz Girl	718,{
 		close;
 	}
 	if(@M_QuizEvA$ == $@M_QuizEvA$) {
-		set $@M_QuizEv,0;
-		announce "[ กิจกรรม ปริศนาฟ้าแลบ : ผู้ตอบถูกคือ "+strcharinfo(0)+" /*และคำตอบที่ถูกคือ "+$@M_QuizEvA$+"*/ยินดีด้วยค่ะ ! ]",bc_all,0x00ff99;
+		announce "[ กิจกรรม ปริศนาฟ้าแลบ : ผู้ตอบถูกคือ "+strcharinfo(0)+"ยินดีด้วยค่ะ ! ]",bc_all,0x00ff99;
 		//getitem $quizitem,$quizitemcount;
 		#CASHPOINTS += 100;
 		dispbottom "คุณได้รับ 100 Cash Point";
@@ -51,6 +50,9 @@ morocc,168,144,4	script	ปริศนาฟ้าแลบ::Quiz Girl	718,{
 			mes "^000000 ถูกต้องค่ะ";
 			end;
 		}
+		set $@M_QuizEv,0;
+		mes " ";
+		mes "ตอบครบแล้วค่ะ";
 		stopnpctimer;
 		close;
 	} else {
