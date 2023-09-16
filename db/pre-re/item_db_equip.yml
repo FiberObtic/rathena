@@ -30260,7 +30260,7 @@ Body:
     Locations:
       Head_Top: true
     ArmorLevel: 1
-    EquipLevelMin: 70
+    EquipLevelMin: 1
     View: 314
     Trade:
       NoDrop: true
@@ -30268,8 +30268,8 @@ Body:
       NoGuildStorage: true
     Script: |
       bonus bSpeedRate,25;
-      bonus bAspdRate,-10;
-      bonus bCastrate,25;
+      bonus bAspdRate,5;
+      bonus bCastrate,-5;
   - Id: 5287
     AegisName: Vacation_Hat
     Name: Vacation Hat
@@ -30389,6 +30389,7 @@ Body:
     Locations:
       Head_Top: true
     ArmorLevel: 1
+    EquipLevelMin: 30
     View: 320
     Trade:
       NoDrop: true
@@ -31645,7 +31646,7 @@ Body:
     Locations:
       Head_Low: true
     ArmorLevel: 1
-    EquipLevelMin: 60
+    EquipLevelMin: 1
     View: 370
     Trade:
       NoDrop: true
@@ -32178,7 +32179,7 @@ Body:
     Locations:
       Head_Mid: true
     ArmorLevel: 1
-    EquipLevelMin: 30
+    EquipLevelMin: 1
     View: 394
     Trade:
       NoDrop: true
@@ -35597,18 +35598,18 @@ Body:
     Locations:
       Head_Mid: true
     ArmorLevel: 1
-    EquipLevelMin: 80
+    EquipLevelMin: 1
     View: 568
     Script: |
       if (BaseClass == Job_Swordman || BaseClass == Job_Merchant || BaseClass == Job_Thief || (BaseJob == Job_Taekwon && Class!=Job_Soul_Linker))
-         bonus bStr,1;
+         bonus bAspd,1;
       else if (BaseClass == Job_Mage || BaseClass == Job_Acolyte || class == Job_Ninja || class == Job_Soul_Linker)
-         bonus bInt,1;
+         bonus bMatk,5;
       else if (BaseClass == Job_Archer || BaseClass == Job_Gunslinger)
-         bonus bDex,1;
+         bonus bLongAtkRate,2;
       else if (BaseJob == Job_Novice || BaseJob == Job_SuperNovice) {
-         bonus bMaxHP,80;
-         bonus bMaxSP,30;
+         bonus bMaxHP,120;
+         bonus bMaxSP,60;
       }
   - Id: 5593
     AegisName: K_Rabbit_Bonnet
@@ -41354,10 +41355,11 @@ Body:
     Locations:
       Head_Low: true
     ArmorLevel: 1
-    EquipLevelMin: 30
+    EquipLevelMin: 1
     View: 675
     Script: |
-      bonus bVit,1;
+      bonus bMaxHPRate,1;
+      bonus bAddMonsterIdDropItem,517,5;
   - Id: 18506
     AegisName: Hattah_Black
     Name: Hattah Black
