@@ -22,3 +22,14 @@
 // Example:
 // 8,6  // Endure cannot be used in PvP and GvG maps (2+4)
 
+369,6	//	Battle Chant  PVP,GVG
+290,6	//	ABRACADABRA  PVP,GVG
+402,6	//	Mind Breaker  PVP,GVG
+396,6	//	Marionette Control  PVP,GVG
+311,6	//	LOki  PVP,GVG
+309,6	//	Battle Theme  PVP,GVG
+310,6	//	Harmonic Lick  PVP,GVG
+313,6	//	Acoustic Rhythm  PVP,GVG
+457,6	//	Spirit of the Assasin  PVP,GVG
+456,6	//	Spirit of the Rogue  PVP,GVG
+426,6	//	High Jump  PVP,GVG
