@@ -154,3 +154,42 @@ Body:
     Hit: Multi_Hit
     HitCount: 2
     Element: Weapon
+  - Id: 42
+    Name: MC_MAMMONITE
+    Description: Mammonite
+    MaxLevel: 10
+    Type: Weapon
+    TargetType: Attack
+    Flags:
+      AllowOnMado: true
+    Range: -1
+    Hit: Single
+    HitCount: 1
+    Element: Weapon
+    CopyFlags:
+      Skill:
+        Plagiarism: true
+        Reproduce: true
+    Requires:
+      SpCost: 5
+      ZenyCost:
+        - Level: 1
+          Amount: 10
+        - Level: 2
+          Amount: 20
+        - Level: 3
+          Amount: 30
+        - Level: 4
+          Amount: 40
+        - Level: 5
+          Amount: 50
+        - Level: 6
+          Amount: 60
+        - Level: 7
+          Amount: 70
+        - Level: 8
+          Amount: 80
+        - Level: 9
+          Amount: 90
+        - Level: 10
+          Amount: 100
