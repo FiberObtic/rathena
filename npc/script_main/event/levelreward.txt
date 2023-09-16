@@ -17,6 +17,10 @@ morocc,150,111,5	script	LevelReward	624,{
 	.@pos = inarray(.clname$,jobname(class));
 	.@npcname$ = "[ Level Max Get Reward ]";
 	mes .@npcname$;
+	if(.@pos < 0 ) {
+		mes "อาชีพของท่านไม่ตรงกับเงื่อนไข";
+		end;
+	}
 	mes "สวัสดีท่านนักผจญภัย";
 	mes "ตอนนี้ ท่านเลเวล "+Baselevel+" จ๊อบ "+Joblevel;
 	mes "อาชีพ "+jobname(class);
