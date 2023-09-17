@@ -75,6 +75,20 @@ Body:
        Price: 500
   - Tab: Limited
     Items:
+     - Item: Swordman_Figure
+       Price: 7500
+     - Item: Archer_Figure
+       Price: 7500
+     - Item: Thief_Figure
+       Price: 7500
+     - Item: Acolyte_Figure
+       Price: 7500
+     - Item: Merchant_Figure
+       Price: 7500
+     - Item: Mage_Figure
+       Price: 7500
+     - Item: Novice_Figure
+       Price: 7500
      - Item: Ramen_Hat
        Price: 999
      - Item: J_Captain_Hat
@@ -221,3 +235,5 @@ Body:
        Price: 2500
      - Item: Random_Costume_Lower
        Price: 2500
+     - Item: Elite_Siege_Supply_Box
+       Price: 2000
