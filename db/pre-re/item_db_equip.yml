@@ -41359,7 +41359,7 @@ Body:
     View: 675
     Script: |
       bonus bMaxHPRate,1;
-      bonus bAddMonsterIdDropItem,517,5;
+      bonus2 bAddMonsterIdDropItem,517,5;
   - Id: 18506
     AegisName: Hattah_Black
     Name: Hattah Black

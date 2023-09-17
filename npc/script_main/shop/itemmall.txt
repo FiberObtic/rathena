@@ -249,7 +249,7 @@ end;
 }
 end;
 OnInit:
-waitingroom "ร้านขายอาวุธชุดเกาะคลาส 3",0; 
+waitingroom "ร้านขายอาวุธ&ชุดเกราะ",0; 
 end;
 }
 
