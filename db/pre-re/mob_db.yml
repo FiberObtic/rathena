@@ -39020,6 +39020,10 @@ Body:
         Rate: 1000
       - Item: Honey
         Rate: 500
+      - Item: Dragon_Vest
+        Rate: 5
+      - Item: Dragon_Manteau
+        Rate: 1
       - Item: Draco_Card
         Rate: 1
         StealProtected: true
