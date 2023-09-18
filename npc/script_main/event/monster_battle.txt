@@ -10,7 +10,7 @@ set $redteam,2718; //ID Monster
 set $blueteam,2810; //ID Monster
 /////////////////////////////////
 set $monsterzenyre,500000; //ราคาเดิมพัน
-set $monsterzenyrservece,95*$monsterzenyre/100; //ราคาค่าน้ำ
+set $monsterzenyrservece,10*$monsterzenyre/100; //ราคาค่าน้ำ
 set $Monterteimset,30000; //เวลานับถอยหลัง 1000=1วินาที
 /////////////**Mode จำกัดผู้เล่นสองฝั่ง**//////////////////
 set $Montermaxon,0; // 1=เปิด 0=ปิด $monterrungamezplayer
