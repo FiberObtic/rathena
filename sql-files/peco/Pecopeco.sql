@@ -1,0 +1,46 @@
+CREATE TABLE `volcano_monster_log` (
+`num`  int(11) NOT NULL AUTO_INCREMENT ,
+`char_id`  int(11) NOT NULL DEFAULT 0 ,
+`name`  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '0' ,
+`number`  int(11) NOT NULL DEFAULT 0 ,
+`numbernpc`  int(11) NULL DEFAULT NULL ,
+`select`  varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '0' ,
+`zeny`  int(255) NOT NULL DEFAULT 0 ,
+`date`  date NOT NULL ,
+PRIMARY KEY (`num`)
+)
+ENGINE=MyISAM
+DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
+AUTO_INCREMENT=1
+CHECKSUM=0
+ROW_FORMAT=DYNAMIC
+DELAY_KEY_WRITE=0
+;
+
+CREATE TABLE `volcano_anticheck` (
+`char_id`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`name`  varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' ,
+`numbercheck`  int(30) NULL DEFAULT NULL ,
+PRIMARY KEY (`char_id`)
+)
+ENGINE=MyISAM
+DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
+AUTO_INCREMENT=1
+CHECKSUM=0
+ROW_FORMAT=DYNAMIC
+DELAY_KEY_WRITE=0
+;
+
+CREATE TABLE `volcano_monster` (
+`number`  int(255) NOT NULL DEFAULT 0 ,
+`numbernpc`  int(11) NOT NULL DEFAULT 0 ,
+`date`  date NOT NULL ,
+`monster`  int(255) NOT NULL DEFAULT 0 
+)
+ENGINE=MyISAM
+DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
+AUTO_INCREMENT=1
+CHECKSUM=0
+ROW_FORMAT=DYNAMIC
+DELAY_KEY_WRITE=0
+;

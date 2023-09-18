@@ -30,7 +30,7 @@ if(getd("$holorun2") == 1){setd "$holorun2",0;}
 
 
 //////////////////พิกัด NPC เนื้อเรื่องรอง//////////////////////
-morocc,219,64,5	script	hilo#01	565,{
+morocc,204,44,5	script	hilo#01	565,{
 	end;
 OnSetup:
 specialeffect 767;
@@ -45,7 +45,7 @@ Ondice:
 end;
 
 }
-morocc,221,64,5	script	hilo#02	565,{ 
+morocc,206,44,5	script	hilo#02	565,{ 
 end;
 OnSetup:
 specialeffect 767;
@@ -59,7 +59,7 @@ Ondice:
  if(getd("$dice2") == 6){specialeffect 763;}
 end;
 }
-morocc,223,64,5	script	hilo#03	565,{
+morocc,208,44,5	script	hilo#03	565,{
 end;	
 OnSetup:
 specialeffect 767;
@@ -212,7 +212,7 @@ return;
 
 
 /////////////////////////////////////////
-morocc,221,62,3	script	เจ้ามือไฮโล	567,{
+morocc,206,42,3	script	เจ้ามือไฮโล	567,{
 	if(getgmlevel()){	
 mes "^FF0000---GM MODE---^000000";
 menu "^009933•^000000 [ ^FF0000รีเซ็ตเจ้ามือ^000000 ]",bossreseto,"^009933•^000000 [ ^FF0000เข้าเมนูปกติ^000000 ]",bossreseto2,"^FF0000•^000000 [ ^009933เปิดถ้วยไฮโล^000000 ]",bossreseto3;	

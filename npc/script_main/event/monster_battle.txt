@@ -47,15 +47,15 @@ morocc,211,70,6	script	[ Chicken 500K ]	540,{
 	setd "$monterrungamezz",0;
 	setd "$mons1",0;
 	setd "$mons2",0;
-	query_sql( "TRUNCATE TABLE `avalon_monster` " );
-	query_sql( "TRUNCATE TABLE `avalon_monster_log` " );
-	query_sql( "TRUNCATE TABLE `avalon_anticheck` " );
+	query_sql( "TRUNCATE TABLE `volcano_monster` " );
+	query_sql( "TRUNCATE TABLE `volcano_monster_log` " );
+	query_sql( "TRUNCATE TABLE `volcano_anticheck` " );
 	donpcevent strnpcinfo(0) +"::Onkillchicken";
 
 		end;
 		gm02:
 			}	
-query_sql( "SELECT `numbercheck` FROM `avalon_anticheck` WHERE char_id = '"+getcharid(0)+"'",.@numberchecks );
+query_sql( "SELECT `numbercheck` FROM `volcano_anticheck` WHERE char_id = '"+getcharid(0)+"'",.@numberchecks );
 mes ""+$@nemeeventcheken1$+"";
 mes "ค่าเล่น ";
 mes "เงิน "+callfunc("F_InsertComma",($monsterzenyre))+"z";		
@@ -90,9 +90,9 @@ menu
 "- ยกเลิก",no;
 
 checkout:
-query_sql( "SELECT `numbercheck` FROM `avalon_anticheck` WHERE char_id = '"+getcharid(0)+"'",.@numbercheck );
-query_sql( "SELECT `monster` FROM `avalon_monster` WHERE numbernpc = '"+.@numbercheck+"'",.@monster );
-query_sql( "SELECT `select`,`zeny`,`number`,`numbernpc` FROM `avalon_monster_log` WHERE char_id = '"+getcharid(0)+"' AND numbernpc = '"+.@numbercheck+"'",.@select,.@zeny,.@number,.@numbernpc );
+query_sql( "SELECT `numbercheck` FROM `volcano_anticheck` WHERE char_id = '"+getcharid(0)+"'",.@numbercheck );
+query_sql( "SELECT `monster` FROM `volcano_monster` WHERE numbernpc = '"+.@numbercheck+"'",.@monster );
+query_sql( "SELECT `select`,`zeny`,`number`,`numbernpc` FROM `volcano_monster_log` WHERE char_id = '"+getcharid(0)+"' AND numbernpc = '"+.@numbercheck+"'",.@select,.@zeny,.@number,.@numbernpc );
 if( getarraysize( .@zeny )){
 
 	for( set .@b,0; .@b < getarraysize( .@zeny ); set .@b,.@b + 1 )
@@ -108,7 +108,7 @@ if( getarraysize( .@zeny )){
 set numbernpcplayer,0;
 set @rn,rand(1000);
 sleep2 @rn;
-if(countk == 0){query_sql("DELETE FROM `avalon_anticheck` WHERE `char_id` = '"+getcharid(0)+"'");}
+if(countk == 0){query_sql("DELETE FROM `volcano_anticheck` WHERE `char_id` = '"+getcharid(0)+"'");}
 	mes ""+$@nemeeventcheken1$+"";
 	mes "ไม่มีรายการรับรางวัลใดๆ";
 	end;
@@ -121,7 +121,7 @@ if(.@monster == 1	&&	.@zenycheck > 0	&&	.@numbercheck > 0){
 	npctalk ""+$@nemeeventcheken1$+" "+strcharinfo(0)+" แทงฝั่ง Peco Peco ได้รับรางวัล  "+callfunc("F_InsertComma",(.@zenycheck*2))+" Zeny" ;
 	 dispbottom "คุณได้รับ  "+callfunc("F_InsertComma",(.@zenycheck*2))+" Zeny";
 	set Zeny,Zeny + (.@zenycheck*2);
-	query_sql("DELETE FROM `avalon_anticheck` WHERE `char_id` = '"+getcharid(0)+"'");
+	query_sql("DELETE FROM `volcano_anticheck` WHERE `char_id` = '"+getcharid(0)+"'");
 	specialeffect2 10;
 	mes ""+$@nemeeventcheken1$+"";
 	mes "`ยินดีด้วย! ท่านได้รับรางวัลจากรอบที่ [ "+.@numbercheck+" ]";
@@ -132,7 +132,7 @@ if(.@monster == 2	&&	.@zenycheck > 0	&&	.@numbercheck > 0){
 	set numbernpcplayer,0;
 	npctalk ""+$@nemeeventcheken1$+" "+strcharinfo(0)+" แทงฝั่ง Grand Peco ได้รับรางวัล  "+callfunc("F_InsertComma",(.@zenycheck*2))+" Zeny" ;
 	dispbottom "คุณได้รับ  "+callfunc("F_InsertComma",(.@zenycheck*2))+" Zeny";
-	query_sql("DELETE FROM `avalon_anticheck` WHERE `char_id` = '"+getcharid(0)+"'");
+	query_sql("DELETE FROM `volcano_anticheck` WHERE `char_id` = '"+getcharid(0)+"'");
 	set Zeny,Zeny + (.@zenycheck*2);
 	specialeffect2 10;
 	mes ""+$@nemeeventcheken1$+"";
@@ -146,12 +146,12 @@ set @rn,rand(1000);
 sleep2 @rn;
 	if(.@modes ==1){
 		next;
-		if(countk == 0){query_sql("DELETE FROM `avalon_anticheck` WHERE `char_id` = '"+getcharid(0)+"'");}
+		if(countk == 0){query_sql("DELETE FROM `volcano_anticheck` WHERE `char_id` = '"+getcharid(0)+"'");}
 		goto mons1;
 	}
 	if(.@modes ==2){
 		next;
-		if(countk == 0){query_sql("DELETE FROM `avalon_anticheck` WHERE `char_id` = '"+getcharid(0)+"'");}
+		if(countk == 0){query_sql("DELETE FROM `volcano_anticheck` WHERE `char_id` = '"+getcharid(0)+"'");}
 		goto mons2;
 	}
 	mes ""+$@nemeeventcheken1$+"";
@@ -167,7 +167,7 @@ end;
 
 status:
 mes ""+$@nemeeventcheken1$+"";
-query_sql( "SELECT `name`,`num`,`select`,`number` FROM `avalon_monster_log` WHERE char_id = '"+getcharid(0)+"' ORDER BY `char_id` DESC LIMIT 20",.@Name$,.@num,.@select,.@number );
+query_sql( "SELECT `name`,`num`,`select`,`number` FROM `volcano_monster_log` WHERE char_id = '"+getcharid(0)+"' ORDER BY `char_id` DESC LIMIT 20",.@Name$,.@num,.@select,.@number );
 if( getarraysize( .@Name$ ) ){
 	for( set .@a,0; .@a < getarraysize( .@num ); set .@a,.@a + 1 )
 	{
@@ -217,8 +217,8 @@ set numbernpcplayer,(getd("$numbernpc")+1);
 if(getd("$mons1") >= $monterrungamezplayer){mes "^FF0000หมายเหตุ^000000 : จำนวนเดิมพันฝั่ง ^FF0000Peco Peco^000000 ครบ "+$monterrungamezplayer+" แล้ว";end;}
 setd "$mons1",getd("$mons1")+1;
 set Zeny,Zeny - ($monsterzenyre+$monsterzenyrservece);
-query_sql( "INSERT INTO `avalon_monster_log` SET `char_id`='"+getcharid(0)+"',`name`='"+escape_sql(strcharinfo(0))+"',`zeny`='"+$monsterzenyre+"',`select`='1',`number`='"+(getd("$monswin1")+getd("$monswin2")+1)+"',`numbernpc`='"+(getd("$numbernpc")+1)+"',`date`='"+gettimestr("%y-%m-%d",21)+"'" );
-query_sql( "INSERT INTO `avalon_anticheck` SET `char_id`='"+getcharid(0)+"',`name`='"+escape_sql(strcharinfo(0))+"',`numbercheck`='"+(getd("$numbernpc")+1)+"' ON DUPLICATE KEY UPDATE `numbercheck`='"+(getd("$numbernpc")+1)+"'" );
+query_sql( "INSERT INTO `volcano_monster_log` SET `char_id`='"+getcharid(0)+"',`name`='"+escape_sql(strcharinfo(0))+"',`zeny`='"+$monsterzenyre+"',`select`='1',`number`='"+(getd("$monswin1")+getd("$monswin2")+1)+"',`numbernpc`='"+(getd("$numbernpc")+1)+"',`date`='"+gettimestr("%y-%m-%d",21)+"'" );
+query_sql( "INSERT INTO `volcano_anticheck` SET `char_id`='"+getcharid(0)+"',`name`='"+escape_sql(strcharinfo(0))+"',`numbercheck`='"+(getd("$numbernpc")+1)+"' ON DUPLICATE KEY UPDATE `numbercheck`='"+(getd("$numbernpc")+1)+"'" );
 npctalk ""+$@nemeeventcheken1$+" "+strcharinfo(0)+" แทงฝั่ง Peco Peco" ;
 set countk,countk + 1;
 goto checkgame;
@@ -255,8 +255,8 @@ if(getd("$mons2") >= $monterrungamezplayer){mes "^FF0000หมายเหตุ^000000 : จำนวนเ
 setd "$mons2",getd("$mons2")+1;
 set Zeny,Zeny - ($monsterzenyre+$monsterzenyrservece);
 set numbernpcplayer,(getd("$numbernpc")+1);
-query_sql( "INSERT INTO `avalon_monster_log` SET `char_id`='"+getcharid(0)+"',`name`='"+escape_sql(strcharinfo(0))+"',`zeny`='"+$monsterzenyre+"',`select`='2',`number`='"+(getd("$monswin1")+getd("$monswin2")+1)+"',`numbernpc`='"+(getd("$numbernpc")+1)+"',`date`='"+gettimestr("%y-%m-%d",21)+"'" );
-query_sql( "INSERT INTO `avalon_anticheck` SET `char_id`='"+getcharid(0)+"',`name`='"+escape_sql(strcharinfo(0))+"',`numbercheck`='"+(getd("$numbernpc")+1)+"' ON DUPLICATE KEY UPDATE `numbercheck`='"+(getd("$numbernpc")+1)+"'" );
+query_sql( "INSERT INTO `volcano_monster_log` SET `char_id`='"+getcharid(0)+"',`name`='"+escape_sql(strcharinfo(0))+"',`zeny`='"+$monsterzenyre+"',`select`='2',`number`='"+(getd("$monswin1")+getd("$monswin2")+1)+"',`numbernpc`='"+(getd("$numbernpc")+1)+"',`date`='"+gettimestr("%y-%m-%d",21)+"'" );
+query_sql( "INSERT INTO `volcano_anticheck` SET `char_id`='"+getcharid(0)+"',`name`='"+escape_sql(strcharinfo(0))+"',`numbercheck`='"+(getd("$numbernpc")+1)+"' ON DUPLICATE KEY UPDATE `numbercheck`='"+(getd("$numbernpc")+1)+"'" );
 
 npctalk ""+$@nemeeventcheken1$+" "+strcharinfo(0)+" แทงฝั่ง Grand Peco" ;
 set countk,countk + 1;
@@ -320,13 +320,13 @@ if(getd("$monterrungames2z")== 1){end;}
 	set .@rn,rand(1000);
 sleep .@rn;
 	/////////////////////////////////////
-	monster "morocc",201,39,"Peco Peco",$redteam,1,strnpcinfo(0) +"::Onbluedie",0,0;
-	monster "morocc",201,38,"Peco Peco",$redteam,1,strnpcinfo(0) +"::Onbluedie",0,0;
-	monster "morocc",201,37,"Peco Peco",$redteam,1,strnpcinfo(0) +"::Onbluedie",0,0;	
+	monster "morocc",207,63,"Peco Peco",$redteam,1,strnpcinfo(0) +"::Onbluedie",0,0;
+	monster "morocc",207,62,"Peco Peco",$redteam,1,strnpcinfo(0) +"::Onbluedie",0,0;
+	monster "morocc",207,61,"Peco Peco",$redteam,1,strnpcinfo(0) +"::Onbluedie",0,0;	
 	/////////////////////////////////////
-	monster "morocc",211,39,"Grand Peco",$blueteam,1,strnpcinfo(0) +"::Onreddie",0,1;
-	monster "morocc",211,38,"Grand Peco",$blueteam,1,strnpcinfo(0) +"::Onreddie",0,1;
-	monster "morocc",211,37,"Grand Peco",$blueteam,1,strnpcinfo(0) +"::Onreddie",0,1;
+	monster "morocc",215,63,"Grand Peco",$blueteam,1,strnpcinfo(0) +"::Onreddie",0,1;
+	monster "morocc",215,62,"Grand Peco",$blueteam,1,strnpcinfo(0) +"::Onreddie",0,1;
+	monster "morocc",215,61,"Grand Peco",$blueteam,1,strnpcinfo(0) +"::Onreddie",0,1;
 
 	setmapflag "morocc", mf_monster_noteleport;
 	end;
@@ -342,7 +342,7 @@ if(getd("$monsdiez1") >= 3){
 	npctalk ""+$@nemeeventcheken1$+": Grand Peco เป็นฝ่ายชนะ....." ;
 	setd "$monswin2",getd("$monswin2")+1;
 	setd "$monswincheck",2;
-	query_sql( "INSERT INTO `avalon_monster` SET `numbernpc`='"+getd("$numbernpc")+"',`number`='"+getd("$monswin1")+getd("$monswin2")+"',`date`='"+gettimestr("%y-%m-%d",21)+"',`monster`='2'" );
+	query_sql( "INSERT INTO `volcano_monster` SET `numbernpc`='"+getd("$numbernpc")+"',`number`='"+getd("$monswin1")+getd("$monswin2")+"',`date`='"+gettimestr("%y-%m-%d",21)+"',`monster`='2'" );
 	donpcevent "Grand Peco#02::Oneffect1";	
 	donpcevent strnpcinfo(0) +"::OnEnd";
 	donpcevent strnpcinfo(0) +"::OnEnd2";
@@ -360,7 +360,7 @@ if(getd("$monsdiez2") >= 3){
 	npctalk ""+$@nemeeventcheken1$+": Peco Peco เป็นฝ่ายชนะ....." ;
 	setd "$monswin1",getd("$monswin1")+1;
 	setd "$monswincheck",1;
-	query_sql( "INSERT INTO `avalon_monster` SET `numbernpc`='"+getd("$numbernpc")+"',`number`='"+getd("$monswin1")+getd("$monswin2")+"',`date`='"+gettimestr("%y-%m-%d",21)+"',`monster`='1'" );
+	query_sql( "INSERT INTO `volcano_monster` SET `numbernpc`='"+getd("$numbernpc")+"',`number`='"+getd("$monswin1")+getd("$monswin2")+"',`date`='"+gettimestr("%y-%m-%d",21)+"',`monster`='1'" );
 	donpcevent "Peco Peco#01::Oneffect1";
 	donpcevent strnpcinfo(0) +"::OnEnd";
 	donpcevent strnpcinfo(0) +"::OnEnd2";
@@ -404,7 +404,7 @@ OnInit:
 	
 	OnEnd2:
 	
-	query_sql("SELECT name FROM `avalon_anticheck`", .@anticheck_name$);
+	query_sql("SELECT name FROM `volcano_anticheck`", .@anticheck_name$);
 if( getarraysize( .@anticheck_name$ ) ){
 	for( set .@b,0; .@b < getarraysize( .@anticheck_name$ ); set .@b,.@b + 1 ){
 set .@rn,rand(2000);
@@ -416,9 +416,9 @@ sleep .@rn;
 }
 }
 function	script	anticheck_name#1	{
-	query_sql( "SELECT `numbercheck` FROM `avalon_anticheck` WHERE char_id = '"+getcharid(0)+"'",.@numbercheck );
-query_sql( "SELECT `monster` FROM `avalon_monster` WHERE numbernpc = '"+.@numbercheck+"'",.@monster );
-query_sql( "SELECT `select`,`zeny`,`number`,`numbernpc` FROM `avalon_monster_log` WHERE char_id = '"+getcharid(0)+"' AND numbernpc = '"+.@numbercheck+"'",.@select,.@zeny,.@number,.@numbernpc );
+	query_sql( "SELECT `numbercheck` FROM `volcano_anticheck` WHERE char_id = '"+getcharid(0)+"'",.@numbercheck );
+query_sql( "SELECT `monster` FROM `volcano_monster` WHERE numbernpc = '"+.@numbercheck+"'",.@monster );
+query_sql( "SELECT `select`,`zeny`,`number`,`numbernpc` FROM `volcano_monster_log` WHERE char_id = '"+getcharid(0)+"' AND numbernpc = '"+.@numbercheck+"'",.@select,.@zeny,.@number,.@numbernpc );
 if( getarraysize( .@zeny )){
 
 	for( set .@b,0; .@b < getarraysize( .@zeny ); set .@b,.@b + 1 )
@@ -438,7 +438,7 @@ if(.@monster == 1	&&	.@zenycheck > 0){
 	npctalk ""+$@nemeeventcheken1$+" "+strcharinfo(0)+" แทงฝั่ง Peco Peco ได้รับรางวัล  "+callfunc("F_InsertComma",(.@zenycheck*2))+" Zeny" ;
 	 dispbottom "คุณได้รับ  "+callfunc("F_InsertComma",(.@zenycheck*2))+" Zeny";
 	set Zeny,Zeny + (.@zenycheck*2);
-	query_sql("DELETE FROM `avalon_anticheck` WHERE `char_id` = '"+getcharid(0)+"'");
+	query_sql("DELETE FROM `volcano_anticheck` WHERE `char_id` = '"+getcharid(0)+"'");
 	specialeffect2 10;
 
 } else
@@ -447,7 +447,7 @@ if(.@monster == 2	&&	.@zenycheck > 0){
 	set numbernpcplayer,0;
 	npctalk ""+$@nemeeventcheken1$+" "+strcharinfo(0)+" แทงฝั่ง Grand Peco ได้รับรางวัล  "+callfunc("F_InsertComma",(.@zenycheck*2))+" Zeny" ;
 	dispbottom "คุณได้รับ  "+callfunc("F_InsertComma",(.@zenycheck*2))+" Zeny";
-	query_sql("DELETE FROM `avalon_anticheck` WHERE `char_id` = '"+getcharid(0)+"'");
+	query_sql("DELETE FROM `volcano_anticheck` WHERE `char_id` = '"+getcharid(0)+"'");
 	set Zeny,Zeny + (.@zenycheck*2);
 	specialeffect2 10;
 
@@ -489,10 +489,10 @@ morocc,217,59,3	script	Wall#1010	858 ,{}
 	
 OnInit:
 	setwall "morocc",205,65,12,6,0,"wallanti#111";
-	setwall "morocc",205,59,6,4,0,"wallanti#112";
-	setwall "morocc",217,65,12,2,0,"wallanti#113";
-	setwall "morocc",217,59,6,0,0,"wallanti#114";
-	setcell "morocc",205,59,217,65,cell_landprotector,1;
-	setcell "morocc",205,59,217,65,cell_basilica,1;	
+	setwall "morocc",217,65,6,4,0,"wallanti#112";
+	setwall "morocc",217,59,12,2,0,"wallanti#113";
+	setwall "morocc",205,59,6,0,0,"wallanti#114";
+	setcell "morocc",205,65,217,59,cell_landprotector,1;
+	setcell "morocc",205,65,217,59,cell_basilica,1;	
 	end;
 }
