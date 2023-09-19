@@ -1,4 +1,4 @@
--	pointshop	exp_shop	-1,Exp_All_1,53000017:100000,501:100
+-	pointshop	exp_shop	-1,Exp_All_1,53000017:500000
 //-	pointshop	job_shop	-1,Job_All_2,502:100000,501:100
 
 
@@ -58,6 +58,10 @@ setarray .mobid[0],
 			
 				set #EXPPOINTS,getmonsterinfo(killedrid,MOB_BASEEXP);
 				set Exp_All_1,Exp_All_1 +#EXPPOINTS;
+				if( Exp_All_1 >= 2000000000 ) {
+					Exp_All_1 = 2000000000;
+					dispbottom "Rank Exp เก็บได้มากที่สุดที่ 20,000,000 แต้ม";
+				}
 				
 				//set #JOBPOINTS,getmonsterinfo(killedrid,MOB_BASEEXP);
 				//set Job_All_2,Job_All_2 +#JOBPOINTS;

@@ -94,6 +94,7 @@ Oninit:
 	waitingroom "·≈°¢Õß¢ÿ¥", 0;
 	setarray .use$[0],"Zeny","DIGPOINTS";
 	setarray .item[0],
+	5300009,5000,
 	12263,500,
 	14592,500,
 	12210,500,
@@ -102,7 +103,7 @@ Oninit:
 	6635,30000,
 	23210,15000,
 	23211,30000; // <ITEM_ID>,<COST> (√À— ‰Õ‡∑Á¡,√“§“)
- 	setarray .limit[0],500,500,500,300,300,100,100,100,100; // Limit ITEM (®”°—¥®”π«π‰Õ‡∑Á¡)
+ 	setarray .limit[0],100,500,500,500,300,300,100,100,100,100; // Limit ITEM (®”°—¥®”π«π‰Õ‡∑Á¡)
 	npcshopdelitem "vote",501;
 	
 	for(.@i = 0;.@i < getarraysize(.item);.@i = .@i+2)

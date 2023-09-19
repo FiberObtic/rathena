@@ -285,7 +285,7 @@ Body:
     AegisName: Leaflet_Of_Aloe
     Name: Aloe Leaflet
     Type: Healing
-    Buy: 360
+    Buy: 70
     Weight: 20
     Flags:
       BuyingStore: true
@@ -803,7 +803,7 @@ Body:
     AegisName: Strawberry
     Name: Strawberry
     Type: Healing
-    Buy: 200
+    Buy: 100
     Weight: 20
     Flags:
       BuyingStore: true
@@ -1533,7 +1533,7 @@ Body:
     AegisName: Center_Potion
     Name: Concentration Potion
     Type: Usable
-    Buy: 800
+    Buy: 650
     Weight: 100
     Flags:
       BuyingStore: true

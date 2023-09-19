@@ -13,11 +13,15 @@ function	script	cc	{
 			break;
 	}
 	.@coinid = .@cashcoin[.@coin];
+	/*
 	set .@cnum,(countitem(.@coinid));
 	set .@ctotals,.@cashamount[.@coin]+(.@cnum*(.@cashamount[.@coin]));
 	set .@cc,.@ctotals;
-	delitem .@coinid,.@cnum;
+	*/
+	.@cc = .@cashamount[.@coin];
+	.@cnum = 1;
+	//delitem .@coinid,.@cnum;
 	#CASHPOINTS += .@cc;
-	dispbottom "ท่านได้รับ Cash point จำนวน "+callfunc("F_InsertComma",.@cc)+" Points.";
+	dispbottom "ท่านได้รับ Cash point จำนวน "+callfunc("F_InsertComma",.@cc)+" Points. ปัจจุบันท่านมี "+#CASHPOINTS+" พ้อย ";
 	end;
 }

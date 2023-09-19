@@ -345,7 +345,7 @@ Body:
       NoDrop: true
       NoSell: true
     Script: |
-       dispbottom "[ RANK EXP] ได้รับ RANK EXP จำนวน 100,000 Points",0xffffff;
+       dispbottom "[ RANK EXP] ได้รับ RANK EXP จำนว?100,000 Points",0xffffff;
        getexp2(100000,0);
   - Id: 53000018
     AegisName: RANK_JOB
@@ -354,7 +354,7 @@ Body:
     Buy: 10
     Weight: 70
     Script: |
-       dispbottom "[ RANK JOB] ได้รับ RANK Job จำนวน 100,000 Points",0xffffff;
+       dispbottom "[ RANK JOB] ได้รับ RANK Job จำนว?100,000 Points",0xffffff;
        getexp2(0,100000);
   - Id: 23165
     AegisName: Service30_AID_Buff
@@ -696,11 +696,9 @@ Body:
     AegisName: Vote_Member_Lv_10
     Name: Vote Member Lv.10
     Type: DelayConsume
-    Weight: 0
     Script: |
       delitem 5300009,1;
-      #vote_member = 10;
-      addtimer 1000,"vote_member::OnBuffer";
+      bonus_script "{ bonus2 bExpAddRace,RC_All,10;  bonus2 bDropAddRace,RC_All,10; bonus2 bAddClass,Class_All,10; bonus bMatkRate,10; }",3600,512,0,EFST_RANKVOTE_10;
       dispbottom "[ระบบ] : คุณได้รับสถานะ Vote Member Lv.10";
       dispbottom "กรุณาออกเลือกตัวละครใหม่อีกครั้ง";
   - Id: 53000010

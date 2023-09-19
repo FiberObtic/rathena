@@ -90,59 +90,59 @@ Body:
      - Item: Novice_Figure
        Price: 7500
      - Item: Ramen_Hat
-       Price: 999
+       Price: 5000
      - Item: J_Captain_Hat
-       Price: 999
+       Price: 5000
      - Item: Blue_Pajamas_Hat
-       Price: 999
+       Price: 5000
      - Item: Pink_Pajamas_Hat
-       Price: 999
+       Price: 5000
      - Item: Rideword_Hat
-       Price: 999
+       Price: 5000
      - Item: Pecopeco_Hairband
-       Price: 999
+       Price: 5000
      - Item: Balloon_Hat
-       Price: 999
+       Price: 5000
      - Item: Flying_Angel
-       Price: 999
+       Price: 5000
      - Item: Satanic_Chain_P
-       Price: 999
+       Price: 5000
      - Item: Angel_Spirit
-       Price: 999
+       Price: 7500
      - Item: Ear_Of_Angel's_Wing
-       Price: 999
+       Price: 7500
      - Item: Black_Glasses
-       Price: 999
+       Price: 7500
      - Item: Cyclops_Visor
-       Price: 999
+       Price: 7500
      - Item: Ifrit's_Ear
-       Price: 999
+       Price: 7500
      - Item: Ear_Of_Devil's_Wing
-       Price: 999
+       Price: 7500
      - Item: Hawk_Eyes01
-       Price: 999
+       Price: 7500
      - Item: Robo_Eye
-       Price: 999
+       Price: 7500
      - Item: Sigrun's_Wing
-       Price: 999
+       Price: 7500
      - Item: Bubble_Gum_In_Mouth
-       Price: 999
+       Price: 5000
      - Item: Choco_Donut_In_Mouth
-       Price: 999
+       Price: 5000
      - Item: Smoking_Pipe_
-       Price: 999
+       Price: 5000
      - Item: Granpa_Beard_F
-       Price: 999
+       Price: 5000
      - Item: Fish_In_Mouth
-       Price: 999
+       Price: 5000
      - Item: Antique_Pipe
-       Price: 999
+       Price: 5000
      - Item: Ninja_Scroll
-       Price: 999
+       Price: 5000
      - Item: Pirate_Dagger
-       Price: 999
+       Price: 5000
      - Item: Umbala_Spirit
-       Price: 999
+       Price: 5000
   - Tab: Rental
     Items:
      - Item: Costume_V1_Knight
@@ -171,6 +171,12 @@ Body:
        Price: 24900
      - Item: Costume_V11_Dance
        Price: 24900       
+  - Tab: Scrolls
+    Items:
+     - Item: Endless_Tower_Reset_Pass
+       Price: 1000
+     - Item: Premium_Reset_Option_Ticket
+       Price: 1000
   - Tab: Permanent
     Items:
      - Item: Costume Upper 1

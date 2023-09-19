@@ -17,7 +17,7 @@
 morocc,133,79,4	script	นักถอดการ์ด	78,{
 
 	set .zenycost,20000;    	// ค่าบริการถอดการ์ด (in Zeny)
-	set .percardcost,250000;	// ค่าบริการถอดการ์ดต่อใบ (in Zeny)
+	set .percardcost,200000;	// ค่าบริการถอดการ์ดต่อใบ (in Zeny)
 	set .faildestroy,0;			// เลือกได้ว่าจะให้ไอเท็มแตกไหมเวลาล้มเหลว ? (1=yes, 0=no)
 
 	disable_items;

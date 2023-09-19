@@ -203,6 +203,6 @@ OnInit:
 	//	===================================================================================================	//
 	
 	bindatcmd "rank_mvp",""+strnpcinfo(3)+"::OnMenu",99,0;
-	waitingroom "[#] "+strnpcinfo(0)+"",0;
+	waitingroom "[#] รับบัพ MVP",0;
 	end;		
 }

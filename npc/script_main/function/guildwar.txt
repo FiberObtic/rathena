@@ -7,13 +7,12 @@ morocc,154,158,4	script	Kriemhild#mor	722,{
 	.@GM = getgmlevel() >= 99;
 	FlagEmblem GetCastleData("prtg_cas01",1);
 	if (agitcheck() || agitcheck2()){
-		mes "กำลัง War อยู่ไอ่ควาย";
+		mes "Guild War เริ่มต้นอยู่แล้ว";
 		end;
 	}else{
 		set @GID,getcastledata("prtg_cas01",1);
 		if (strcharinfo(0) != getguildmaster(@GID) && !.@GM) {
-			mes "มึงมันไม่ใช่หัวหน้ากิลด์";
-			mes "กลับไปซะไอ่ควาย";
+			mes "ข้าคุยเฉพาะหัวหน้ากิล";
 			end;
 		}
 		
@@ -31,7 +30,7 @@ morocc,154,158,4	script	Kriemhild#mor	722,{
 			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.@GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
 				case 1:
 					if(#guild_reward == 1 || .@GM){
-						mes "ท่านเคยรับรางวัลไปแล้ว ไอ่สัส";
+						mes "ท่านเคยรับรางวัลไปแล้ว";
 						end;
 					}
 					#guild_reward = 1;
@@ -42,8 +41,8 @@ morocc,154,158,4	script	Kriemhild#mor	722,{
 						mes "ท่านเคยกรอกข้อมูลไปแล้วไม่สามารถแก้ไขได้";
 						end;
 					}
-						mes "1.กรอกเลขบัญชีสิไอ่ควาย";
-						mes "2.กรอกชื่อธนาคารสิไอ่ควาย";
+						mes "1.กรอกเลขบัญชี";
+						mes "2.กรอกชื่อธนาคาร";
 						mes "3.กรอกชื่อบัญชีผู้รับ";
 						input .id_bank$;
 						input .name_bank$;
@@ -67,7 +66,7 @@ morocc,154,158,4	script	Kriemhild#mor	722,{
 						query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
 					break;
 				default:
-					mes "ไม่ทำอะไรเสือกมาทำควายอะไร";
+					mes "OK";
 					break;
 			}
 			end;
@@ -105,13 +104,12 @@ morocc,158,158,4	script	Bright Arbor#mor	722,{
 	.@GM = getgmlevel() >= 99;
 	FlagEmblem GetCastleData("payg_cas01",1);
 	if (agitcheck() || agitcheck2()){
-		mes "กำลัง War อยู่ไอ่ควาย";
+		mes "Guild War เริ่มต้นอยู่แล้ว";
 		end;
 	}else{
 		set @GID,getcastledata("payg_cas01",1);
 		if (strcharinfo(0) != getguildmaster(@GID) && !.@GM) {
-			mes "มึงมันไม่ใช่หัวหน้ากิลด์";
-			mes "กลับไปซะไอ่ควาย";
+			mes "ข้าคุยเฉพาะหัวหน้ากิล";
 			end;
 		}
 		
@@ -129,7 +127,7 @@ morocc,158,158,4	script	Bright Arbor#mor	722,{
 			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.@GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
 				case 1:
 					if(#guild_reward == 1 || .@GM){
-						mes "ท่านเคยรับรางวัลไปแล้ว ไอ่สัส";
+						mes "ท่านเคยรับรางวัลไปแล้ว";
 						end;
 					}
 					#guild_reward = 1;
@@ -140,8 +138,8 @@ morocc,158,158,4	script	Bright Arbor#mor	722,{
 						mes "ท่านเคยกรอกข้อมูลไปแล้วไม่สามารถแก้ไขได้";
 						end;
 					}
-						mes "1.กรอกเลขบัญชีสิไอ่ควาย";
-						mes "2.กรอกชื่อธนาคารสิไอ่ควาย";
+						mes "1.กรอกเลขบัญชี";
+						mes "2.กรอกชื่อธนาคาร";
 						mes "3.กรอกชื่อบัญชีผู้รับ";
 						input .id_bank$;
 						input .name_bank$;
@@ -165,7 +163,7 @@ morocc,158,158,4	script	Bright Arbor#mor	722,{
 						query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
 					break;
 				default:
-					mes "ไม่ทำอะไรเสือกมาทำควายอะไร";
+					mes "ok";
 					break;
 			}
 			end;
@@ -179,13 +177,12 @@ morocc,162,158,4	script	Bergel#mor	722,{
 	.@GM = getgmlevel() >= 99;
 	FlagEmblem GetCastleData("gefg_cas04",1);
 	if (agitcheck() || agitcheck2()){
-		mes "กำลัง War อยู่ไอ่ควาย";
+		mes "Guild War เริ่มต้นอยู่แล้ว";
 		end;
 	}else{
 		set @GID,getcastledata("gefg_cas04",1);
 		if (strcharinfo(0) != getguildmaster(@GID) && !.@GM) {
-			mes "มึงมันไม่ใช่หัวหน้ากิลด์";
-			mes "กลับไปซะไอ่ควาย";
+			mes "ข้าคุยเฉพาะหัวหน้ากิล";
 			end;
 		}
 		
@@ -203,7 +200,7 @@ morocc,162,158,4	script	Bergel#mor	722,{
 			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.@GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
 				case 1:
 					if(#guild_reward == 1 || .@GM){
-						mes "ท่านเคยรับรางวัลไปแล้ว ไอ่สัส";
+						mes "ท่านเคยรับรางวัลไปแล้ว";
 						end;
 					}
 					#guild_reward = 1;
@@ -214,8 +211,8 @@ morocc,162,158,4	script	Bergel#mor	722,{
 						mes "ท่านเคยกรอกข้อมูลไปแล้วไม่สามารถแก้ไขได้";
 						end;
 					}
-						mes "1.กรอกเลขบัญชีสิไอ่ควาย";
-						mes "2.กรอกชื่อธนาคารสิไอ่ควาย";
+						mes "1.กรอกเลขบัญชี";
+						mes "2.กรอกชื่อธนาคาร";
 						mes "3.กรอกชื่อบัญชีผู้รับ";
 						input .id_bank$;
 						input .name_bank$;
@@ -239,7 +236,7 @@ morocc,162,158,4	script	Bergel#mor	722,{
 						query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
 					break;
 				default:
-					mes "ไม่ทำอะไรเสือกมาทำควายอะไร";
+					mes "ok";
 					break;
 			}
 			end;
@@ -253,13 +250,12 @@ morocc,166,158,4	script	Nuernberg#mor	722,{
 	.@GM = getgmlevel() >= 99;
 	FlagEmblem GetCastleData("aldeg_cas03",1);
 	if (agitcheck() || agitcheck2()){
-		mes "กำลัง War อยู่ไอ่ควาย";
+		mes "Guild War เริ่มต้นอยู่แล้ว";
 		end;
 	}else{
 		set @GID,getcastledata("aldeg_cas03",1);
 		if (strcharinfo(0) != getguildmaster(@GID) && !.@GM) {
-			mes "มึงมันไม่ใช่หัวหน้ากิลด์";
-			mes "กลับไปซะไอ่ควาย";
+			mes "ข้าคุยเฉพาะหัวหน้ากิล";
 			end;
 		}
 		
@@ -277,7 +273,7 @@ morocc,166,158,4	script	Nuernberg#mor	722,{
 			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.@GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
 				case 1:
 					if(#guild_reward == 1 || .@GM){
-						mes "ท่านเคยรับรางวัลไปแล้ว ไอ่สัส";
+						mes "ท่านเคยรับรางวัลไปแล้ว";
 						end;
 					}
 					#guild_reward = 1;
@@ -288,8 +284,8 @@ morocc,166,158,4	script	Nuernberg#mor	722,{
 						mes "ท่านเคยกรอกข้อมูลไปแล้วไม่สามารถแก้ไขได้";
 						end;
 					}
-						mes "1.กรอกเลขบัญชีสิไอ่ควาย";
-						mes "2.กรอกชื่อธนาคารสิไอ่ควาย";
+						mes "1.กรอกเลขบัญชี";
+						mes "2.กรอกชื่อธนาคาร";
 						mes "3.กรอกชื่อบัญชีผู้รับ";
 						input .id_bank$;
 						input .name_bank$;
@@ -313,7 +309,7 @@ morocc,166,158,4	script	Nuernberg#mor	722,{
 						query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
 					break;
 				default:
-					mes "ไม่ทำอะไรเสือกมาทำควายอะไร";
+					mes "ok";
 					break;
 			}
 			end;

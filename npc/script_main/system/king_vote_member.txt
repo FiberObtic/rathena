@@ -5,7 +5,7 @@ OnPCLoginEvent:
 	
 	bonus_script_clear 1,getcharid(0);
 	//bonus_script_clear EFST_RANKVOTE_1;
-
+	/*
 	if(#vote_member == 1){	
 		bonus_script "{ bonus2 bExpAddRace,RC_All,1; bonus2 bDropAddRace,RC_All,1; bonus2 bAddClass,Class_All,1; bonus bMatkRate,1; }",99999999,512,0,EFST_RANKVOTE_1;
 	}
@@ -36,7 +36,7 @@ OnPCLoginEvent:
 	else if(#vote_member == 10){	
 		bonus_script "{ bonus2 bExpAddRace,RC_All,10;  bonus2 bDropAddRace,RC_All,10; bonus2 bAddClass,Class_All,10; bonus bMatkRate,10; }",99999999,512,0,EFST_RANKVOTE_10;
 	}
-	
+	*/
 	//message strcharinfo(0),"[ระบบ] : กรุณาออกเข้าเกมส์ใหม่";
 
 	if((delay_buff_mvp-gettimetick(2)) > 0){
