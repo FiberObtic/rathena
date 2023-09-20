@@ -24356,6 +24356,7 @@ Body:
       Both_Accessory: true
     ArmorLevel: 1
     Script: |
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bMaxHP,70;
       if (BaseJob == Job_Novice || BaseJob == Job_SuperNovice)
          bonus bMaxHP,30;
@@ -24367,6 +24368,7 @@ Body:
       Both_Accessory: true
     ArmorLevel: 1
     Script: |
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bVit,1;
       if (Class == Job_Swordman)
          bonus bDef,2;
@@ -24378,6 +24380,7 @@ Body:
       Both_Accessory: true
     ArmorLevel: 1
     Script: |
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bInt,1;
       if (Class == Job_Acolyte)
          bonus bMaxSP,50;
@@ -24389,6 +24392,7 @@ Body:
       Both_Accessory: true
     ArmorLevel: 1
     Script: |
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bInt,1;
       if (Class == Job_Mage)
          bonus bSPrecovRate,5;
@@ -24400,6 +24404,7 @@ Body:
       Both_Accessory: true
     ArmorLevel: 1
     Script: |
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bDex,1;
       if (Class == Job_Archer)
          bonus bBaseAtk,10;
@@ -24411,6 +24416,7 @@ Body:
       Both_Accessory: true
     ArmorLevel: 1
     Script: |
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bAgi,1;
       if (Class == Job_Thief)
          bonus bAspdRate,3;
@@ -24422,6 +24428,7 @@ Body:
       Both_Accessory: true
     ArmorLevel: 1
     Script: |
+      bonus2 bExpAddRace,Rc_All,5;
       bonus bStr,1;
       if (Class == Job_Merchant)
          bonus bCritical,5;
