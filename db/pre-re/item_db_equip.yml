@@ -4844,6 +4844,7 @@ Body:
     Name: Axe
     Type: Weapon
     SubType: 1hAxe
+    View: 6
     Buy: 500
     Weight: 800
     Attack: 38
@@ -4871,6 +4872,7 @@ Body:
     Name: Axe
     Type: Weapon
     SubType: 1hAxe
+    View: 6
     Buy: 500
     Weight: 800
     Attack: 38
@@ -4898,6 +4900,7 @@ Body:
     Name: Axe
     Type: Weapon
     SubType: 1hAxe
+    View: 6
     Buy: 500
     Weight: 800
     Attack: 38
@@ -4924,6 +4927,7 @@ Body:
     Name: Orcish Axe
     Type: Weapon
     SubType: 1hAxe
+    View: 6
     Buy: 20
     Weight: 1500
     Attack: 75
@@ -4950,6 +4954,7 @@ Body:
     Name: Cleaver
     Type: Weapon
     SubType: 1hAxe
+    View: 6
     Buy: 20
     Weight: 1200
     Attack: 140
@@ -4975,6 +4980,7 @@ Body:
     Name: War Axe
     Type: Weapon
     SubType: 1hAxe
+    View: 6
     Buy: 20
     Weight: 4200
     Attack: 140
@@ -4996,6 +5002,7 @@ Body:
     Name: Windhawk
     Type: Weapon
     SubType: 1hAxe
+    View: 6
     Buy: 18000
     Weight: 1500
     Attack: 115
@@ -5023,6 +5030,7 @@ Body:
     Name: Golden Axe
     Type: Weapon
     SubType: 1hAxe
+    View: 6
     Buy: 20
     Weight: 3000
     Attack: 170
@@ -5040,6 +5048,7 @@ Body:
     Name: Orcish Axe
     Type: Weapon
     SubType: 1hAxe
+    View: 6
     Buy: 20
     Weight: 1500
     Attack: 75
@@ -5067,6 +5076,7 @@ Body:
     Name: Glorious Cleaver
     Type: Weapon
     SubType: 1hAxe
+    View: 6
     Buy: 20
     Attack: 130
     Range: 1
@@ -5113,6 +5123,7 @@ Body:
     Name: Vecer Axe
     Type: Weapon
     SubType: 1hAxe
+    View: 6
     Buy: 20
     Weight: 1500
     Attack: 140
@@ -5147,6 +5158,7 @@ Body:
     Name: Orcish Axe
     Type: Weapon
     SubType: 1hAxe
+    View: 6
     Attack: 110
     Range: 1
     Jobs:
@@ -5181,6 +5193,7 @@ Body:
     Name: Tourist Axe
     Type: Weapon
     SubType: 1hAxe
+    View: 6
     Weight: 500
     Attack: 77
     Range: 1
