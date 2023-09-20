@@ -1089,3 +1089,46 @@ Body:
       bonus bStr,1;
       if (Class == Job_Merchant)
          bonus bCritical,5;
+  - Id: 2399
+    AegisName: Dragon_Vest
+    Name: Dragon Vest
+    Type: Armor
+    Buy: 20
+    Weight: 500
+    Defense: 3
+    Slots: 1
+    # Jobs:
+      # All: true
+      # Novice: false
+      # SuperNovice: false
+    # Classes:
+      # Upper: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bMdef,3;
+  - Id: 2553
+    AegisName: Dragon_Manteau
+    Name: Dragon Manteau
+    Type: Armor
+    Buy: 20
+    Weight: 1000
+    Defense: 5
+    Slots: 1
+    # Jobs:
+      # All: true
+      # Novice: false
+      # SuperNovice: false
+    # Classes:
+      # Upper: true
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bAgi,1;
+      bonus bMdef,5;
