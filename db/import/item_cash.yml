@@ -241,5 +241,9 @@ Body:
        Price: 2500
      - Item: Random_Costume_Lower
        Price: 2500
+     - Item: Comp_Battle_Manual
+       Price: 250
+     - Item: Job_Manual50
+       Price: 250
      - Item: Elite_Siege_Supply_Box
        Price: 2000

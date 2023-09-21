@@ -62,13 +62,13 @@
 		sc_end SC_FREEZING;
 		sc_end SC_FEAR;
 
-		if(#PREMIUMSERVICE_TIME){
+		if(#PREMIUMSERVICE_TIME - gettimetick(2) > 0){
 			sc_start SC_INCREASEAGI,1000*60*30,10;
 			sc_start SC_BLESSING,1000*60*30,10;
 			sc_start 41,1000*60*30,5; //กอเรีย
 			sc_start 40,1000*60*30,5; // MAGNIFICAT เร่ง
-			sc_start4 SC_POEMBRAGI,1000*60*5,5,70,90,10;
-			sc_start4 SC_SERVICE4U,1000*60*5,5,40,40,1;
+			sc_start4 SC_POEMBRAGI,1000*60*15,5,70,90,10;
+			sc_start4 SC_SERVICE4U,1000*60*15,5,40,40,1;
 			
 			//บัพค่าอาหาร 30นาที Support rAthena
 			sc_start SC_STRFood,1000*60*30,5;
