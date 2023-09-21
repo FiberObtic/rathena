@@ -32773,7 +32773,7 @@ Body:
     Locations:
       Head_Mid: true
     ArmorLevel: 1
-    EquipLevelMin: 70
+    EquipLevelMin: 50
     View: 422
     Trade:
       NoDrop: true

@@ -245,5 +245,7 @@ Body:
        Price: 250
      - Item: Job_Manual50
        Price: 250
+     - Item: Bubble_Gum
+       Price: 250
      - Item: Elite_Siege_Supply_Box
        Price: 2000

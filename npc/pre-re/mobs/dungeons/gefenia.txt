@@ -36,7 +36,7 @@ gefenia02,0,0	monster	Succubus	1370,20
 gefenia02,0,0	monster	Incubus	1374,10
 gefenia02,0,0	monster	Violy	1390,40
 gefenia02,0,0	monster	Mini Demon	1292,30
-gefenia02,0,0	monster	Abysmal Knight	1219,10
+gefenia02,0,0	monster	Abysmal Knight	1219,25
 gefenia02,0,0	monster	Bloody Knight	1268,1,3600000,3000000
 gefenia02,0,0	monster	Mysteltainn	1203,1,18000000,14400000
 gefenia02,0,0	monster	Executioner	1205,1,18000000,14400000
@@ -50,7 +50,7 @@ gefenia03,0,0	monster	Succubus	1370,10
 gefenia03,0,0	monster	Incubus	1374,20
 gefenia03,0,0	monster	Violy	1390,40
 gefenia03,0,0	monster	Mini Demon	1292,30
-gefenia03,0,0	monster	Abysmal Knight	1219,10
+gefenia03,0,0	monster	Abysmal Knight	1219,25
 gefenia03,0,0	monster	Bloody Knight	1268,1,3600000,3000000
 gefenia03,0,0	monster	Mysteltainn	1203,1,18000000,14400000
 gefenia03,0,0	monster	Executioner	1205,1,10800000,7200000
@@ -64,7 +64,7 @@ gefenia04,0,0	monster	Succubus	1370,10,600000,300000
 gefenia04,0,0	monster	Incubus	1374,10,600000,300000
 gefenia04,0,0	monster	Violy	1390,30
 gefenia04,0,0	monster	Mini Demon	1292,20
-gefenia04,0,0	monster	Abysmal Knight	1219,10
+gefenia04,0,0	monster	Abysmal Knight	1219,25
 gefenia04,0,0	monster	Bloody Knight	1268,1,3600000,3000000
 gefenia04,0,0	monster	Mysteltainn	1203,1,18000000,14400000
 gefenia04,0,0	monster	Executioner	1205,1,18000000,14400000
