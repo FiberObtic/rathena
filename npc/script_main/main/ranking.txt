@@ -163,8 +163,9 @@ OnRankingManage:
 		next;
 		switch (select("- Reset คะแนน PVP","- Reset คะแนน MVP","- แก้ไขสถานะการดำเนินการ","- เคลียรายชื่อผู้ได้รับรางวัล")) {
 		case 1:
-			query_sql "SELECT `name`,`point_pvp`,`class`,`account_id` FROM `char` ORDER BY `point_pvp` DESC LIMIT 1",.@name$,.@point,.@class,.@accid;
-			query_sql "INSERT INTO reward_ranking (`account_id`,`name`,`class`,`status`,`type`,`points`) VALUES ('"+.@accid+"','"+.@name$+"','"+.@class+"',0,'PVP','"+.@point+"')";
+			query_sql "SELECT `name`,`point_pvp`,`class`,`account_id` FROM `char` ORDER BY `point_pvp` DESC LIMIT 3",.@name$,.@point,.@class,.@accid;
+			for(.@i=0; .@i < getarraysize(.@name$); .@i++)
+				if(.@point[.@i]) query_sql "INSERT INTO reward_ranking (`account_id`,`name`,`class`,`status`,`type`,`points`) VALUES ('"+.@accid+"','"+.@name$+"','"+.@class+"',0,'PVP Top "+.@i+"','"+.@point+"')";
 			query_sql "UPDATE `char` SET `point_pvp` = 0";
 			mes .@npc$;
 			mes "Reset คะแนน PVP";
@@ -173,7 +174,8 @@ OnRankingManage:
 		break;
 		case 2:
 			query_sql "SELECT `name`,`point_mvp`,`class`,`account_id` FROM `char` ORDER BY `point_mvp` DESC LIMIT 1",.@name$,.@point,.@class,.@accid;
-			query_sql "INSERT INTO reward_ranking (`account_id`,`name`,`class`,`status`,`type`,`points`) VALUES ('"+.@accid+"','"+.@name$+"','"+.@class+"',0,'MVP','"+.@point+"')";
+			for(.@i=0; .@i < getarraysize(.@name$); .@i++)
+				if(.@point[.@i]) query_sql "INSERT INTO reward_ranking (`account_id`,`name`,`class`,`status`,`type`,`points`) VALUES ('"+.@accid+"','"+.@name$+"','"+.@class+"',0,'MVP Top "+.@i+"','"+.@point+"')";
 			query_sql "UPDATE `char` SET `point_mvp`= 0";
 			mes .@npc$;
 			mes "Reset คะแนน MVP";
@@ -202,7 +204,7 @@ OnRankingManage:
 			close;
 		break;
 		case 4:
-			query_sql "UPDATE `reward_ranking` SET `status` = 2 WHERE `status` = 1";
+			query_sql "UPDATE `reward_ranking` SET `status` = 2";
 			close;
 		break;
 		}
@@ -232,7 +234,7 @@ OnShow_MVP:
 		mes "=========================";
 	} else if ( (.@command$ == "emp") || (.@command$ == "EMP") ) {
 OnShow_EMP:
-		query_sql "SELECT `name`,`class`,`status`,`type`,`points`,`bank_acc` FROM `reward_ranking` WHERE `status` <= 1 ORDER BY `id` DESC LIMIT 2",.@name$,.@class,.@status,.@type$,.@point,.@bank_acc$;
+		query_sql "SELECT `name`,`class`,`status`,`type`,`points`,`bank_acc` FROM `reward_ranking` WHERE `status` <= 1 ORDER BY `type` ASC LIMIT 6",.@name$,.@class,.@status,.@type$,.@point,.@bank_acc$;
 		mes "^FF0000===== REWARD RANKING =====^000000";
 		for (set .@i,0; .@i < getarraysize(.@name$); set .@i,.@i+1) {
 			if (.@name$[.@i] == "") set .@name$[.@i],"None";
