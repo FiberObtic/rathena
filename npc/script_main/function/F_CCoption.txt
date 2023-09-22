@@ -24,6 +24,8 @@ function	script	F_CashOptionTicket	{
 			case W_SHOTGUN: 
 			case W_GRENADE: 
 			case W_HUUMA: 
+				.@2hand = 1;
+				break;
 			}
 			if(getequipweaponlv(.@part)) {
 				if (!getequiprandomoption(.@part,0,ROA_VALUE) || !.@index )
@@ -79,8 +81,9 @@ function	script	F_CashOptionTicket	{
 		default:
 			break;
 	}
-	if (getequiprandomoption(.@part,1,ROA_ID) && inarray(.@idop[0],(getequiprandomoption(.@part,1,ROA_ID))) >= 0 ) {
-		.@pos = inarray(.@idop[0],(getequiprandomoption(.@part,1,ROA_ID)));
+	if ( (.@index = 2 && getequiprandomoption(.@part,1,ROA_ID) > 0 ) || (.@index = 1 && getequiprandomoption(.@part,2,ROA_ID ) > 0 ) {
+		if(.@index = 2 ) .@row = 1; if(.@index = 1) .@row = 2;
+		.@pos = inarray(.@idop[0],(getequiprandomoption(.@part,.@row,ROA_ID)));
 		deletearray .@idop[.@pos],1;
 	}
 	if (!.@id) .@id = .@idop[rand(getarraysize(.@idop))];

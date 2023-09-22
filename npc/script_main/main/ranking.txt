@@ -322,7 +322,7 @@ end;
 function	script	AddPointChar	{
 	set .@string$,getarg(0);
 	if (.@string$ == "PVP") {
-		query_sql "UPDATE `char` SET `point_pvp`=(`point_pvp` + 1) WHERE `char_id`='"+getcharid(0)+"' LIMIT 1";
+		if(killedrid != getcharid(0) ) query_sql "UPDATE `char` SET `point_pvp`=(`point_pvp` + 1) WHERE `char_id`='"+getcharid(0)+"' LIMIT 1";
 	} else if (.@string$ == "MVP") {
 		query_sql "UPDATE `char` SET `point_mvp`=(`point_mvp` + 1) WHERE `char_id`='"+getcharid(0)+"' LIMIT 1";
 		if (query_sql("SELECT `id` FROM `premium_pass` WHERE `account_id` = '"+getcharid(3)+"'",.@sql_id)) {

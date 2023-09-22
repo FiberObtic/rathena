@@ -92,3 +92,9 @@ Body:
     Script: |
       bonus bAtkRate,getequiprefinerycnt(EQI_GARMENT);
       bonus bMatkRate,getequiprefinerycnt(EQI_GARMENT);
+  - Combos:
+      - Combo:
+          - Golden_Angel_Band_TH
+          - Golden_Angel_Wing_TH
+    Script: |
+      bonus bAllStats,1;
