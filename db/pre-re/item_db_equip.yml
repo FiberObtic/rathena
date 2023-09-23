@@ -30279,6 +30279,9 @@ Body:
       bonus bSpeedRate,25;
       bonus bAspdRate,5;
       bonus bCastrate,5;
+      if(#PREMIUMSERVICE_TIME - gettimetick(2) > 0){
+        bonus bAllStats,1;
+      }
   - Id: 5287
     AegisName: Vacation_Hat
     Name: Vacation Hat
@@ -35690,7 +35693,13 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
+      bonus bBaseAtk,5;
+      bonus bMatk,5;
       bonus bMdef,2;
+      if(#PREMIUMSERVICE_TIME - gettimetick(2) > 0){
+        bonus bAllStats,1;
+        bonus2 bDropAddClass,Class_All,5;
+      }
   - Id: 5600
     AegisName: Br_Twin_Ribbon
     Name: Brazil Twin Ribbon
@@ -41407,7 +41416,7 @@ Body:
       bonus bMaxHPrate,1;
       bonus2 bAddMonsterDropItem,517,500;
       bonus2 bAddItemHealRate,517,25;
-      if (vip_status(VIP_STATUS_ACTIVE)) {
+      if(#PREMIUMSERVICE_TIME - gettimetick(2) > 0){
          bonus bAllStats,1;
       }
   - Id: 18506
