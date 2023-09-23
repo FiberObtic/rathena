@@ -1282,6 +1282,7 @@ enum sc_type : int16 {
 
 	SC_RUSH_QUAKE1,
 	SC_RUSH_QUAKE2,
+	SC_G_LIFEPOTION,
 	
 	// TAURUS VIP Icon
 	SC_CASH_VIP,
