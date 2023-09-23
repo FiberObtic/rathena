@@ -2011,6 +2011,7 @@ static void clif_move2( struct block_list *bl, struct view_data *vd, struct unit
 				clif_specialeffect(&sd->bl,EF_BABYBODY2,AREA);
 			if (sd->status.robe)
 				clif_refreshlook(bl,bl->id,LOOK_ROBE,sd->status.robe,AREA);
+			map_foreachinallrange(clif_hideview, &sd->bl, AREA_SIZE, BL_PC, &sd->bl);
 		}
 		break;
 	case BL_MOB:
@@ -5114,6 +5115,7 @@ void clif_getareachar_unit( map_session_data* sd,struct block_list *bl ){
 				clif_refreshlook(&sd->bl,bl->id,LOOK_ROBE,tsd->status.robe,SELF);
 			clif_efst_status_change_sub(&sd->bl, bl, SELF);
 			clif_hat_effects(sd,bl,SELF);
+			map_foreachinallrange(clif_hideview, &sd->bl, AREA_SIZE, BL_PC, &sd->bl);
 		}
 		break;
 	case BL_MER: // Devotion Effects
@@ -5714,6 +5716,56 @@ int clif_insight(struct block_list *bl,va_list ap)
 	return 0;
 }
 
+/*==========================================
+ * Change players views with hideview state
+ *------------------------------------------*/
+int clif_hideview(struct block_list *bl,va_list ap)
+{
+	struct block_list *tbl;
+	struct view_data *vd;
+	TBL_PC *sd, *tsd;
+	tbl=va_arg(ap,struct block_list*);
+	vd = status_get_viewdata(bl);
+
+	sd = BL_CAST(BL_PC, bl);
+	tsd = BL_CAST(BL_PC, tbl);
+
+	if (tsd && tsd->fd) {
+		if(sd != tsd){
+			//ShowError("Target Session Data : %s\n",tsd->status.name);
+			if (tbl->type == BL_PC && tsd->state.hideview) {
+				if(tsd->state.hideview&16){
+					if(tsd->state.hideview&1) clif_refreshlook(&tsd->bl,tsd->bl.id,LOOK_HEAD_TOP,0,SELF);
+					if(tsd->state.hideview&2) clif_refreshlook(&tsd->bl,tsd->bl.id,LOOK_HEAD_MID,0,SELF);
+					if(tsd->state.hideview&4) clif_refreshlook(&tsd->bl,tsd->bl.id,LOOK_HEAD_BOTTOM,0,SELF);
+					if(tsd->state.hideview&8) clif_refreshlook(&tsd->bl,tsd->bl.id,LOOK_ROBE,0,SELF);
+				}
+				if(tsd->state.hideview&1) clif_refreshlook(&tsd->bl,sd->bl.id,LOOK_HEAD_TOP,0,SELF);
+				if(tsd->state.hideview&2) clif_refreshlook(&tsd->bl,sd->bl.id,LOOK_HEAD_MID,0,SELF);
+				if(tsd->state.hideview&4) clif_refreshlook(&tsd->bl,sd->bl.id,LOOK_HEAD_BOTTOM,0,SELF);
+				if(tsd->state.hideview&8) clif_refreshlook(&tsd->bl,sd->bl.id,LOOK_ROBE,0,SELF);
+			}
+		}
+	}
+	if (sd && sd->fd) {
+		//ShowError("Session Data : %s\n\r\n",sd->status.name);
+		if(sd != tsd){
+			if (bl->type == BL_PC && sd->state.hideview) {
+				if(sd->state.hideview&16){
+					if(sd->state.hideview&1) clif_refreshlook(&sd->bl,bl->id,LOOK_HEAD_TOP,0,SELF);
+					if(sd->state.hideview&2) clif_refreshlook(&sd->bl,bl->id,LOOK_HEAD_MID,0,SELF);
+					if(sd->state.hideview&4) clif_refreshlook(&sd->bl,bl->id,LOOK_HEAD_BOTTOM,0,SELF);
+					if(sd->state.hideview&8) clif_refreshlook(&sd->bl,bl->id,LOOK_ROBE,0,SELF);
+				}
+				if(sd->state.hideview&1) clif_refreshlook(&sd->bl,tsd->bl.id,LOOK_HEAD_TOP,0,SELF);
+				if(sd->state.hideview&2) clif_refreshlook(&sd->bl,tsd->bl.id,LOOK_HEAD_MID,0,SELF);
+				if(sd->state.hideview&4) clif_refreshlook(&sd->bl,tsd->bl.id,LOOK_HEAD_BOTTOM,0,SELF);
+				if(sd->state.hideview&8) clif_refreshlook(&sd->bl,tsd->bl.id,LOOK_ROBE,0,SELF);
+			}
+		}
+	}
+	return 0;
+}
 
 /// Updates whole skill tree (ZC_SKILLINFO_LIST).
 /// 010f <packet len>.W { <skill id>.W <type>.L <level>.W <sp cost>.W <attack range>.W <skill name>.24B <upgradable>.B }*

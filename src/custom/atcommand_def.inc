@@ -7,5 +7,8 @@
  * Format:
  *	ACMD_DEF(command_name),
  **/
+ 
+	ACMD_DEF(hideview),
+	ACMD_DEF2("showview", hideview),
 
 //ACMD_DEF(newcommand),
