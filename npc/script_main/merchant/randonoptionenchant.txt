@@ -123,7 +123,7 @@ morocc,143,74,4	script	Option Item	10009,{
 			end;
 	}
 	mes .@NPCName$;
-	mes "คุณเลือก ^006600"+getequipname(.@indices[.@i]) + "^000000";
+	mes "คุณเลือก ^006600"+getequipname(.@part) + "^000000";
 	mes "สิ่งของที่ต้องการคือ <ITEM>"+getitemname(.@itemuse)+"<INFO>"+.@itemuse+"</INFO></ITEM>";
 	mes "ยืนยันหรือไม่";
 	next;
@@ -208,7 +208,7 @@ L_ResetOption:
 			.@randomOptionValue5 = getequiprandomoption(.@part,4,ROA_VALUE);
 
 			mes .@NPCName$;
-			mes "คุณเลือก ^006600"+getequipname(.@indices[.@i]) + "^000000";
+			mes "คุณเลือก ^006600"+getequipname(.@part) + "^000000";
 			mes "สิ่งของที่ต้องการคือ xxx ??";
 			mes "ยืนยันที่จะลบการเสริมพลังหรือไม่";
 			next;

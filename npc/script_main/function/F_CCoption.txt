@@ -81,9 +81,9 @@ function	script	F_CashOptionTicket	{
 		default:
 			break;
 	}
-	if ( (.@index = 2 && getequiprandomoption(.@part,1,ROA_ID) > 0 ) || (.@index = 1 && getequiprandomoption(.@part,2,ROA_ID ) > 0 ) ) {
-		if(.@index = 2 ) .@row = 1; if(.@index = 1) .@row = 2;
-		.@pos = inarray(.@idop[0],(getequiprandomoption(.@part,.@row,ROA_ID)));
+	if ( (.@index == 2 && getequiprandomoption(.@part,1,ROA_ID) > 0 ) || (.@index == 1 && getequiprandomoption(.@part,2,ROA_ID ) > 0 ) ) {
+		if(.@index == 2 ) .@row = 1; if(.@index == 1) .@row = 2;
+		.@pos = inarray(.@idop[0],getequiprandomoption(.@part,.@row,ROA_ID));
 		deletearray .@idop[.@pos],1;
 	}
 	if (!.@id) .@id = .@idop[rand(getarraysize(.@idop))];
