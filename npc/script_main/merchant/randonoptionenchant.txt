@@ -107,7 +107,7 @@ morocc,143,74,4	script	Option Item	10009,{
 		case EQI_GARMENT:
 		case EQI_SHOES:
 			if(.@refine >= 7)
-				.@itemuse = .@itemcost[0];
+				.@itemuse = .@itemcost[1];
 			else {
 				.@refinereq = 7;
 				goto L_Refinereq;
