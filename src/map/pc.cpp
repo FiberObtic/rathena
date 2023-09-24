@@ -11013,6 +11013,7 @@ void pc_changelook(map_session_data *sd,int type,int val) {
 		break;
 	}
 	clif_changelook(&sd->bl, type, val);
+	map_foreachinallrange(clif_hideview, &sd->bl, AREA_SIZE, BL_PC, &sd->bl);
 }
 
 /*==========================================
@@ -15326,6 +15327,7 @@ void pc_set_costume_view(map_session_data *sd) {
 		clif_changelook(&sd->bl, LOOK_HEAD_TOP, sd->status.head_top);
 	if (robe != sd->status.robe)
 		clif_changelook(&sd->bl, LOOK_ROBE, sd->status.robe);
+	map_foreachinallrange(clif_hideview, &sd->bl, AREA_SIZE, BL_PC, &sd->bl);
 	if (weapon != sd->status.cweapon)
 		clif_changelook(&sd->bl, LOOK_WEAPON, sd->status.cweapon);
 }
