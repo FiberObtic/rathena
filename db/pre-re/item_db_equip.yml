@@ -35676,14 +35676,15 @@ Body:
     AegisName: Bubble_Gum_In_Mouth
     Name: Bubble Gum In Mouth
     Type: Armor
+    View: 572
     Buy: 20
     Defense: 2
     Locations:
       Head_Low: true
     ArmorLevel: 1
     EquipLevelMin: 1
-    View: 572
     Trade:
+      Override: 100
       NoDrop: true
       NoTrade: true
       NoSell: true
@@ -35699,6 +35700,7 @@ Body:
       if(#PREMIUMSERVICE_TIME - gettimetick(2) > 0){
         bonus bAllStats,1;
         bonus2 bDropAddClass,Class_All,5;
+        bonus2 bExpAddClass,CLASS_ALL,5;
       }
   - Id: 5600
     AegisName: Br_Twin_Ribbon

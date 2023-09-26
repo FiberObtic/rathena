@@ -17,6 +17,7 @@
 morocc,133,79,4	script	นักถอดการ์ด	78,{
 
 	set .zenycost,20000;    	// ค่าบริการถอดการ์ด (in Zeny)
+	set .percashcost,250;    	// ค่าบริการถอดการ์ด (in Zeny)
 	set .percardcost,200000;	// ค่าบริการถอดการ์ดต่อใบ (in Zeny)
 	set .faildestroy,0;			// เลือกได้ว่าจะให้ไอเท็มแตกไหมเวลาล้มเหลว ? (1=yes, 0=no)
 
@@ -59,17 +60,37 @@ morocc,133,79,4	script	นักถอดการ์ด	78,{
 			close;
 		}
 		mes "[นักถอดการ์ด]";
-		mes "ไอเท็มมีการ์ด " + .@cardcount + " ใบ. ข้าต้องการ " + (.zenycost+(.@cardcount * .percardcost)) + " zeny, ^0000FFStar Crumb^000000, และ ^0000FFYellow Gemstone^000000.";
-		next;
-		if(select("ฉันจะทำมัน.:ไม่เป็นไร") == 2) {
-			mes "[นักถอดการ์ด]";
-			mes "ดีมาก. กลับมาทันทีหากคุณต้องการใช้บริการของฉัน.";
-			close;
+		mes "จะถอดการ์ดเป็น Cash หรือ Zeny หละ?";
+		if(select("Zeny:Cash") == 1 ) {
+			.@type = 1;
+			mes "ไอเท็มมีการ์ด " + .@cardcount + " ใบ. ข้าต้องการ " + (.zenycost+(.@cardcount * .percardcost)) + " zeny, ^0000FFStar Crumb^000000, และ ^0000FFYellow Gemstone^000000.";
+			next;
+			if(select("ฉันจะทำมัน.:ไม่เป็นไร") == 2) {
+				mes "[นักถอดการ์ด]";
+				mes "ดีมาก. กลับมาทันทีหากคุณต้องการใช้บริการของฉัน.";
+				close;
+			}
+			if((zeny < (.zenycost+(.@cardcount * .percardcost))) || (countitem(1000) < 1) || (countitem(715) < 1)) {
+				mes "[นักถอดการ์ด]";
+				mes "คุณมีไอเท็มไม่เพียงพอ ไว้ค่อยกลับมาใหม่ เมื่อเจ้าพร้อม.";
+				close;
+			}
 		}
-		if((zeny < (.zenycost+(.@cardcount * .percardcost))) || (countitem(1000) < 1) || (countitem(715) < 1)) {
-			mes "[นักถอดการ์ด]";
-			mes "คุณมีไอเท็มไม่เพียงพอ ไว้ค่อยกลับมาใหม่ เมื่อเจ้าพร้อม.";
-			close;
+		else {
+			.@type = 2;
+			mes "ไอเท็มมีการ์ด " + .@cardcount + " ใบ. ข้าต้องการ  zeny : " + .zenycost+ " zeny, ^0000FFStar Crumb^000000, และ ^0000FFYellow Gemstone^000000.";
+			mes "Cash : "+ .@cardcount * .percashcost +" Cash ";
+			next;
+			if(select("ฉันจะทำมัน.:ไม่เป็นไร") == 2) {
+				mes "[นักถอดการ์ด]";
+				mes "ดีมาก. กลับมาทันทีหากคุณต้องการใช้บริการของฉัน.";
+				close;
+			}
+		if( zeny < (.zenycost) || #CASHPOINTS < (.@cardcount * .percashcost) || (countitem(1000) < 1) || (countitem(715) < 1) ) {
+				mes "[นักถอดการ์ด]";
+				mes "คุณมีไอเท็มไม่เพียงพอ ไว้ค่อยกลับมาใหม่ เมื่อเจ้าพร้อม.";
+				close;
+			}
 		}
 		mes "[นักถอดการ์ด]";
 		mes "ก่อนที่จะเริ่ม ^FF0000ฉันขอเตือน^000000 มีโอกาสล้มเหลว อุปกรณ์ หรือ การ์ด อาจจะถูกทำลาย แน่ใจใช่มั้ย?";
@@ -87,7 +108,11 @@ morocc,133,79,4	script	นักถอดการ์ด	78,{
 		}
 		mes "[นักถอดการ์ด]";
 		mes "ยอดเยี่ยม. ฉันจะเริ่มแล้วนะ.";
-		set Zeny, Zeny - (.zenycost+(.@cardcount * .percardcost));
+		if(.@type == 1 ) set Zeny, Zeny - (.zenycost+(.@cardcount * .percardcost));
+		else {
+			zeny -= .zenycost;
+			#CASHPOINTS -= (.@cardcount * .percashcost);
+		}
 		delitem 1000,1; //Star_Crumb
 		delitem 715,1; //Yellow_Gemstone
 		
