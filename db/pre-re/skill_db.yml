@@ -10886,6 +10886,8 @@ Body:
       Weapon:
         1hSpear: true
         2hSpear: true
+        1hSword: true
+        2hSword: true
     Status: Stop
   - Id: 398
     Name: LK_HEADCRUSH
