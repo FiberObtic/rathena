@@ -2049,7 +2049,7 @@ Body:
         MaxLevel: 5
         Requires:
           - Name: KN_SPEARMASTERY
-            Level: 10
+            Level: 5
           - Name: KN_PIERCE
             Level: 5
           - Name: KN_SPEARSTAB

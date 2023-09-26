@@ -326,6 +326,7 @@ function	script	F_KafStor	{
 			mes "เราจะอยู่เคียงข้างท่านตลอดไป  ~";
 		}
 	}
+	next;
 // - - > ^FF0000•^000000 เปิดคลัง
 	if(select("~ เปิดคลัง","~ เปิดคลัง Premium") == 1){
 		openstorage;

@@ -39171,7 +39171,7 @@ Body:
       - Item: Veteran_Hammer
         Rate: 100
       - Item: Bradium
-        Rate: 5
+        Rate: 1000
   - Id: 2018
     AegisName: DUNEYRR
     Name: Duneyrr

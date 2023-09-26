@@ -67,7 +67,7 @@ Start:
 	
 	mes "^FF3300[ "+strnpcinfo(0)+" ]^000000";
 	
-	query_sql("SELECT player_name,score FROM `rank_mvp_player_ranking` ORDER BY score DESC LIMIT 100",.@name$,.@score);
+	//query_sql("SELECT player_name,score FROM `rank_mvp_player_ranking` ORDER BY score DESC LIMIT 10",.@name$,.@score);
 	
 	for (set .@i,0; .@i < getarraysize(.@name$); set .@i,.@i+1) {
 		if(strcharinfo(0) == .@name$[.@i]){ mes "MVP# : ^0000FF"+callfunc("F_InsertComma",.@score[.@i])+" คะแนน^000000"; }
@@ -95,7 +95,7 @@ Start:
 		next;
 		
 		mes "^FF3300[ "+strnpcinfo(0)+" ]^000000";
-			query_sql("SELECT player_name,score FROM `rank_mvp_player_ranking` ORDER BY score DESC LIMIT 10",.@name$,.@score);
+			query_sql("SELECT player_name,score FROM `rank_mvp_player_ranking` WHERE score > 0 ORDER BY score DESC LIMIT 10",.@name$,.@score);
 			if (!.@score[0]) {
 				mes " ";
 				mes "^FF0000ยังไม่มีข้อมูลของสัปดาห์นี้^000000";
