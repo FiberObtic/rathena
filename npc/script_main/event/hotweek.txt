@@ -11,7 +11,7 @@ morocc,159,133,0	script	avb	10081,{
 }
 */ 
 
-morocc,128,120,4	script	GM GAY PRESENT	800,{
+sec_pri,16,62,4	script	GM GAY PRESENT	800,{
 	if(getgmlevel() < 99) end;
 	if(getgmlevel() < 99) 				
 		announce "["+strcharinfo(0)+"] บัคของได้แจ้ง GM เร็ว!! ",bc_all;
@@ -105,7 +105,7 @@ Oninit:
 	for(.@i = 0;.@i<getarraysize(.zenyitem);.@i += 2) npcshopadditem "surprise_zeny",.zenyitem[.@i],.zenyitem[.@i+1];
 	end;
 }
-morocc,126,110,0	script	Surprise!#cash	564,{
+morocc,128,110,0	script	Surprise!#cash	564,{
 	if(!.cashitem[0]) {
 		mes "ร้านนี้ไม่มีอะไรขาย";
 		end;
