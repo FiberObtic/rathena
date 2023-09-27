@@ -18,7 +18,7 @@ morocc,154,158,4	script	Kriemhild#mor	722,{
 		
 		if (getcharid(2) == @GID || .@GM) {
 			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
-			if(!$Warhome1) {
+			if(!$Warhome1 && !.@GM) {
 				mes "รับของรางวัลไป";
 				Zeny += 5000000;
 				setarray .@itemamount,30005,20,14004,2,13989,5,14003,5;
@@ -124,7 +124,7 @@ morocc,158,158,4	script	Bright Arbor#mor	722,{
 		
 		if (getcharid(2) == @GID || .@GM) {
 			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
-			if(!$Warhome2) {
+			if(!$Warhome2 && !.@GM) {
 				mes "รับของรางวัลไป";
 				Zeny += 5000000;
 				setarray .@itemamount,30005,20,14004,2,13989,5,14003,5;
@@ -205,7 +205,7 @@ morocc,162,158,4	script	Bergel#mor	722,{
 		
 		if (getcharid(2) == @GID || .@GM) {
 			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
-			if(!$Warhome3) {
+			if(!$Warhome3 && !.@GM) {
 				mes "รับของรางวัลไป";
 				Zeny += 5000000;
 				setarray .@itemamount,30005,20,14004,2,13989,5,14003,5;
@@ -286,7 +286,7 @@ morocc,166,158,4	script	Nuernberg#mor	722,{
 		
 		if (getcharid(2) == @GID || .@GM) {
 			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
-			if(!$Warhome4) {
+			if(!$Warhome4 && !.@GM) {
 				mes "รับของรางวัลไป";
 				Zeny += 5000000;
 				setarray .@itemamount,30005,20,14004,2,13989,5,14003,5;
