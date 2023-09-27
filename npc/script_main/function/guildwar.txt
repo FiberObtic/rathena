@@ -18,16 +18,8 @@ morocc,154,158,4	script	Kriemhild#mor	722,{
 		
 		if (getcharid(2) == @GID || .@GM) {
 			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
-			if(!$Warhome1 && !.@GM) {
-				mes "รับของรางวัลไป";
-				Zeny += 5000000;
-				setarray .@itemamount,30005,20,14004,2,13989,5,14003,5;
-				for(.@i=0; .@i < getarraysize(.@itemamount); .@i++)
-					getitem .@itemamount[.@i],.@itemamount[.@i+1];
-				$Warhome1 = 1;
-			}
-			mes "แล้วมากรอกเลขที่บัญชีตอนนี้";
-			query_sql("SELECT `id_bank`,`name_bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_castle` = 'prtg_cas01' ORDER BY `date` DESC",.id_bank$,.name_bank$,.name$,.date,.status);
+			mes "กรุณากรอกเลขที่บัญชีตอนนี้";
+			query_sql("SELECT `id_bank`,`name_bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_castle` = 'prtg_cas01' AND `status` = 0 ORDER BY `date` DESC",.id_bank$,.name_bank$,.name$,.date,.status);
 			mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
 			mes "ชื่อธนาคาร: ^5533FF"+.name_bank$+" ^000000";
 			mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
@@ -38,18 +30,22 @@ morocc,154,158,4	script	Kriemhild#mor	722,{
 			next;
 			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.@GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
 				case 1:
-					if(#guild_reward == 1 || .@GM){
-						mes "ท่านเคยรับรางวัลไปแล้ว";
-						end;
+					if(!$Warhome1 && !.@GM) {
+						mes "รับของรางวัลไป";
+						Zeny += 5000000;
+						setarray .@itemamount,30005,20,14004,2,13989,5,14003,5;
+						for(.@i=0; .@i < getarraysize(.@itemamount); .@i++)
+							getitem .@itemamount[.@i],.@itemamount[.@i+1];
+						$Warhome1 = 1;
 					}
-					#guild_reward = 1;
-					getitem 501,1;
+					else mes "เจ้ารับรางวัลไปแล้วนะ";
 					break;
 				case 2:
-					if(#guild_bank == 1 || .@GM){
+					if(.id_bank$ || .@GM){
 						mes "ท่านเคยกรอกข้อมูลไปแล้วไม่สามารถแก้ไขได้";
 						end;
 					}
+					else {
 						mes "1.กรอกเลขบัญชี";
 						mes "2.กรอกชื่อธนาคาร";
 						mes "3.กรอกชื่อบัญชีผู้รับ";
@@ -57,6 +53,7 @@ morocc,154,158,4	script	Kriemhild#mor	722,{
 						input .name_bank$;
 						input .name$;
 						next;
+					}
 						mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
 						mes "ชื่อธนาคาร: ^5533FF"+.name_bank$+" ^000000";
 						mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
@@ -66,7 +63,6 @@ morocc,154,158,4	script	Kriemhild#mor	722,{
 					if(select("~ ยกเลิก:~ ยืนยัน") == 1)end;
 					next;
 					mes "เอาหละ ข้อมูลของท่านถูกจัดเก็บเรียบร้อย";
-					#guild_bank = 1;
 					query_sql("INSERT INTO `guild_bank`(id_bank,name_bank,name,guild_name,guild_master,date,status,guild_castle) VALUES ('"+.id_bank$+"','"+.name_bank$+"','"+.name$+"','"+strcharinfo(2)+"','"+strcharinfo(0)+"',now(),0,'prtg_cas01')");
 					break;
 				case 3:
@@ -101,10 +97,9 @@ OnInit:
 	end;
 	
 OnAgitStart:
-	query_sql("DELETE FROM `acc_reg_num` WHERE `key` = '#guild_reward'");
-	query_sql("DELETE FROM `acc_reg_num` WHERE `key` = '#guild_bank'");
+	$Warhome1 = 0;
+	query_sql("UPDATE `guild_bank` set `status` = 2");
 	addrid(0);
-	setd("#guild_reward",0);
 	setd("#guild_bank",0);
 	end;
 }
@@ -124,15 +119,8 @@ morocc,158,158,4	script	Bright Arbor#mor	722,{
 		
 		if (getcharid(2) == @GID || .@GM) {
 			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
-			if(!$Warhome2 && !.@GM) {
-				mes "รับของรางวัลไป";
-				Zeny += 5000000;
-				setarray .@itemamount,30005,20,14004,2,13989,5,14003,5;
-				for(.@i=0; .@i < getarraysize(.@itemamount); .@i++)
-					getitem .@itemamount[.@i],.@itemamount[.@i+1];
-				$Warhome2 = 1;
-			}
-			query_sql("SELECT `id_bank`,`name_bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_castle` = 'payg_cas01' ORDER BY `date` DESC",.id_bank$,.name_bank$,.name$,.date,.status);
+			mes "กรุณากรอกเลขที่บัญชีตอนนี้";
+			query_sql("SELECT `id_bank`,`name_bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_castle` = 'payg_cas01' AND `status` = 0 ORDER BY `date` DESC",.id_bank$,.name_bank$,.name$,.date,.status);
 			mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
 			mes "ชื่อธนาคาร: ^5533FF"+.name_bank$+" ^000000";
 			mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
@@ -143,18 +131,22 @@ morocc,158,158,4	script	Bright Arbor#mor	722,{
 			next;
 			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.@GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
 				case 1:
-					if(#guild_reward == 1 || .@GM){
-						mes "ท่านเคยรับรางวัลไปแล้ว";
-						end;
+					if(!$Warhome2 && !.@GM) {
+						mes "รับของรางวัลไป";
+						Zeny += 5000000;
+						setarray .@itemamount,30005,20,14004,2,13989,5,14003,5;
+						for(.@i=0; .@i < getarraysize(.@itemamount); .@i++)
+							getitem .@itemamount[.@i],.@itemamount[.@i+1];
+						$Warhome2 = 1;
 					}
-					#guild_reward = 1;
-					getitem 501,1;
+					else mes "เจ้ารับรางวัลไปแล้วนะ";
 					break;
 				case 2:
-					if(#guild_bank == 1 || .@GM){
+					if(.id_bank$ || .@GM){
 						mes "ท่านเคยกรอกข้อมูลไปแล้วไม่สามารถแก้ไขได้";
 						end;
 					}
+					else {
 						mes "1.กรอกเลขบัญชี";
 						mes "2.กรอกชื่อธนาคาร";
 						mes "3.กรอกชื่อบัญชีผู้รับ";
@@ -162,6 +154,7 @@ morocc,158,158,4	script	Bright Arbor#mor	722,{
 						input .name_bank$;
 						input .name$;
 						next;
+					}
 						mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
 						mes "ชื่อธนาคาร: ^5533FF"+.name_bank$+" ^000000";
 						mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
@@ -171,7 +164,6 @@ morocc,158,158,4	script	Bright Arbor#mor	722,{
 					if(select("~ ยกเลิก:~ ยืนยัน") == 1)end;
 					next;
 					mes "เอาหละ ข้อมูลของท่านถูกจัดเก็บเรียบร้อย";
-					#guild_bank = 1;
 					query_sql("INSERT INTO `guild_bank`(id_bank,name_bank,name,guild_name,guild_master,date,status,guild_castle) VALUES ('"+.id_bank$+"','"+.name_bank$+"','"+.name$+"','"+strcharinfo(2)+"','"+strcharinfo(0)+"',now(),0,'payg_cas01')");
 					break;
 				case 3:
@@ -180,13 +172,36 @@ morocc,158,158,4	script	Bright Arbor#mor	722,{
 						query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
 					break;
 				default:
-					mes "ok";
+					mes "OK";
 					break;
 			}
 			end;
 		}
 		end;
 	}
+	end;
+OnInit:
+	query_sql (
+		"CREATE TABLE IF NOT EXISTS `guild_bank` ("+
+		"`id` int(7) NOT NULL AUTO_INCREMENT,"+
+		"`id_bank` varchar(255) NOT NULL,"+
+		"`name_bank` varchar(255) NOT NULL,"+
+		"`name` varchar(255) NOT NULL,"+
+		"`guild_name` varchar(255) NOT NULL,"+
+		"`guild_master` varchar(255) NOT NULL,"+
+		"`date` datetime,"+
+		"`status` int(1) NOT NULL,"+
+		"`guild_castle` varchar(255) NOT NULL,"+
+		"PRIMARY KEY (`id`)"+
+		") ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=tis620;"
+	);
+	end;
+	
+OnAgitStart:
+	$Warhome2 = 0;
+	query_sql("UPDATE `guild_bank` set `status` = 2");
+	addrid(0);
+	setd("#guild_bank",0);
 	end;
 }
 
@@ -205,15 +220,8 @@ morocc,162,158,4	script	Bergel#mor	722,{
 		
 		if (getcharid(2) == @GID || .@GM) {
 			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
-			if(!$Warhome3 && !.@GM) {
-				mes "รับของรางวัลไป";
-				Zeny += 5000000;
-				setarray .@itemamount,30005,20,14004,2,13989,5,14003,5;
-				for(.@i=0; .@i < getarraysize(.@itemamount); .@i++)
-					getitem .@itemamount[.@i],.@itemamount[.@i+1];
-				$Warhome3 = 1;
-			}
-			query_sql("SELECT `id_bank`,`name_bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_castle` = 'gefg_cas04' ORDER BY `date` DESC",.id_bank$,.name_bank$,.name$,.date,.status);
+			mes "กรุณากรอกเลขที่บัญชีตอนนี้";
+			query_sql("SELECT `id_bank`,`name_bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_castle` = 'gefg_cas04' AND `status` = 0 ORDER BY `date` DESC",.id_bank$,.name_bank$,.name$,.date,.status);
 			mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
 			mes "ชื่อธนาคาร: ^5533FF"+.name_bank$+" ^000000";
 			mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
@@ -224,18 +232,22 @@ morocc,162,158,4	script	Bergel#mor	722,{
 			next;
 			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.@GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
 				case 1:
-					if(#guild_reward == 1 || .@GM){
-						mes "ท่านเคยรับรางวัลไปแล้ว";
-						end;
+					if(!$Warhome3 && !.@GM) {
+						mes "รับของรางวัลไป";
+						Zeny += 5000000;
+						setarray .@itemamount,30005,20,14004,2,13989,5,14003,5;
+						for(.@i=0; .@i < getarraysize(.@itemamount); .@i++)
+							getitem .@itemamount[.@i],.@itemamount[.@i+1];
+						$Warhome3 = 1;
 					}
-					#guild_reward = 1;
-					getitem 501,1;
+					else mes "เจ้ารับรางวัลไปแล้วนะ";
 					break;
 				case 2:
-					if(#guild_bank == 1 || .@GM){
+					if(.id_bank$ || .@GM){
 						mes "ท่านเคยกรอกข้อมูลไปแล้วไม่สามารถแก้ไขได้";
 						end;
 					}
+					else {
 						mes "1.กรอกเลขบัญชี";
 						mes "2.กรอกชื่อธนาคาร";
 						mes "3.กรอกชื่อบัญชีผู้รับ";
@@ -243,6 +255,7 @@ morocc,162,158,4	script	Bergel#mor	722,{
 						input .name_bank$;
 						input .name$;
 						next;
+					}
 						mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
 						mes "ชื่อธนาคาร: ^5533FF"+.name_bank$+" ^000000";
 						mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
@@ -252,7 +265,6 @@ morocc,162,158,4	script	Bergel#mor	722,{
 					if(select("~ ยกเลิก:~ ยืนยัน") == 1)end;
 					next;
 					mes "เอาหละ ข้อมูลของท่านถูกจัดเก็บเรียบร้อย";
-					#guild_bank = 1;
 					query_sql("INSERT INTO `guild_bank`(id_bank,name_bank,name,guild_name,guild_master,date,status,guild_castle) VALUES ('"+.id_bank$+"','"+.name_bank$+"','"+.name$+"','"+strcharinfo(2)+"','"+strcharinfo(0)+"',now(),0,'gefg_cas04')");
 					break;
 				case 3:
@@ -261,13 +273,36 @@ morocc,162,158,4	script	Bergel#mor	722,{
 						query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
 					break;
 				default:
-					mes "ok";
+					mes "OK";
 					break;
 			}
 			end;
 		}
 		end;
 	}
+	end;
+OnInit:
+	query_sql (
+		"CREATE TABLE IF NOT EXISTS `guild_bank` ("+
+		"`id` int(7) NOT NULL AUTO_INCREMENT,"+
+		"`id_bank` varchar(255) NOT NULL,"+
+		"`name_bank` varchar(255) NOT NULL,"+
+		"`name` varchar(255) NOT NULL,"+
+		"`guild_name` varchar(255) NOT NULL,"+
+		"`guild_master` varchar(255) NOT NULL,"+
+		"`date` datetime,"+
+		"`status` int(1) NOT NULL,"+
+		"`guild_castle` varchar(255) NOT NULL,"+
+		"PRIMARY KEY (`id`)"+
+		") ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=tis620;"
+	);
+	end;
+	
+OnAgitStart:
+	$Warhome3 = 0;
+	query_sql("UPDATE `guild_bank` set `status` = 2");
+	addrid(0);
+	setd("#guild_bank",0);
 	end;
 }
 
@@ -286,15 +321,8 @@ morocc,166,158,4	script	Nuernberg#mor	722,{
 		
 		if (getcharid(2) == @GID || .@GM) {
 			mes "เจ้าคือหัวหน้ากิลด์ ที่ชื่อ ^5533FF[ "+getguildmaster(@GID)+" ]^000000 สินะ";
-			if(!$Warhome4 && !.@GM) {
-				mes "รับของรางวัลไป";
-				Zeny += 5000000;
-				setarray .@itemamount,30005,20,14004,2,13989,5,14003,5;
-				for(.@i=0; .@i < getarraysize(.@itemamount); .@i++)
-					getitem .@itemamount[.@i],.@itemamount[.@i+1];
-				$Warhome4 = 1;
-			}
-			query_sql("SELECT `id_bank`,`name_bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_castle` = 'aldeg_cas03' ORDER BY `date` DESC",.id_bank$,.name_bank$,.name$,.date,.status);
+			mes "กรุณากรอกเลขที่บัญชีตอนนี้";
+			query_sql("SELECT `id_bank`,`name_bank`,`name`,`date`,`status` FROM `guild_bank` WHERE `guild_castle` = 'aldeg_cas03' AND `status` = 0 ORDER BY `date` DESC",.id_bank$,.name_bank$,.name$,.date,.status);
 			mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
 			mes "ชื่อธนาคาร: ^5533FF"+.name_bank$+" ^000000";
 			mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
@@ -305,18 +333,22 @@ morocc,166,158,4	script	Nuernberg#mor	722,{
 			next;
 			switch(select("~ รับของรางวัล","~ กรอกบัญชี",""+(.@GM ? "~ ^006600โอนสำเร็จ^000000":""),"~ ยกเลิก")){
 				case 1:
-					if(#guild_reward == 1 || .@GM){
-						mes "ท่านเคยรับรางวัลไปแล้ว";
-						end;
+					if(!$Warhome4 && !.@GM) {
+						mes "รับของรางวัลไป";
+						Zeny += 5000000;
+						setarray .@itemamount,30005,20,14004,2,13989,5,14003,5;
+						for(.@i=0; .@i < getarraysize(.@itemamount); .@i++)
+							getitem .@itemamount[.@i],.@itemamount[.@i+1];
+						$Warhome4 = 1;
 					}
-					#guild_reward = 1;
-					getitem 501,1;
+					else mes "เจ้ารับรางวัลไปแล้วนะ";
 					break;
 				case 2:
-					if(#guild_bank == 1 || .@GM){
+					if(.id_bank$ || .@GM){
 						mes "ท่านเคยกรอกข้อมูลไปแล้วไม่สามารถแก้ไขได้";
 						end;
 					}
+					else {
 						mes "1.กรอกเลขบัญชี";
 						mes "2.กรอกชื่อธนาคาร";
 						mes "3.กรอกชื่อบัญชีผู้รับ";
@@ -324,6 +356,7 @@ morocc,166,158,4	script	Nuernberg#mor	722,{
 						input .name_bank$;
 						input .name$;
 						next;
+					}
 						mes "เลขบัญชี: ^5533FF"+.id_bank$+" ^000000";
 						mes "ชื่อธนาคาร: ^5533FF"+.name_bank$+" ^000000";
 						mes "ชื่อเจ้าของบัญชี: ^5533FF"+.name$+" ^000000";
@@ -333,7 +366,6 @@ morocc,166,158,4	script	Nuernberg#mor	722,{
 					if(select("~ ยกเลิก:~ ยืนยัน") == 1)end;
 					next;
 					mes "เอาหละ ข้อมูลของท่านถูกจัดเก็บเรียบร้อย";
-					#guild_bank = 1;
 					query_sql("INSERT INTO `guild_bank`(id_bank,name_bank,name,guild_name,guild_master,date,status,guild_castle) VALUES ('"+.id_bank$+"','"+.name_bank$+"','"+.name$+"','"+strcharinfo(2)+"','"+strcharinfo(0)+"',now(),0,'aldeg_cas03')");
 					break;
 				case 3:
@@ -342,12 +374,35 @@ morocc,166,158,4	script	Nuernberg#mor	722,{
 						query_sql "UPDATE `guild_bank` set `status` = 1 WHERE `id` = "+.id;
 					break;
 				default:
-					mes "ok";
+					mes "OK";
 					break;
 			}
 			end;
 		}
 		end;
 	}
+	end;
+OnInit:
+	query_sql (
+		"CREATE TABLE IF NOT EXISTS `guild_bank` ("+
+		"`id` int(7) NOT NULL AUTO_INCREMENT,"+
+		"`id_bank` varchar(255) NOT NULL,"+
+		"`name_bank` varchar(255) NOT NULL,"+
+		"`name` varchar(255) NOT NULL,"+
+		"`guild_name` varchar(255) NOT NULL,"+
+		"`guild_master` varchar(255) NOT NULL,"+
+		"`date` datetime,"+
+		"`status` int(1) NOT NULL,"+
+		"`guild_castle` varchar(255) NOT NULL,"+
+		"PRIMARY KEY (`id`)"+
+		") ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=tis620;"
+	);
+	end;
+	
+OnAgitStart:
+	$Warhome4 = 0;
+	query_sql("UPDATE `guild_bank` set `status` = 2");
+	addrid(0);
+	setd("#guild_bank",0);
 	end;
 }
