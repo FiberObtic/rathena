@@ -1,0 +1,8 @@
+morocc,171,86,4	script	√«¡‰Õ‡∑Á¡	456,{
+	mergeitem2;
+	end;
+
+OnInit:
+	waitingroom "√«¡‰Õ‡∑Á¡",0;
+end;
+}

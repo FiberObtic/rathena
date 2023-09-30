@@ -958,13 +958,17 @@ Body:
     AegisName: CD_In_Mouth
     Name: CD In Mouth
     Type: Armor
-    View: 815
     Buy: 20
     Weight: 200
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
     Locations:
       Head_Low: true
     ArmorLevel: 1
     EquipLevelMin: 20
+    View: 815
     Script: |
       autobonus "{ bonus3 bAutoSpell,\"MG_FIREBOLT\",rand(1,5),400; bonus3 bAutoSpell,\"MG_LIGHTNINGBOLT\",rand(1,5),400; bonus3 bAutoSpell,\"MG_COLDBOLT\",rand(1,5),400; bonus3 bAutoSpell,\"WZ_EARTHSPIKE\",rand(1,5),400; bonus3 bAutoSpell,\"MG_SOULSTRIKE\",rand(1,5),400; }",60,5000,BF_NORMAL,"{ specialeffect2 EF_ENHANCE; }";
   - Id: 18523
