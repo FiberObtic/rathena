@@ -37,7 +37,7 @@ OnInit:
 	end;
 }
 */
-morocc,124,82,6	script	Craft Item#1	735,{
+morocc,124,82,6	script	Volcano Craft#1	735,{
 	select(" > ^006600คราฟหมวก^000000: ^FF0000> ออก < ^000000:"+((getgmlevel())?" ล้างค่าคราฟ":""));
 	switch(@menu){
 		case 1:
@@ -50,7 +50,7 @@ morocc,124,82,6	script	Craft Item#1	735,{
 	}
 	end;
 OnInit:
-	waitingroom "คราฟไอเท็ม",0;
+	waitingroom "Volcano Craft",0;
 	end;
 
 Onreset:
