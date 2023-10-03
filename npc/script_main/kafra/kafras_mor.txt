@@ -13,8 +13,8 @@
 	callfunc "F_Kafra",5,0,0,60,930;
 
 	M_Save:
-		getmapxy(.@map$,.@x,.@y,BL_PC);
-		savepoint .@map$,.@x,.@y;
+		getmapxy(.@map$,.@x,.@y,BL_NPC);
+		savepoint .@map$,.@x-7,.@y;
 		callfunc "F_KafEnd",0,1,"Morroc";
 }
 
