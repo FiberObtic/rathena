@@ -88,7 +88,8 @@
 					mes "นี่ค่อนข้างแพงเอาการเลย!";
 					mes "ได้เลย, เลือกอาวุธที่เจ้าต้องการจะเจาะรูสิ ?";
 					next;
-					
+					switch(select("Dragon Killer:Katar of Quaking:Katar of Raging Blaze:Katar of Frozen Icicle:Katar of Piercing Wind:Golden Mace:Oriental Lute:Queen's Whip:Spectral Spear:Gae Bolg:Schweizersabel"))
+					{
 						case 1:  callfunc "Func_Socket2",13001,13030,40,61,500,984,2;
 						case 2:  callfunc "Func_Socket2", 1257, 1276,40,66,500,984,2;
 						case 3:  callfunc "Func_Socket2", 1258, 1277,40,66,500,984,2;
@@ -332,7 +333,7 @@
 	}
 }
 
-function	script	Func_Socket	{
+function	script	Func_Socket2	{
 	.@item_id = getarg(0);
 	.@zeny_req = getarg(4);
 	setarray .@item_req[0], getarg(5), getarg(7,0);
