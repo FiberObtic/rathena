@@ -14,7 +14,7 @@
 
 	M_Save:
 		getmapxy(.@map$,.@x,.@y,BL_NPC);
-		savepoint .@map$,.@x-7,.@y;
+		savepoint .@map$,.@x,.@y-7;
 		callfunc "F_KafEnd",0,1,"Morroc";
 }
 
