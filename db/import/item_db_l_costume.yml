@@ -12,9 +12,9 @@ Body:
     ArmorLevel: 1
     View: 5000
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62002
     AegisName: Costume Lower 2
     Name: Costume Lower 2
@@ -24,9 +24,9 @@ Body:
     ArmorLevel: 1
     View: 5001
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62003
     AegisName: Costume Lower 3
     Name: Costume Lower 3
@@ -36,9 +36,9 @@ Body:
     ArmorLevel: 1
     View: 5002
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62004
     AegisName: Costume Lower 4
     Name: Costume Lower 4
@@ -48,9 +48,9 @@ Body:
     ArmorLevel: 1
     View: 5003
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62005
     AegisName: Costume Lower 5
     Name: Costume Lower 5
@@ -60,9 +60,9 @@ Body:
     ArmorLevel: 1
     View: 5004
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62006
     AegisName: Costume Lower 6
     Name: Costume Lower 6
@@ -72,9 +72,9 @@ Body:
     ArmorLevel: 1
     View: 5005
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62007
     AegisName: Costume Lower 7
     Name: Costume Lower 7
@@ -84,9 +84,9 @@ Body:
     ArmorLevel: 1
     View: 5006
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62008
     AegisName: Costume Lower 8
     Name: Costume Lower 8
@@ -96,9 +96,9 @@ Body:
     ArmorLevel: 1
     View: 5007
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62009
     AegisName: Costume Lower 9
     Name: Costume Lower 9
@@ -108,9 +108,9 @@ Body:
     ArmorLevel: 1
     View: 5008
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62010
     AegisName: Costume Lower 10
     Name: Costume Lower 10
@@ -120,9 +120,9 @@ Body:
     ArmorLevel: 1
     View: 5009
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62011
     AegisName: Costume Lower 11
     Name: Costume Lower 11
@@ -132,9 +132,9 @@ Body:
     ArmorLevel: 1
     View: 5010
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62012
     AegisName: Costume Lower 12
     Name: Costume Lower 12
@@ -144,9 +144,9 @@ Body:
     ArmorLevel: 1
     View: 5011
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62013
     AegisName: Costume Lower 13
     Name: Costume Lower 13
@@ -156,9 +156,9 @@ Body:
     ArmorLevel: 1
     View: 5012
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62014
     AegisName: Costume Lower 14
     Name: Costume Lower 14
@@ -168,9 +168,9 @@ Body:
     ArmorLevel: 1
     View: 5013
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62015
     AegisName: Costume Lower 15
     Name: Costume Lower 15
@@ -180,9 +180,9 @@ Body:
     ArmorLevel: 1
     View: 5014
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62016
     AegisName: Costume Lower 16
     Name: Costume Lower 16
@@ -192,9 +192,9 @@ Body:
     ArmorLevel: 1
     View: 5015
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62017
     AegisName: Costume Lower 17
     Name: Costume Lower 17
@@ -204,9 +204,9 @@ Body:
     ArmorLevel: 1
     View: 5016
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62018
     AegisName: Costume Lower 18
     Name: Costume Lower 18
@@ -216,9 +216,9 @@ Body:
     ArmorLevel: 1
     View: 5017
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62019
     AegisName: Costume Lower 19
     Name: Costume Lower 19
@@ -228,9 +228,9 @@ Body:
     ArmorLevel: 1
     View: 5018
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62020
     AegisName: Costume Lower 20
     Name: Costume Lower 20
@@ -240,9 +240,9 @@ Body:
     ArmorLevel: 1
     View: 5019
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62021
     AegisName: Costume Lower 21
     Name: Costume Lower 21
@@ -252,9 +252,9 @@ Body:
     ArmorLevel: 1
     View: 5020
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62022
     AegisName: Costume Lower 22
     Name: Costume Lower 22
@@ -264,9 +264,9 @@ Body:
     ArmorLevel: 1
     View: 5021
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62023
     AegisName: Costume Lower 23
     Name: Costume Lower 23
@@ -276,9 +276,9 @@ Body:
     ArmorLevel: 1
     View: 5022
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62024
     AegisName: Costume Lower 24
     Name: Costume Lower 24
@@ -288,9 +288,9 @@ Body:
     ArmorLevel: 1
     View: 5023
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62025
     AegisName: Costume Lower 25
     Name: Costume Lower 25
@@ -300,9 +300,9 @@ Body:
     ArmorLevel: 1
     View: 5024
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62026
     AegisName: Costume Lower 26
     Name: Costume Lower 26
@@ -312,9 +312,9 @@ Body:
     ArmorLevel: 1
     View: 5025
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62027
     AegisName: Costume Lower 27
     Name: Costume Lower 27
@@ -324,9 +324,9 @@ Body:
     ArmorLevel: 1
     View: 5026
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62028
     AegisName: Costume Lower 28
     Name: Costume Lower 28
@@ -336,9 +336,9 @@ Body:
     ArmorLevel: 1
     View: 5027
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62029
     AegisName: Costume Lower 29
     Name: Costume Lower 29
@@ -348,9 +348,9 @@ Body:
     ArmorLevel: 1
     View: 5028
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62030
     AegisName: Costume Lower 30
     Name: Costume Lower 30
@@ -360,9 +360,9 @@ Body:
     ArmorLevel: 1
     View: 5029
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62031
     AegisName: Costume Lower 31
     Name: Costume Lower 31
@@ -372,9 +372,9 @@ Body:
     ArmorLevel: 1
     View: 5030
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62032
     AegisName: Costume Lower 32
     Name: Costume Lower 32
@@ -384,9 +384,9 @@ Body:
     ArmorLevel: 1
     View: 5031
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62033
     AegisName: Costume Lower 33
     Name: Costume Lower 33
@@ -396,9 +396,9 @@ Body:
     ArmorLevel: 1
     View: 5032
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62034
     AegisName: Costume Lower 34
     Name: Costume Lower 34
@@ -408,9 +408,9 @@ Body:
     ArmorLevel: 1
     View: 5033
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62035
     AegisName: Costume Lower 35
     Name: Costume Lower 35
@@ -420,9 +420,9 @@ Body:
     ArmorLevel: 1
     View: 5034
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62036
     AegisName: Costume Lower 36
     Name: Costume Lower 36
@@ -432,9 +432,9 @@ Body:
     ArmorLevel: 1
     View: 5035
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62037
     AegisName: Costume Lower 37
     Name: Costume Lower 37
@@ -444,9 +444,9 @@ Body:
     ArmorLevel: 1
     View: 5036
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62038
     AegisName: Costume Lower 38
     Name: Costume Lower 38
@@ -456,9 +456,9 @@ Body:
     ArmorLevel: 1
     View: 5037
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62039
     AegisName: Costume Lower 39
     Name: Costume Lower 39
@@ -468,9 +468,9 @@ Body:
     ArmorLevel: 1
     View: 5038
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62040
     AegisName: Costume Lower 40
     Name: Costume Lower 40
@@ -480,9 +480,9 @@ Body:
     ArmorLevel: 1
     View: 5039
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62041
     AegisName: Costume Lower 41
     Name: Costume Lower 41
@@ -492,9 +492,9 @@ Body:
     ArmorLevel: 1
     View: 5040
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62042
     AegisName: Costume Lower 42
     Name: Costume Lower 42
@@ -504,9 +504,9 @@ Body:
     ArmorLevel: 1
     View: 5041
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62043
     AegisName: Costume Lower 43
     Name: Costume Lower 43
@@ -516,9 +516,9 @@ Body:
     ArmorLevel: 1
     View: 5042
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62044
     AegisName: Costume Lower 44
     Name: Costume Lower 44
@@ -528,9 +528,9 @@ Body:
     ArmorLevel: 1
     View: 5043
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62045
     AegisName: Costume Lower 45
     Name: Costume Lower 45
@@ -540,9 +540,9 @@ Body:
     ArmorLevel: 1
     View: 5044
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62046
     AegisName: Costume Lower 46
     Name: Costume Lower 46
@@ -552,9 +552,9 @@ Body:
     ArmorLevel: 1
     View: 5045
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1; 
   - Id: 62047
     AegisName: Costume Lower 47
     Name: Costume Lower 47
@@ -564,9 +564,9 @@ Body:
     ArmorLevel: 1
     View: 5046
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62048
     AegisName: Costume Lower 48
     Name: Costume Lower 48
@@ -576,9 +576,9 @@ Body:
     ArmorLevel: 1
     View: 5047
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62049
     AegisName: Costume Lower 49
     Name: Costume Lower 49
@@ -588,9 +588,9 @@ Body:
     ArmorLevel: 1
     View: 5048
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3; 
+      bonus2 bDropAddRace,Rc_All,5;
+      bonus2 bExpAddRace,Rc_All,5;
+      bonus bAllstats,1; 
   - Id: 62050
     AegisName: Costume Lower 50
     Name: Costume Lower 50
@@ -600,6 +600,6 @@ Body:
     ArmorLevel: 1
     View: 5049
     Script: |
-      bonus2 bDropAddRace,Rc_All,10;
-      bonus2 bExpAddRace,Rc_All,10;
-      bonus bAllstats,3;
+      bonus2 bDropAddRace,Rc_All,3;
+      bonus2 bExpAddRace,Rc_All,3;
+      bonus bAllstats,1;
