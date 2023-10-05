@@ -24,8 +24,9 @@ Body:
     ArmorLevel: 1
     View: 4001
     Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus bAllstats,2;
       bonus bAllstats,1; 
   - Id: 61003
     AegisName: Costume Middle 3
@@ -36,8 +37,9 @@ Body:
     ArmorLevel: 1
     View: 4002
     Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus bAllstats,2;
       bonus bAllstats,1; 
   - Id: 61004
     AegisName: Costume Middle 4
@@ -48,8 +50,9 @@ Body:
     ArmorLevel: 1
     View: 4003
     Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus bAllstats,2;
       bonus bAllstats,1; 
   - Id: 61005
     AegisName: Costume Middle 5
@@ -60,8 +63,9 @@ Body:
     ArmorLevel: 1
     View: 4004
     Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus bAllstats,2;
       bonus bAllstats,1; 
   - Id: 61006
     AegisName: Costume Middle 6
@@ -180,8 +184,9 @@ Body:
     ArmorLevel: 1
     View: 4014
     Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus bAllstats,2;
       bonus bAllstats,1; 
   - Id: 61016
     AegisName: Costume Middle 16
@@ -192,8 +197,9 @@ Body:
     ArmorLevel: 1
     View: 4015
     Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus bAllstats,2;
       bonus bAllstats,1; 
   - Id: 61017
     AegisName: Costume Middle 17
@@ -204,8 +210,9 @@ Body:
     ArmorLevel: 1
     View: 4016
     Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus bAllstats,2;
       bonus bAllstats,1; 
   - Id: 61018
     AegisName: Costume Middle 18
@@ -252,8 +259,9 @@ Body:
     ArmorLevel: 1
     View: 4020
     Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus bAllstats,2;
       bonus bAllstats,1; 
   - Id: 61022
     AegisName: Costume Middle 22
@@ -264,8 +272,9 @@ Body:
     ArmorLevel: 1
     View: 4021
     Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus bAllstats,2;
       bonus bAllstats,1; 
   - Id: 61023
     AegisName: Costume Middle 23
@@ -348,8 +357,9 @@ Body:
     ArmorLevel: 1
     View: 4028
     Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus bAllstats,2;
       bonus bAllstats,1; 
   - Id: 61030
     AegisName: Costume Middle 30
@@ -372,8 +382,9 @@ Body:
     ArmorLevel: 1
     View: 4030
     Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus bAllstats,2;
       bonus bAllstats,1; 
   - Id: 61032
     AegisName: Costume Middle 32
@@ -384,8 +395,9 @@ Body:
     ArmorLevel: 1
     View: 4031
     Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus bAllstats,2;
       bonus bAllstats,1; 
   - Id: 61033
     AegisName: Costume Middle 33
@@ -576,8 +588,9 @@ Body:
     ArmorLevel: 1
     View: 4047
     Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus bAllstats,2;
       bonus bAllstats,1;
   - Id: 61049
     AegisName: Costume Middle 49
@@ -612,8 +625,9 @@ Body:
     ArmorLevel: 1
     View: 4050
     Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus bAllstats,2;
       bonus bAllstats,1;
   - Id: 61052
     AegisName: Costume Middle 52
@@ -624,6 +638,7 @@ Body:
     ArmorLevel: 1
     View: 4051
     Script: |
-      bonus2 bDropAddRace,Rc_All,5;
-      bonus2 bExpAddRace,Rc_All,5;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus2 bDropAddRace,Rc_All,10;
+      bonus bAllstats,2;
       bonus bAllstats,1;
