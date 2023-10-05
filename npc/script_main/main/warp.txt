@@ -184,7 +184,7 @@ T37: Go("yuno",157,51);
 @f = true;
 menu	"Amatsu Fields",F1, "Ayothaya Fields",F2,
     	"Comodo Fields",F5, 
-    	"Einbroch Fields",F8,
+    	"Einbroch Fields",F8,"El Dicastes Field",F9,
     	"Geffen Fields",F10, "Gonryun Fields",F11, "Hugel Fields",F12,
 		"Lighthalzen Fields",F14, "Louyang Field",F15, 
 		"Lutie Field",F16, "Manuk Fields",F18, 
@@ -215,7 +215,7 @@ F7: Restrict("RE");
 F8: Restrict("Pre-RE",2,10);
 	setarray @c[2],142,225,182,141,187,228,185,173,216,173,195,148,272,220,173,214,207,174,196,200;
 	Disp("Einbroch Field",1,10); Pick("ein_fild");
-F9: Restrict("RE");
+F9: Restrict("Pre-RE");
 	setarray @c[2],143,132,143,217;
 	Disp("El Dicastes Field",1,2); Pick("dic_fild");
 F10: Restrict("Pre-RE",13,15);
@@ -279,7 +279,7 @@ F29: Restrict("Pre-RE",5,10);
 @d = true;
 menu	"Abyss Lakes",D1, "Amatsu Dungeon",D2, "Anthell",D3,
     	"Ayothaya Dungeon",D4, "Beach Dungeon",D5,
-    	"Bio Labs",D6, "Byalan Dungeon",D8, "Clock Tower",D9,
+    	"Bio Labs",D6,"Brasilis Dungeon",D7, "Byalan Dungeon",D8, "Clock Tower",D9,
     	"Coal Mines",D10, "Culvert",D11, "Cursed Abbey",D12,
     	"Einbroch Dungeon",D14, "Gefenia",D15, "Geffen Dungeon",D16,
     	"Glast Heim",D17, "Gonryun Dungeon",D18, "Hidden Dungeon",D19,
@@ -308,7 +308,7 @@ D6: Restrict("RE",4);
 	setarray @c[2],150,288,150,18,140,134,244,52,99,202;
 	Disp("Bio Lab F1:Bio Lab F2:Bio Lab F3");
 	Pick("","lhz_dun01","lhz_dun02","lhz_dun03","lhz_dun04","lhz_dun_n");
-D7: Restrict("RE");
+D7: Restrict("Pre-RE");
 	setarray @c[2],87,47,262,262;
 	Disp("Brasilis Dungeon",1,2); Pick("bra_dun");
 D8: Restrict("RE",6);
