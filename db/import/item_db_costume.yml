@@ -19409,7 +19409,8 @@ Body:
     Locations:
       Shadow_Weapon: true
     Script: |
-      bonus2 bSkillAtk,"HT_BLITZBEAT",100;
+      bonus2 bSkillAtk,"HT_BLITZBEAT",200;
+      bonus2 bSkillAtk,"SN_SHARPSHOOTING",25;
       bonus2 bSkillAtk,"AC_DOUBLE",25;
       bonus2 bDropAddRace,RC_All,5;
   - Id: 1300008
