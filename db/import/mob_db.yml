@@ -80,6 +80,55 @@ Header:
   Version: 3
 
 Body:
+ - Id: 2092
+    AegisName: DOLOMEDES
+    Name: Dolomedes
+    Level: 132
+    Hp: 54591
+    BaseExp: 3351
+    JobExp: 3401
+    Attack: 1016
+    Attack2: 286
+    Defense: 98
+    MagicDefense: 83
+    Str: 149
+    Agi: 34
+    Vit: 82
+    Int: 55
+    Dex: 143
+    Luk: 67
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Insect
+    Element: Water
+    ElementLevel: 3
+    WalkSpeed: 250
+    AttackDelay: 360
+    AttackMotion: 360
+    DamageMotion: 600
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Small_Bradium
+        Rate: 1500
+      - Item: White_Spider_Limb
+        Rate: 2500
+      - Item: Purified_Bradium
+        Rate: 250
+      - Item: Bradium_Ring
+        Rate: 5
+      - Item: Runstone_Rare
+        Rate: 5
+      - Item: Bradium
+        Rate: 250
+      - Item: Stem_Whip
+        Rate: 5
+      - Item: Dolomedes_Card
+        Rate: 1
+        StealProtected: true
   - Id: 2408
     AegisName: DUMMY_10
     Name: Dummy 10
