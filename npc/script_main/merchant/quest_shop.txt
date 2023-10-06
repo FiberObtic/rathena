@@ -38,7 +38,7 @@ OnInit:
 }
 */
 morocc,124,82,6	script	Volcano Craft#1	735,{
-	select(" > ^006600คราฟหมวก^000000: ^FF0000> ออก < ^000000:"+((getgmlevel())?" ล้างค่าคราฟ":""));
+	select(" > ^006600คราฟไอเท็ม^000000: ^FF0000> ออก < ^000000:"+((getgmlevel())?" ล้างค่าคราฟ":""));
 	switch(@menu){
 		case 1:
 			callfunc "qshop",2;
