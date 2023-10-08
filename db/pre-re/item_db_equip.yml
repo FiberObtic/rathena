@@ -24751,6 +24751,7 @@ Body:
       bonus bMatkRate,2;
       bonus bInt,1;
       bonus bDex,1;
+      bonus bMatk,5;
   - Id: 2789
     AegisName: Bradium_Ring
     Name: Bradium Ring
@@ -24772,6 +24773,7 @@ Body:
       bonus2 bAddClass,Class_All,2;
       bonus bStr,1;
       bonus bVit,1;
+      bonus bAtk,5;
   - Id: 2790
     AegisName: Bradium_Brooch
     Name: Bradium Brooch
@@ -35676,20 +35678,19 @@ Body:
     AegisName: Bubble_Gum_In_Mouth
     Name: Bubble Gum In Mouth
     Type: Armor
-    View: 572
     Buy: 20
     Defense: 2
     Locations:
       Head_Low: true
     ArmorLevel: 1
     EquipLevelMin: 1
+    View: 572
     Trade:
-      Override: 100
       NoDrop: true
       NoTrade: true
       NoSell: true
       NoCart: true
-      NoStorage: true
+      NoStorage: false
       NoGuildStorage: true
       NoMail: true
       NoAuction: true
@@ -35700,7 +35701,6 @@ Body:
       if(#PREMIUMSERVICE_TIME - gettimetick(2) > 0){
         bonus bAllStats,1;
         bonus2 bDropAddClass,Class_All,5;
-        bonus2 bExpAddClass,CLASS_ALL,5;
       }
   - Id: 5600
     AegisName: Br_Twin_Ribbon
