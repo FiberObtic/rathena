@@ -87,10 +87,10 @@ Body:
     Hp: 54591
     BaseExp: 3351
     JobExp: 3401
-    Attack: 1016
-    Attack2: 286
-    Defense: 98
-    MagicDefense: 83
+    Attack: 2016
+    Attack2: 4286
+    Defense: 35
+    MagicDefense: 35
     Str: 149
     Agi: 34
     Vit: 82
@@ -124,11 +124,6 @@ Body:
         Rate: 5
       - Item: Bradium
         Rate: 250
-      - Item: Stem_Whip
-        Rate: 5
-      - Item: Dolomedes_Card
-        Rate: 1
-        StealProtected: true
   - Id: 2408
     AegisName: DUMMY_10
     Name: Dummy 10
