@@ -12302,7 +12302,7 @@ Body:
     EquipLevelMin: 70
     Refineable: true
     Script: |
-      bonus3 bAutoSpell,"AC_DOUBLE",GetSkillLv("AC_DOUBLE"),10;
+      bonus3 bAutoSpell,"AC_DOUBLE",GetSkillLv("AC_DOUBLE"),50;
   - Id: 1737
     AegisName: Ixion_Wing
     Name: Ixion Wings
