@@ -63,6 +63,7 @@ Body:
     Fullness: 3
     IntimacyFed: 50
     CaptureRate: 2000
+    AllowAutoFeed: True
     Script: >
       .@i = getpetinfo(PETINFO_INTIMATE);
       

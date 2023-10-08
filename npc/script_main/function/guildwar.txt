@@ -41,7 +41,7 @@ morocc,154,158,4	script	Kriemhild#mor	722,{
 					else mes "เจ้ารับรางวัลไปแล้วนะ";
 					break;
 				case 2:
-					if(.id_bank$ || .@GM){
+					if(.id_bank$ != "" || .@GM){
 						mes "ท่านเคยกรอกข้อมูลไปแล้วไม่สามารถแก้ไขได้";
 						end;
 					}
@@ -142,7 +142,7 @@ morocc,158,158,4	script	Bright Arbor#mor	722,{
 					else mes "เจ้ารับรางวัลไปแล้วนะ";
 					break;
 				case 2:
-					if(.id_bank$ || .@GM){
+					if(.id_bank$ != "" || .@GM){
 						mes "ท่านเคยกรอกข้อมูลไปแล้วไม่สามารถแก้ไขได้";
 						end;
 					}
@@ -243,7 +243,7 @@ morocc,162,158,4	script	Bergel#mor	722,{
 					else mes "เจ้ารับรางวัลไปแล้วนะ";
 					break;
 				case 2:
-					if(.id_bank$ || .@GM){
+					if(.id_bank$ != "" || .@GM){
 						mes "ท่านเคยกรอกข้อมูลไปแล้วไม่สามารถแก้ไขได้";
 						end;
 					}
@@ -344,7 +344,7 @@ morocc,166,158,4	script	Nuernberg#mor	722,{
 					else mes "เจ้ารับรางวัลไปแล้วนะ";
 					break;
 				case 2:
-					if(.id_bank$ || .@GM){
+					if(.id_bank$ != "" || .@GM){
 						mes "ท่านเคยกรอกข้อมูลไปแล้วไม่สามารถแก้ไขได้";
 						end;
 					}

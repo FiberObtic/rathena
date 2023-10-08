@@ -35,6 +35,8 @@ Header:
 Body:
   - Tab: New
     Items:
+     - Item: C_Wing_Of_Fly
+       Price: 18900
      - Item: Premium_Box_6h
        Price: 500
      - Item: Premium_Box_1d
