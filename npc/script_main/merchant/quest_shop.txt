@@ -90,7 +90,7 @@ OnInit:
 	set .Announce,1;	// Announce quest completion? (1: yes / 0: no)
 	set .ShowSlot,1;	// Show item slots? (2: all equipment / 1: if slots > 0 / 0: never)
 	set .ShowID,1;  	// Show item IDs? (1: yes / 0: no)
-	set .ShowZeny,1;	// Show Zeny cost, if any? (1: yes / 0: no)
+	set .ShowZeny,0;	// Show Zeny cost, if any? (1: yes / 0: no)
 	set .MaxStack,1;	// Max number of quest items purchased at one time.
 	/*
 	set .guaranteeID,50101;	// +100
