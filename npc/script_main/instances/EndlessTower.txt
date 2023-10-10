@@ -326,6 +326,7 @@ L_Enter:
 		mes "ท่านจะเข้าดันเจี้ยนได้ ก็ต่อเมื่ออยู่ในปาร์ตี้";
 		close;
 	case IE_OK:
+		bonus_script "if(strcharinfo(3) == \"1@tower\") if(gettimetick(2) < #PREMIUMSERVICE_TIME) {bonus2 bAddClass,Class_All,20; bonus bMatkRate,20;}",999999,9;
 		mapannounce "e_tower", strcharinfo(0) +" จากปาร์ตี้, "+ getpartyname( getcharid(1) ) +", กำลังเข้าสู่ดันเจี้ยน Endless Tower.",bc_map,"0x00ff99",FW_NORMAL,12;
 		if (getarg(1)) {
 			set etower_timer,gettimetick(1);
