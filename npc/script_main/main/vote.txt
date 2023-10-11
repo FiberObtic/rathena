@@ -15,6 +15,7 @@
 
 morocc,147,104,3	script	áÅ¡¢Í§¢Ø´::duckdig_shop	848,{
 	mes .npc$;
+	set .@accid, getcharid(3);
 	query_sql "SELECT `point` FROM `duckdig` WHERE `account_id` = " + .@accid + " LIMIT 1", .@point;
 	if( .@point[0] > 0 )
 	{
