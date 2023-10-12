@@ -418,10 +418,10 @@ Battlepass_Menu:
 		.@point_exp = 20;
 		goto OnExpEarn;
 	OnExpBoss:
-		.@point_exp = 2;
+		.@point_exp = 5;
 		goto OnExpEarn;
 	OnExpEndless:
-		.@point_exp = 6;
+		.@point_exp = 100;
 		goto OnExpEarn;
 	OnExpQuestionEvent:
 		.@point_exp = 2;

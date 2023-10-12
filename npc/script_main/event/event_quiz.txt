@@ -40,7 +40,7 @@ morocc,168,144,4	script	ปริศนาฟ้าแลบ::Quiz Girl	718,{
 		#CASHPOINTS += 100;
 		dispbottom "คุณได้รับ 100 Cash Point";
 		if (query_sql("SELECT `id` FROM `premium_pass` WHERE `account_id` = '"+getcharid(3)+"'",.@sql_id)) {
-			#BP_Points += 1;
+			#BP_Points += 2;
 			doevent "Premium Pass Manager::OnExpBoss";
 		}
 		if($MAXPLAYERANSWER < 10 ) {

@@ -2185,7 +2185,7 @@ OnMyMobDead:
 	mes "ลาก่อน ท่านนักผจญภัยหนุ่ม ขอให้ท่านโชคดีและปลอดภัย";
 	close2;
 	if (query_sql("SELECT `id` FROM `premium_pass` WHERE `account_id` = '"+getcharid(3)+"'",.@sql_id)) {
-		#BP_Points += 3;
+		#BP_Points += 100;
 		doevent "Premium Pass Manager::OnExpEndless";
 	}
 	warp "alberta",223,36;

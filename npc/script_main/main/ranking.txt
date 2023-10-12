@@ -329,7 +329,7 @@ function	script	AddPointChar	{
 	} else if (.@string$ == "MVP") {
 		query_sql "UPDATE `char` SET `point_mvp`=(`point_mvp` + 1) WHERE `char_id`='"+getcharid(0)+"' LIMIT 1";
 		if (query_sql("SELECT `id` FROM `premium_pass` WHERE `account_id` = '"+getcharid(3)+"'",.@sql_id)) {
-			#BP_Points += 1;
+			#BP_Points += 3;
 			doevent "Premium Pass Manager::OnExpBoss";
 		}
 	} else if (.@string$ == "EMP") {
