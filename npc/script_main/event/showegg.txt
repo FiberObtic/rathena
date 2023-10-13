@@ -1,0 +1,35 @@
+-	shop	#Egg1	-1,no,909:-1
+-	shop	#Egg2	-1,no,909:-1
+-	shop	#Egg3	-1,no,909:-1
+
+morocc,169,77,0	script	ของในไข่#show	574,{
+	.@npcname$ = " [ ผู้จัดการ ] ";
+	mes .@npcname$;
+	mes "ท่านอยากดูฟองไหนรึ";
+	next;
+	.@menu$ = "";
+	for(.@i=0;.@i<getarraysize(.eggid);.@i++) {
+		.@menu$ += " > "+getitemname(.eggid[.@i])+" : ";
+	}
+	.@eggchoose = select(.@menu$);
+	callshop "#Egg"+.@eggchoose,1;
+	npcshopattach "#Egg"+.@eggchoose;
+	close;
+Oninit:
+	waitingroom "ดูของภายในไข่สุ่ม",0;
+	setarray .eggid,63002,63003,63004;
+	setarray .egg1,60008,60011,60017,60033,60042,60057,60062,60066,60070,60077,60080,60086,60100,60103,60112;
+	setarray .egg2,61002,61003,61004,61005,61015,61016,61017,61021,61022,61029,61031,61032,61048,61051,61052;
+	setarray .egg3,62001,62002,62005,62006,62012,62013,62014,62016,62018,62020,62033,62034,62035,6209,62040,62042,62043,62047,62048,62049;
+	for(.@i=0,.@i<getarraysize(.eggid);.@i++) {
+		npcshopdelitem "#Egg"+(.@i+1),909;
+		for(.@j=0;.@j<getarraysize(getd(".egg"+(.@i+1)));.@j++)
+			npcshopadditem "#Egg"+(.@i+1),getd(".egg"+(.@i+1)+"["+.@j+"]"),100;
+	}
+	end;
+
+OnBuyItem:
+	end;
+}
+
+
