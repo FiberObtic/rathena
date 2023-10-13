@@ -14,7 +14,8 @@ morocc,169,77,0	script	ของในไข่#show	574,{
 	.@eggchoose = select(.@menu$);
 	callshop "#Egg"+.@eggchoose,1;
 	npcshopattach "#Egg"+.@eggchoose;
-	close;
+	end;
+	
 Oninit:
 	waitingroom "ดูของภายในไข่สุ่ม",0;
 	setarray .eggid,63002,63003,63004;
