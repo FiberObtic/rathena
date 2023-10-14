@@ -1,0 +1,72 @@
+//===== rAthena Script =======================================
+//= Floating Server Rates
+//===== By: ==================================================
+//= Lupus
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= It's a simply example of setbattleflag
+//= This script will change your server rates from 1x to 1.5x every 6 hours
+//= Note: It doesn't affect Card granted drops, MVP & Treasure Chests drops ^_-
+//=       It also doesn't affect CARD drops, because they are just 0.01%
+//===== Additional Comments: =================================
+//= You can make incredible scripts with 'setbattleflag'!
+//============================================================
+-	script	FloatingRates	-1,{
+OnClock1000:
+if (!gettime(DT_DAYOFWEEK) == SATURDAY || !gettime(DT_DAYOFWEEK) == SUNDAY) end;
+OnClock1900:
+	.@openevent = 1;
+	$@brate = getbattleflag("base_exp_rate")*2;
+	$@jrate = getbattleflag("job_exp_rate")*2;
+	$@cdrate = getbattleflag("item_rate_common")*2;
+	$@hdrate = getbattleflag("item_rate_heal")*2;
+	$@udrate = getbattleflag("item_rate_use")*2;
+	$@sdrate = getbattleflag("item_rate_card")*2;
+	$@edrate = getbattleflag("item_rate_equip")*2; // Apply new rates to configs set above
+	goto Setnewrate;
+
+OnClock1400:
+if (!gettime(DT_DAYOFWEEK) == SATURDAY || !gettime(DT_DAYOFWEEK) == SUNDAY) end;
+OnClock2300:
+	/*
+	$@brate = setbattleflag("base_exp_rate")*2;
+	$@jrate = setbattleflag("job_exp_rate")*2;
+	$@cdrate = setbattleflag("item_rate_common")*2;
+	$@hdrate = setbattleflag("item_rate_heal")*2;
+	$@udrate = setbattleflag("item_rate_use")*2;
+	$@sdrate = setbattleflag("item_rate_card")*2;
+	$@edrate = setbattleflag("item_rate_equip")*2; // Apply new rates to configs set above
+	*/
+	$@brate = .truerate[0];
+	$@jrate = .truerate[1];
+	$@cdrate = .truerate[2];
+	$@hdrate = .truerate[3];
+	$@udrate = .truerate[4];
+	$@sdrate = .truerate[5];
+	$@edrate = .truerate[6];
+	goto Setnewrate;
+Setnewrate:
+	//Base exp
+	setbattleflag("base_exp_rate",$@brate);
+	//Job exp
+	setbattleflag("job_exp_rate",$@jrate);
+	//Drops
+	setbattleflag("item_rate_common",$@cdrate);
+	setbattleflag("item_rate_heal",$@hdrate);
+	setbattleflag("item_rate_use",$@udrate);
+	setbattleflag("item_rate_card",$@sdrate);
+	setbattleflag("item_rate_equip",$@edrate,true); // Apply new rates to configs set above
+	//we don't change card drops rate, because these values won't change them anyway
+	
+	announce "ขณะนี้กิจกรรม คูณ EXP & DROP "+(.@openevent?"เริ่มต้นขึ้นแล้ว":"สิ้นสุดลงแล้ว"),bc_all,0xFF6060;
+	end;
+
+Oninit:
+	setarray .truerate,3000,2000,100,100,100,500,300;
+	end;
+
+	
+}

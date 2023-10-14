@@ -1,0 +1,115 @@
+//===== rAthena Script =======================================
+//= Floating Server Rates
+//===== By: ==================================================
+//= Lupus
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= It's a simply example of setbattleflag
+//= This script will change your server rates from 1x to 1.5x every 6 hours
+//= Note: It doesn't affect Card granted drops, MVP & Treasure Chests drops ^_-
+//=       It also doesn't affect CARD drops, because they are just 0.01%
+//===== Additional Comments: =================================
+//= You can make incredible scripts with 'setbattleflag'!
+//============================================================
+sec_pri,20,61,4	script	Event Time	966,{
+	doevent "FloatingRates::OnMenu";
+	end;
+
+OnInit:	
+	waitingroom "Event X", 0;
+	end;
+	
+}
+
+
+-	script	FloatingRates	-1,{
+	function Add_Zero;
+OnInit:
+setarray .Days$[0],"วันอาทิตย์","วันจันทร์","วันอังคาร","วันพุธ","วันพฤหัสบดี","วันศุกร์","วันเสาร์";
+setarray .currentrate$[0],"base_exp_rate","job_exp_rate","item_rate_common","item_rate_heal","item_rate_use","item_rate_equip","item_rate_card";
+set .Size, getarraysize($RATE_SETTING);
+end;
+//add any other HOURS
+/*
+OnMinute00:
+	freeloop(1);
+//-------------------
+	set $@brate,rand(100,150);
+	set $@jrate,rand(100,150);
+	set $@drate,rand(100,150);
+*/
+Onmenu:
+	mes "[Event Rate Times]";
+	freeloop(1);
+	mes "ปัจจุบัน Rate เซิฟเวอร์ตอนนี้คือ :";
+	setarray .@ratename$,"EXP","JOB","ขยะ","ของปั้ม","ของกดใช้","ของสวมใส่","การ์ด";
+	for(set .@i,0; .@i<getarraysize(.currentrate$); set .@i,.@i+1)
+		mes ""+.@ratename$[.@i]+" :: x" + getbattleflag(.currentrate$[.@i])/100;
+	mes "จะตั้ง Event x ไหม ?";
+	next;
+	switch(select("ตั้งเลย","ดูเวลา Event ปัจจุบัน","เคลียเวลา","ช่างมัน")) {
+		case 1:
+			mes "[Setting Times]";
+			mes "เลือกวัน.";
+			set .@Day, select(" ~ "+implode(.Days$,": ~ "))-1;
+			mes "เลือกเวลาเริ่มต้นสำหรับ ^0055FF"+.Days$[.@Day]+"^000000.";
+			set .@menu$,"";
+			for(set .@i,0; .@i<23; set .@i,.@i+1)
+				set .@menu$, .@menu$+" ~ "+Add_Zero(.@i,1)+":";
+			set .@Start, select(.@menu$)-1;
+			mes "เลือกเวลาสิ้นสุดสำหรับ ^0055FF"+.Days$[.@Day]+"^000000.";
+			next;
+			set .@menu$,"";
+			for(set .@i,.@Start+1; .@i<24; set.@i,.@i+1)
+				set .@menu$, .@menu$+" ~ "+Add_Zero(.@i,1)+":";
+			set .@End, select(.@menu$)+.@Start;
+			mes "^0055FF"+.Days$[.@Day]+" ("+Add_Zero(.@Start)+"-"+Add_Zero(.@End)+")^000000";
+			mes "กำหนด เรทคูณตามลำดับ (ใส่ 0 ถ้าไม่อยากเปลี่ยน) : ";	
+			mes ""+implode(.@ratename$,":");
+			for(set .@i,0; .@i<getarraysize(.currentrate$); set .@i,.@i+1) {
+				input .@nowrate[.@i];
+				.@multirate[getarraysize(.@multirate)] = .@nowrate*100;
+				mes ""+.@ratename$[.@i]+" : x"+.@nowrate[.@i];
+			}
+			mes "คุณแน่ใจไหม?";
+			next;
+			switch(select(" ~ ^0055FFใช่...^000000"," ~ ^777777ยกเลิก^000000")) {
+				case 1:
+					setarray $RATE_SETTING,.@Day,.@Start,.@End;
+					copyarray $RATE_SETTING[getarraysize($RATE_SETTING)],.@multirate[0],getarraysize(.@multirate);
+					goto Onmenu;
+				default:
+					end;
+			}
+			break;
+		default:
+			break;
+	}
+	end;
+	
+	
+OnMinute00:
+OnRunEvent:
+	//Base exp
+	setbattleflag("base_exp_rate",$@brate);
+	//Job exp
+	setbattleflag("job_exp_rate",$@jrate);
+	//Drops
+	setbattleflag("item_rate_common",$@cdrate);
+	setbattleflag("item_rate_heal",$@hdrate);
+	setbattleflag("item_rate_use",$@udrate);
+	setbattleflag("item_rate_card",$@sdrate);
+	setbattleflag("item_rate_equip",$@drate,true); // Apply new rates to configs set above
+	//we don't change card drops rate, because these values won't change them anyway
+	
+	announce "Current rates are: 1."+($@brate-100)+"x 1."+($@jrate-100)+"x 1."+($@drate-100)+"x",bc_all,0xFF6060;
+	end;
+
+function Add_Zero {
+	return ((getarg(0)<10)?"0":"")+getarg(0)+(getarg(1,0)?".":":")+"00";
+}
+
+}
