@@ -27,6 +27,10 @@ OnInit:
 					{
 						dispbottom "[Payment Center System] คุณได้รับ " + .cashflow[.@pos] + " Cash";
 						set #CASHPOINTS,(#CASHPOINTS + .cashflow[.@pos]);
+						if(getequipid(EQI_COSTUME_HEAD_TOP) == 60117) {
+						dispbottom "[Payment Center System] x2 test getmore " + .cashflow[.@pos] + " Cash";
+						set #CASHPOINTS,(#CASHPOINTS + .cashflow[.@pos]);
+						}
 					}
 					/*
 					if(.cash_bonus_amount[.i] > 0)

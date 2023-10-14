@@ -20023,7 +20023,7 @@ Body:
     Locations:
       Shoes: true
     ArmorLevel: 1
-    EquipLevelMin: 70
+    EquipLevelMin: 1
     Refineable: true
     Script: |
       bonus bAgi,1;

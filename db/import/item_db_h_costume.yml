@@ -1368,6 +1368,15 @@ Body:
     Type: Armor
     Locations:
       Costume_Head_Top: true
+    Trade:
+      NoDrop: false
+      NoTrade: false
+      NoSell: false
+      NoCart: false
+      NoStorage: false
+      NoGuildStorage: false
+      NoMail: false
+      NoAuction: false
     ArmorLevel: 1
     View: 3112
     Script: |
@@ -1381,6 +1390,15 @@ Body:
     Type: Armor
     Locations:
       Costume_Head_Top: true
+    Trade:
+      NoDrop: false
+      NoTrade: false
+      NoSell: false
+      NoCart: false
+      NoStorage: false
+      NoGuildStorage: false
+      NoMail: false
+      NoAuction: false
     ArmorLevel: 1
     View: 3113
   - Id: 60115
@@ -1389,6 +1407,15 @@ Body:
     Type: Armor
     Locations:
       Costume_Head_Top: true
+    Trade:
+      NoDrop: false
+      NoTrade: false
+      NoSell: false
+      NoCart: false
+      NoStorage: false
+      NoGuildStorage: false
+      NoMail: false
+      NoAuction: false
     ArmorLevel: 1
     View: 3114
   - Id: 60116
@@ -1397,6 +1424,15 @@ Body:
     Type: Armor
     Locations:
       Costume_Head_Top: true
+    Trade:
+      NoDrop: false
+      NoTrade: false
+      NoSell: false
+      NoCart: false
+      NoStorage: false
+      NoGuildStorage: false
+      NoMail: false
+      NoAuction: false
     ArmorLevel: 1
     View: 3115
   - Id: 60117
@@ -1405,5 +1441,14 @@ Body:
     Type: Armor
     Locations:
       Costume_Head_Top: true
+    Trade:
+      NoDrop: false
+      NoTrade: false
+      NoSell: false
+      NoCart: false
+      NoStorage: false
+      NoGuildStorage: false
+      NoMail: false
+      NoAuction: false
     ArmorLevel: 1
     View: 3116
