@@ -190,7 +190,7 @@ menu	"Amatsu Fields",F1, "Ayothaya Fields",F2,
 		"Lutie Field",F16, "Manuk Fields",F18, 
 		"Mjolnir Fields",F19, "Moscovia Fields",F20, "Niflheim Fields",F21, 
 		"Payon Forests",F22, "Prontera Fields",F23, "Rachel Fields",F24, 
-		"Sograt Deserts",F25, "Umbala Fields",F27, 
+		"Sograt Deserts",F25,"Splendide Field",F26, "Umbala Fields",F27, 
 		"Veins Fields",F28, "Yuno Fields",F29;
 
 F1: setarray @c[2],190,197;

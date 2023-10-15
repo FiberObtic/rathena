@@ -2861,7 +2861,7 @@ Body:
       Id: Magnus
       Layout: -1
       Range: 1
-      Interval: 3000
+      Interval: 6000
       Target: Enemy
       Flag:
         NoOverlap: true

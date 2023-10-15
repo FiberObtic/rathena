@@ -19384,7 +19384,8 @@ Body:
     Locations:
       Shadow_Weapon: true
     Script: |
-      bonus2 bSkillAtk,"KN_BOWLINGBASH",50;
+      bonus2 bSkillAtk,"KN_BOWLINGBASH",75;
+      bonus2 bSkillAtk,"LK_SPIRALPIERCE",50;
       bonus2 bDropAddRace,RC_All,5;
   - Id: 1300006
     AegisName: Costume_V2_Crusader
@@ -19397,7 +19398,8 @@ Body:
       Shadow_Weapon: true
     Script: |
       bonus2 bSkillAtk,"CR_GRANDCROSS",50;
-      bonus2 bSkillAtk,"PA_SACRIFICE",25;
+      bonus2 bSkillAtk,"PA_SACRIFICE",50;
+      bonus2 bSkillAtk,"PA_SHIELDCHAIN",30;
       bonus2 bDropAddRace,RC_All,5;
   - Id: 1300007
     AegisName: Costume_V3_Hunter
@@ -19448,8 +19450,9 @@ Body:
     Locations:
       Shadow_Weapon: true
     Script: |
-      bonus bCritAtkRate,25;
-      bonus bAspdRate,5;
+      bonus2 bSkillAtk,"AS_SONICBLOW",50;
+      bonus bCritAtkRate,30;
+      bonus bAspdRate,10;
       bonus2 bDropAddRace,RC_All,5;
   - Id: 1300011
     AegisName: Costume_V7_Alchemist
@@ -19461,7 +19464,8 @@ Body:
     Locations:
       Shadow_Weapon: true
     Script: |
-      bonus2 bSkillAtk,"CR_ACIDDEMONSTRATION",10;
+      bonus2 bSkillAtk,"MC_MAMMONITE",50;
+      bonus2 bSkillAtk,"CR_ACIDDEMONSTRATION",30;
       bonus2 bDropAddRace,RC_All,5;
   - Id: 1300012
     AegisName: Costume_V8_Blacksmith
@@ -19474,7 +19478,7 @@ Body:
       Shadow_Weapon: true
     Script: |
       bonus2 bSkillAtk,"MC_MAMMONITE",50;
-      bonus2 bSkillAtk,"WS_CARTTERMINATION",25;
+      bonus2 bSkillAtk,"WS_CARTTERMINATION",30;
       bonus2 bDropAddRace,RC_All,5;
   - Id: 1300013
     AegisName: Costume_V9_Wizard
@@ -19486,9 +19490,9 @@ Body:
     Locations:
       Shadow_Weapon: true
     Script: |
-      bonus2 bSkillAtk,"WZ_METEOR",25;
-      bonus2 bSkillAtk,"WZ_VERMILION",25;
-      bonus2 bSkillAtk,"WZ_STORMGUST",25;
+      bonus2 bSkillAtk,"WZ_METEOR",30;
+      bonus2 bSkillAtk,"WZ_VERMILION",30;
+      bonus2 bSkillAtk,"WZ_STORMGUST",30;
       bonus2 bDropAddRace,RC_All,5;
   - Id: 1300014
     AegisName: Costume_V10_Sage
