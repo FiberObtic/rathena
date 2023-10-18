@@ -29,6 +29,72 @@
 #       ItemId              Item ID.
 ###########################################################################
 
+# Generated with Secret's Attendance Generator version 1.1.0
 Header:
   Type: ATTENDANCE_DB
   Version: 1
+  
+Body:
+  - Start: 20231101
+    End: 20231120
+    Rewards:
+      - Day: 1
+        ItemId: 12263
+        Amount: 5
+      - Day: 2
+        ItemId: 14592
+        Amount: 5
+      - Day: 3
+        ItemId: 12264
+        Amount: 5
+      - Day: 4
+        ItemId: 7776
+        Amount: 1
+      - Day: 5
+        ItemId: 12214
+        Amount: 5
+      - Day: 6
+        ItemId: 63002
+        Amount: 5
+      - Day: 7
+        ItemId: 23209
+        Amount: 5
+      - Day: 8
+        ItemId: 12250
+        Amount: 5
+      - Day: 9
+        ItemId: 12251
+        Amount: 5
+      - Day: 10
+        ItemId: 12255
+        Amount: 5
+      - Day: 11
+        ItemId: 12253
+        Amount: 5
+      - Day: 12
+        ItemId: 12254
+        Amount: 5
+      - Day: 13
+        ItemId: 12252
+        Amount: 5
+      - Day: 14
+        ItemId: 5300009
+        Amount: 5
+      - Day: 15
+        ItemId: 12103
+        Amount: 5
+      - Day: 16
+        ItemId: 63003
+        Amount: 5
+      - Day: 17
+        ItemId: 6635
+        Amount: 5
+      - Day: 18
+        ItemId: 63004
+        Amount: 5
+      - Day: 19
+        ItemId: 30005
+        Amount: 10
+      - Day: 20
+        ItemId: 90001
+        Amount: 1
