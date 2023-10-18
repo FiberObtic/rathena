@@ -145,6 +145,8 @@ Body:
        Price: 5000
      - Item: Umbala_Spirit
        Price: 5000
+     - Item: Snake_Head
+       Price: 5000
   - Tab: Rental
     Items:
      - Item: Costume_V1_Knight
@@ -251,3 +253,33 @@ Body:
        Price: 250
      - Item: Elite_Siege_Supply_Box
        Price: 1000
+     - Item: Str_Dish_Box
+       Price: 2000
+     - Item: Agi_Dish_Box
+       Price: 2000
+     - Item: Int_Dish_Box
+       Price: 2000
+     - Item: Dex_Dish_Box
+       Price: 2000
+     - Item: Luk_Dish_Box
+       Price: 2000
+     - Item: Vit_Dish_Box
+       Price: 2000
+     - Item: Abrasive_Box10
+       Price: 2000
+     - Item: Gloomy_Box
+       Price: 100
+     - Item: Aloebera
+       Price: 100
+     - Item: STR_Biscuit_Stick_Box
+       Price: 5000
+     - Item: VIT_Biscuit_Stick_Box
+       Price: 5000
+     - Item: AGI_Biscuit_Stick_Box
+       Price: 5000
+     - Item: INT_Biscuit_Stick_Box
+       Price: 5000
+     - Item: DEX_Biscuit_Stick_Box
+       Price: 5000
+     - Item: LUK_Biscuit_Stick_Box
+       Price: 5000
