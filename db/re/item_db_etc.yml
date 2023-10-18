@@ -29127,7 +29127,7 @@ Body:
     Flags:
       BuyingStore: true
   - Id: 7644
-    AegisName: Unsent_Mail
+    AegisName: Unsent_Letter
     Name: Unsent Letter
     Type: Etc
     Buy: 10
