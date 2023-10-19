@@ -1829,3 +1829,209 @@ Body:
       bonus bMdef,5;
       bonus bCritAtkRate,2*(.@r/3);
       if (readparam(bLuk)>=90) bonus bCritAtkRate,30;
+  - Id: 14616
+    AegisName: STR_Biscuit_Stick
+    Name: Bar Cookie Of Strength
+    Type: Usable
+    Buy: 1
+    Weight: 10
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_FOOD_STR_CASH,1800000,15;
+      sc_start SC_ATKPOTION,600000,rand(11,111);
+  - Id: 14617
+    AegisName: VIT_Biscuit_Stick
+    Name: Bar Cookie Of Vitality
+    Type: Usable
+    Buy: 1
+    Weight: 10
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_FOOD_VIT_CASH,1800000,15;
+      bonus_script "{ bonus bHPRecovRate,rand(11,33); }",1800,1;
+  - Id: 14618
+    AegisName: AGI_Biscuit_Stick
+    Name: Bar Cookie Of Agility
+    Type: Usable
+    Buy: 1
+    Weight: 10
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_FOOD_AGI_CASH,1800000,15;
+      sc_start SC_FLEEFOOD,600000,rand(11,33);
+  - Id: 14619
+    AegisName: INT_Biscuit_Stick
+    Name: Bar Cookie Of Intelligence
+    Type: Usable
+    Buy: 1
+    Weight: 10
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_FOOD_INT_CASH,1800000,15;
+      sc_start SC_MATKPOTION,600000,rand(11,111);
+  - Id: 14620
+    AegisName: DEX_Biscuit_Stick
+    Name: Bar Cookie Of Dexterity
+    Type: Usable
+    Buy: 1
+    Weight: 10
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_FOOD_DEX_CASH,1800000,15;
+      sc_start SC_HITFOOD,600000,rand(11,33);
+  - Id: 14621
+    AegisName: LUK_Biscuit_Stick
+    Name: Bar Cookie Of Lucky
+    Type: Usable
+    Buy: 1
+    Weight: 10
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      sc_start SC_FOOD_LUK_CASH,1800000,15;
+      sc_start SC_CRIFOOD,600000,rand(11,33);
+  - Id: 17270
+    AegisName: STR_Biscuit_Stick_Box
+    Name: Bar Cookie Of Strength Box
+    Type: Cash
+    Flags:
+      UniqueId: true
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      getitem 14616,20;
+  - Id: 17271
+    AegisName: VIT_Biscuit_Stick_Box
+    Name: Bar Cookie Of Vitality Box
+    Type: Cash
+    Flags:
+      UniqueId: true
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      getitem 14617,20;
+  - Id: 17272
+    AegisName: AGI_Biscuit_Stick_Box
+    Name: Bar Cookie Of Agility Box
+    Type: Cash
+    Buy: 10
+    Weight: 10
+    Flags:
+      UniqueId: true
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      getitem 14618,20;
+  - Id: 17273
+    AegisName: INT_Biscuit_Stick_Box
+    Name: Bar Cookie Of Intellgence Box
+    Type: Cash
+    Buy: 10
+    Weight: 10
+    Flags:
+      UniqueId: true
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      getitem 14619,20;
+  - Id: 17274
+    AegisName: DEX_Biscuit_Stick_Box
+    Name: Bar Cookie Of Dexterity Box
+    Type: Cash
+    Buy: 10
+    Weight: 10
+    Flags:
+      UniqueId: true
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      getitem 14620,20;
+  - Id: 17275
+    AegisName: LUK_Biscuit_Stick_Box
+    Name: Bar Cookie Of Luck Box
+    Type: Cash
+    Buy: 10
+    Weight: 10
+    Flags:
+      UniqueId: true
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      getitem 14621,20;
