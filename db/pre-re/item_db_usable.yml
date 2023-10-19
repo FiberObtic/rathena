@@ -15833,7 +15833,7 @@ Body:
     Weight: 10
     Trade:
       NoDrop: true
-      NoTrade: true
+      NoTrade: false
       NoSell: true
       NoCart: true
       NoGuildStorage: true
@@ -16077,7 +16077,7 @@ Body:
     Weight: 10
     Trade:
       NoDrop: true
-      NoTrade: true
+      NoTrade: false
       NoSell: true
       NoCart: true
       NoGuildStorage: true
