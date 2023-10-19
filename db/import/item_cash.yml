@@ -284,6 +284,6 @@ Body:
      - Item: LUK_Biscuit_Stick_Box
        Price: 5000
      - Item: Acidbomb_10_Box
-       Price: 1000
+       Price: 100
      - Item: Poison_Bottle_10_Box
        Price: 500
