@@ -18,17 +18,19 @@ menu	"^FF0000•^000000 วาร์ปล่าสุด ^777777["+lastwarp$+"]^000000",-,
     	"^FF0000•^000000 ปราสาท กิลด์",Castles,
     	"^FF0000•^000000 ดันเจี้ยน กิลด์",Guild_Dungeons,
 		"^FF0000•^000000 ดันเจี้ยน พิเศษ",Instances,
-		"^FF0000•^000000 ห้อง PVP",Pvp;
+		"^FF0000•^000000 ห้อง PVP",Pvp,
 //		"^FF0000•^000000 Instances ^ff0000Boss^000000",Instances2,
 //    	"^FF0000•^000000 Instances ^ff0000New^000000",Instances,
 //    	"^FF0000•^000000 พื้นที่ พิเศษ",Special;
+		"-",Done;
 
 	if (lastwarp$ == "")
 		message strcharinfo(0),"ขออภัยด้วยค่ะ แต่คุณยังไม่แผนที่วาร์ปล่าสุด.";
 	else
 		warp lastwarp$,lastwarpx,lastwarpy;
 	end;
-
+Done:
+	end;
 // ------------------- Functions -------------------
 // * Go("<map>",<x>,<y>);
 //	~ Warps directly to a map.
@@ -516,7 +518,7 @@ P2: Go("pvp_n_8-5",0,0);
 // --------------------------------------------------
 	Instances:
 // --------------------------------------------------
-menu	"Endless Tower",Z1,"Battle Pass ^FF0000[Battle Pass Lv.4 ขึ้นไป]^000000",Z2;
+menu	"Endless Tower",Z1,"Bakonawa Lake",IS3,"Buwaya Cave",IS6,"Battle Pass ^FF0000[Battle Pass Lv.4 ขึ้นไป]^000000",Z2;
 Z1: Go("e_tower",77,109);
 
 Z2:

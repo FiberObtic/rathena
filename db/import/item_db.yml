@@ -101,6 +101,35 @@ Body:
     Name: Cash
     Type: Etc
     Weight: 1
+# Eden Apple
+#=============================================================
+  - Id: 99900
+    AegisName: EdenApple000
+    Name: EdenApple000
+    Type: Armor
+    View: 55
+    Buy: 20
+    Weight: 100
+    Jobs:
+      All: true
+    Locations:
+      Head_Low: true
+    ArmorLevel: 1
+    Script: |
+      bonus bAtkRange,3;
+      bonus3 bAutospell,"HT_BLITZBEAT",10,1000;
+      bonus2 bSkillatk,"HT_BLITZBEAT",readparam(bInt)*5;
+  - Id: 99901
+    AegisName: EdenApple001
+    Name: EdenApple001
+    Type: Usable
+    Buy: 1000
+    Flags:
+      BuyingStore: true
+    Script: |
+      sc_start SC_EXPBOOST,600000,2000;
+      sc_start SC_ITEMBOOST,600000,2000;
+#============================================================= 
   - Id: 30002
     AegisName: 1Cash
     Name: 1Cash
@@ -2035,3 +2064,166 @@ Body:
       NoAuction: true
     Script: |
       getitem 14621,20;
+  - Id: 4592
+    AegisName: Buwaya_Card
+    Name: Buwaya Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bVit,4;
+      bonus5 bAutoSpellWhenHit,"NPC_WIDESTONE",4,20,BF_MAGIC,0;
+  - Id: 6518
+    AegisName: Buwaya_Doll
+    Name: Buwaya Doll
+    Type: Etc
+    Buy: 3000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6525
+    AegisName: Buwaya_Spirit_Piece
+    Name: Piece of Buwaya's Spirit
+    Type: Etc
+    Buy: 3000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 2590
+    AegisName: Buwaya_Cloth
+    Name: Buwaya Sack Cloth
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 8
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      .@r = getrefine();
+      bonus bHealPower2,.@r/3;
+      bonus bAddItemHealRate,.@r/3;
+      bonus2 bSubEle,Ele_Water,10;
+      bonus2 bSubEle,Ele_Wind,10;
+      bonus2 bSubEle,Ele_Earth,10;
+      bonus2 bSubEle,Ele_Fire,10;
+  - Id: 2591
+    AegisName: Bayani_Buwaya_Cloth
+    Name: Bayani Buwaya Sack Cloth
+    Type: Armor
+    Buy: 20
+    Weight: 200
+    Defense: 8
+    Slots: 1
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      .@r = getrefine();
+      bonus bHealPower2,.@r;
+      bonus bAddItemHealRate,.@r;
+      bonus2 bSubEle,Ele_Water,10;
+      bonus2 bSubEle,Ele_Wind,10;
+      bonus2 bSubEle,Ele_Earth,10;
+      bonus2 bSubEle,Ele_Fire,10;
+  - Id: 4591
+    AegisName: Bakonawa_Card
+    Name: Bakonawa Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bStr,4;
+      bonus5 bAutoSpellWhenHit,"NPC_WIDEBLEEDING",4,20,BF_WEAPON,0;
+  - Id: 6516
+    AegisName: Bakonawa_Doll
+    Name: Bakonawa Doll
+    Type: Etc
+    Buy: 3000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6523
+    AegisName: Bakonawa_Spirit_Piece
+    Name: Piece of Bakonawa's Spirit
+    Type: Etc
+    Buy: 3000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 15051
+    AegisName: Bakonawa_Armor
+    Name: Bakunawa Scale Armor
+    Type: Armor
+    Buy: 20
+    Weight: 500
+    Defense: 55
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus2 bSubClass,Class_Boss,getrefine()/2;
+      bonus bAllStats,1;
+  - Id: 15052
+    AegisName: Bayani_Bakonawa_Armor
+    Name: Bayani Bakunawa Scale Armor
+    Type: Armor
+    Buy: 20
+    Weight: 500
+    Defense: 55
+    Slots: 1
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus2 bSubClass,Class_Boss,getrefine()/2;
+      bonus bAllStats,2;
+  - Id: 2169
+    AegisName: Kalasak
+    Name: Kalasag
+    Type: Armor
+    View: 1
+    Buy: 20
+    Weight: 400
+    Defense: 40
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus2 bSubClass,Class_Boss,getrefine()/3;
+  - Id: 2170
+    AegisName: Bayani_Kalasak
+    Name: Bayani Kalasag
+    Type: Armor
+    View: 1
+    Buy: 20
+    Weight: 400
+    Defense: 40
+    Slots: 1
+    Locations:
+      Left_Hand: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus2 bSubClass,Class_Boss,getrefine()/3;

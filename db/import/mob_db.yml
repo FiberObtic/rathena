@@ -80,6 +80,614 @@ Header:
   Version: 3
 
 Body:
+  - Id: 2319
+    AegisName: BUWAYA
+    Name: Buwaya
+    Level: 151
+    Hp: 4090365
+    BaseExp: 3000012
+    JobExp: 3081720
+    MvpExp: 1500006
+    Attack: 3614
+    Attack2: 3501
+    Defense: 75
+    MagicDefense: 78
+    Str: 151
+    Agi: 201
+    Vit: 130
+    Int: 231
+    Dex: 310
+    Luk: 66
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Water
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 1424
+    AttackMotion: 576
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Yggdrasilberry
+        Rate: 5500
+      - Item: Old_Violet_Box
+        Rate: 2250
+      - Item: Old_Card_Album
+        Rate: 450
+    Drops:
+      - Item: Buwaya_Doll
+        Rate: 2000
+      - Item: Buwaya_Spirit_Piece
+        Rate: 2000
+      - Item: Ancient_Grudge
+        Rate: 2000
+      - Item: Buwaya_Cloth
+        Rate: 1000
+      - Item: Kalasak
+        Rate: 100
+      - Item: Ancient_Grudge
+        Rate: 10000
+      - Item: Buwaya_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2320
+    AegisName: BAKONAWA_1
+    Name: Bakonawa
+    Level: 156
+    Hp: 3351884
+    Attack: 4801
+    Attack2: 2501
+    Defense: 75
+    Str: 251
+    Agi: 134
+    Vit: 194
+    Int: 70
+    Dex: 237
+    Luk: 66
+    AttackRange: 10
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Water
+    ElementLevel: 4
+    WalkSpeed: 1000
+    AttackDelay: 440
+    AttackMotion: 672
+    DamageMotion: 432
+    Ai: 10
+    Class: Boss
+    Drops:
+      - Item: Bakonawa_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2321
+    AegisName: BAKONAWA_2
+    Name: Bakonawa
+    Level: 156
+    Hp: 3351884
+    Attack: 4801
+    Attack2: 2501
+    Defense: 75
+    Str: 251
+    Agi: 134
+    Vit: 194
+    Int: 70
+    Dex: 237
+    Luk: 66
+    AttackRange: 10
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Water
+    ElementLevel: 4
+    WalkSpeed: 1000
+    AttackDelay: 440
+    AttackMotion: 672
+    DamageMotion: 432
+    Ai: 10
+    Class: Boss
+    Drops:
+      - Item: Bakonawa_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2322
+    AegisName: BAKONAWA_3
+    Name: Bakonawa
+    Level: 156
+    Hp: 3351884
+    BaseExp: 2510111
+    JobExp: 2579666
+    Attack: 4801
+    Attack2: 2501
+    Defense: 75
+    Str: 251
+    Agi: 134
+    Vit: 194
+    Int: 70
+    Dex: 237
+    Luk: 66
+    AttackRange: 10
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Water
+    ElementLevel: 4
+    WalkSpeed: 1000
+    AttackDelay: 440
+    AttackMotion: 672
+    DamageMotion: 432
+    Ai: 10
+    Class: Boss
+    Drops:
+      - Item: Bakonawa_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2328
+    AegisName: MA_DRUM
+    Name: Drum
+    Level: 1
+    Hp: 200
+    Attack: 1
+    Attack2: 1
+    Defense: 100
+    MagicDefense: 99
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 1
+    WalkSpeed: 1000
+    AttackDelay: 1
+    AttackMotion: 1
+    DamageMotion: 1
+    Modes:
+      IgnoreMagic: true
+      IgnoreMelee: true
+      IgnoreMisc: true
+      IgnoreRanged: true
+  - Id: 2329
+    AegisName: BUWAYA_EGG
+    Name: Buwaya's Egg
+    Level: 100
+    Hp: 10000
+    Attack: 1
+    Attack2: 1
+    Defense: 40
+    MagicDefense: 40
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 1000
+    AttackDelay: 1001
+    AttackMotion: 1
+    DamageMotion: 1
+  - Id: 2330
+    AegisName: BUWAYA_SLAVE
+    Name: Slave
+    JapaneseName: Buwaya's Slave
+    Level: 135
+    Hp: 20145
+    Attack: 2413
+    Attack2: 2041
+    Defense: 40
+    MagicDefense: 40
+    Str: 151
+    Agi: 120
+    Vit: 110
+    Int: 102
+    Dex: 143
+    Luk: 61
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Plant
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 576
+    AttackMotion: 960
+    DamageMotion: 504
+    Ai: 21
+    Modes:
+      Detector: true
+  - Id: 2331
+    AegisName: MA_SEAW
+    Name: Seaweed
+    Level: 100
+    Hp: 10
+    Attack: 1
+    Attack2: 1
+    Defense: 1
+    MagicDefense: 1
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Fish
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 1000
+    AttackDelay: 384
+    AttackMotion: 720
+    DamageMotion: 360
+    Ai: 10
+    Class: Battlefield
+    Modes:
+      Detector: true
+      IgnoreMagic: true
+      IgnoreMelee: true
+      IgnoreMisc: true
+      IgnoreRanged: true
+  - Id: 2332
+    AegisName: BUWAYA_GHOST
+    Name: Buwaya
+    JapaneseName: Fake Buwaya
+    Level: 138
+    Hp: 30000
+    Attack: 1280
+    Attack2: 1252
+    Defense: 40
+    MagicDefense: 40
+    Str: 201
+    Agi: 248
+    Vit: 174
+    Int: 112
+    Dex: 371
+    Luk: 57
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Plant
+    Element: Water
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 1424
+    AttackMotion: 576
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+  - Id: 2333
+    AegisName: BUWAYA_WEAK
+    Name: Weakpoint
+    JapaneseName: Buwaya's Weakness
+    Level: 138
+    Hp: 20
+    Attack2: 1
+    Defense: 40
+    MagicDefense: 40
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Plant
+    Element: Water
+    ElementLevel: 4
+    WalkSpeed: 1000
+    AttackDelay: 1
+    AttackMotion: 1
+    DamageMotion: 1
+    Class: Boss
+    Modes:
+      IgnoreMagic: true
+      IgnoreMelee: true
+      IgnoreMisc: true
+      IgnoreRanged: true
+  - Id: 2334
+    AegisName: G_WAKWAK
+    Name: Wakwak
+    Level: 145
+    Hp: 194830
+    Attack: 1544
+    Attack2: 3171
+    Defense: 24
+    MagicDefense: 40
+    Str: 101
+    Agi: 154
+    Vit: 104
+    Int: 184
+    Dex: 151
+    Luk: 71
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Dark
+    ElementLevel: 2
+    WalkSpeed: 100
+    AttackDelay: 424
+    AttackMotion: 576
+    DamageMotion: 360
+    Ai: 02
+  - Id: 2335
+    AegisName: MA_TREASURE
+    Name: Bakonawa's Treasure
+    JapaneseName: Treasure Chest
+    Level: 140
+    Hp: 5
+    Defense: 40
+    Dex: 1199
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Holy
+    ElementLevel: 1
+    Class: Boss
+    Modes:
+      IgnoreMagic: true
+      IgnoreMelee: true
+      IgnoreMisc: true
+      IgnoreRanged: true
+    Drops:
+      - Item: Bakonawa_Doll
+        Rate: 2000
+      - Item: Bakonawa_Spirit_Piece
+        Rate: 2000
+      - Item: Ancient_Grudge
+        Rate: 2000
+      - Item: Bakonawa_Armor
+        Rate: 1000
+      - Item: Kalasak
+        Rate: 100
+      - Item: Gold
+        Rate: 1
+      - Item: Ancient_Grudge
+        Rate: 10000
+      - Item: Bakonawa_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 2336
+    AegisName: DOMOVOI
+    Name: Domovoi
+    Level: 38
+    Hp: 694
+    BaseExp: 155
+    JobExp: 143
+    Attack: 64
+    Attack2: 11
+    Defense: 40
+    Str: 20
+    Agi: 11
+    Vit: 34
+    Int: 20
+    Dex: 19
+    Luk: 10
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Brute
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 800
+    AttackMotion: 1200
+    DamageMotion: 288
+    Ai: 02
+  - Id: 2337
+    AegisName: HIDDEN_MOB
+    Name: Monster
+    JapaneseName: Hidden Mob
+    Level: 151
+    Hp: 10000
+    Sp: 200
+    Attack2: 1000
+    Defense: 100
+    MagicDefense: 10
+    Str: 200
+    Agi: 200
+    Vit: 200
+    Int: 200
+    Dex: 200
+    Luk: 200
+    AttackRange: 7
+    SkillRange: 12
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    RaceGroups:
+      Ogh_Hidden: true
+    Element: Ghost
+    ElementLevel: 4
+    WalkSpeed: 1000
+    AttackMotion: 1000
+    Ai: 10
+    Class: Battlefield
+    Modes:
+      Detector: true
+      IgnoreMagic: true
+      IgnoreMelee: true
+      IgnoreMisc: true
+      IgnoreRanged: true
+  - Id: 2338
+    AegisName: MD_MANANANGGAL
+    Name: Manananggal
+    JapaneseName: Bangungot Manananggal
+    Level: 107
+    Hp: 204511
+    Attack: 801
+    Attack2: 103
+    Defense: 64
+    MagicDefense: 31
+    Str: 75
+    Agi: 85
+    Vit: 45
+    Int: 71
+    Dex: 75
+    Luk: 46
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Dark
+    ElementLevel: 2
+    WalkSpeed: 100
+    AttackDelay: 280
+    AttackMotion: 720
+    DamageMotion: 360
+    Ai: 21
+    Modes:
+      Detector: true
+  - Id: 2339
+    AegisName: MD_MANGKUKULAM
+    Name: Mangkukulam
+    JapaneseName: Bangungot Mangkukulam
+    Level: 110
+    Hp: 102154
+    Attack: 582
+    Attack2: 196
+    Defense: 89
+    MagicDefense: 75
+    Str: 35
+    Agi: 71
+    Vit: 31
+    Int: 82
+    Dex: 64
+    Luk: 52
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Neutral
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 1664
+    AttackMotion: 336
+    DamageMotion: 480
+    Ai: 21
+    Modes:
+      Detector: true
+  - Id: 2340
+    AegisName: MD_TIYANAK
+    Name: Tiyanak
+    Level: 105
+    Hp: 50211
+    Attack: 457
+    Attack2: 251
+    Defense: 76
+    MagicDefense: 21
+    Str: 41
+    Agi: 58
+    Vit: 41
+    Int: 51
+    Dex: 72
+    Luk: 47
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Dark
+    ElementLevel: 2
+    WalkSpeed: 100
+    AttackDelay: 496
+    AttackMotion: 504
+    DamageMotion: 360
+    Ai: 21
+    Modes:
+      Detector: true
+  - Id: 2341
+    AegisName: RWC_BOSS2011
+    Name: 2011 RWC Boss
+    JapaneseName: RWC Boss
+    Level: 141
+    Hp: 32050000
+    BaseExp: 1300000
+    JobExp: 1210000
+    MvpExp: 650000
+    Attack: 73430
+    Attack2: 104412
+    Defense: 99
+    MagicDefense: 99
+    Str: 296
+    Agi: 231
+    Vit: 225
+    Int: 376
+    Dex: 501
+    Luk: 156
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Angel
+    Element: Holy
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 576
+    AttackMotion: 576
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Magic_Card_Album
+        Rate: 5000
+      - Item: Magic_Card_Album
+        Rate: 5000
+      - Item: Magic_Card_Album
+        Rate: 5000
+    Drops:
+      - Item: Treasure_Box
+        Rate: 5000
+      - Item: White_Slim_Pot_Box2
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 5000
+  - Id: 2343
+    AegisName: HIDDEN_MOB_W
+    Name: Hidden Mob
+    Level: 151
+    Hp: 10000
+    Sp: 200
+    Attack2: 1000
+    Defense: 100
+    MagicDefense: 10
+    Str: 200
+    Agi: 200
+    Vit: 200
+    Int: 200
+    Dex: 200
+    Luk: 200
+    AttackRange: 7
+    SkillRange: 12
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    RaceGroups:
+      Ogh_Hidden: true
+    Element: Ghost
+    ElementLevel: 4
+    WalkSpeed: 1000
+    AttackMotion: 2000
+    Ai: 10
+    Class: Battlefield
+    Modes:
+      IgnoreMagic: true
+      IgnoreMelee: true
+      IgnoreMisc: true
+      IgnoreRanged: true
+      Detector: true
   - Id: 2092
     AegisName: DOLOMEDES
     Name: Dolomedes
