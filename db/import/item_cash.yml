@@ -287,3 +287,13 @@ Body:
        Price: 100
      - Item: Poison_Bottle_10_Box
        Price: 500
+     - Item: Resist_Fire
+       Price: 100
+     - Item: Resist_Water
+       Price: 100
+     - Item: Resist_Earth
+       Price: 100
+     - Item: Resist_Wind
+       Price: 100
+     - Item: Token_Of_Siegfried
+       Price: 250

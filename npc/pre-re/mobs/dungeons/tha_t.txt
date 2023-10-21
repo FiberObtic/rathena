@@ -180,3 +180,6 @@ tha_t12,129,51,35,35	monster	Lady Solace	1703,5,420000
 tha_t12,129,51,35,35	monster	Mistress of Shelter	1701,5,420000
 tha_t12,129,51,35,35	monster	Baroness of Retribution	1702,5,420000
 tha_t12,129,51,35,35	monster	Odium of Thanatos	1709,4,1800000,1200000
+
+
+thana_boss,0,0	boss_monster	Thanatos Phantom	1708,1,28800000

@@ -732,6 +732,9 @@ Body:
         Rate: 5
       - Item: Bradium
         Rate: 250
+      - Item: Dolomedes_Card
+        Rate: 1
+        StealProtected: true
   - Id: 2408
     AegisName: DUMMY_10
     Name: Dummy 10

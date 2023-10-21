@@ -2227,3 +2227,21 @@ Body:
     Refineable: true
     Script: |
       bonus2 bSubClass,Class_Boss,getrefine()/3;
+  - Id: 4506
+    AegisName: Dolomedes_Card
+    Name: Dolomedes Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Head_Low: true
+      Head_Mid: true
+      Head_Top: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bDex,2;
+      if (BaseClass == Job_Archer) {
+         bonus bDex,getrefine()/3;
+      }
