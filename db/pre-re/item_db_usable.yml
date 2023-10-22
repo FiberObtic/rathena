@@ -4762,12 +4762,12 @@ Body:
       Status: Reuse_Limit_C
     Trade:
       NoDrop: true
-      NoTrade: true
+      NoTrade: false
       NoSell: true
-      NoCart: true
+      NoCart: false
       NoGuildStorage: true
       NoMail: true
-      NoAuction: true
+      NoAuction: false
     Script: |
       sc_start SC_EXPBOOST,1800000,50;
   - Id: 12209
@@ -4797,12 +4797,12 @@ Body:
       Status: Reuse_Limit_D
     Trade:
       NoDrop: true
-      NoTrade: true
+      NoTrade: false
       NoSell: true
-      NoCart: true
+      NoCart: false
       NoGuildStorage: true
       NoMail: true
-      NoAuction: true
+      NoAuction: false
     Script: |
       sc_start SC_ITEMBOOST,1800000,100;
   - Id: 12211
@@ -21765,12 +21765,12 @@ Body:
       Sitting: true
     Trade:
       NoDrop: true
-      NoTrade: true
+      NoTrade: false
       NoSell: true
-      NoCart: true
+      NoCart: false
       NoGuildStorage: true
       NoMail: true
-      NoAuction: true
+      NoAuction: false
   - Id: 14607
     AegisName: Luxurious_Dinner_W
     Name: Luxurious Western Food
