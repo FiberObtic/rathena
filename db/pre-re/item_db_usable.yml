@@ -15835,10 +15835,10 @@ Body:
       NoDrop: true
       NoTrade: false
       NoSell: true
-      NoCart: true
+      NoCart: false
       NoGuildStorage: true
       NoMail: true
-      NoAuction: true
+      NoAuction: false
     Script: |
       getitem 7135,10;
       getitem 7136,10;
@@ -16079,10 +16079,10 @@ Body:
       NoDrop: true
       NoTrade: false
       NoSell: true
-      NoCart: true
+      NoCart: false
       NoGuildStorage: true
       NoMail: true
-      NoAuction: true
+      NoAuction: false
     Script: |
       getitem 678,10;
   - Id: 14005
