@@ -1968,7 +1968,7 @@ Body:
       UniqueId: true
     Trade:
       NoDrop: true
-      NoTrade: true
+      NoTrade: false
       NoSell: true
       NoCart: true
       NoGuildStorage: true
@@ -1984,7 +1984,7 @@ Body:
       UniqueId: true
     Trade:
       NoDrop: true
-      NoTrade: true
+      NoTrade: false
       NoSell: true
       NoCart: true
       NoGuildStorage: true
@@ -2002,7 +2002,7 @@ Body:
       UniqueId: true
     Trade:
       NoDrop: true
-      NoTrade: true
+      NoTrade: false
       NoSell: true
       NoCart: true
       NoGuildStorage: true
@@ -2020,7 +2020,7 @@ Body:
       UniqueId: true
     Trade:
       NoDrop: true
-      NoTrade: true
+      NoTrade: false
       NoSell: true
       NoCart: true
       NoGuildStorage: true
@@ -2038,7 +2038,7 @@ Body:
       UniqueId: true
     Trade:
       NoDrop: true
-      NoTrade: true
+      NoTrade: false
       NoSell: true
       NoCart: true
       NoGuildStorage: true
@@ -2056,7 +2056,7 @@ Body:
       UniqueId: true
     Trade:
       NoDrop: true
-      NoTrade: true
+      NoTrade: false
       NoSell: true
       NoCart: true
       NoGuildStorage: true
