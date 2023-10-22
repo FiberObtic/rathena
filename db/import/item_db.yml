@@ -1970,10 +1970,10 @@ Body:
       NoDrop: true
       NoTrade: false
       NoSell: true
-      NoCart: true
+      NoCart: false
       NoGuildStorage: true
       NoMail: true
-      NoAuction: true
+      NoAuction: false
     Script: |
       getitem 14616,20;
   - Id: 17271
@@ -1986,10 +1986,10 @@ Body:
       NoDrop: true
       NoTrade: false
       NoSell: true
-      NoCart: true
+      NoCart: false
       NoGuildStorage: true
       NoMail: true
-      NoAuction: true
+      NoAuction: false
     Script: |
       getitem 14617,20;
   - Id: 17272
@@ -2004,10 +2004,10 @@ Body:
       NoDrop: true
       NoTrade: false
       NoSell: true
-      NoCart: true
+      NoCart: false
       NoGuildStorage: true
       NoMail: true
-      NoAuction: true
+      NoAuction: false
     Script: |
       getitem 14618,20;
   - Id: 17273
@@ -2022,10 +2022,10 @@ Body:
       NoDrop: true
       NoTrade: false
       NoSell: true
-      NoCart: true
+      NoCart: false
       NoGuildStorage: true
       NoMail: true
-      NoAuction: true
+      NoAuction: false
     Script: |
       getitem 14619,20;
   - Id: 17274
@@ -2040,10 +2040,10 @@ Body:
       NoDrop: true
       NoTrade: false
       NoSell: true
-      NoCart: true
+      NoCart: false
       NoGuildStorage: true
       NoMail: true
-      NoAuction: true
+      NoAuction: false
     Script: |
       getitem 14620,20;
   - Id: 17275
@@ -2058,10 +2058,10 @@ Body:
       NoDrop: true
       NoTrade: false
       NoSell: true
-      NoCart: true
+      NoCart: false
       NoGuildStorage: true
       NoMail: true
-      NoAuction: true
+      NoAuction: false
     Script: |
       getitem 14621,20;
   - Id: 4592
