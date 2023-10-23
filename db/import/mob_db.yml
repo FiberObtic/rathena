@@ -206,7 +206,7 @@ Body:
     BaseExp: 2510111
     JobExp: 2579666
     Attack: 4801
-    Attack2: 2501
+    Attack2: 1000
     Defense: 75
     Str: 251
     Agi: 134
@@ -489,7 +489,7 @@ Body:
     Level: 151
     Hp: 10000
     Sp: 200
-    Attack2: 1000
+    Attack2: 500
     Defense: 100
     MagicDefense: 10
     Str: 200
@@ -512,11 +512,11 @@ Body:
     Ai: 10
     Class: Battlefield
     Modes:
-      Detector: true
       IgnoreMagic: true
       IgnoreMelee: true
       IgnoreMisc: true
       IgnoreRanged: true
+      Detector: true
   - Id: 2338
     AegisName: MD_MANANANGGAL
     Name: Manananggal

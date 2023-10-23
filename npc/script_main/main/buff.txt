@@ -32,6 +32,7 @@
 	percentheal 100,100;
 	identifyall();
 	if (.@Buffs) {
+ONBUFF:
 		//แก้สถานะต่างๆ
 		sc_end SC_STAN;
 		sc_end SC_STUN;

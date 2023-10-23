@@ -297,3 +297,5 @@ Body:
        Price: 100
      - Item: Token_Of_Siegfried
        Price: 250
+     - Item: Full_Buff_Scroll
+       Price: 250

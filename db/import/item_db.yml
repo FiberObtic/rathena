@@ -229,6 +229,18 @@ Body:
       NoMail: true
     Script: |
       callfunc("F_Gachapon",3);
+  - Id: 63005
+    AegisName: Full_Buff_Scroll
+    Name: Full Buff Scroll
+    Type: Usable
+    Weight: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoSell: true
+      NoMail: true
+    Script: |
+      donpcevent "Healer::ONBUFF";
   - Id: 65001
     AegisName: Option_Weapon_Ticket
     Name:  Option Weapon Ticket
