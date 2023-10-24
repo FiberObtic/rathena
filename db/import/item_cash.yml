@@ -147,6 +147,8 @@ Body:
        Price: 5000
      - Item: Snake_Head
        Price: 5000
+     - Item: Alice_Doll
+       Price: 5000
   - Tab: Rental
     Items:
      - Item: Costume_V1_Knight

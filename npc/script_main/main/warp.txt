@@ -162,7 +162,7 @@ T20: Go("louyang",217,100);
 T21: Go("xmas",147,134);
 T22: Restrict("RE");
 	 Go("malangdo",140,114);
-T23: Restrict("RE");
+T23: Restrict("Pre-RE");
 	 Go("malaya",231,200);
 T24: Go("manuk",282,138);
 T25: Go("mid_camp",210,288);
@@ -189,7 +189,7 @@ menu	"Amatsu Fields",F1, "Ayothaya Fields",F2,
     	"Einbroch Fields",F8,"El Dicastes Field",F9,
     	"Geffen Fields",F10, "Gonryun Fields",F11, "Hugel Fields",F12,
 		"Lighthalzen Fields",F14, "Louyang Field",F15, 
-		"Lutie Field",F16, "Malaya Fields",F17, "Manuk Fields",F18, 
+		"Lutie Field",F16, "Malaya Field",F17, "Manuk Fields",F18, 
 		"Mjolnir Fields",F19, "Moscovia Fields",F20, "Niflheim Fields",F21, 
 		"Payon Forests",F22, "Prontera Fields",F23, "Rachel Fields",F24, 
 		"Sograt Deserts",F25,"Splendide Field",F26, "Umbala Fields",F27, 
@@ -237,7 +237,7 @@ F15: setarray @c[2],229,187;
 	 Disp("Louyang Field",1,1); Pick("lou_fild");
 F16: setarray @c[2],115,145;
 	 Disp("Lutie Field",1,1); Pick("xmas_fild");
-F17: Restrict("RE");
+F17: Restrict("Pre-RE");
 	 setarray @c[2],40,272,207,180;
 	 Disp("Malaya Field",1,2); Pick("ma_fild");
 F18: setarray @c[2],35,236,35,262,84,365;
