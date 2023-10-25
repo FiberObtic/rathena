@@ -241,31 +241,29 @@ Body:
       NoMail: true
     Script: |
       if(#PREMIUMSERVICE_TIME - gettimetick(2) > 0){
-			sc_start SC_INCREASEAGI,1000*60*30,10;
-			sc_start SC_BLESSING,1000*60*30,10;
-			sc_start 41,1000*60*30,5; //กอเรีย
-			sc_start 40,1000*60*30,5; // MAGNIFICAT เร่ง
-			sc_start4 SC_POEMBRAGI,1000*60*15,5,70,90,10;
-			sc_start4 SC_SERVICE4U,1000*60*15,5,40,40,1;
-			
-			//บัพค่าอาหาร 30นาที Support rAthena
-			sc_start SC_STRFood,1000*60*30,5;
-			sc_start SC_AGIFood,1000*60*30,5;
-			sc_start SC_VITFood,1000*60*30,5;
-			sc_start SC_INTFood,1000*60*30,5;
-			sc_start SC_DEXFood,1000*60*30,5;
-			sc_start SC_LUKFood,1000*60*30,5;
-			end;
-		}
-		else{
-			sc_start SC_INCREASEAGI,420000,5;
-			sc_start SC_BLESSING,420000,5;
-			sc_start 41,420000,1; //กอเรีย
-			sc_start 40,420000,3; // MAGNIFICAT เร่ง
-			sc_start4 SC_POEMBRAGI,1000*60,1,20,30,1;
-			sc_start4 SC_SERVICE4U,1000*60,1,10,6,1;
-			end;
-		}
+        sc_start SC_INCREASEAGI,1000*60*30,10;
+        sc_start SC_BLESSING,1000*60*30,10;
+        sc_start 41,1000*60*30,5;
+        sc_start 40,1000*60*30,5;
+        sc_start4 SC_POEMBRAGI,1000*60*15,5,70,90,10;
+        sc_start4 SC_SERVICE4U,1000*60*15,5,40,40,1;
+        sc_start SC_STRFood,1000*60*30,5;
+        sc_start SC_AGIFood,1000*60*30,5;
+        sc_start SC_VITFood,1000*60*30,5;
+        sc_start SC_INTFood,1000*60*30,5;
+        sc_start SC_DEXFood,1000*60*30,5;
+        sc_start SC_LUKFood,1000*60*30,5;
+        end;
+      }
+      else{
+        sc_start SC_INCREASEAGI,420000,5;
+        sc_start SC_BLESSING,420000,5;
+        sc_start 41,420000,1;
+        sc_start 40,420000,3;
+        sc_start4 SC_POEMBRAGI,1000*60,1,20,30,1;
+        sc_start4 SC_SERVICE4U,1000*60,1,10,6,1;
+        end;
+      }
   - Id: 65001
     AegisName: Option_Weapon_Ticket
     Name:  Option Weapon Ticket
