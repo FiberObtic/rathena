@@ -14,10 +14,25 @@
 //===== Additional Comments: =================================
 //= You can make incredible scripts with 'setbattleflag'!
 //============================================================
+sec_pri,20,61,4	script	Event Time	966,{
+	select("- Open","- Close");
+	switch(@menu) {
+		case 1: donpcevent "FloatingRates::OnStart"; end;
+		case 2: donpcevent "FloatingRates::OnEnd"; end;
+	}
+	end;
+
+OnInit:	
+	waitingroom "Event X", 0;
+	end;
+	
+}
+
 -	script	FloatingRates	-1,{
 OnClock1000:
 if (!gettime(DT_DAYOFWEEK) == SATURDAY || !gettime(DT_DAYOFWEEK) == SUNDAY) end;
 OnClock1900:
+OnStart:
 	.@openevent = 1;
 	$@brate = getbattleflag("base_exp_rate")*2;
 	$@jrate = getbattleflag("job_exp_rate")*2;
@@ -40,6 +55,7 @@ OnClock2300:
 	$@sdrate = setbattleflag("item_rate_card")*2;
 	$@edrate = setbattleflag("item_rate_equip")*2; // Apply new rates to configs set above
 	*/
+OnEnd:
 	$@brate = .truerate[0];
 	$@jrate = .truerate[1];
 	$@cdrate = .truerate[2];
