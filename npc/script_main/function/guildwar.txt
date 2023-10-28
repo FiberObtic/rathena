@@ -33,7 +33,7 @@ morocc,154,158,4	script	Kriemhild#mor	722,{
 					if(!$Warhome1 && !.@GM) {
 						mes "ÃÑº¢Í§ÃÒ§ÇÑÅä»";
 						Zeny += 5000000;
-						setarray .@itemamount,30005,100,14004,2,13989,5,14003,5;
+						setarray .@itemamount,30005,100,14004,2,13989,5,14001,1;
 						for(.@i=0; .@i < getarraysize(.@itemamount); .@i++)
 							getitem .@itemamount[.@i],.@itemamount[.@i+1];
 						$Warhome1 = 1;
@@ -134,7 +134,7 @@ morocc,158,158,4	script	Bright Arbor#mor	722,{
 					if(!$Warhome2 && !.@GM) {
 						mes "ÃÑº¢Í§ÃÒ§ÇÑÅä»";
 						Zeny += 5000000;
-						setarray .@itemamount,30005,100,14004,2,13989,5,14003,5;
+						setarray .@itemamount,30005,100,14004,2,13989,5,14001,1;
 						for(.@i=0; .@i < getarraysize(.@itemamount); .@i++)
 							getitem .@itemamount[.@i],.@itemamount[.@i+1];
 						$Warhome2 = 1;
@@ -235,7 +235,7 @@ morocc,162,158,4	script	Bergel#mor	722,{
 					if(!$Warhome3 && !.@GM) {
 						mes "ÃÑº¢Í§ÃÒ§ÇÑÅä»";
 						Zeny += 5000000;
-						setarray .@itemamount,30005,100,14004,2,13989,5,14003,5;
+						setarray .@itemamount,30005,100,14004,2,13989,5,14001,1;
 						for(.@i=0; .@i < getarraysize(.@itemamount); .@i++)
 							getitem .@itemamount[.@i],.@itemamount[.@i+1];
 						$Warhome3 = 1;
@@ -336,7 +336,7 @@ morocc,166,158,4	script	Nuernberg#mor	722,{
 					if(!$Warhome4 && !.@GM) {
 						mes "ÃÑº¢Í§ÃÒ§ÇÑÅä»";
 						Zeny += 5000000;
-						setarray .@itemamount,30005,100,14004,2,13989,5,14003,5;
+						setarray .@itemamount,30005,100,14004,2,13989,5,14001,1;
 						for(.@i=0; .@i < getarraysize(.@itemamount); .@i++)
 							getitem .@itemamount[.@i],.@itemamount[.@i+1];
 						$Warhome4 = 1;

@@ -3022,7 +3022,7 @@ Body:
       NoBanishingBuster: true
       NoClearance: true
     EndOnStart:
-      Intfood: true
+      Dexfood: true
   - Status: Food_Int_Cash
     Icon: EFST_FOOD_INT_CASH
     CalcFlags:
@@ -3034,7 +3034,7 @@ Body:
       NoBanishingBuster: true
       NoClearance: true
     EndOnStart:
-      Dexfood: true
+      Intfood: true
   - Status: Food_Luk_Cash
     Icon: EFST_FOOD_LUK_CASH
     CalcFlags:

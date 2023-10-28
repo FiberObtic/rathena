@@ -175,6 +175,23 @@ Body:
       NoAuction: true
     Script: |
       itemskill "AL_TELEPORT",1;
+  - Id: 30006
+    AegisName: WOE_potion_box
+    Name: WOE potion box
+    Type: Cash
+    Buy: 10
+    Weight: 10
+    Flags:
+      UniqueId: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoSell: true
+      NoGuildStorage: true
+      NoMail: true
+    Script: |
+      getitem 11503,1000;
+      getitem 11504,500;
   - Id: 63001
     AegisName: Endless_Tower_Reset_Pass
     Name: Endless Tower Reset Pass
@@ -1900,6 +1917,7 @@ Body:
     Buy: 1
     Weight: 10
     Trade:
+      Override: 100
       NoDrop: true
       NoTrade: true
       NoSell: true
@@ -1908,7 +1926,7 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      sc_start SC_FOOD_STR_CASH,1800000,15;
+      sc_start SC_Incstr,1800000,15;
       sc_start SC_ATKPOTION,600000,rand(11,111);
   - Id: 14617
     AegisName: VIT_Biscuit_Stick
@@ -1917,6 +1935,7 @@ Body:
     Buy: 1
     Weight: 10
     Trade:
+      Override: 100
       NoDrop: true
       NoTrade: true
       NoSell: true
@@ -1925,7 +1944,7 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      sc_start SC_FOOD_VIT_CASH,1800000,15;
+      sc_start SC_Incvit,1800000,15;
       bonus_script "{ bonus bHPRecovRate,rand(11,33); }",1800,1;
   - Id: 14618
     AegisName: AGI_Biscuit_Stick
@@ -1934,6 +1953,7 @@ Body:
     Buy: 1
     Weight: 10
     Trade:
+      Override: 100
       NoDrop: true
       NoTrade: true
       NoSell: true
@@ -1942,7 +1962,7 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      sc_start SC_FOOD_AGI_CASH,1800000,15;
+      sc_start SC_Incagi,1800000,15;
       sc_start SC_FLEEFOOD,600000,rand(11,33);
   - Id: 14619
     AegisName: INT_Biscuit_Stick
@@ -1951,6 +1971,7 @@ Body:
     Buy: 1
     Weight: 10
     Trade:
+      Override: 100
       NoDrop: true
       NoTrade: true
       NoSell: true
@@ -1959,7 +1980,7 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      sc_start SC_FOOD_INT_CASH,1800000,15;
+      sc_start SC_Incint,1800000,15;
       sc_start SC_MATKPOTION,600000,rand(11,111);
   - Id: 14620
     AegisName: DEX_Biscuit_Stick
@@ -1968,6 +1989,7 @@ Body:
     Buy: 1
     Weight: 10
     Trade:
+      Override: 100
       NoDrop: true
       NoTrade: true
       NoSell: true
@@ -1976,7 +1998,7 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      sc_start SC_FOOD_DEX_CASH,1800000,15;
+      sc_start SC_Incdex,1800000,15;
       sc_start SC_HITFOOD,600000,rand(11,33);
   - Id: 14621
     AegisName: LUK_Biscuit_Stick
@@ -1985,6 +2007,7 @@ Body:
     Buy: 1
     Weight: 10
     Trade:
+      Override: 100
       NoDrop: true
       NoTrade: true
       NoSell: true
@@ -1993,7 +2016,7 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      sc_start SC_FOOD_LUK_CASH,1800000,15;
+      sc_start SC_Incluk,1800000,15;
       sc_start SC_CRIFOOD,600000,rand(11,33);
   - Id: 17270
     AegisName: STR_Biscuit_Stick_Box
