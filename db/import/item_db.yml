@@ -176,8 +176,8 @@ Body:
     Script: |
       itemskill "AL_TELEPORT",1;
   - Id: 30006
-    AegisName: WOE_potion_box
-    Name: WOE potion box
+    AegisName: WOE_White_potion_box
+    Name: WOE White potion box
     Type: Cash
     Buy: 10
     Weight: 10
@@ -191,6 +191,21 @@ Body:
       NoMail: true
     Script: |
       getitem 11503,1000;
+  - Id: 30007
+    AegisName: WOE_Blue_potion_box
+    Name: WOE Blue potion box
+    Type: Cash
+    Buy: 10
+    Weight: 10
+    Flags:
+      UniqueId: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoSell: true
+      NoGuildStorage: true
+      NoMail: true
+    Script: |
       getitem 11504,500;
   - Id: 63001
     AegisName: Endless_Tower_Reset_Pass
