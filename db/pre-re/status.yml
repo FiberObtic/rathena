@@ -1991,7 +1991,6 @@ Body:
     CalcFlags:
       Str: true
     Flags:
-      NoRemoveOnDead: true
       NoClearbuff: true
       NoDispell: true
       NoBanishingBuster: true
@@ -1999,7 +1998,6 @@ Body:
     CalcFlags:
       Agi: true
     Flags:
-      NoRemoveOnDead: true
       NoClearbuff: true
       NoDispell: true
       NoBanishingBuster: true
@@ -2008,7 +2006,6 @@ Body:
     CalcFlags:
       Vit: true
     Flags:
-      NoRemoveOnDead: true
       NoClearbuff: true
       NoDispell: true
       NoBanishingBuster: true
@@ -2017,7 +2014,6 @@ Body:
     CalcFlags:
       Int: true
     Flags:
-      NoRemoveOnDead: true
       NoClearbuff: true
       NoDispell: true
       NoBanishingBuster: true
@@ -2026,7 +2022,6 @@ Body:
     CalcFlags:
       Dex: true
     Flags:
-      NoRemoveOnDead: true
       NoClearbuff: true
       NoDispell: true
       NoBanishingBuster: true
@@ -2035,7 +2030,6 @@ Body:
     CalcFlags:
       Luk: true
     Flags:
-      NoRemoveOnDead: true
       NoClearbuff: true
       NoDispell: true
       NoBanishingBuster: true
@@ -2876,7 +2870,6 @@ Body:
     CalcFlags:
       Str: true
     Flags:
-      NoRemoveOnDead: true
       NoClearbuff: true
       NoDispell: true
       NoBanishingBuster: true
@@ -2888,7 +2881,6 @@ Body:
     CalcFlags:
       Agi: true
     Flags:
-      NoRemoveOnDead: true
       NoClearbuff: true
       NoDispell: true
       NoBanishingBuster: true
@@ -2900,7 +2892,6 @@ Body:
     CalcFlags:
       Vit: true
     Flags:
-      NoRemoveOnDead: true
       NoClearbuff: true
       NoDispell: true
       NoBanishingBuster: true
@@ -2912,31 +2903,28 @@ Body:
     CalcFlags:
       Dex: true
     Flags:
-      NoRemoveOnDead: true
-      NoClearbuff: true
-      NoDispell: true
-      NoBanishingBuster: true
-      NoClearance: true
-    EndOnStart:
-      Intfood: true
-  - Status: Food_Int_Cash
-    Icon: EFST_FOOD_INT_CASH
-    CalcFlags:
-      Int: true
-    Flags:
-      NoRemoveOnDead: true
       NoClearbuff: true
       NoDispell: true
       NoBanishingBuster: true
       NoClearance: true
     EndOnStart:
       Dexfood: true
+  - Status: Food_Int_Cash
+    Icon: EFST_FOOD_INT_CASH
+    CalcFlags:
+      Int: true
+    Flags:
+      NoClearbuff: true
+      NoDispell: true
+      NoBanishingBuster: true
+      NoClearance: true
+    EndOnStart:
+      Intfood: true
   - Status: Food_Luk_Cash
     Icon: EFST_FOOD_LUK_CASH
     CalcFlags:
       Luk: true
     Flags:
-      NoRemoveOnDead: true
       NoClearbuff: true
       NoDispell: true
       NoBanishingBuster: true
