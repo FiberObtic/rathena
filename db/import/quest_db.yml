@@ -48,3 +48,125 @@
 Header:
   Type: QUEST_DB
   Version: 3
+
+Body:
+  - Id: 12280
+    Title: A suspicious prisoner
+  - Id: 12281
+    Title: An unwanted favor
+  - Id: 12282
+    Title: Gossip king Clever
+  - Id: 12283
+    Title: The rift researcher
+  - Id: 12284
+    Title: A cat merchant's source of information
+  - Id: 12285
+    Title: A way to calm down a cat
+  - Id: 12286
+    Title: Information traded for some canned foods
+  - Id: 12287
+    Title: A weird experience
+  - Id: 12288
+    Title: A successful experience
+  - Id: 12289
+    Title: Another visitation
+  - Id: 12290
+    Title: Clever's historical documents
+  - Id: 12291
+    Title: Hidden historical documents (?)
+  - Id: 12292
+    Title: The unknown ones
+  - Id: 12293
+    Title: Figures in history
+  - Id: 12294
+    Title: Tour of Eclage
+  - Id: 12295
+    Title: Error
+  - Id: 12296
+    Title: Fun times with the reactor
+  - Id: 12297
+    Title: Encountering Etran
+  - Id: 12298
+    Title: Two wishes
+  - Id: 12299
+    Title: Revisiting Robert
+  - Id: 12300
+    Title: Revisiting Etran
+  - Id: 12301
+    Title: Two remaining friends
+  - Id: 12302
+    Title: Salim Hamid
+  - Id: 12303
+    Title: Applicant for trader
+  - Id: 12304
+    Title: Introduction to merchantology
+  - Id: 12305
+    Title: About the capability figure
+  - Id: 12306
+    Title: Experience of disounts
+  - Id: 12307
+    Title: Way to the Merchant
+  - Id: 12308
+    Title: Removal of Worm Tails
+  - Id: 12309
+    Title: Removal of Boa
+  - Id: 12310
+    Title: Removal of Spore
+  - Id: 12311
+    Title: Removal of Pirate Skeletons
+  - Id: 12312
+    Title: Supplementary to the theory lesson
+  - Id: 12313
+    Title: About stats
+  - Id: 12314
+    Title: About skills
+  - Id: 12316
+    Title: Meeting Hugin
+  - Id: 12317
+    Title: Trace of Time Travel
+    TimeLimit: 4h
+  - Id: 12318
+    Title: Corrupted Soul Hunt
+    Targets:
+      - Mob: MG_CORRUPTION_ROOT
+        Count: 1
+  - Id: 12319
+    Title: Amdarais Hunt
+    Targets:
+      - Mob: MG_AMDARAIS
+        Count: 1
+  - Id: 12320
+    Title: Time Traveler
+  - Id: 12321
+    Title: Time Conqueror
+  - Id: 12322
+    Title: Space Distortion
+  - Id: 12325
+    Title: Faceworm's Nest after-effects
+    TimeLimit: 4h
+  - Id: 12326
+    Title: The owner of old ring
+    TimeLimit: 4h
+  - Id: 12327
+    Title: The memory of old photo album
+    TimeLimit: 4h
+  - Id: 12328
+    Title: Dol-Seoi's Sorrow
+    TimeLimit: 4h
+  - Id: 12329
+    Title: Keaton's Bracelet
+    TimeLimit: 4h
+  - Id: 12330
+    Title: Skull-faced Girl
+  - Id: 12331
+    Title: Trail of Toy Factory
+    TimeLimit: 4h
+  - Id: 12334
+    Title: Trace of Time Travel
+    TimeLimit: 3d 4h
+  - Id: 12335
+    Title: Space Distortion
+  - Id: 12338
+    Title: Time Traveler
+  - Id: 12339
+    Title: Time Conqueror

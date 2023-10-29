@@ -519,7 +519,7 @@ P2: Go("pvp_n_8-5",0,0);
 // --------------------------------------------------
 	Instances:
 // --------------------------------------------------
-menu	"Endless Tower",Z1,"Bakonawa Lake",IS3,"Buwaya Cave",IS6,"Battle Pass ^FF0000[Battle Pass Lv.4 ขึ้นไป]^000000",Z2;
+menu	"Endless Tower",Z1,"Bakonawa Lake",IS3,"Buwaya Cave",IS6,"Old Glast Heim",IS22,"Battle Pass ^FF0000[Battle Pass Lv.4 ขึ้นไป]^000000",Z2;
 Z1: Go("e_tower",77,109);
 
 Z2:

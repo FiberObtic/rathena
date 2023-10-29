@@ -2318,3 +2318,133 @@ Body:
       if (BaseClass == Job_Archer) {
          bonus bDex,getrefine()/3;
       }
+  - Id: 6607
+    AegisName: Temporal_Crystal
+    Name: Temporal Crystal
+    Type: Etc
+    Buy: 20
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6608
+    AegisName: Coagulated_Spell
+    Name: Coagulated Spell
+    Type: Etc
+    Buy: 20
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6609
+    AegisName: Glast_Decayed_Nail
+    Name: Glast Decayed Nail
+    Type: Etc
+    Buy: 2800
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 6610
+    AegisName: Glast_Horrendous_Mouth
+    Name: Glast Horrendous Mouth
+    Type: Etc
+    Buy: 3200
+    Weight: 10
+    Flags:
+      BuyingStore: true
+  - Id: 4601
+    AegisName: Amdarais_Card
+    Name: Amdarais Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddClass,Class_All,15;
+      bonus bMatkRate,15;
+      bonus2 bHPLossRate,666,4000;
+      bonus2 bSPLossRate,66,4000;
+    UnEquipScript: |
+      heal -6666,-666;
+  - Id: 4602
+    AegisName: AmdaraisH_Card
+    Name: Realized Amdarais Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddClass,Class_All,20;
+      bonus bMatkRate,20;
+      bonus2 bHPLossRate,666,6000;
+      bonus2 bSPLossRate,66,6000;
+    UnEquipScript: |
+      heal -6666,-666;
+  - Id: 4603
+    AegisName: CorruptionRoot_Card
+    Name: Corruption Root Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bBaseAtk,20;
+      bonus5 bAutoSpell,"NPC_WIDESTONE",1,50,BF_SHORT,0;
+      bonus5 bAutoSpell,"NPC_WIDESLEEP",1,50,BF_SHORT,0;
+      bonus5 bAutoSpell,"NPC_WIDECURSE",1,50,BF_SHORT,0;
+  - Id: 4604
+    AegisName: CorruptionRootH_Card
+    Name: Realized Corruption Root Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bBaseAtk,30;
+      bonus5 bAutoSpell,"NPC_WIDESTONE",2,50,BF_SHORT,0;
+      bonus5 bAutoSpell,"NPC_WIDESLEEP",2,50,BF_SHORT,0;
+      bonus5 bAutoSpell,"NPC_WIDECURSE",2,50,BF_SHORT,0;
+  - Id: 4605
+    AegisName: UndeadKnightM_Card
+    Name: Agony Of Royal Knight Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bMaxHPrate,-44;
+      bonus bHPGainValue,200+10*getrefine();
+  - Id: 4606
+    AegisName: UndeadKnightF_Card
+    Name: Grudge of Royal Knight Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bMaxSPrate,-44;
+      bonus bSPGainValue,20+(getrefine()/2);
+    UnEquipScript: |
+      heal 0,-444;
