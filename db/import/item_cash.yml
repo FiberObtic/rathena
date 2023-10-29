@@ -91,6 +91,8 @@ Body:
        Price: 7500
      - Item: Novice_Figure
        Price: 7500
+     - Item: Valkyrie_Helmet
+       Price: 9900
      - Item: Ramen_Hat
        Price: 5000
      - Item: J_Captain_Hat
