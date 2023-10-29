@@ -88,8 +88,8 @@ morocc,122,110,4	script	Jackpot Item#i1	562,{
 //=================================================================================================
 	mes .NPCname$;
 	mes "ยินดีต้อนรับท่าน ^0000FF["+strcharinfo(0)+"]^000000";
-	if(!.status){
-		mes "สถานะ : ^FF0000"+((.status)?"เปิดใช้งาน":"ปิดใช้งาน")+"^000000";
+	if(!$status){
+		mes "สถานะ : ^FF0000"+(($status)?"เปิดใช้งาน":"ปิดใช้งาน")+"^000000";
 		if(!.@GM) goto Reward;;
 		goto GM;
 	}else{
@@ -108,16 +108,16 @@ morocc,122,110,4	script	Jackpot Item#i1	562,{
 GM:
 	if(.@GM){
 		switch(select("~ เมนูเริ่มสุ่ม ^FF0000[GM Only]^000000",
-			""+((!.status)?"~ ^017A01เปิดใช้งาน^000000":"~ ^FF0000ปิดใช้งาน^000000"),
+			""+((!$status)?"~ ^017A01เปิดใช้งาน^000000":"~ ^FF0000ปิดใช้งาน^000000"),
 		"~ ออก")){
 			case 1:
 				break;
 			case 2:
-				if(!.status){
-					.status = 1;
+				if(!$status){
+					$status = 1;
 					announce "ขณะนี้ตู้ "+.NPCname$+" ได้เปิดใช้งานเรียบร้อยแล้ว",bc_all;
 				}else{
-					.status = 0;
+					$status = 0;
 					announce "ขณะนี้ตู้ "+.NPCname$+" ได้ปิดใช้งานเรียบร้อยแล้ว",bc_all;
 				}
 				end;
@@ -128,6 +128,7 @@ GM:
 	next;
 	mes .NPCname$;
 	mes "โปรดเลือกสิ่งที่ต้องการ";
+	next;
 	/*
 	mes "รายการของดังต่อไปนี้";
 	for(.@i = 0; .@i < getarraysize(.@item) ; .@i += 1) 
@@ -273,7 +274,9 @@ Reward:
 	}
 
 // check time and day end event
-	if((gettime(DT_DAYOFWEEK) == TUESDAY) && (gettime(DT_HOUR) >= 18 && gettime(DT_HOUR) < 19)){
+OnClock1900:
+	if((gettime(DT_DAYOFWEEK) == TUESDAY) && (gettime(DT_HOUR) >= 19 && gettime(DT_HOUR) <= 23)){
+	$status = 0;
 	query_sql "SELECT `char_id` FROM `char` WHERE `point_jack_item` > 0 ORDER BY `point_jack_item` DESC LIMIT 3",.@char;
 		for(set .@i,0; .@i < getarraysize(.@char); set .@i,.@i+1){
 			if(getcharid(0) == .@char[.@i]){
@@ -310,7 +313,7 @@ Oninit:
 	
 	set .NPCname$,"[ Jackpot Item ]";
 	// item id 909(ห้ามแก้) rate 1% = ยอดสะสม zeny
-	setarray .item[0],909,12208,12103,12210,12437,12214,12254,12514,14592,12075,12080,12095,12090,12085,7619,7620,607,23209; // item_id
+	setarray .item[0],909,12208,12103,12210,12437,12214,12254,12514,14606,12075,12080,12095,12090,12085,7619,7620,607,5300009; // item_id
 	setarray .arr[0],100,8000,2000,8000,4000,2000,4000,4000,8000,4000,4000,4000,4000,4000,2000,2000,8000,1000;	// item_rate 100 = 1%
 	setarray .amt[0],1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;	// item_amount
 	// reward rank 1-3
