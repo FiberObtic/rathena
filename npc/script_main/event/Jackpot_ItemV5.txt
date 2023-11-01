@@ -301,7 +301,9 @@ OnClock1900:
 	mes .NPCname$;
 	mes "ยังไม่ถึงเวลารับของรางวัล";
 	end;
-	
+OnClock2300:
+	$status = 1;
+	end;
 OnBuyItem:
 OnSellItem:
 	mes .NPCname$;

@@ -167,7 +167,7 @@ OnRankingManage:
 			query_sql "SELECT `name`,`point_pvp`,`class`,`account_id` FROM `char` WHERE `point_pvp` > 0 ORDER BY `point_pvp` DESC LIMIT 3",.@name$,.@point,.@class,.@accid;
 			for(.@i=0; .@i < getarraysize(.@name$); .@i++)
 				if(.@point[.@i]) query_sql "INSERT INTO reward_ranking (`account_id`,`name`,`class`,`status`,`type`,`points`) VALUES ('"+.@accid[.@i]+"','"+.@name$[.@i]+"','"+.@class[.@i]+"',0,'PVP TOP "+(.@i+1)+"','"+.@point[.@i]+"')";
-			//query_sql "UPDATE `char` SET `point_pvp` = 0";
+			query_sql "UPDATE `char` SET `point_pvp` = 0";
 			mes .@npc$;
 			mes "Reset คะแนน PVP";
 			mes "เรียบร้อยแล้ว";
@@ -176,15 +176,15 @@ OnRankingManage:
 		case 2:
 			query_sql "SELECT `name`,`point_mvp`,`class`,`account_id` FROM `char` WHERE `point_mvp` > 0 ORDER BY `point_mvp` DESC LIMIT 3",.@name$,.@point,.@class,.@accid;
 			for(.@i=0; .@i < getarraysize(.@name$); .@i++)
-				if(.@point[.@i]) query_sql "INSERT INTO reward_ranking (`account_id`,`name`,`class`,`status`,`type`,`points`) VALUES ('"+.@accid[.@i]+"','"+.@name$[.@i]+"','"+.@class[.@i]+"',0,'MVP "+(.@i+1)+"','"+.@point[.@i]+"')";
-			//query_sql "UPDATE `char` SET `point_mvp`= 0";
+				if(.@point[.@i]) query_sql "INSERT INTO reward_ranking (`account_id`,`name`,`class`,`status`,`type`,`points`) VALUES ('"+.@accid[.@i]+"','"+.@name$[.@i]+"','"+.@class[.@i]+"',0,'MVP TOP"+(.@i+1)+"','"+.@point[.@i]+"')";
+			query_sql "UPDATE `char` SET `point_mvp`= 0";
 			mes .@npc$;
 			mes "Reset คะแนน MVP";
 			mes "เรียบร้อยแล้ว";
 			close;
 		break;
 		case 3:
-			query_sql "SELECT `name`,`bank_acc`,`bank_name`,`real_name` FROM `reward_ranking` WHERE `status` = 0 ORDER BY `id` DESC LIMIT 6",.@name$,.@bankacc$,.@bankname$,.@realname$;
+			query_sql "SELECT `name`,`type`,`bank_acc`,`bank_name`,`real_name` FROM `reward_ranking` WHERE `status` = 0 ORDER BY `id`",.@name$,.@type$,.@bankacc$,.@bankname$,.@realname$;			
 			mes .@npc$;
 			mes "โปรดเลือกบุคคลที่ต้องการเปลี่ยนสถานะ";
 			.@menu$ = "";
@@ -195,6 +195,7 @@ OnRankingManage:
 				mes "บุคคลนี้ยังไม่กรอกข้อมูลธนาคาร";
 				end;
 			}
+			mes "รางวัลของ : > "+.@type$[atoi(.@choose$)];
 			mes "ชื่อตัวละคร : > "+.@name$[atoi(.@choose$)];
 			mes "เลขบัญชี  : > "+.@bankacc$[atoi(.@choose$)];
 			mes "ชื่อธนาคาร  : > "+.@bankname$[atoi(.@choose$)];
@@ -235,7 +236,8 @@ OnShow_MVP:
 		mes "=========================";
 	} else if ( (.@command$ == "emp") || (.@command$ == "EMP") ) {
 OnShow_EMP:
-		query_sql "SELECT `name`,`class`,`status`,`type`,`points`,`bank_acc` FROM `reward_ranking` WHERE `status` <= 1 ORDER BY `type` ASC LIMIT 6",.@name$,.@class,.@status,.@type$,.@point,.@bank_acc$;
+		query_sql "SELECT `name`,`class`,`type`,`points`,`bank_acc` FROM `reward_ranking` WHERE `status` <= 1 and ( type like '%PVP%' or type like '%MVP%') ORDER BY type",.@name$,.@class,.@type$,.@point,.@bankacc$;
+		//query_sql "SELECT `name`,`class`,`type`,`points`,`bank_acc` FROM `reward_ranking` WHERE `status` <= 1 and type like '%MVP%' ORDER BY `type` ASC LIMIT 3",.@name$[getarraysize(.@names$)],.@class[getarraysize(.@class)],.@type$[getarraysize(.@type$)],.@point[getarraysize(.@point)],.@bankacc$[getarraysize(.@bankacc$)],.@bankname$[getarraysize(.@bankname$)],.@realname$[getarraysize(.@realname$)];
 		mes "^FF0000===== REWARD RANKING =====^000000";
 		for (set .@i,0; .@i < getarraysize(.@name$); set .@i,.@i+1) {
 			if (.@name$[.@i] == "") set .@name$[.@i],"None";
@@ -248,30 +250,31 @@ OnShow_EMP:
 			mes "^FF0000=======================^000000";
 		}
 		for (set .@j,0; .@j < getarraysize(.@name$); set .@j,.@j+1)
-		if( strcharinfo(0) == .@name$[.@j]) {
-			if( .@bank_acc$[.@j] == "") {
-			next;
-			mes "[Ranking]";
-			mes "ท่านจะกรอกเลขบัญชีเพื่อรอรับรางวัลเลยหรือไม่ ??";
-			if(select("+ กรอกข้อมูล:+ ยกเลิก") == 2 ) end;
-			next;
-			mes "[Ranking]";
-			mes "กรุณากรอกเลขบัญชี หรือ พร้อมเพย์";
-			input .@banknum$;
-			mes "กรอกชื่อธนาคาร กรณีพร้อมเพย์ บอกว่าคือ พร้อมเพย์";
-			input .@bankname$;
-			mes "กรอกชื่อ สกุล ให้ตรงกับชื่อบัญชีที่โอน";
-			input .@realname$;
-			query_sql "UPDATE `reward_ranking` SET `bank_acc`='"+.@banknum$+"',`bank_name` = '"+.@bankname$+"',`real_name` = '"+.@realname$+"' WHERE name = '"+.@name$[.@j]+"'";
-			next;
-			mes "[Ranking]";
-			mes "กรณีเลขบัญชีพลาดกรุณาติดต่อทีมงานโดยทันที หากเลยระยะเวลา 3 วันหลังกรอกข้อมูล จะถือว่าสละสิทธิ์รับรางวัล";
-			mes "เลขบัญชี : " +.@banknum$;
-			mes "ชื่อธนาคาร : " +.@bankname$;
-			mes "ชื่อ - สกุล : "+.@realname$;
+			if( strcharinfo(0) == .@name$[.@j]) {
+				if( .@bankacc$[.@j] == "") {
+					next;
+					mes "[Ranking]";
+					mes "ท่านจะกรอกเลขบัญชีเพื่อรอรับรางวัลเลยหรือไม่ ??";
+					if(select("+ กรอกข้อมูล:+ ยกเลิก") == 2 ) end;
+					next;
+					mes "[Ranking]";
+					mes "กรอกรางวัล สำหรับผู้ที่ได้ "+.@type$[.@j];
+					mes "กรุณากรอกเลขบัญชี หรือ พร้อมเพย์";
+					input @banknum$;
+					mes "กรอกชื่อธนาคาร กรณีพร้อมเพย์ บอกว่าคือ พร้อมเพย์";
+					input @bankname$;
+					mes "กรอกชื่อ สกุล ให้ตรงกับชื่อบัญชีที่โอน";
+					input @realname$;
+					query_sql "UPDATE `reward_ranking` SET `bank_acc`='"+@banknum$+"',`bank_name` = '"+@bankname$+"',`real_name` = '"+@realname$+"' WHERE name = '"+.@name$[.@j]+"'";
+					next;
+					mes "[Ranking]";
+					mes "กรณีเลขบัญชีพลาดกรุณาติดต่อทีมงานโดยทันที หากเลยระยะเวลา 3 วันหลังกรอกข้อมูล จะถือว่าสละสิทธิ์รับรางวัล";
+					mes "เลขบัญชี : " +@banknum$;
+					mes "ชื่อธนาคาร : " +@bankname$;
+					mes "ชื่อ - สกุล : "+@realname$;
+				}
 			}
-		break;
-		}
+			
 	} else if ( (.@command$ == "rep") || (.@command$ == "REP") ) {
 OnShow_REP:
 		query_sql "SELECT `userid`,`point_total` FROM `login` ORDER BY `point_total` DESC LIMIT 10",.@name$,.@point;
