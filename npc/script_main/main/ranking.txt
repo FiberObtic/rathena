@@ -202,7 +202,7 @@ OnRankingManage:
 			mes "ชื่อบัญชี  : > "+.@realname$[atoi(.@choose$)];
 			mes "ท่านยืนยันการโอนหรือไม่";
 			if(select(" > ยืนยัน: > ไม่ยืนยัน") == 2 ) end;
-			query_sql "UPDATE `reward_ranking` SET `status` = 1 WHERE `name` = '"+.@name$[atoi(.@choose$)]+"'";
+			query_sql "UPDATE `reward_ranking` SET `status` = 1 WHERE `type` = '"+.@type$[atoi(.@choose$)]+"'";
 			close;
 		break;
 		case 4:
@@ -236,7 +236,7 @@ OnShow_MVP:
 		mes "=========================";
 	} else if ( (.@command$ == "emp") || (.@command$ == "EMP") ) {
 OnShow_EMP:
-		query_sql "SELECT `name`,`class`,`type`,`points`,`bank_acc` FROM `reward_ranking` WHERE `status` <= 1 and ( type like '%PVP%' or type like '%MVP%') ORDER BY type",.@name$,.@class,.@type$,.@point,.@bankacc$;
+		query_sql "SELECT `name`,`status`,`class`,`type`,`points`,`bank_acc` FROM `reward_ranking` WHERE `status` <= 1 and ( type like '%PVP%' or type like '%MVP%') ORDER BY type",.@name$,.@status,.@class,.@type$,.@point,.@bankacc$;
 		//query_sql "SELECT `name`,`class`,`type`,`points`,`bank_acc` FROM `reward_ranking` WHERE `status` <= 1 and type like '%MVP%' ORDER BY `type` ASC LIMIT 3",.@name$[getarraysize(.@names$)],.@class[getarraysize(.@class)],.@type$[getarraysize(.@type$)],.@point[getarraysize(.@point)],.@bankacc$[getarraysize(.@bankacc$)],.@bankname$[getarraysize(.@bankname$)],.@realname$[getarraysize(.@realname$)];
 		mes "^FF0000===== REWARD RANKING =====^000000";
 		for (set .@i,0; .@i < getarraysize(.@name$); set .@i,.@i+1) {
