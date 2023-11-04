@@ -75,6 +75,66 @@ static inline int32 client_exp(t_exp exp) {
 }
 #endif
 
+// (^~_~^) Gepard Shield Start
+
+bool clif_gepard_process_packet(map_session_data* sd)
+{
+	int fd = sd->fd;
+	struct socket_data* s = session[fd];
+	int packet_id = RFIFOW(fd, 0);
+	long long diff_time = gettick() - session[fd]->gepard_info.sync_tick;
+
+	if (diff_time > 40000)
+	{
+		clif_authfail_fd(sd->fd, 15);
+		return true;
+	}
+
+	if (packet_id <= MAX_PACKET_DB)
+	{
+		return gepard_process_cs_packet(fd, s, packet_db[packet_id].len);
+	}
+
+	if (packet_id == CS_GEPARD_SYNC_2)
+	{
+		const unsigned int sync_packet_len = 128;
+		unsigned int control_value, info_type, info_code;
+
+		if (RFIFOREST(fd) < sync_packet_len)
+		{
+			return true;
+		}
+
+		gepard_enc_dec(RFIFOP(fd, 2), sync_packet_len - 2, &s->sync_crypt); 
+
+		control_value = control_value = RFIFOL(fd, 2); 
+
+		if (control_value != 0xDDCCBBAA)
+		{
+			RFIFOSKIP(fd, sync_packet_len);
+			return true;
+		}
+
+		s->gepard_info.sync_tick = gepard_get_tick();
+
+		info_type = RFIFOW(fd, 6);
+		info_code = RFIFOW(fd, 8);
+
+		if (info_type == 1 && info_code == 1)
+		{
+			const char* message = (const char*)RFIFOP(fd, 10);
+			chrif_gepard_save_report(sd, message);
+		}
+
+		RFIFOSKIP(fd, sync_packet_len);
+		return true;
+	}
+
+	return gepard_process_cs_packet(fd, s, 0);
+}
+
+// (^~_~^) Gepard Shield End
+
 /* for clif_clearunit_delayed */
 static struct eri *delay_clearunit_ers;
 
@@ -2326,6 +2386,11 @@ void clif_npc_market_open(map_session_data *sd, struct npc_data *nd) {
 		std::shared_ptr<item_data> id = item_db.find(item->nameid);
 
 		if( !id ){
+			continue;
+		}
+
+		// Out of stock
+		if( item->qty == 0 ){
 			continue;
 		}
 
@@ -5860,7 +5925,7 @@ void clif_addskill(map_session_data *sd, int skill_id)
 
 /// Deletes a skill from the skill tree (ZC_SKILLINFO_DELETE).
 /// 0441 <skill id>.W
-void clif_deleteskill(map_session_data *sd, int skill_id, bool skip_infoblock)
+void clif_deleteskill(map_session_data *sd, int skill_id)
 {
 #if PACKETVER >= 20081217
 	nullpo_retv(sd);
@@ -5876,10 +5941,7 @@ void clif_deleteskill(map_session_data *sd, int skill_id, bool skip_infoblock)
 	WFIFOW(fd,2) = skill_id;
 	WFIFOSET(fd,packet_len(0x441));
 #endif
-#if PACKETVER_MAIN_NUM >= 20190807 || PACKETVER_RE_NUM >= 20190807 || PACKETVER_ZERO_NUM >= 20190918
-	if (!skip_infoblock)
-#endif
-		clif_skillinfoblock(sd);
+	clif_skillinfoblock(sd);
 }
 
 /// Updates a skill in the skill tree (ZC_SKILLINFO_UPDATE).
@@ -10888,6 +10950,16 @@ void clif_parse_WantToConnection(int fd, map_session_data* sd)
 #endif
 	session[fd]->session_data = sd;
 
+// (^~_~^) Gepard Shield Start
+
+	if (is_gepard_active)
+	{
+		gepard_init(session[fd], fd, GEPARD_MAP);
+		session[fd]->gepard_info.sync_tick = gettick();
+	}
+
+// (^~_~^) Gepard Shield End
+
 	pc_setnewpc(sd, account_id, char_id, login_id1, client_tick, sex, fd);
 
 #if PACKETVER < 20070521
@@ -11780,7 +11852,9 @@ void clif_parse_Emotion(int fd, map_session_data *sd)
 		}
 
 		if(battle_config.client_reshuffle_dice && emoticon>=ET_DICE1 && emoticon<=ET_DICE6) {// re-roll dice
-			emoticon = rnd()%6+ET_DICE1;
+			if( pc_readglobalreg(sd,add_str("PLAY_DICE")) > 0 ){
+				emoticon = rnd()%6+ET_DICE1;
+			}
 		}
 
 		clif_emotion(&sd->bl, emoticon);
@@ -22573,18 +22647,8 @@ void clif_parse_unequipall( int fd, map_session_data* sd ){
 		return;
 	}
 
-	struct PACKET_CZ_REQ_TAKEOFF_EQUIP_ALL* p = (struct PACKET_CZ_REQ_TAKEOFF_EQUIP_ALL*)RFIFOP( fd, 0 );
-
-#if PACKETVER_MAIN_NUM >= 20230906
-	uint32 location = p->location;
-	int max = EQI_MAX;
-#else
-	uint32 location = 0xFFFFFFFF;
-	int max = EQI_COSTUME_HEAD_TOP;
-#endif
-
-	for( int i = 0; i < max; i++ ){
-		if( sd->equip_index[i] >= 0 && ( location & equip_bitmask[i] ) != 0 ){
+	for( int i = 0; i < EQI_COSTUME_HEAD_TOP; i++ ){
+		if( sd->equip_index[i] >= 0 ){
 			pc_unequipitem( sd, sd->equip_index[i], 1 );
 		}
 	}
@@ -25272,6 +25336,15 @@ static int clif_parse(int fd)
 
 	if (RFIFOREST(fd) < 2)
 		return 0;
+
+// (^~_~^) Gepard Shield Start
+
+	if (is_gepard_active == true && sd != NULL && clif_gepard_process_packet(sd) == true)
+	{
+		return 0;
+	}
+
+// (^~_~^) Gepard Shield End
 
 	cmd = RFIFOW(fd, 0);
 
