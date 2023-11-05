@@ -33,18 +33,21 @@ OnInit:
 						switch(.pay_amount[.i]) {
 							case 1:
 							case 5000:
-								getitem 7621,5;
-								getitem 63005,5;
+								getitem 60008,1;
 							case 3000:
-								getitem 5300009,10;
+								getitem 23213,1;
 							case 1000:
 								getitem 53000010,1;
 							case 500:
-								getitem 23213,1;
+								getitem 5300009,10;
 							case 300:
-								getitem 60008,5
+								getitem 7621,5;
+								getitem 63005,5;
 						}
-						if(.pay_amount[.i] >= 300) #RewardPointShop += .pay_amount[.i]/2;
+						if(.pay_amount[.i] >= 300) {
+							#RewardPoint += .pay_amount[.i]/2;
+							dispbottom "[Payment Center System] คุณได้รับแต้มสะสม " + .pay_amount[.i]/2 + " แต้ม";
+						}
 							
 					}
 					/*
