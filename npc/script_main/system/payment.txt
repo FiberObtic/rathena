@@ -4,8 +4,7 @@ OnInit:
 
 	setarray .stairmoney[1],1,50,100,300,500,1000,3000,5000,100000;
 	setarray .cashflow[1],9999,5000,10000,33000,57500,120000,360000,625000,1000000;
-	
-	
+	//setarray .rewardpoint[1],9999,25,50,150,250,500,1500,2500,5000;
 
 	while (1)
 	{
@@ -31,6 +30,25 @@ OnInit:
 						dispbottom "[Payment Center System] x2 test getmore " + .cashflow[.@pos] + " Cash";
 						set #CASHPOINTS,(#CASHPOINTS + .cashflow[.@pos]);
 						}
+						switch(.pay_amount[.i]) {
+							case 1:
+							case 5000:
+								getitem 60008,1;
+							case 3000:
+								getitem 23213,1;
+							case 1000:
+								getitem 53000010,1;
+							case 500:
+								getitem 5300009,10;
+							case 300:
+								getitem 7621,5;
+								getitem 63005,5;
+						}
+						if(.pay_amount[.i] >= 300) {
+							#RewardPoint += .pay_amount[.i]/2;
+							dispbottom "[Payment Center System] คุณได้รับแต้มสะสม " + .pay_amount[.i]/2 + " แต้ม";
+						}
+							
 					}
 					/*
 					if(.cash_bonus_amount[.i] > 0)
@@ -64,52 +82,6 @@ OnInit:
 			}
 			deletearray .scbId$[0],getarraysize(.scbId$);
 			deletearray .pay_amount[0],getarraysize(.pay_amount);
-			/*
-			deletearray .cash_bonus_amount[0],getarraysize(.cash_bonus_amount);
-			deletearray .pay_user_id[0],getarraysize(.pay_user_id);
-			deletearray .item_add[0],getarraysize(.item_add);
-			deletearray .qty_add[0],getarraysize(.qty_add);
-			deletearray .item_add_1[0],getarraysize(.item_add_1);
-			deletearray .qty_add_1[0],getarraysize(.qty_add_1);
-			deletearray .item_add_2[0],getarraysize(.item_add_2);
-			deletearray .qty_add_2[0],getarraysize(.qty_add_2);
-			deletearray .item_add_3[0],getarraysize(.item_add_3);
-			deletearray .qty_add_3[0],getarraysize(.qty_add_3);
-			deletearray .item_add_4[0],getarraysize(.item_add_4);
-			deletearray .qty_add_4[0],getarraysize(.qty_add_4);
-			deletearray .item_add_5[0],getarraysize(.item_add_5);
-			deletearray .qty_add_5[0],getarraysize(.qty_add_5);
-			deletearray .item_add_6[0],getarraysize(.item_add_6);
-			deletearray .qty_add_6[0],getarraysize(.qty_add_6);
-			deletearray .item_add_7[0],getarraysize(.item_add_7);
-			deletearray .qty_add_7[0],getarraysize(.qty_add_7);
-			deletearray .item_add_8[0],getarraysize(.item_add_8);
-			deletearray .qty_add_8[0],getarraysize(.qty_add_8);
-			deletearray .item_add_9[0],getarraysize(.item_add_9);
-			deletearray .qty_add_9[0],getarraysize(.qty_add_9);
-			deletearray .item_add_10[0],getarraysize(.item_add_10);
-			deletearray .qty_add_10[0],getarraysize(.qty_add_10);
-			deletearray .item_add_11[0],getarraysize(.item_add_11);
-			deletearray .qty_add_11[0],getarraysize(.qty_add_11);
-			deletearray .item_add_12[0],getarraysize(.item_add_12);
-			deletearray .qty_add_12[0],getarraysize(.qty_add_12);
-			deletearray .item_add_13[0],getarraysize(.item_add_13);
-			deletearray .qty_add_13[0],getarraysize(.qty_add_13);
-			deletearray .item_add_14[0],getarraysize(.item_add_14);
-			deletearray .qty_add_14[0],getarraysize(.qty_add_14);
-			deletearray .item_add_15[0],getarraysize(.item_add_15);
-			deletearray .qty_add_15[0],getarraysize(.qty_add_15);
-			deletearray .item_add_16[0],getarraysize(.item_add_16);
-			deletearray .qty_add_16[0],getarraysize(.qty_add_16);
-			deletearray .item_add_17[0],getarraysize(.item_add_17);
-			deletearray .qty_add_17[0],getarraysize(.qty_add_17);
-			deletearray .item_add_18[0],getarraysize(.item_add_18);
-			deletearray .qty_add_18[0],getarraysize(.qty_add_18);
-			deletearray .item_add_19[0],getarraysize(.item_add_19);
-			deletearray .qty_add_19[0],getarraysize(.qty_add_19);
-			deletearray .item_add_20[0],getarraysize(.item_add_20);
-			deletearray .qty_add_20[0],getarraysize(.qty_add_20);
-			*/
 		}
 		sleep 5000;
 	}
