@@ -28,14 +28,14 @@
 // 519,322  // Milk can't be consumed in PVP and maps marked as 'restricted zone 2' or 'restricted zone 4' (256+64+2)
 // 519,-2   // Unset `restricted in PVP` flag from Milk. Making it usable in PVP again.
 
-4047,6,	//Ghostring Card PVP,GVG
-4174,6,	//Deviling Card PVP,GVG
-4146,6,	//Maya Card PVP,GVG
-4302,6,	//Tao Gunka Card PVP,GVG
-4128,6,	//Golden Thief Bug Card PVP,GVG
-4263,6,	//Samurai Spector Card PVP,GVG
-4399,6,	//Memory of Thanatos Card PVP,GVG
-4131,6,	//Moonlight Flower Card PVP,GVG
+4047,6	//Ghostring Card PVP,GVG
+4174,6	//Deviling Card PVP,GVG
+4146,6	//Maya Card PVP,GVG
+4302,6	//Tao Gunka Card PVP,GVG
+4128,6	//Golden Thief Bug Card PVP,GVG
+4263,6	//Samurai Spector Card PVP,GVG
+4399,6	//Memory of Thanatos Card PVP,GVG
+4131,6	//Moonlight Flower Card PVP,GVG
 12016,6	//Speed Potion Card PVP,GVG
 12028,6	//Box Of Thunder Card PVP,GVG
 12033,6	//Box of Sunlight Card PVP,GVG

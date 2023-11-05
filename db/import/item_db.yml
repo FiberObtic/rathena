@@ -2448,3 +2448,19 @@ Body:
       bonus bSPGainValue,20+(getrefine()/2);
     UnEquipScript: |
       heal 0,-444;
+  - Id: 2499
+    AegisName: Temporal_Boots
+    Name: Temporal Boots
+    Type: Armor
+    Buy: 400
+    Weight: 600
+    Defense: 20
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 10
+    Refineable: true
+    Script: |
+      .@r = getrefine()/3;
+      bonus bMaxHP,300+(.@r*100);
+      bonus bMaxSP,30+(.@r*10);

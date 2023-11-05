@@ -11852,8 +11852,11 @@ void clif_parse_Emotion(int fd, map_session_data *sd)
 		}
 
 		if(battle_config.client_reshuffle_dice && emoticon>=ET_DICE1 && emoticon<=ET_DICE6) {// re-roll dice
-			if( pc_readglobalreg(sd,add_str("PLAY_DICE")) > 0 ){
+			if( pc_readglobalreg(sd,add_str("ALLOW_DICE"))>0 ){
 				emoticon = rnd()%6+ET_DICE1;
+			}
+			else {
+				return;
 			}
 		}
 

@@ -1379,10 +1379,10 @@ Body:
       NoAuction: false
     ArmorLevel: 1
     View: 3112
-    EquipScript: |
-      PLAY_DICE = 1;
+    Script: |
+      ALLOW_DICE = 1;
     UnEquipScript: |
-      PLAY_DICE = 0;
+      ALLOW_DICE = 0;
   - Id: 60114
     AegisName: Costume Upper 114
     Name: Costume Upper 114
@@ -1400,10 +1400,10 @@ Body:
       NoAuction: false
     ArmorLevel: 1
     View: 3113
-    EquipScript: |
-      PLAY_DICE = 1;
+    Script: |
+      ALLOW_DICE = 1;
     UnEquipScript: |
-      PLAY_DICE = 0;
+      ALLOW_DICE = 0;
   - Id: 60115
     AegisName: Costume Upper 115
     Name: Costume Upper 115
@@ -1421,10 +1421,10 @@ Body:
       NoAuction: false
     ArmorLevel: 1
     View: 3114
-    EquipScript: |
-      PLAY_DICE = 1;
+    Script: |
+      ALLOW_DICE = 1;
     UnEquipScript: |
-      PLAY_DICE = 0;
+      ALLOW_DICE = 0;
   - Id: 60116
     AegisName: Costume Upper 116
     Name: Costume Upper 116
@@ -1442,10 +1442,10 @@ Body:
       NoAuction: false
     ArmorLevel: 1
     View: 3115
-    EquipScript: |
-      PLAY_DICE = 1;
+    Script: |
+      ALLOW_DICE = 1;
     UnEquipScript: |
-      PLAY_DICE = 0;
+      ALLOW_DICE = 0;
   - Id: 60117
     AegisName: Costume Upper 117
     Name: Costume Upper 117
@@ -1463,7 +1463,7 @@ Body:
       NoAuction: false
     ArmorLevel: 1
     View: 3116
-    EquipScript: |
-      PLAY_DICE = 1;
+    Script: |
+      ALLOW_DICE = 1;
     UnEquipScript: |
-      PLAY_DICE = 0;
+      ALLOW_DICE = 0;
