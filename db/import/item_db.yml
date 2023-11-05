@@ -904,6 +904,22 @@ Body:
       bonus bAspdRate,3*(readparam(bAgi)/20);
       bonus bLongAtkRate,2*(readparam(bDex)/20);
       bonus bCritAtkRate,4*(readparam(bLuk)/20);
+  - Id: 2499
+    AegisName: Temporal_Boots
+    Name: Temporal Boots
+    Type: Armor
+    Buy: 400
+    Weight: 600
+    Defense: 20
+    Locations:
+      Shoes: true
+    ArmorLevel: 1
+    EquipLevelMin: 10
+    Refineable: true
+    Script: |
+      .@r = getrefine()/3;
+      bonus bMaxHP,300+(.@r*100);
+      bonus bMaxSP,30+(.@r*10);
   - Id: 2576
     AegisName: Bravery_Bag
     Name: Adventurer's Backpack
@@ -1245,10 +1261,6 @@ Body:
       Rogue: true
       Sage: true
       Wizard: true
-    Classes:
-      Third: true
-      Third_Upper: true
-      Third_Baby: true
     Locations:
       Shoes: true
     ArmorLevel: 1
@@ -1280,10 +1292,6 @@ Body:
       Rogue: true
       Sage: true
       Wizard: true
-    Classes:
-      Third: true
-      Third_Upper: true
-      Third_Baby: true
     Locations:
       Shoes: true
     ArmorLevel: 1
@@ -1316,10 +1324,6 @@ Body:
       Rogue: true
       Sage: true
       Wizard: true
-    Classes:
-      Third: true
-      Third_Upper: true
-      Third_Baby: true
     Locations:
       Shoes: true
     ArmorLevel: 1
@@ -1351,10 +1355,6 @@ Body:
       Rogue: true
       Sage: true
       Wizard: true
-    Classes:
-      Third: true
-      Third_Upper: true
-      Third_Baby: true
     Locations:
       Shoes: true
     ArmorLevel: 1
@@ -1385,10 +1385,6 @@ Body:
       Rogue: true
       Sage: true
       Wizard: true
-    Classes:
-      Third: true
-      Third_Upper: true
-      Third_Baby: true
     Locations:
       Shoes: true
     ArmorLevel: 1
@@ -1423,10 +1419,6 @@ Body:
       Rogue: true
       Sage: true
       Wizard: true
-    Classes:
-      Third: true
-      Third_Upper: true
-      Third_Baby: true
     Locations:
       Shoes: true
     ArmorLevel: 1
@@ -1460,10 +1452,6 @@ Body:
       Rogue: true
       Sage: true
       Wizard: true
-    Classes:
-      Third: true
-      Third_Upper: true
-      Third_Baby: true
     Locations:
       Shoes: true
     ArmorLevel: 1
@@ -1496,10 +1484,6 @@ Body:
       Rogue: true
       Sage: true
       Wizard: true
-    Classes:
-      Third: true
-      Third_Upper: true
-      Third_Baby: true
     Locations:
       Shoes: true
     ArmorLevel: 1
@@ -1531,10 +1515,6 @@ Body:
       Rogue: true
       Sage: true
       Wizard: true
-    Classes:
-      Third: true
-      Third_Upper: true
-      Third_Baby: true
     Locations:
       Shoes: true
     ArmorLevel: 1
@@ -1570,10 +1550,6 @@ Body:
       Rogue: true
       Sage: true
       Wizard: true
-    Classes:
-      Third: true
-      Third_Upper: true
-      Third_Baby: true
     Locations:
       Shoes: true
     ArmorLevel: 1
@@ -1607,10 +1583,6 @@ Body:
       Rogue: true
       Sage: true
       Wizard: true
-    Classes:
-      Third: true
-      Third_Upper: true
-      Third_Baby: true
     Locations:
       Shoes: true
     ArmorLevel: 1
@@ -1643,10 +1615,6 @@ Body:
       Rogue: true
       Sage: true
       Wizard: true
-    Classes:
-      Third: true
-      Third_Upper: true
-      Third_Baby: true
     Locations:
       Shoes: true
     ArmorLevel: 1
