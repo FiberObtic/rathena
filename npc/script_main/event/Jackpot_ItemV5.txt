@@ -24,7 +24,7 @@
 //============================================================
 -	shop	Dummy#Jackpot_Item	-1,909:-1
 morocc,122,110,4	script	Jackpot Item#i1	562,{
-	
+	set .NPCname$,"[ Jackpot Item ]";
 //============= Setting ===========================================================================
 	disable_items;
 	if (MaxWeight - Weight < 1000) {
@@ -303,6 +303,9 @@ OnClock1900:
 	end;
 OnClock2300:
 	$status = 1;
+	setd "#jack0",0;
+	setd "#jack1",0;
+	setd "#jack2",0;
 	end;
 OnBuyItem:
 OnSellItem:
@@ -313,7 +316,6 @@ Oninit:
 	if (!query_sql("SHOW COLUMNS FROM `char` WHERE `Field` = 'point_jack_item'", .@fields, .@a, .@b, .@c, .@d, .@e))
 		query_sql "ALTER TABLE `char` ADD COLUMN `point_jack_item` INT DEFAULT 0 AFTER `show_equip`, ADD INDEX(`point_jack_item`)";
 	
-	set .NPCname$,"[ Jackpot Item ]";
 	// item id 909(ห้ามแก้) rate 1% = ยอดสะสม zeny
 	setarray .item[0],909,12208,12103,12210,12437,12214,12254,12514,14606,12075,12080,12095,12090,12085,7619,7620,607,5300009; // item_id
 	setarray .arr[0],100,8000,2000,8000,4000,2000,4000,4000,8000,4000,4000,4000,4000,4000,2000,2000,8000,1000;	// item_rate 100 = 1%
