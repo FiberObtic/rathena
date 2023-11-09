@@ -50,6 +50,11 @@ Header:
   Version: 3
 
 Body:
+  - Id: 12346
+    Title: Strange Ancient Science
+  - Id: 12347
+    Title: Trace of Laboratory Access
+    TimeLimit: 4h
   - Id: 12280
     Title: A suspicious prisoner
   - Id: 12281

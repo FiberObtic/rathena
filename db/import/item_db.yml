@@ -89,6 +89,229 @@ Header:
   Version: 3
 
 Body:
+# Instance New item
+#=============================================================
+  - Id: 15032
+    AegisName: Tidung
+    Name: Tidung
+    Type: Armor
+    Buy: 10
+    Weight: 500
+    Defense: 2
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    Script: |
+      bonus bMdef,10;
+      bonus2 bSubEle,Ele_All,5;
+      bonus2 bResEff,Eff_Stun,1500;
+      bonus2 bResEff,Eff_Freeze,1500;
+  - Id: 4518
+    AegisName: Banaspaty_Card
+    Name: Banaspaty Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus3 bAddEff,Eff_Burning,300,ATF_TARGET;
+  - Id: 4519
+    AegisName: Butoijo_Card
+    Name: Butoijo Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddRace,RC_Angel,20;
+  - Id: 4520
+    AegisName: Leak_Card
+    Name: Leak Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bStr,3;
+      bonus3 bAddEffWhenHit,Eff_Confusion,100,ATF_WEAPON|ATF_MAGIC;
+      bonus3 bAddEffWhenHit,Eff_Fear,100,ATF_WEAPON|ATF_MAGIC;
+  - Id: 4574
+    AegisName: Daehyon_Card
+    Name: General Daehyon Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      .@i = getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW);
+      if (.@i == W_1HSWORD || .@i == W_2HSWORD) {
+        bonus bBaseAtk,100;
+      }
+  - Id: 4575
+    AegisName: Soheon_Card
+    Name: Armed Guard Soheon Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bBaseAtk,10;
+      if (getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_DAGGER) {
+        .@r = getrefine();
+        if (.@r>=10) {
+          bonus bAspd,1;
+        }
+        if (.@r>=14) {
+          bonus bAspd,1;
+        }
+      }
+  - Id: 4576
+    AegisName: Gioia_Card
+    Name: Gioia Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Wind,100;
+      bonus2 bMagicAtkEle,Ele_Ghost,100;
+      bonus2 bSubEle,Ele_All,-30;
+  - Id: 4577
+    AegisName: Elvira_Card
+    Name: Elvira Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Wind,20;
+      bonus2 bMagicAtkEle,Ele_Ghost,20;
+  - Id: 4578
+    AegisName: Pyuriel_Card
+    Name: Angry Student Pyuriel Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bCritAtkRate,30;
+      bonus2 bSubRace,RC_All,-10;
+  - Id: 4579
+    AegisName: Lora_Card
+    Name: Warrior Lola Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      if (getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_MACE) {
+        .@r = getrefine();
+        bonus bBaseAtk,20+.@r;
+        bonus bCritical,10+.@r;
+      }
+  - Id: 4580
+    AegisName: Kades_Card
+    Name: Dark Guardian Kades Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bSubEle,Ele_Water,50;
+      bonus2 bSubEle,Ele_Earth,50;
+      bonus2 bSubEle,Ele_Fire,50;
+      bonus2 bSubEle,Ele_Wind,50;
+      bonus2 bSubEle,Ele_Dark,50;
+      bonus2 bSubEle,Ele_Undead,50;
+      bonus2 bSubEle,Ele_Holy,-100;
+      bonus2 bSubEle,Ele_Ghost,-100;
+  - Id: 4581
+    AegisName: Rudo_Card
+    Name: Rudo Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Shoes: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      autobonus2 "{ bonus bAgi,44; bonus bNoWalkDelay; heal 0,-40; }",50,3000,0,"{ sc_start SC_SPEEDUP1,3000,50; }";
+  - Id: 4505
+    AegisName: Scaraba_Card
+    Name: Scaraba Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus bMatk,20;
+      bonus bMaxSPrate,-1;
+  - Id: 4507
+    AegisName: Q_Scaraba_Card
+    Name: Queen Scaraba Card
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bAddRace2,RC2_SCARABA,30;
+      bonus2 bAddMonsterDropItem,12806,50;
 # Extended Vending Items
 #=============================================================
   - Id: 30000

@@ -1867,6 +1867,10 @@ OnMyMobDead:
 		donpcevent instance_npcname("Lucid Crystal#102")+"::OnEnable";
 		//SetItemPartyInMap in_102floor 100
 	}
+	addrid(1);
+	if (query_sql("SELECT `id` FROM `premium_pass` WHERE `account_id` = '"+getcharid(3)+"'",.@sql_id)) {
+			doevent "Premium Pass Manager::OnExpEndless";
+		}
 	end;
 }
 
@@ -2129,6 +2133,10 @@ OnTimer10500:
 
 OnMyMobDead:
 	donpcevent instance_npcname("วิญญาณผู้ถูกลืม#102")+"::OnEnable";
+	addrid(1);
+	if (query_sql("SELECT `id` FROM `premium_pass` WHERE `account_id` = '"+getcharid(3)+"'",.@sql_id)) {
+			doevent "Premium Pass Manager::OnExpEndless";
+		}
 	end;
 }
 

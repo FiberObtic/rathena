@@ -517,7 +517,7 @@ glast_01,184,283,4	script	Dark magic master#pa082	1_F_01,{
 	getitem2 .@equip_id,1,1,.@equip_refine,0,0,0,.@card[2],.@card[3];
 	close;
 }
-
+/*
 // Items exchange for card
 glast_01,216,292,5	script	Portrait collector#0002	4_M_OILMAN,{
 	disable_items;
@@ -596,3 +596,4 @@ glast_01,216,292,5	script	Portrait collector#0002	4_M_OILMAN,{
 	getitem .@reward_id,1;
 	close;
 }
+*/
