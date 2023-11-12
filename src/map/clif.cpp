@@ -75,66 +75,6 @@ static inline int32 client_exp(t_exp exp) {
 }
 #endif
 
-// (^~_~^) Gepard Shield Start
-
-bool clif_gepard_process_packet(map_session_data* sd)
-{
-	int fd = sd->fd;
-	struct socket_data* s = session[fd];
-	int packet_id = RFIFOW(fd, 0);
-	long long diff_time = gettick() - session[fd]->gepard_info.sync_tick;
-
-	if (diff_time > 40000)
-	{
-		clif_authfail_fd(sd->fd, 15);
-		return true;
-	}
-
-	if (packet_id <= MAX_PACKET_DB)
-	{
-		return gepard_process_cs_packet(fd, s, packet_db[packet_id].len);
-	}
-
-	if (packet_id == CS_GEPARD_SYNC_2)
-	{
-		const unsigned int sync_packet_len = 128;
-		unsigned int control_value, info_type, info_code;
-
-		if (RFIFOREST(fd) < sync_packet_len)
-		{
-			return true;
-		}
-
-		gepard_enc_dec(RFIFOP(fd, 2), sync_packet_len - 2, &s->sync_crypt); 
-
-		control_value = control_value = RFIFOL(fd, 2); 
-
-		if (control_value != 0xDDCCBBAA)
-		{
-			RFIFOSKIP(fd, sync_packet_len);
-			return true;
-		}
-
-		s->gepard_info.sync_tick = gepard_get_tick();
-
-		info_type = RFIFOW(fd, 6);
-		info_code = RFIFOW(fd, 8);
-
-		if (info_type == 1 && info_code == 1)
-		{
-			const char* message = (const char*)RFIFOP(fd, 10);
-			chrif_gepard_save_report(sd, message);
-		}
-
-		RFIFOSKIP(fd, sync_packet_len);
-		return true;
-	}
-
-	return gepard_process_cs_packet(fd, s, 0);
-}
-
-// (^~_~^) Gepard Shield End
-
 /* for clif_clearunit_delayed */
 static struct eri *delay_clearunit_ers;
 
@@ -1081,7 +1021,7 @@ void clif_clearunit_delayed(struct block_list* bl, clr_type type, t_tick tick)
 
 void clif_get_weapon_view(map_session_data* sd, t_itemid *rhand, t_itemid *lhand)
 {
-	int c_weapon = 0;
+	int cViewID = 0, cNameID = 0, wViewID = 0, wNameID = 0;
 	if(sd->sc.option&OPTION_COSTUME)
 	{
 		*rhand = *lhand = 0;
@@ -1092,40 +1032,34 @@ void clif_get_weapon_view(map_session_data* sd, t_itemid *rhand, t_itemid *lhand
 	*rhand = sd->status.weapon;
 	*lhand = sd->status.shield;
 #else
-	
-	if (sd->equip_index[EQI_SHADOW_WEAPON] >= 0 &&
+	*rhand = 0;
+
+	if (sd->equip_index[EQI_SHADOW_WEAPON] > 0 &&
 		sd->inventory_data[sd->equip_index[EQI_SHADOW_WEAPON]]){
 		struct item_data* id = sd->inventory_data[sd->equip_index[EQI_SHADOW_WEAPON]];
- 		if (id->view_id > 0)
- 			*rhand = id->view_id;
- 		else
- 			*rhand = id->nameid;
-		c_weapon = 1;
- 	} else
- 		*rhand = 0;
-	
-	if (*rhand == 0){
-		if (sd->equip_index[EQI_HAND_R] >= 0 &&
-			sd->inventory_data[sd->equip_index[EQI_HAND_R]]){
-			struct item_data* id = sd->inventory_data[sd->equip_index[EQI_HAND_R]];
-			*rhand = id->nameid;
-		} else
-			*rhand = 0;
+		cViewID = id->look;
+		cNameID = id->nameid;
 	}
+	
+	if (sd->equip_index[EQI_HAND_R] >= 0 &&
+		sd->inventory_data[sd->equip_index[EQI_HAND_R]]){
+		struct item_data* id = sd->inventory_data[sd->equip_index[EQI_HAND_R]];
+		wViewID = id->look;
+		wNameID = id->nameid;
+	}
+	if (cViewID)		*rhand = cNameID;
+	else if (wViewID)	*rhand = wNameID;
+	else 				*rhand = 0;
 
 	if (sd->equip_index[EQI_HAND_L] >= 0 &&
-		sd->equip_index[EQI_HAND_L] != sd->equip_index[EQI_HAND_R] &&
+		//sd->equip_index[EQI_HAND_L] != sd->equip_index[EQI_HAND_R] &&
 		sd->inventory_data[sd->equip_index[EQI_HAND_L]])
 	{
 		struct item_data* id = sd->inventory_data[sd->equip_index[EQI_HAND_L]];
-		if (c_weapon && id->type == IT_WEAPON)
-			*lhand = 0;
-		else {
-			if (id->view_id > 0)
-				*lhand = id->view_id;
-			else
-				*lhand = id->nameid;
-		}	
+		if (id->view_id > 0)
+			*lhand = id->view_id;
+		//else
+		//	*lhand = id->nameid;
 	} else
 		*lhand = 0;
 #endif
@@ -10956,16 +10890,6 @@ void clif_parse_WantToConnection(int fd, map_session_data* sd)
 #endif
 	session[fd]->session_data = sd;
 
-// (^~_~^) Gepard Shield Start
-
-	if (is_gepard_active)
-	{
-		gepard_init(session[fd], fd, GEPARD_MAP);
-		session[fd]->gepard_info.sync_tick = gettick();
-	}
-
-// (^~_~^) Gepard Shield End
-
 	pc_setnewpc(sd, account_id, char_id, login_id1, client_tick, sex, fd);
 
 #if PACKETVER < 20070521
@@ -11858,12 +11782,7 @@ void clif_parse_Emotion(int fd, map_session_data *sd)
 		}
 
 		if(battle_config.client_reshuffle_dice && emoticon>=ET_DICE1 && emoticon<=ET_DICE6) {// re-roll dice
-			if( pc_readglobalreg(sd,add_str("ALLOW_DICE"))>0 ){
-				emoticon = rnd()%6+ET_DICE1;
-			}
-			else {
-				return;
-			}
+			emoticon = rnd()%6+ET_DICE1;
 		}
 
 		clif_emotion(&sd->bl, emoticon);
@@ -25345,15 +25264,6 @@ static int clif_parse(int fd)
 
 	if (RFIFOREST(fd) < 2)
 		return 0;
-
-// (^~_~^) Gepard Shield Start
-
-	if (is_gepard_active == true && sd != NULL && clif_gepard_process_packet(sd) == true)
-	{
-		return 0;
-	}
-
-// (^~_~^) Gepard Shield End
 
 	cmd = RFIFOW(fd, 0);
 

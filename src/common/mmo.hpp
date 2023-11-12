@@ -584,7 +584,7 @@ struct mmo_charstatus {
 	short shield; // view-id
 	short head_top,head_mid,head_bottom;
 	short robe;
-	short costume_weapon;
+	short cweapon;
 	uint8 body_direction;
 
 	char name[NAME_LENGTH];

@@ -1,0 +1,1497 @@
+(11/10/2023 23:20:05) [ Warning ] : npc_market_fromsql: Item Underground_Key [7027] discounted buying price (50->37) is less than overcharged selling price (50->62) in table 'market'. Assigning to current sell value.
+(11/10/2023 23:20:05) [ Warning ] : npc_market_fromsql: Item Key_Of_Clock_Tower [7026] discounted buying price (50->37) is less than overcharged selling price (50->62) in table 'market'. Assigning to current sell value.
+(11/10/2023 23:20:05) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/airports/izlude.txt', line '17' : Airship_Staff_izlude
+(11/10/2023 23:20:05) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/airports/izlude.txt', line '18' : Airship_Staff_izlude
+(11/10/2023 23:20:05) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/airports/izlude.txt', line '19' : Airship_Staff_izlude
+(11/10/2023 23:20:05) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/airports/izlude.txt', line '20' : Airship_Staff_izlude
+(11/10/2023 23:20:05) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/airports/izlude.txt', line '21' : Airship_Staff_izlude
+(11/10/2023 23:20:05) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/battleground/bg_common.txt', line '29' : BatRecruit
+(11/10/2023 23:20:05) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/alberta.txt', line '18' : Sea_Captain_amatsu
+(11/10/2023 23:20:05) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/alberta.txt', line '22' : Aibakthing_ayothaya
+(11/10/2023 23:20:05) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/alberta.txt', line '26' : Kunlun_Envoy_gonryun
+(11/10/2023 23:20:05) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/alberta.txt', line '30' : Girl_louyang
+(11/10/2023 23:20:05) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/alberta.txt', line '34' : PR_Officer_moscovia
+(11/10/2023 23:20:05) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/alberta.txt', line '38' : Sailor_alberta
+(11/10/2023 23:20:05) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/alberta.txt', line '39' : Turtle_Scholar_alberta
+(11/10/2023 23:20:05) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/alberta.txt', line '43' : Gershaun_alberta
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '20' : Sailor_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '21' : Sailor_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '22' : Sailor_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '23' : Sailor_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '24' : Sailor_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '26' : Bonne_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '27' : Bonne_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '28' : Bonne_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '29' : Bonne_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '30' : Bonne_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '32' : Charfri_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '33' : Charfri_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '34' : Charfri_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '35' : Charfri_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '36' : Charfri_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '38' : Cuskoal_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '39' : Cuskoal_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '40' : Cuskoal_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '41' : Cuskoal_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '42' : Cuskoal_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '44' : Dega_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '45' : Dega_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '46' : Dega_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '47' : Dega_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '48' : Dega_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '50' : Kylick_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '51' : Kylick_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '52' : Kylick_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '53' : Kylick_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '54' : Kylick_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '56' : Red_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '57' : Red_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '58' : Red_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '59' : Red_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '60' : Red_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '62' : Cebalis_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '63' : Cebalis_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '64' : Cebalis_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '65' : Cebalis_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '66' : Cebalis_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '68' : Soldier_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '69' : Soldier_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '70' : Soldier_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '71' : Soldier_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/izlude.txt', line '72' : Soldier_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/jawaii.txt', line '18' : Honeymoon_Helper_Izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/jawaii.txt', line '19' : Honeymoon_Helper_Izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/jawaii.txt', line '20' : Honeymoon_Helper_Izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/jawaii.txt', line '21' : Honeymoon_Helper_Izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/jawaii.txt', line '22' : Honeymoon_Helper_Izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/lutie.txt', line '11' : Mr. Claus
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/prontera.txt', line '21' : prtguard
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/yuno.txt', line '16' : JunoSoldier1
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/yuno.txt', line '17' : JunoSoldier2
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/yuno.txt', line '18' : JunoSoldier3
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/yuno.txt', line '19' : JunoSoldier4
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/yuno.txt', line '20' : JunoSoldier5
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/yuno.txt', line '21' : JunoSoldier6
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/cities/yuno.txt', line '22' : JunoSoldier7
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/kafras/kafras.txt', line '80' : kaf_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/kafras/kafras.txt', line '81' : kaf_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/kafras/kafras.txt', line '82' : kaf_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/kafras/kafras.txt', line '83' : kaf_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/kafras/kafras.txt', line '84' : kaf_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/merchants/socket_enchant2.txt', line '18' : SocketEnchant2
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/other/mail.txt', line '18' : MailBox
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/other/mail.txt', line '19' : MailBox
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/other/mail.txt', line '20' : MailBox
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/other/mail.txt', line '21' : MailBox
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/other/mercenary_rent.txt', line '18' : Mercenary Manager#main
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/other/mercenary_rent.txt', line '19' : Mercenary Manager#main
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/other/mercenary_rent.txt', line '20' : Mercenary Manager#main
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/other/mercenary_rent.txt', line '21' : Mercenary Manager#main
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/other/mercenary_rent.txt', line '22' : Mercenary Manager#main
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/other/mercenary_rent.txt', line '24' : MercMerchant
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/other/mercenary_rent.txt', line '25' : MercMerchant
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/other/mercenary_rent.txt', line '26' : MercMerchant
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/other/mercenary_rent.txt', line '27' : MercMerchant
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/other/mercenary_rent.txt', line '28' : MercMerchant
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/other/turbo_track.txt', line '16' : MountManager_turbo
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/first_class/tu_archer.txt', line '17' : Acolyte_Tu
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/first_class/tu_archer.txt', line '21' : Minister#tu_
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/first_class/tu_archer.txt', line '25' : #sound_tu_
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/seals/brisingamen_seal.txt', line '193' : Librarian#2_
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/seals/megingard_seal.txt', line '10' : Rebarev Doug_
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/seals/megingard_seal.txt', line '11' : Crusader#God_
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/cooking_quest.txt', line '10' : Charles Orleans#cook_
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/cooking_quest.txt', line '11' : Madeleine Chu#cook_
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/cooking_quest.txt', line '12' : Child with Cat#cook_
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/cooking_quest.txt', line '15' : Wickebine#cook_
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/monstertamers.txt', line '15' : MonsterTamer_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/mrsmile.txt', line '18' : SmileHelper
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/mrsmile.txt', line '19' : SmileHelper
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/mrsmile.txt', line '20' : SmileHelper
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/mrsmile.txt', line '21' : SmileHelper
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/mrsmile.txt', line '22' : SmileHelper
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/mrsmile.txt', line '24' : SmileHelper
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_13_1.txt', line '17' : PromotionalStaff_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_13_1.txt', line '18' : PromotionalStaff_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_13_1.txt', line '19' : PromotionalStaff_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_13_1.txt', line '20' : PromotionalStaff_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_13_1.txt', line '21' : PromotionalStaff_izlude
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_13_1.txt', line '23' : Alliance Manager#prt_
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_13_1.txt', line '24' : Member of Alliance#prt_
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_13_1.txt', line '25' : Recruiter for the Brave_
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_13_1.txt', line '26' : Laur_
+(11/10/2023 23:20:06) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_13_1.txt', line '28' : Diego#ep13bs_
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_izlude.txt', line '17' : Edgar_izlude
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_izlude.txt', line '18' : Edgar_izlude
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_izlude.txt', line '19' : Edgar_izlude
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_izlude.txt', line '20' : Edgar_izlude
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_izlude.txt', line '21' : Edgar_izlude
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_lighthalzen.txt', line '20' : Scamp
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_lighthalzen.txt', line '21' : Scamp
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_lighthalzen.txt', line '22' : Scamp
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_lighthalzen.txt', line '23' : Scamp
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_lighthalzen.txt', line '24' : Scamp
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_morocc.txt', line '20' : William
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_morocc.txt', line '24' : Alchemist
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_morocc.txt', line '60' : Continental Official
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_nameless.txt', line '17' : Dorian_izlude
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_nameless.txt', line '18' : StrangeMachine_izlude
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_niflheim.txt', line '10' : Piano3
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/quests_veins.txt', line '15' : WincingOldMan_veins
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/the_sign_quest.txt', line '12' : Soldier#s11_
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/jobs/1-1e/taekwon.txt', line '9' : PhoenixTKJobChange
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/jobs/2-2/crusader.txt', line '12' : Senior Crusader_
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/jobs/2-2/crusader.txt', line '16' : Man in Anguish_
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/jobs/2-2/crusader.txt', line '20' : Patron Knight_
+(11/10/2023 23:20:07) [ Error ] : npc_parse_script: original npc not found for duplicate in file 'npc/re/quests/skills/swordman_skills.txt', line '15' : KnightDeThomas
+(11/10/2023 23:20:07) [ Warning ] : npc_parse_shop: Item Center_Potion [645] discounted buying price (650->487) is less than overcharged selling price (600->744) at file 'npc/script_main/shop/itemmall.txt', line '7'.
+(11/10/2023 23:20:07) [ Warning ] : npc_parse_shop: Item Blue_Gemstone [717] discounted buying price (600->450) is less than overcharged selling price (700->868) at file 'npc/script_main/shop/itemmall.txt', line '7'.
+(11/10/2023 23:20:07) [ Warning ] : npc_parse_shop: Item Strawberry [578] discounted buying price (100->75) is less than overcharged selling price (100->124) at file 'npc/script_main/shop/itemmall.txt', line '8'.
+(11/10/2023 23:20:07) [ Warning ] : npc_parse_shop: Item Leaflet_Of_Aloe [521] discounted buying price (70->52) is less than overcharged selling price (180->223) at file 'npc/script_main/shop/itemmall.txt', line '8'.
+(11/10/2023 23:20:07) [ Warning ] : npc_parse_shop: Item Center_Potion [645] discounted buying price (650->487) is less than overcharged selling price (600->744) at file 'npc/script_main/shop/itemmall.txt', line '8'.
+(11/10/2023 23:20:07) [ Warning ] : npc_parse_shop: Item Blue_Gemstone [717] discounted buying price (600->450) is less than overcharged selling price (700->868) at file 'npc/script_main/shop/itemmall.txt', line '8'.
+(11/10/2023 23:20:07) [ Warning ] : npc_parse_shop: Item Blue_Gemstone [717] discounted buying price (600->450) is less than overcharged selling price (700->868) at file 'npc/script_main/shop/itemmall.txt', line '9'.
+(11/10/2023 23:20:07) [ Warning ] : npc_parse_shop: Item Blue_Gemstone [717] discounted buying price (600->450) is less than overcharged selling price (700->868) at file 'npc/script_main/shop/itemmall.txt', line '36'.
+(11/10/2023 23:20:07) [ Warning ] : npc_parse_shop: Item Protect_Neck_Candy [11513] discounted buying price (200->150) is less than overcharged selling price (125->155) at file 'npc/script_main/shop/itemmall.txt', line '40'.
+(11/10/2023 23:20:07) [ Warning ] : npc_parse_shop: Item Protect_Neck_Candy [11513] discounted buying price (200->150) is less than overcharged selling price (125->155) at file 'npc/script_main/shop/itemmall.txt', line '49'.
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'31'. Renaming 'Rodel the Guard#malaya' to '1_774_266_76'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Rodel the Guard#malaya'
+   unique name 'Rodel the Guard#malaya'
+   map=malaya, x=266, y=76
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Rodel the Guard#malaya'
+   unique name 'Rodel the Guard#malaya'
+   map=malaya, x=266, y=76
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'193'. Renaming 'Leader Phong in Mumbaki' to '1_774_185_358'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Leader Phong in Mumbaki'
+   unique name 'Leader Phong in Mumbaki'
+   map=malaya, x=185, y=358
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Leader Phong in Mumbaki'
+   unique name 'Leader Phong in Mumbaki'
+   map=malaya, x=185, y=358
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'530'. Renaming 'Imelda#malaya' to '1_774_169_350'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Imelda#malaya'
+   unique name 'Imelda#malaya'
+   map=malaya, x=169, y=350
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Imelda#malaya'
+   unique name 'Imelda#malaya'
+   map=malaya, x=169, y=350
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'907'. Renaming 'Old Man Nardo#malaya' to '1_774_181_353'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Old Man Nardo#malaya'
+   unique name 'Old Man Nardo#malaya'
+   map=malaya, x=181, y=353
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Old Man Nardo#malaya'
+   unique name 'Old Man Nardo#malaya'
+   map=malaya, x=181, y=353
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'1174'. Renaming 'Romel#malaya' to '1_774_224_267'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Romel#malaya'
+   unique name 'Romel#malaya'
+   map=malaya, x=224, y=267
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Romel#malaya'
+   unique name 'Romel#malaya'
+   map=malaya, x=224, y=267
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'1330'. Renaming 'Talah#malaya' to '1_774_223_267'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Talah#malaya'
+   unique name 'Talah#malaya'
+   map=malaya, x=223, y=267
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Talah#malaya'
+   unique name 'Talah#malaya'
+   map=malaya, x=223, y=267
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'1461'. Renaming 'Sand Trap#malaya' to '1_774_62_274'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Sand Trap#malaya'
+   unique name 'Sand Trap#malaya'
+   map=malaya, x=62, y=274
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Sand Trap#malaya'
+   unique name 'Sand Trap#malaya'
+   map=malaya, x=62, y=274
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'1492'. Renaming 'Sand Trap#malaya01' to '1_774_66_277'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Sand Trap#malaya01'
+   unique name 'Sand Trap#malaya01'
+   map=malaya, x=66, y=277
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Sand Trap#malaya01'
+   unique name 'Sand Trap#malaya01'
+   map=malaya, x=66, y=277
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'1493'. Renaming 'Sand Trap#malaya02' to '1_774_70_282'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Sand Trap#malaya02'
+   unique name 'Sand Trap#malaya02'
+   map=malaya, x=70, y=282
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Sand Trap#malaya02'
+   unique name 'Sand Trap#malaya02'
+   map=malaya, x=70, y=282
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'1495'. Renaming 'Black Bamboo#malaya' to '1_782_178_206'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Black Bamboo#malaya'
+   unique name 'Black Bamboo#malaya'
+   map=ma_fild01, x=178, y=206
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Black Bamboo#malaya'
+   unique name 'Black Bamboo#malaya'
+   map=ma_fild01, x=178, y=206
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'1528'. Renaming 'Black Bamboo#malaya01' to '1_782_225_186'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Black Bamboo#malaya01'
+   unique name 'Black Bamboo#malaya01'
+   map=ma_fild01, x=225, y=186
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Black Bamboo#malaya01'
+   unique name 'Black Bamboo#malaya01'
+   map=ma_fild01, x=225, y=186
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'1529'. Renaming 'Black Bamboo#malaya02' to '1_782_230_244'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Black Bamboo#malaya02'
+   unique name 'Black Bamboo#malaya02'
+   map=ma_fild01, x=230, y=244
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Black Bamboo#malaya02'
+   unique name 'Black Bamboo#malaya02'
+   map=ma_fild01, x=230, y=244
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'1530'. Renaming 'Black Bamboo#malaya03' to '1_782_174_238'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Black Bamboo#malaya03'
+   unique name 'Black Bamboo#malaya03'
+   map=ma_fild01, x=174, y=238
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Black Bamboo#malaya03'
+   unique name 'Black Bamboo#malaya03'
+   map=ma_fild01, x=174, y=238
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'1531'. Renaming 'Black Bamboo#malaya04' to '1_782_180_273'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Black Bamboo#malaya04'
+   unique name 'Black Bamboo#malaya04'
+   map=ma_fild01, x=180, y=273
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Black Bamboo#malaya04'
+   unique name 'Black Bamboo#malaya04'
+   map=ma_fild01, x=180, y=273
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'1532'. Renaming 'Black Bamboo#malaya05' to '1_782_179_145'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Black Bamboo#malaya05'
+   unique name 'Black Bamboo#malaya05'
+   map=ma_fild01, x=179, y=145
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Black Bamboo#malaya05'
+   unique name 'Black Bamboo#malaya05'
+   map=ma_fild01, x=179, y=145
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'1534'. Renaming 'Collection Dealer Woeon' to '1_774_295_171'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Collection Dealer Woeon'
+   unique name 'Collection Dealer Woeon'
+   map=malaya, x=295, y=171
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Collection Dealer Woeon'
+   unique name 'Collection Dealer Woeon'
+   map=malaya, x=295, y=171
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'1772'. Renaming 'Blacksmith Pandoi' to '1_774_119_217'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Blacksmith Pandoi'
+   unique name 'Blacksmith Pandoi'
+   map=malaya, x=119, y=217
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Blacksmith Pandoi'
+   unique name 'Blacksmith Pandoi'
+   map=malaya, x=119, y=217
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'2119'. Renaming 'Pedro the Sailor' to '1_774_326_68'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Pedro the Sailor'
+   unique name 'Pedro the Sailor'
+   map=malaya, x=326, y=68
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Pedro the Sailor'
+   unique name 'Pedro the Sailor'
+   map=malaya, x=326, y=68
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'2479'. Renaming 'Ghost Diwata' to '1_780_125_107'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Ghost Diwata'
+   unique name 'Ghost Diwata'
+   map=ma_in01, x=125, y=107
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Ghost Diwata'
+   unique name 'Ghost Diwata'
+   map=ma_in01, x=125, y=107
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'2727'. Renaming 'Kiko in Mumbaki' to '1_782_261_208'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Kiko in Mumbaki'
+   unique name 'Kiko in Mumbaki'
+   map=ma_fild01, x=261, y=208
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Kiko in Mumbaki'
+   unique name 'Kiko in Mumbaki'
+   map=ma_fild01, x=261, y=208
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'2838'. Renaming 'Dhong the Guard' to '1_782_239_253'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Dhong the Guard'
+   unique name 'Dhong the Guard'
+   map=ma_fild01, x=239, y=253
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Dhong the Guard'
+   unique name 'Dhong the Guard'
+   map=ma_fild01, x=239, y=253
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'2977'. Renaming 'Guard Dog Vantai' to '1_782_238_257'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Guard Dog Vantai'
+   unique name 'Guard Dog Vantai'
+   map=ma_fild01, x=238, y=257
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Guard Dog Vantai'
+   unique name 'Guard Dog Vantai'
+   map=ma_fild01, x=238, y=257
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'2985'. Renaming 'Maries#malaya' to '1_782_200_190'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Maries#malaya'
+   unique name 'Maries#malaya'
+   map=ma_fild01, x=200, y=190
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Maries#malaya'
+   unique name 'Maries#malaya'
+   map=ma_fild01, x=200, y=190
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'3093'. Renaming 'Little Girl#malaya' to '1_782_203_189'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Little Girl#malaya'
+   unique name 'Little Girl#malaya'
+   map=ma_fild01, x=203, y=189
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Little Girl#malaya'
+   unique name 'Little Girl#malaya'
+   map=ma_fild01, x=203, y=189
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'3104'. Renaming 'Lost Child#malaya01' to '1_782_251_93'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Lost Child#malaya01'
+   unique name 'Lost Child#malaya01'
+   map=ma_fild01, x=251, y=93
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Lost Child#malaya01'
+   unique name 'Lost Child#malaya01'
+   map=ma_fild01, x=251, y=93
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'3176'. Renaming 'Lost Child#malaya02' to '1_782_114_141'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Lost Child#malaya02'
+   unique name 'Lost Child#malaya02'
+   map=ma_fild01, x=114, y=141
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Lost Child#malaya02'
+   unique name 'Lost Child#malaya02'
+   map=ma_fild01, x=114, y=141
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'3177'. Renaming 'Lost Child#malaya03' to '1_782_130_314'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Lost Child#malaya03'
+   unique name 'Lost Child#malaya03'
+   map=ma_fild01, x=130, y=314
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Lost Child#malaya03'
+   unique name 'Lost Child#malaya03'
+   map=ma_fild01, x=130, y=314
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'3179'. Renaming 'Good Capre Budidai' to '1_783_241_39'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Good Capre Budidai'
+   unique name 'Good Capre Budidai'
+   map=ma_fild02, x=241, y=39
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Good Capre Budidai'
+   unique name 'Good Capre Budidai'
+   map=ma_fild02, x=241, y=39
+(11/10/2023 23:20:07) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'3345'. Renaming 'Old Man in Dilemma#GA' to '1_782_166_214'.
+(11/10/2023 23:20:07) [ Debug ] : this npc:
+   display name 'Old Man in Dilemma#GA'
+   unique name 'Old Man in Dilemma#GA'
+   map=ma_fild01, x=166, y=214
+(11/10/2023 23:20:07) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Old Man in Dilemma#GA'
+   unique name 'Old Man in Dilemma#GA'
+   map=ma_fild01, x=166, y=214
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'3420'. Renaming 'Tikbalang Expert#malaya' to '1_782_238_198'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tikbalang Expert#malaya'
+   unique name 'Tikbalang Expert#malaya'
+   map=ma_fild01, x=238, y=198
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tikbalang Expert#malaya'
+   unique name 'Tikbalang Expert#malaya'
+   map=ma_fild01, x=238, y=198
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'3608'. Renaming 'Tribe Blacksmith#malaya' to '1_782_158_243'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tribe Blacksmith#malaya'
+   unique name 'Tribe Blacksmith#malaya'
+   map=ma_fild01, x=158, y=243
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tribe Blacksmith#malaya'
+   unique name 'Tribe Blacksmith#malaya'
+   map=ma_fild01, x=158, y=243
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'3844'. Renaming 'Guard#buwaya' to '1_774_305_281'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Guard#buwaya'
+   unique name 'Guard#buwaya'
+   map=malaya, x=305, y=281
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Guard#buwaya'
+   unique name 'Guard#buwaya'
+   map=malaya, x=305, y=281
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'3904'. Renaming 'buwaya_A' to '1_774_276_288'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Port Malaya Villager'
+   unique name 'buwaya_A'
+   map=malaya, x=276, y=288
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Port Malaya Villager'
+   unique name 'buwaya_A'
+   map=malaya, x=276, y=288
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4004'. Renaming 'buwaya_B' to '1_774_278_288'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Port Malaya Villager'
+   unique name 'buwaya_B'
+   map=malaya, x=278, y=288
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Port Malaya Villager'
+   unique name 'buwaya_B'
+   map=malaya, x=278, y=288
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4005'. Renaming 'buwaya_C' to '1_774_276_286'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Port Malaya Villager'
+   unique name 'buwaya_C'
+   map=malaya, x=276, y=286
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Port Malaya Villager'
+   unique name 'buwaya_C'
+   map=malaya, x=276, y=286
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4007'. Renaming 'Totoy#buwaya' to '1_780_47_101'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Totoy#buwaya'
+   unique name 'Totoy#buwaya'
+   map=ma_in01, x=47, y=101
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Totoy#buwaya'
+   unique name 'Totoy#buwaya'
+   map=ma_in01, x=47, y=101
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4291'. Renaming 'Dog#buwaya_totoi' to '1_780_43_101'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Dog#buwaya_totoi'
+   unique name 'Dog#buwaya_totoi'
+   map=ma_in01, x=43, y=101
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Dog#buwaya_totoi'
+   unique name 'Dog#buwaya_totoi'
+   map=ma_in01, x=43, y=101
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4298'. Renaming 'Drawer#buwaya' to '1_780_44_105'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Drawer#buwaya'
+   unique name 'Drawer#buwaya'
+   map=ma_in01, x=44, y=105
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Drawer#buwaya'
+   unique name 'Drawer#buwaya'
+   map=ma_in01, x=44, y=105
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4317'. Renaming 'Master of Hunting#buwaya' to '1_774_290_152'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Master of Hunting#buwaya'
+   unique name 'Master of Hunting#buwaya'
+   map=malaya, x=290, y=152
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Master of Hunting#buwaya'
+   unique name 'Master of Hunting#buwaya'
+   map=malaya, x=290, y=152
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4461'. Renaming '#buwaya_soil' to '1_774_291_152'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name '#buwaya_soil'
+   unique name '#buwaya_soil'
+   map=malaya, x=291, y=152
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name '#buwaya_soil'
+   unique name '#buwaya_soil'
+   map=malaya, x=291, y=152
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4529'. Renaming 'Unknown Trace#buwaya' to '1_-1_0_0'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Unknown Trace#buwaya'
+   unique name 'Unknown Trace#buwaya'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Unknown Trace#buwaya'
+   unique name 'Unknown Trace#buwaya'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4565'. Renaming 'Unknown Trace#buwaya_1' to '1_783_155_235'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Unknown Trace#buwaya_1'
+   unique name 'Unknown Trace#buwaya_1'
+   map=ma_fild02, x=155, y=235
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Unknown Trace#buwaya_1'
+   unique name 'Unknown Trace#buwaya_1'
+   map=ma_fild02, x=155, y=235
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4566'. Renaming 'Unknown Trace#buwaya_2' to '1_783_143_142'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Unknown Trace#buwaya_2'
+   unique name 'Unknown Trace#buwaya_2'
+   map=ma_fild02, x=143, y=142
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Unknown Trace#buwaya_2'
+   unique name 'Unknown Trace#buwaya_2'
+   map=ma_fild02, x=143, y=142
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4567'. Renaming 'Unknown Trace#buwaya_3' to '1_783_266_155'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Unknown Trace#buwaya_3'
+   unique name 'Unknown Trace#buwaya_3'
+   map=ma_fild02, x=266, y=155
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Unknown Trace#buwaya_3'
+   unique name 'Unknown Trace#buwaya_3'
+   map=ma_fild02, x=266, y=155
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4568'. Renaming 'Unknown Trace#buwaya_4' to '1_783_221_91'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Unknown Trace#buwaya_4'
+   unique name 'Unknown Trace#buwaya_4'
+   map=ma_fild02, x=221, y=91
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Unknown Trace#buwaya_4'
+   unique name 'Unknown Trace#buwaya_4'
+   map=ma_fild02, x=221, y=91
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4569'. Renaming 'Unknown Trace#buwaya_5' to '1_783_205_85'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Unknown Trace#buwaya_5'
+   unique name 'Unknown Trace#buwaya_5'
+   map=ma_fild02, x=205, y=85
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Unknown Trace#buwaya_5'
+   unique name 'Unknown Trace#buwaya_5'
+   map=ma_fild02, x=205, y=85
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4570'. Renaming 'Unknown Trace#buwaya_6' to '1_783_300_98'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Unknown Trace#buwaya_6'
+   unique name 'Unknown Trace#buwaya_6'
+   map=ma_fild02, x=300, y=98
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Unknown Trace#buwaya_6'
+   unique name 'Unknown Trace#buwaya_6'
+   map=ma_fild02, x=300, y=98
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4571'. Renaming 'Unknown Trace#buwaya_7' to '1_783_100_275'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Unknown Trace#buwaya_7'
+   unique name 'Unknown Trace#buwaya_7'
+   map=ma_fild02, x=100, y=275
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Unknown Trace#buwaya_7'
+   unique name 'Unknown Trace#buwaya_7'
+   map=ma_fild02, x=100, y=275
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4573'. Renaming 'Guard Leader#buwaya' to '1_774_290_340'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Guard Leader#buwaya'
+   unique name 'Guard Leader#buwaya'
+   map=malaya, x=290, y=340
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Guard Leader#buwaya'
+   unique name 'Guard Leader#buwaya'
+   map=malaya, x=290, y=340
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4722'. Renaming '#buwaya_todog1' to '1_783_307_245'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name '#buwaya_todog1'
+   unique name '#buwaya_todog1'
+   map=ma_fild02, x=307, y=245
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name '#buwaya_todog1'
+   unique name '#buwaya_todog1'
+   map=ma_fild02, x=307, y=245
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4733'. Renaming '#buwaya_todog2' to '1_783_320_241'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name '#buwaya_todog2'
+   unique name '#buwaya_todog2'
+   map=ma_fild02, x=320, y=241
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name '#buwaya_todog2'
+   unique name '#buwaya_todog2'
+   map=ma_fild02, x=320, y=241
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4734'. Renaming '#buwaya_todog3' to '1_783_317_250'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name '#buwaya_todog3'
+   unique name '#buwaya_todog3'
+   map=ma_fild02, x=317, y=250
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name '#buwaya_todog3'
+   unique name '#buwaya_todog3'
+   map=ma_fild02, x=317, y=250
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4736'. Renaming 'Dog#buwaya' to '1_783_312_259'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Dog#buwaya'
+   unique name 'Dog#buwaya'
+   map=ma_fild02, x=312, y=259
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Dog#buwaya'
+   unique name 'Dog#buwaya'
+   map=ma_fild02, x=312, y=259
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4810'. Renaming 'Guard#buwayacave' to '1_783_308_262'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Guard#buwayacave'
+   unique name 'Guard#buwayacave'
+   map=ma_fild02, x=308, y=262
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Guard#buwayacave'
+   unique name 'Guard#buwayacave'
+   map=ma_fild02, x=308, y=262
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4819'. Renaming 'Singing Man#bako1' to '1_774_280_331'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Singing Man#bako1'
+   unique name 'Singing Man#bako1'
+   map=malaya, x=280, y=331
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Singing Man#bako1'
+   unique name 'Singing Man#bako1'
+   map=malaya, x=280, y=331
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4873'. Renaming 'Singing Woman#bako1' to '1_774_275_333'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Singing Woman#bako1'
+   unique name 'Singing Woman#bako1'
+   map=malaya, x=275, y=333
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Singing Woman#bako1'
+   unique name 'Singing Woman#bako1'
+   map=malaya, x=275, y=333
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4916'. Renaming 'Frightened Boy#bako1' to '1_774_290_329'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Frightened Boy#bako1'
+   unique name 'Frightened Boy#bako1'
+   map=malaya, x=290, y=329
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Frightened Boy#bako1'
+   unique name 'Frightened Boy#bako1'
+   map=malaya, x=290, y=329
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4937'. Renaming 'Frightened Maiden#bako1' to '1_774_264_338'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Frightened Maiden#bako1'
+   unique name 'Frightened Maiden#bako1'
+   map=malaya, x=264, y=338
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Frightened Maiden#bako1'
+   unique name 'Frightened Maiden#bako1'
+   map=malaya, x=264, y=338
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'4988'. Renaming 'Old Fortune Teller#bako1' to '1_774_272_339'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Old Fortune Teller#bako1'
+   unique name 'Old Fortune Teller#bako1'
+   map=malaya, x=272, y=339
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Old Fortune Teller#bako1'
+   unique name 'Old Fortune Teller#bako1'
+   map=malaya, x=272, y=339
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'5021'. Renaming 'Old Legend Teller#bako1' to '1_774_285_332'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Old Legend Teller#bako1'
+   unique name 'Old Legend Teller#bako1'
+   map=malaya, x=285, y=332
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Old Legend Teller#bako1'
+   unique name 'Old Legend Teller#bako1'
+   map=malaya, x=285, y=332
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'5259'. Renaming 'Malaya Immigrant#bako1' to '1_783_40_240'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Malaya Immigrant#bako1'
+   unique name 'Malaya Immigrant#bako1'
+   map=ma_fild02, x=40, y=240
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Malaya Immigrant#bako1'
+   unique name 'Malaya Immigrant#bako1'
+   map=ma_fild02, x=40, y=240
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'5370'. Renaming 'Malaya Immigrant#bako2' to '1_782_165_237'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Malaya Immigrant#bako2'
+   unique name 'Malaya Immigrant#bako2'
+   map=ma_fild01, x=165, y=237
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Malaya Immigrant#bako2'
+   unique name 'Malaya Immigrant#bako2'
+   map=ma_fild01, x=165, y=237
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'5481'. Renaming '#bako1' to '1_782_171_235'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name '#bako1'
+   unique name '#bako1'
+   map=ma_fild01, x=171, y=235
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name '#bako1'
+   unique name '#bako1'
+   map=ma_fild01, x=171, y=235
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'5555'. Renaming 'Old Man's Granddaughter' to '1_774_304_100'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Old Man's Granddaughter'
+   unique name 'Old Man's Granddaughter'
+   map=malaya, x=304, y=100
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Old Man's Granddaughter'
+   unique name 'Old Man's Granddaughter'
+   map=malaya, x=304, y=100
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'5598'. Renaming 'Angry Man#bako2' to '1_774_286_269'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Angry Man#bako2'
+   unique name 'Angry Man#bako2'
+   map=malaya, x=286, y=269
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Angry Man#bako2'
+   unique name 'Angry Man#bako2'
+   map=malaya, x=286, y=269
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'5611'. Renaming 'Calm Woman#bako2' to '1_774_276_269'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Calm Woman#bako2'
+   unique name 'Calm Woman#bako2'
+   map=malaya, x=276, y=269
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Calm Woman#bako2'
+   unique name 'Calm Woman#bako2'
+   map=malaya, x=276, y=269
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'5624'. Renaming 'Angry Boy#bako2' to '1_774_276_262'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Angry Boy#bako2'
+   unique name 'Angry Boy#bako2'
+   map=malaya, x=276, y=262
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Angry Boy#bako2'
+   unique name 'Angry Boy#bako2'
+   map=malaya, x=276, y=262
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'5636'. Renaming 'Village Chief#bako2' to '1_774_283_265'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Village Chief#bako2'
+   unique name 'Village Chief#bako2'
+   map=malaya, x=283, y=265
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Village Chief#bako2'
+   unique name 'Village Chief#bako2'
+   map=malaya, x=283, y=265
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'5881'. Renaming 'Missing Person's Father' to '1_774_269_267'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Missing Person's Father'
+   unique name 'Missing Person's Father'
+   map=malaya, x=269, y=267
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Missing Person's Father'
+   unique name 'Missing Person's Father'
+   map=malaya, x=269, y=267
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'5932'. Renaming 'Missing Person's Friend' to '1_774_265_274'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Missing Person's Friend'
+   unique name 'Missing Person's Friend'
+   map=malaya, x=265, y=274
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Missing Person's Friend'
+   unique name 'Missing Person's Friend'
+   map=malaya, x=265, y=274
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'5987'. Renaming 'Missing Person's Son' to '1_774_270_278'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Missing Person's Son'
+   unique name 'Missing Person's Son'
+   map=malaya, x=270, y=278
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Missing Person's Son'
+   unique name 'Missing Person's Son'
+   map=malaya, x=270, y=278
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'6033'. Renaming 'Missing Person's Mother' to '1_774_265_284'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Missing Person's Mother'
+   unique name 'Missing Person's Mother'
+   map=malaya, x=265, y=284
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Missing Person's Mother'
+   unique name 'Missing Person's Mother'
+   map=malaya, x=265, y=284
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'6087'. Renaming 'Young Fortune Teller' to '1_774_289_364'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Young Fortune Teller'
+   unique name 'Young Fortune Teller'
+   map=malaya, x=289, y=364
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Young Fortune Teller'
+   unique name 'Young Fortune Teller'
+   map=malaya, x=289, y=364
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'6175'. Renaming 'Gruffy Worker#bako2' to '1_782_54_253'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Gruffy Worker#bako2'
+   unique name 'Gruffy Worker#bako2'
+   map=ma_fild01, x=54, y=253
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Gruffy Worker#bako2'
+   unique name 'Gruffy Worker#bako2'
+   map=ma_fild01, x=54, y=253
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'6202'. Renaming '#bako2' to '1_782_54_244'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name '#bako2'
+   unique name '#bako2'
+   map=ma_fild01, x=54, y=244
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name '#bako2'
+   unique name '#bako2'
+   map=ma_fild01, x=54, y=244
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'6243'. Renaming 'Grumpy Worker#bako2' to '1_782_236_119'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Grumpy Worker#bako2'
+   unique name 'Grumpy Worker#bako2'
+   map=ma_fild01, x=236, y=119
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Grumpy Worker#bako2'
+   unique name 'Grumpy Worker#bako2'
+   map=ma_fild01, x=236, y=119
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'6271'. Renaming '#bako3' to '1_782_242_116'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name '#bako3'
+   unique name '#bako3'
+   map=ma_fild01, x=242, y=116
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name '#bako3'
+   unique name '#bako3'
+   map=ma_fild01, x=242, y=116
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'6313'. Renaming 'Cowardly Worker#bako2' to '1_776_177_89'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Cowardly Worker#bako2'
+   unique name 'Cowardly Worker#bako2'
+   map=ma_scene01, x=177, y=89
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Cowardly Worker#bako2'
+   unique name 'Cowardly Worker#bako2'
+   map=ma_scene01, x=177, y=89
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'6344'. Renaming '#bako4' to '1_776_179_85'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name '#bako4'
+   unique name '#bako4'
+   map=ma_scene01, x=179, y=85
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name '#bako4'
+   unique name '#bako4'
+   map=ma_scene01, x=179, y=85
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'6385'. Renaming 'Gloomy Worker#bako2' to '1_776_141_118'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Gloomy Worker#bako2'
+   unique name 'Gloomy Worker#bako2'
+   map=ma_scene01, x=141, y=118
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Gloomy Worker#bako2'
+   unique name 'Gloomy Worker#bako2'
+   map=ma_scene01, x=141, y=118
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'6414'. Renaming '#bako5' to '1_776_138_122'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name '#bako5'
+   unique name '#bako5'
+   map=ma_scene01, x=138, y=122
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name '#bako5'
+   unique name '#bako5'
+   map=ma_scene01, x=138, y=122
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'6448'. Renaming 'Sentimental Worker#bako2' to '1_776_175_170'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Sentimental Worker#bako2'
+   unique name 'Sentimental Worker#bako2'
+   map=ma_scene01, x=175, y=170
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Sentimental Worker#bako2'
+   unique name 'Sentimental Worker#bako2'
+   map=ma_scene01, x=175, y=170
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'6481'. Renaming '#bako6' to '1_776_171_174'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name '#bako6'
+   unique name '#bako6'
+   map=ma_scene01, x=171, y=174
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name '#bako6'
+   unique name '#bako6'
+   map=ma_scene01, x=171, y=174
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'6517'. Renaming 'Bakonawa Intro Helper' to '1_399_10_16'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Bakonawa Intro Helper'
+   unique name 'Bakonawa Intro Helper'
+   map=sec_in02, x=10, y=16
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Bakonawa Intro Helper'
+   unique name 'Bakonawa Intro Helper'
+   map=sec_in02, x=10, y=16
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'6841'. Renaming 'Nurse#ma_n1' to '1_774_55_72'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Nurse#ma_n1'
+   unique name 'Nurse#ma_n1'
+   map=malaya, x=55, y=72
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Nurse#ma_n1'
+   unique name 'Nurse#ma_n1'
+   map=malaya, x=55, y=72
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7417'. Renaming 'Nurse#ma_n2' to '1_781_35_108'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Nurse#ma_n2'
+   unique name 'Nurse#ma_n2'
+   map=ma_dun01, x=35, y=108
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Nurse#ma_n2'
+   unique name 'Nurse#ma_n2'
+   map=ma_dun01, x=35, y=108
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7457'. Renaming 'MalayaStick0' to '1_781_152_23'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick0'
+   map=ma_dun01, x=152, y=23
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick0'
+   map=ma_dun01, x=152, y=23
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7525'. Renaming 'Hospital Door#ma_n1' to '1_774_48_76'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Hospital Door#ma_n1'
+   unique name 'Hospital Door#ma_n1'
+   map=malaya, x=48, y=76
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Hospital Door#ma_n1'
+   unique name 'Hospital Door#ma_n1'
+   map=malaya, x=48, y=76
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7560'. Renaming 'Village Woman#mab' to '1_774_64_78'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Village Woman#mab'
+   unique name 'Village Woman#mab'
+   map=malaya, x=64, y=78
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Village Woman#mab'
+   unique name 'Village Woman#mab'
+   map=malaya, x=64, y=78
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7624'. Renaming 'Village Man#mab' to '1_774_62_37'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Village Man#mab'
+   unique name 'Village Man#mab'
+   map=malaya, x=62, y=37
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Village Man#mab'
+   unique name 'Village Man#mab'
+   map=malaya, x=62, y=37
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7706'. Renaming 'Dr. Boon#ma' to '1_774_210_200'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Dr. Boon#ma'
+   unique name 'Dr. Boon#ma'
+   map=malaya, x=210, y=200
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Dr. Boon#ma'
+   unique name 'Dr. Boon#ma'
+   map=malaya, x=210, y=200
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7779'. Renaming 'Bushes#ma' to '1_774_53_68'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Bushes#ma'
+   unique name 'Bushes#ma'
+   map=malaya, x=53, y=68
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Bushes#ma'
+   unique name 'Bushes#ma'
+   map=malaya, x=53, y=68
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7887'. Renaming 'MalayaStick' to '2_-1_0_0'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7947'. Renaming 'MalayaStick1' to '1_774_40_52'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick1'
+   map=malaya, x=40, y=52
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick1'
+   map=malaya, x=40, y=52
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7948'. Renaming 'MalayaStick2' to '1_774_31_42'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick2'
+   map=malaya, x=31, y=42
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick2'
+   map=malaya, x=31, y=42
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7949'. Renaming 'MalayaStick3' to '1_774_34_36'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick3'
+   map=malaya, x=34, y=36
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick3'
+   map=malaya, x=34, y=36
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7950'. Renaming 'MalayaStick4' to '1_774_40_32'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick4'
+   map=malaya, x=40, y=32
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick4'
+   map=malaya, x=40, y=32
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7951'. Renaming 'MalayaStick5' to '1_774_50_85'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick5'
+   map=malaya, x=50, y=85
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick5'
+   map=malaya, x=50, y=85
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7952'. Renaming 'MalayaStick6' to '1_774_46_93'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick6'
+   map=malaya, x=46, y=93
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick6'
+   map=malaya, x=46, y=93
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7953'. Renaming 'MalayaStick7' to '1_774_36_98'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick7'
+   map=malaya, x=36, y=98
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick7'
+   map=malaya, x=36, y=98
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7954'. Renaming 'MalayaStick8' to '1_774_48_79'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick8'
+   map=malaya, x=48, y=79
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick8'
+   map=malaya, x=48, y=79
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7955'. Renaming 'MalayaStick9' to '1_774_50_46'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick9'
+   map=malaya, x=50, y=46
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick9'
+   map=malaya, x=50, y=46
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7956'. Renaming 'MalayaStick10' to '1_774_59_84'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick10'
+   map=malaya, x=59, y=84
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Suspicious Wooden Stick'
+   unique name 'MalayaStick10'
+   map=malaya, x=59, y=84
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7958'. Renaming 'Tent#ma' to '3_-1_0_0'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tent#ma'
+   unique name 'Tent#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tent#ma'
+   unique name 'Tent#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7979'. Renaming 'Tent1#ma' to '4_-1_0_0'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tent1#ma'
+   unique name 'Tent1#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tent1#ma'
+   unique name 'Tent1#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7980'. Renaming 'Tent2#ma' to '5_-1_0_0'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tent2#ma'
+   unique name 'Tent2#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tent2#ma'
+   unique name 'Tent2#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7981'. Renaming 'Tent3#ma' to '6_-1_0_0'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tent3#ma'
+   unique name 'Tent3#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tent3#ma'
+   unique name 'Tent3#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7982'. Renaming 'Tent4#ma' to '7_-1_0_0'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tent4#ma'
+   unique name 'Tent4#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tent4#ma'
+   unique name 'Tent4#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7983'. Renaming 'Tent5#ma' to '8_-1_0_0'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tent5#ma'
+   unique name 'Tent5#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tent5#ma'
+   unique name 'Tent5#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7984'. Renaming 'Tent6#ma' to '9_-1_0_0'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tent6#ma'
+   unique name 'Tent6#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tent6#ma'
+   unique name 'Tent6#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7985'. Renaming 'Tent7#ma' to '10_-1_0_0'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tent7#ma'
+   unique name 'Tent7#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tent7#ma'
+   unique name 'Tent7#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7986'. Renaming 'Tent8#ma' to '11_-1_0_0'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tent8#ma'
+   unique name 'Tent8#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tent8#ma'
+   unique name 'Tent8#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7987'. Renaming 'Tent9#ma' to '12_-1_0_0'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tent9#ma'
+   unique name 'Tent9#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tent9#ma'
+   unique name 'Tent9#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7988'. Renaming 'Tent10#ma' to '13_-1_0_0'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tent10#ma'
+   unique name 'Tent10#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tent10#ma'
+   unique name 'Tent10#ma'
+   map=(not on a map), x=0, y=0
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'7990'. Renaming 'Bent Old Lady#ma' to '1_774_114_183'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Bent Old Lady#ma'
+   unique name 'Bent Old Lady#ma'
+   map=malaya, x=114, y=183
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Bent Old Lady#ma'
+   unique name 'Bent Old Lady#ma'
+   map=malaya, x=114, y=183
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'8179'. Renaming 'Bent Shaman#ma' to '1_774_276_367'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Bent Shaman#ma'
+   unique name 'Bent Shaman#ma'
+   map=malaya, x=276, y=367
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Bent Shaman#ma'
+   unique name 'Bent Shaman#ma'
+   map=malaya, x=276, y=367
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'8228'. Renaming 'Pintados Manager#pin' to '1_782_1_1'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Pintados Manager#pin'
+   unique name 'Pintados Manager#pin'
+   map=ma_fild01, x=1, y=1
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Pintados Manager#pin'
+   unique name 'Pintados Manager#pin'
+   map=ma_fild01, x=1, y=1
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'8386'. Renaming 'Festival Helper Boy#pin' to '1_782_179_260'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Festival Helper Boy#pin'
+   unique name 'Festival Helper Boy#pin'
+   map=ma_fild01, x=179, y=260
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Festival Helper Boy#pin'
+   unique name 'Festival Helper Boy#pin'
+   map=ma_fild01, x=179, y=260
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'8608'. Renaming 'Tattooist#pin' to '1_782_172_223'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tattooist#pin'
+   unique name 'Tattooist#pin'
+   map=ma_fild01, x=172, y=223
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tattooist#pin'
+   unique name 'Tattooist#pin'
+   map=ma_fild01, x=172, y=223
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'8909'. Renaming 'Ancient Grudge#01' to '1_782_171_224'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Ancient Grudge#01'
+   unique name 'Ancient Grudge#01'
+   map=ma_fild01, x=171, y=224
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Ancient Grudge#01'
+   unique name 'Ancient Grudge#01'
+   map=ma_fild01, x=171, y=224
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'8910'. Renaming 'Ancient Grudge#02' to '1_782_173_224'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Ancient Grudge#02'
+   unique name 'Ancient Grudge#02'
+   map=ma_fild01, x=173, y=224
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Ancient Grudge#02'
+   unique name 'Ancient Grudge#02'
+   map=ma_fild01, x=173, y=224
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'8911'. Renaming 'Ancient Grudge#03' to '1_782_173_223'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Ancient Grudge#03'
+   unique name 'Ancient Grudge#03'
+   map=ma_fild01, x=173, y=223
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Ancient Grudge#03'
+   unique name 'Ancient Grudge#03'
+   map=ma_fild01, x=173, y=223
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'8912'. Renaming 'Ancient Grudge#04' to '1_782_172_222'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Ancient Grudge#04'
+   unique name 'Ancient Grudge#04'
+   map=ma_fild01, x=172, y=222
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Ancient Grudge#04'
+   unique name 'Ancient Grudge#04'
+   map=ma_fild01, x=172, y=222
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'8913'. Renaming 'Ancient Grudge#05' to '1_782_171_223'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Ancient Grudge#05'
+   unique name 'Ancient Grudge#05'
+   map=ma_fild01, x=171, y=223
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Ancient Grudge#05'
+   unique name 'Ancient Grudge#05'
+   map=ma_fild01, x=171, y=223
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'8915'. Renaming 'Tourist#pin01' to '1_782_192_200'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tourist#pin01'
+   unique name 'Tourist#pin01'
+   map=ma_fild01, x=192, y=200
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tourist#pin01'
+   unique name 'Tourist#pin01'
+   map=ma_fild01, x=192, y=200
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'8946'. Renaming 'Tourist#pin02' to '1_782_211_200'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tourist#pin02'
+   unique name 'Tourist#pin02'
+   map=ma_fild01, x=211, y=200
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tourist#pin02'
+   unique name 'Tourist#pin02'
+   map=ma_fild01, x=211, y=200
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'8965'. Renaming 'Tourist#pin03' to '1_782_251_205'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tourist#pin03'
+   unique name 'Tourist#pin03'
+   map=ma_fild01, x=251, y=205
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tourist#pin03'
+   unique name 'Tourist#pin03'
+   map=ma_fild01, x=251, y=205
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'8993'. Renaming 'Young Tattooist#pin04' to '1_782_249_206'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Young Tattooist#pin04'
+   unique name 'Young Tattooist#pin04'
+   map=ma_fild01, x=249, y=206
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Young Tattooist#pin04'
+   unique name 'Young Tattooist#pin04'
+   map=ma_fild01, x=249, y=206
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'9015'. Renaming 'Tourist#pin05' to '1_782_162_235'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Tourist#pin05'
+   unique name 'Tourist#pin05'
+   map=ma_fild01, x=162, y=235
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Tourist#pin05'
+   unique name 'Tourist#pin05'
+   map=ma_fild01, x=162, y=235
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'9034'. Renaming 'Drumming Young Man#pin06' to '1_782_164_234'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Drumming Young Man#pin06'
+   unique name 'Drumming Young Man#pin06'
+   map=ma_fild01, x=164, y=234
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Drumming Young Man#pin06'
+   unique name 'Drumming Young Man#pin06'
+   map=ma_fild01, x=164, y=234
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'9055'. Renaming 'Drumming Young Man#pin07' to '1_782_170_231'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Drumming Young Man#pin07'
+   unique name 'Drumming Young Man#pin07'
+   map=ma_fild01, x=170, y=231
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Drumming Young Man#pin07'
+   unique name 'Drumming Young Man#pin07'
+   map=ma_fild01, x=170, y=231
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'9076'. Renaming 'Drumming Young Man#pin08' to '1_782_164_228'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Drumming Young Man#pin08'
+   unique name 'Drumming Young Man#pin08'
+   map=ma_fild01, x=164, y=228
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Drumming Young Man#pin08'
+   unique name 'Drumming Young Man#pin08'
+   map=ma_fild01, x=164, y=228
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'9094'. Renaming 'Beat Catching Boy#pin09' to '1_782_170_234'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Beat Catching Boy#pin09'
+   unique name 'Beat Catching Boy#pin09'
+   map=ma_fild01, x=170, y=234
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Beat Catching Boy#pin09'
+   unique name 'Beat Catching Boy#pin09'
+   map=ma_fild01, x=170, y=234
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'9115'. Renaming 'Beat Catching Boy#pin10' to '1_782_164_231'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Beat Catching Boy#pin10'
+   unique name 'Beat Catching Boy#pin10'
+   map=ma_fild01, x=164, y=231
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Beat Catching Boy#pin10'
+   unique name 'Beat Catching Boy#pin10'
+   map=ma_fild01, x=164, y=231
+(11/10/2023 23:20:08) [ Warning ] : npc_parsename: Duplicate unique name in file 'npc/quests/quests_malaya.txt', line'9132'. Renaming 'Beat Catching Boy#pin11' to '1_782_170_228'.
+(11/10/2023 23:20:08) [ Debug ] : this npc:
+   display name 'Beat Catching Boy#pin11'
+   unique name 'Beat Catching Boy#pin11'
+   map=ma_fild01, x=170, y=228
+(11/10/2023 23:20:08) [ Debug ] : other npc in 'npc/re/quests/quests_malaya.txt' :
+   display name 'Beat Catching Boy#pin11'
+   unique name 'Beat Catching Boy#pin11'
+   map=ma_fild01, x=170, y=228
+(11/10/2023 23:20:08) [ Error ] : stylist_parseBodyNode: hair style "24" is too high...
+(11/10/2023 23:20:08) [ Error ] : Occurred in file '[1;37mdb/re/stylist.yml[0m' on line 218 and column 8.
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Inventor Jaax' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#alb' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#alb2' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#alde' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#ama' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#ayo' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#bra' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#cmd' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#cmd2' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#ein' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#gef' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#gef2' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#gon' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#hu' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#hu2' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#yuno' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#yuno1' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#yuno2' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#lhz' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#lhz2' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#lou' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#xmas' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#mosk' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#pay' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#pay2' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#prt' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#prt1' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#ra' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#tu' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#um' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
+(11/10/2023 23:20:08) [ Error ] : buildin_unloadnpc: npc 'Tool Dealer#ve' was not found.
+(11/10/2023 23:20:08) [ Warning ] : Script command 'unloadnpc' returned failure.
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init (invisible/not on a map)
+(11/10/2023 23:20:08) [ Debug ] : Source (NPC): Barter_Init is located in: npc/re/merchants/Dealer_Update.txt
