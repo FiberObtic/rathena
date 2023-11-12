@@ -5931,7 +5931,7 @@ void clif_addskill(map_session_data *sd, int skill_id)
 
 /// Deletes a skill from the skill tree (ZC_SKILLINFO_DELETE).
 /// 0441 <skill id>.W
-void clif_deleteskill(map_session_data *sd, int skill_id)
+void clif_deleteskill(map_session_data *sd, int skill_id, bool skip_infoblock)
 {
 #if PACKETVER >= 20081217
 	nullpo_retv(sd);
