@@ -98,6 +98,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)3rdparty\yaml-cpp\include\;$(SolutionDir)3rdparty\yaml-cpp\src\;</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>YAML_CPP_STATIC_DEFINE;WIN32;_WINDOWS;_DEBUG;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -110,6 +111,7 @@
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
       <PreprocessorDefinitions>YAML_CPP_STATIC_DEFINE;WIN32;_WINDOWS;_DEBUG;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -123,6 +125,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)3rdparty\yaml-cpp\include\;$(SolutionDir)3rdparty\yaml-cpp\src\;</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>YAML_CPP_STATIC_DEFINE;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -140,6 +143,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)3rdparty\yaml-cpp\include\;$(SolutionDir)3rdparty\yaml-cpp\src\;</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>YAML_CPP_STATIC_DEFINE;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
